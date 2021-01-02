@@ -1,12 +1,7 @@
 
-Scrap_Sets = {
-	["repair"] = true,
-	["glow"] = true,
-	["safe"] = true,
+Scrap_CharSets = {
+	["ml"] = {
+	},
 	["list"] = {
 	},
-	["tutorial"] = 5,
-	["sell"] = true,
-	["icons"] = true,
-	["destroy"] = true,
 }
