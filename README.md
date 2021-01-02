@@ -1,4 +1,4 @@
-**Angarr UI**
+#Angarr UI
 
 Special thanks to [Luxthos](https://www.luxthos.com/) for his WeakAuras packages for the classes I play.
 
