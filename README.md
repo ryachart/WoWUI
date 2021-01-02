@@ -25,4 +25,5 @@ Preview (1/2/2021):
 * Go to Wowup and use it to update your addons.
 * If possible, go the WeakAuras companion and download weak aura updates
 * Login to your main character.  If it warns about out of date addons double check Wowup for updates and then click Load Anyway and then check the Addons loaded to make sure they are all loaded.
-* After login, the chat window will be in your bottom left corner.  Right click on the General Tab after mousing over it to unlock it and move it to the top left.
+* After login, the chat window may be in your bottom left corner.  Right click on the General Tab after mousing over it to unlock it and move it to the top left.
+* After login, you will need to type /sexymap and in the profile tab select "Use Global Profile" to use the Global Profile.
