@@ -1,7 +1,4 @@
-# WoWUI
-My World of Warcraft UI Configuration Files and Notes
-
-**Mistgarr UI**
+**Angarr UI**
 
 Special thanks to [Luxthos](https://www.luxthos.com/) for his WeakAuras packages for the classes I play.
 
