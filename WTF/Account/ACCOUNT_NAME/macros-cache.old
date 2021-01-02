@@ -1,0 +1,25 @@
+VER 3 000000000000001E "Focus" "135766"
+/focus
+END
+VER 3 0000000000000032 "HarmHelpCharge" "INV_MISC_QUESTIONMARK"
+END
+VER 3 000000000000002A "HealingCD" "463901"
+#showtooltip
+/cast Spiritual Healing Potion
+END
+VER 3 0000000000000031 "Healthstone" "INV_MISC_QUESTIONMARK"
+#showtooltip Healthstone
+/use Healthstone
+END
+VER 3 0000000000000016 "Illidan Start" "Ability_Ambush"
+/script PlaySoundFile("Sound\\Creature\\Illidan\\BLACK_Illidan_01.wav")
+END
+VER 3 0000000000000012 "Mumble" "Ability_Creature_Cursed_05"
+/raid Please Join me in Mumble (Get it @ mumble.com)
+/raid helios.typefrag.com port: 59660 pw: hotcakes
+/p Please Join me in Mumble (Get it @ mumble.com)
+/p helios.typefrag.com port: 59660 pw: hotcakes
+END
+VER 3 000000000000002E "ReleaseSpirit" "897136"
+/run RepopMe()
+END

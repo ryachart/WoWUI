@@ -1,0 +1,40 @@
+lightweight tag 51c3300914ec490d1fdce8d4b3c6ea27c97cf22a Plater-v9.0.1.323-Retail
+Author:	Tercio Jose <terciob19@hotmail.com>
+Date:	Thu Dec 24 20:41:16 2020 -0300
+
+commit 51c3300914ec490d1fdce8d4b3c6ea27c97cf22a
+Author: Tercio Jose <terciob19@hotmail.com>
+Date:   Thu Dec 24 20:41:16 2020 -0300
+
+    Ingame Change Logs
+
+commit 5ee64c4af8ac8fd8a236ca0968e20bf895b22421
+Author: Tercio Jose <terciob19@hotmail.com>
+Date:   Thu Dec 24 20:37:24 2020 -0300
+
+    Added script to show the time to die of Spiteful affix units
+
+commit 368c747f01b76b117a48c0a12f4b75092189ec5b
+Author: Tercio Jose <terciob19@hotmail.com>
+Date:   Thu Dec 24 18:34:50 2020 -0300
+
+    df update
+
+commit 368c747f01b76b117a48c0a12f4b75092189ec5b
+Author: Tercio Jose <terciob19@hotmail.com>
+Date:   Thu Dec 24 18:34:50 2020 -0300
+
+    df update
+
+commit ff946583ded032e855506b33e2ba7c4679820af0
+Author: Continuity <continuity@gmx.net>
+Date:   Tue Dec 22 19:52:45 2020 +0100
+
+    - updating Aura Reorder to use new internal sorting
+
+commit ff946583ded032e855506b33e2ba7c4679820af0
+Author: Continuity <continuity@gmx.net>
+Date:   Tue Dec 22 19:52:45 2020 +0100
+
+    - updating Aura Reorder to use new internal sorting
+

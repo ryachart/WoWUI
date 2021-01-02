@@ -1,0 +1,100 @@
+bind BUTTON3 NONE
+bind A STRAFELEFT
+bind D STRAFERIGHT
+bind Q ACTIONBUTTON8
+bind E ACTIONBUTTON7
+bind Z ACTIONBUTTON9
+bind BUTTON4 NONE
+bind R EXTRAACTIONBUTTON1
+bind SHIFT-R REPLY
+bind 1 ACTIONBUTTON2
+bind 2 ACTIONBUTTON3
+bind 3 ACTIONBUTTON4
+bind 4 ACTIONBUTTON5
+bind 5 ACTIONBUTTON6
+bind 6 NONE
+bind 7 CLICK BongosActionButton7:LeftButton
+bind 8 NONE
+bind 9 CLICK BongosActionButton9:LeftButton
+bind 0 NONE
+bind - CLICK BongosActionButton11:LeftButton
+bind = NONE
+bind CTRL-F1 NONE
+bind CTRL-F2 NONE
+bind CTRL-F3 NONE
+bind CTRL-F4 NONE
+bind CTRL-F5 NONE
+bind CTRL-F6 NONE
+bind CTRL-F7 NONE
+bind CTRL-F8 NONE
+bind CTRL-F9 NONE
+bind CTRL-F10 NONE
+bind CTRL-1 NONE
+bind CTRL-2 NONE
+bind CTRL-3 NONE
+bind CTRL-4 NONE
+bind CTRL-5 NONE
+bind F2 CLICK BT4Button25:LeftButton
+bind F3 CLICK BT4Button26:LeftButton
+bind F4 CLICK BT4Button27:LeftButton
+bind F5 CLICK BT4Button28:LeftButton
+bind G ACTIONBUTTON10
+bind V CLICK BT4Button24:LeftButton
+bind SHIFT-V CLICK BT4Button59:LeftButton
+bind CTRL-V NONE
+bind SHIFT-T CLICK BT4Button56:LeftButton
+bind B TOGGLEBACKPACK
+bind SHIFT-B OPENALLBAGS
+bind F8 NONE
+bind F9 NONE
+bind F10 NONE
+bind F11 NONE
+bind F12 NONE
+bind SHIFT-P TOGGLECHARACTER3
+bind SHIFT-SPACE RAIDTARGET8
+bind K TOGGLECHARACTER1
+bind Y ACTIONBUTTON11
+bind END FRIENDNAMEPLATES
+bind CTRL-Y NONE
+bind CTRL-Q NONE
+bind CTRL-E NONE
+bind CTRL-T NONE
+bind CTRL-P RESETPERFORMANCEVALUES
+bind SHIFT-G CLICK BT4Button58:LeftButton
+bind SHIFT-C TOGGLECOLLECTIONS
+bind T ACTIONBUTTON12
+bind SHIFT-1 CLICK BT4Button49:LeftButton
+bind SHIFT-2 CLICK BT4Button50:LeftButton
+bind SHIFT-3 CLICK BT4Button51:LeftButton
+bind SHIFT-4 CLICK BT4Button52:LeftButton
+bind SHIFT-5 CLICK BT4Button53:LeftButton
+bind SHIFT-6 CLICK BT4Button54:LeftButton
+bind ALT-P TOGGLEPERFORMANCEDISPLAY
+bind SHIFT-E CLICK BT4Button55:LeftButton
+bind ALT-3 CLICK BT4Button15:LeftButton
+bind ALT-2 CLICK BT4Button14:LeftButton
+bind ALT-1 CLICK BT4Button13:LeftButton
+bind ALT-E CLICK BT4Button19:LeftButton
+bind ALT-6 NONE
+bind ALT-5 CLICK BT4Button17:LeftButton
+bind ALT-4 CLICK BT4Button16:LeftButton
+bind ` ACTIONBUTTON1
+bind ALT-T CLICK BT4Button21:LeftButton
+bind ALT-Y CLICK BT4Button23:LeftButton
+bind BACKSPACE NONE
+bind ALT-R NONE
+bind \ NONE
+bind ALT-F CLICK BT4Button18:LeftButton
+bind ALT-Q CLICK BT4Button20:LeftButton
+bind ALT-G CLICK BT4Button22:LeftButton
+bind SHIFT-F CLICK BT4Button57:LeftButton
+bind ALT-V CLICK BT4Button60:LeftButton
+bind ALT-` CLICK BT4Button30:LeftButton
+bind CTRL-F NONE
+bind CTRL-G NONE
+bind CTRL-` NONE
+bind BUTTON5 NONE
+bind F6 TOGGLEAUTORUN
+bind [ PAWN_COMPARE_LEFT
+bind ] PAWN_COMPARE_RIGHT
+bind SHIFT-Q CLICK BT4Button32:LeftButton
