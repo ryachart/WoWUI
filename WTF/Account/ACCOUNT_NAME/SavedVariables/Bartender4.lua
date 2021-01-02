@@ -146,8 +146,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -156,8 +156,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -283,6 +283,66 @@ Bartender4DB = {
 				},
 			},
 		},
+		["Vehicle"] = {
+			["profiles"] = {
+				["Default"] = {
+					["position"] = {
+						["y"] = -201.2775268554688,
+						["x"] = 450.189208984375,
+						["point"] = "CENTER",
+					},
+					["version"] = 3,
+				},
+				["Mistgarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
+			},
+		},
+		["StanceBar"] = {
+			["profiles"] = {
+				["Default"] = {
+					["position"] = {
+						["y"] = 88.83331489562988,
+						["x"] = 258.7502746582031,
+						["point"] = "BOTTOM",
+					},
+					["version"] = 3,
+				},
+				["Mistgarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = -14.99996185302734,
+						["x"] = -82.5,
+						["point"] = "CENTER",
+					},
+				},
+			},
+		},
+		["PetBar"] = {
+			["profiles"] = {
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 195.1651153564453,
+						["x"] = 218.6001434326172,
+						["point"] = "BOTTOMLEFT",
+					},
+				},
+				["Mistgarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 143,
+						["x"] = -460,
+						["point"] = "BOTTOM",
+					},
+				},
+			},
+		},
 		["ZoneAbilityBar"] = {
 			["profiles"] = {
 				["Fangarr - Tichondrius"] = {
@@ -343,66 +403,6 @@ Bartender4DB = {
 				},
 			},
 		},
-		["Vehicle"] = {
-			["profiles"] = {
-				["Default"] = {
-					["position"] = {
-						["y"] = -201.2775268554688,
-						["x"] = 450.189208984375,
-						["point"] = "CENTER",
-					},
-					["version"] = 3,
-				},
-				["Mistgarr - Tichondrius"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
-					},
-				},
-			},
-		},
-		["PetBar"] = {
-			["profiles"] = {
-				["Default"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 195.1651153564453,
-						["x"] = 218.6001434326172,
-						["point"] = "BOTTOMLEFT",
-					},
-				},
-				["Mistgarr - Tichondrius"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 143,
-						["x"] = -460,
-						["point"] = "BOTTOM",
-					},
-				},
-			},
-		},
-		["StanceBar"] = {
-			["profiles"] = {
-				["Default"] = {
-					["position"] = {
-						["y"] = 88.83331489562988,
-						["x"] = 258.7502746582031,
-						["point"] = "BOTTOM",
-					},
-					["version"] = 3,
-				},
-				["Mistgarr - Tichondrius"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = -14.99996185302734,
-						["x"] = -82.5,
-						["point"] = "CENTER",
-					},
-				},
-			},
-		},
 	},
 	["profileKeys"] = {
 		["Fangarr - Tichondrius"] = "Default",
@@ -415,12 +415,12 @@ Bartender4DB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["selfcastmodifier"] = false,
+			["blizzardVehicle"] = true,
+			["focuscastmodifier"] = false,
 			["minimapIcon"] = {
 				["minimapPos"] = 62.83491322859041,
 			},
-			["blizzardVehicle"] = true,
-			["focuscastmodifier"] = false,
-			["selfcastmodifier"] = false,
 			["outofrange"] = "hotkey",
 		},
 		["Mistgarr - Tichondrius"] = {

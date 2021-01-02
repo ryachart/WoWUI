@@ -1,8 +1,8 @@
 
 BugGrabberDB = {
 	["stopnag"] = 90002,
+	["session"] = 454,
 	["lastSanitation"] = 3,
-	["session"] = 451,
 	["errors"] = {
 		{
 			["message"] = "Interface\\AddOns\\AstralKeys\\MinimapButton.lua:21: attempt to index field 'general' (a nil value)",
@@ -754,8 +754,8 @@ BugGrabberDB = {
 		}, -- [97]
 		{
 			["message"] = "(null)",
-			["time"] = "2019/11/05 20:37:11",
 			["session"] = 372,
+			["time"] = "2019/11/05 20:37:11",
 			["counter"] = 73,
 		}, -- [98]
 		{
@@ -832,5 +832,12 @@ BugGrabberDB = {
 			["session"] = 451,
 			["counter"] = 1,
 		}, -- [108]
+		{
+			["message"] = "[ADDON_ACTION_FORBIDDEN] AddOn 'Chatter' tried to call the protected function 'Logout()'.",
+			["time"] = "2021/01/02 14:56:26",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Logout'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:1706: in function `?'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:5073: in function `ChatEdit_ParseText'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4757: in function `ChatEdit_SendText'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4793: in function `ChatEdit_OnEnterPressed'\n[string \"*:OnEnterPressed\"]:1: in function <[string \"*:OnEnterPressed\"]:1>",
+			["session"] = 453,
+			["counter"] = 1,
+		}, -- [109]
 	},
 }

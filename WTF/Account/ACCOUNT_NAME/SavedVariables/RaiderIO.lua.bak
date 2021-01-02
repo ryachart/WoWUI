@@ -1,9 +1,7 @@
 
 RaiderIO_Config = {
 }
-RaiderIO_LastCharacter = "us-Fangarr-tichondrius"
+RaiderIO_LastCharacter = "us-Mistgarr-tichondrius"
 RaiderIO_MissingCharacters = {
-	["us-Pixlz-tichondrius"] = true,
-	["us-Fangarr-tichondrius"] = true,
 }
 RaiderIO_CachedRuns = nil

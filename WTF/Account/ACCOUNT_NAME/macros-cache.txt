@@ -1,58 +1,27 @@
-VER 3 0100000000000015 "BlackoutKickTrin" "574575"
-#showtooltip Blackout Kick
-/use 13
-/cast Blackout Kick
+VER 3 000000000000001E "Focus" "135766"
+/focus
 END
-VER 3 0100000000000017 "BreathOfTrinket" "615339"
-#showtooltip Breath of Fire
-/use 14
-/cast Breath of Fire
-END
-VER 3 0100000000000019 "DetoxMouseover" "460692"
-#showtooltip Detox
-/cast [@mouseover,exists,help]Detox; Detox;
-END
-VER 3 010000000000000C "EMBlackout" "SPELL_MONK_ENVELOPINGMIST"
+VER 3 0000000000000032 "HarmHelpCharge" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [help]Enveloping Mist;[harm]Blackout Kick;Enveloping Mist
+/cast [help]Intervene;[harm]Charge;
 END
-VER 3 0100000000000014 "FocusInpt" "608940"
+VER 3 000000000000002A "HealingCD" "463901"
 #showtooltip
-/cast [@focus,exists]Spear Hand Strike; Spear Hand Strike
+/cast Spiritual Healing Potion
 END
-VER 3 0100000000000018 "HealthstoneExter" "134876"
+VER 3 0000000000000031 "Healthstone" "INV_MISC_QUESTIONMARK"
 #showtooltip Healthstone
 /use Healthstone
-/p {cross}{star} Tank CD pls!! {star}{cross}
 END
-VER 3 0100000000000016 "KegTrinket" "594274"
-#showtooltip Keg Smash
-/use 13
-/cast Keg Smash
+VER 3 0000000000000016 "Illidan Start" "Ability_Ambush"
+/script PlaySoundFile("Sound\\Creature\\Illidan\\BLACK_Illidan_01.wav")
 END
-VER 3 0100000000000013 "ManaTeaTrinkets" "136099"
-#showtooltip Invoke Yu'lon, the Jade Serpent
-/use 13
-/cast Invoke Yu'lon, the Jade Serpent
+VER 3 0000000000000012 "Mumble" "Ability_Creature_Cursed_05"
+/raid Please Join me in Mumble (Get it @ mumble.com)
+/raid helios.typefrag.com port: 59660 pw: hotcakes
+/p Please Join me in Mumble (Get it @ mumble.com)
+/p helios.typefrag.com port: 59660 pw: hotcakes
 END
-VER 3 0100000000000011 "PalmVivify" "606551"
-#showtooltip
-/cast [help]Vivify;[harm]Tiger Palm
-END
-VER 3 010000000000000E "RemMouseover" "ABILITY_MONK_RENEWINGMISTS"
-#showtooltip Renewing Mist
-/cast [@mouseover, help, exists]Renewing Mist;Renewing Mist
-END
-VER 3 010000000000000B "SM-TP" "606550"
-#showtooltip
-/cast [help]Soothing Mist;[harm]Tiger Palm
-END
-VER 3 0100000000000012 "TrinketSEF" "INV_MISC_QUESTIONMARK"
-#showtooltip Storm, Earth, and Fire
-/use 13
-/cast Storm, Earth, and Fire
-END
-VER 3 010000000000000D "VivifyRSK" "ABILITY_MONK_VIVIFY"
-#showtooltip Vivify
-/cast [help]Vivify;[harm]Rising Sun Kick;Vivify
+VER 3 000000000000002E "ReleaseSpirit" "897136"
+/run RepopMe()
 END
