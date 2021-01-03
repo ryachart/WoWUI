@@ -89,7 +89,6 @@ MADB = {
 					["orgHeight"] = 700.0000610351562,
 					["height"] = 620,
 					["orgWidth"] = 235.0000610351563,
-					["width"] = 235.0000610351563,
 					["pos"] = {
 						"TOPRIGHT", -- [1]
 						"MinimapCluster", -- [2]
@@ -97,6 +96,7 @@ MADB = {
 						-9.9998779296875, -- [4]
 						-79.99993896484375, -- [5]
 					},
+					["width"] = 235.0000610351563,
 				},
 				["TargetFrame"] = {
 					["orgPos"] = {
@@ -118,9 +118,9 @@ MADB = {
 			},
 		},
 	},
-	["closeGUIOnEscape"] = false,
-	["squareMM"] = false,
-	["noMMMW"] = false,
-	["playSound"] = false,
 	["tooltips"] = true,
+	["squareMM"] = false,
+	["playSound"] = false,
+	["noMMMW"] = false,
+	["closeGUIOnEscape"] = false,
 }

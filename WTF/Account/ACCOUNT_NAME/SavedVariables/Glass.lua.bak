@@ -1,19 +1,19 @@
 
 GlassDB = {
-	["global"] = {
-		["version"] = "1.8.0",
-	},
 	["profileKeys"] = {
 		["Angarr - Thunderlord"] = "Default",
 		["Angarr - Blackrock"] = "Default",
 		["Shadegarr - Tichondrius"] = "Default",
 		["Fangarr - Tichondrius"] = "Default",
 		["Mistgarr - Tichondrius"] = "Default",
-		["Glaivegarr - Blackrock"] = "Default",
-		["Flashlyte - Blackrock"] = "Default",
-		["Raingarr - Thunderlord"] = "Default",
-		["Paingarr - Sargeras"] = "Default",
 		["Ignorc - Blackrock"] = "Default",
+		["Paingarr - Sargeras"] = "Default",
+		["Raingarr - Thunderlord"] = "Default",
+		["Flashlyte - Blackrock"] = "Default",
+		["Glaivegarr - Blackrock"] = "Default",
+	},
+	["global"] = {
+		["version"] = "1.8.0",
 	},
 	["profiles"] = {
 		["Default"] = {

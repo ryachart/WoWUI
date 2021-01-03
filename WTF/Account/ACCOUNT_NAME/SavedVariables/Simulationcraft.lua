@@ -9,10 +9,10 @@ SimulationCraftDB = {
 		["Fangarr - Tichondrius"] = "Fangarr - Tichondrius",
 		["Raingarr - Tichondrius"] = "Raingarr - Tichondrius",
 		["Mistgarr - Tichondrius"] = "Mistgarr - Tichondrius",
-		["Paingarr - Sargeras"] = "Paingarr - Sargeras",
-		["Ignorc - Blackrock"] = "Ignorc - Blackrock",
-		["Glaivegarr - Blackrock"] = "Glaivegarr - Blackrock",
 		["Flashlyte - Blackrock"] = "Flashlyte - Blackrock",
+		["Glaivegarr - Blackrock"] = "Glaivegarr - Blackrock",
+		["Ignorc - Blackrock"] = "Ignorc - Blackrock",
+		["Paingarr - Sargeras"] = "Paingarr - Sargeras",
 		["Skren - Thunderlord"] = "Skren - Thunderlord",
 	},
 	["profiles"] = {
@@ -41,13 +41,13 @@ SimulationCraftDB = {
 				["minimapPos"] = 339.8142043464709,
 			},
 		},
-		["Paingarr - Sargeras"] = {
-		},
-		["Ignorc - Blackrock"] = {
+		["Flashlyte - Blackrock"] = {
 		},
 		["Glaivegarr - Blackrock"] = {
 		},
-		["Flashlyte - Blackrock"] = {
+		["Ignorc - Blackrock"] = {
+		},
+		["Paingarr - Sargeras"] = {
 		},
 		["Skren - Thunderlord"] = {
 		},

@@ -14,16 +14,11 @@ VER 3 0100000000000019 "DetoxMouseover" "460692"
 END
 VER 3 010000000000000C "EMBlackout" "SPELL_MONK_ENVELOPINGMIST"
 #showtooltip
-/cast [help]Enveloping Mist;[harm]Blackout Kick;Enveloping Mist
+/cast [@mouseover, exists, help]Enveloping Mist;[harm]Blackout Kick;[target,exists]Enveloping Mist
 END
 VER 3 0100000000000014 "FocusInpt" "608940"
 #showtooltip
 /cast [@focus,exists]Spear Hand Strike; Spear Hand Strike
-END
-VER 3 0100000000000018 "HealthstoneExter" "134876"
-#showtooltip Healthstone
-/use Healthstone
-/p {cross}{star} Tank CD pls!! {star}{cross}
 END
 VER 3 0100000000000016 "KegTrinket" "594274"
 #showtooltip Keg Smash
@@ -43,9 +38,13 @@ VER 3 010000000000000E "RemMouseover" "ABILITY_MONK_RENEWINGMISTS"
 #showtooltip Renewing Mist
 /cast [@mouseover, help, exists]Renewing Mist;Renewing Mist
 END
-VER 3 010000000000000B "SM-TP" "606550"
+VER 3 010000000000001A "SerpentCursor" "620831"
 #showtooltip
-/cast [help]Soothing Mist;[harm]Tiger Palm
+/cast [@cursor] Summon Jade Serpent Statue
+END
+VER 3 010000000000000B "SMMouseover" "606550"
+#showtooltip
+/cast [@mouseover,exists,help]Soothing Mist; Soothing Mist;
 END
 VER 3 0100000000000012 "TrinketSEF" "INV_MISC_QUESTIONMARK"
 #showtooltip Storm, Earth, and Fire
@@ -54,5 +53,5 @@ VER 3 0100000000000012 "TrinketSEF" "INV_MISC_QUESTIONMARK"
 END
 VER 3 010000000000000D "VivifyRSK" "ABILITY_MONK_VIVIFY"
 #showtooltip Vivify
-/cast [help]Vivify;[harm]Rising Sun Kick;Vivify
+/cast [@mouseover, exists, help]Vivify;[harm]Rising Sun Kick;[help.target,exists]Vivify;[harm,target,exists]Rising Sun Kick
 END

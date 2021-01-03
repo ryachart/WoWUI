@@ -4,6 +4,17 @@ ChatterDB = {
 		["PlayerNames"] = {
 		},
 		["AltLinks"] = {
+			["profiles"] = {
+				["Default"] = {
+					["guildranks"] = {
+						false, -- [1]
+						false, -- [2]
+						false, -- [3]
+						false, -- [4]
+						[0] = false,
+					},
+				},
+			},
 		},
 		["Scrollback"] = {
 		},
@@ -22,99 +33,114 @@ ChatterDB = {
 				["Default"] = {
 					["colors"] = {
 						["General"] = {
+							["r"] = 1,
+							["g"] = 0.7529412508010864,
+							["b"] = 0.7529412508010864,
+						},
+						["Instance Leader"] = {
+							["r"] = 1,
+							["g"] = 0.2823529541492462,
+							["b"] = 0.03529411926865578,
+						},
+						["Raid Leader"] = {
+							["r"] = 1,
+							["g"] = 0.2823529541492462,
+							["b"] = 0.03529411926865578,
+						},
+						["Community:2005851:1"] = {
+							["r"] = 0.5098039507865906,
+							["g"] = 0.7725490927696228,
+							["b"] = 1,
+						},
+						["LookingForGroup"] = {
 							["b"] = 0.7529412508010864,
 							["g"] = 0.7529412508010864,
 							["r"] = 1,
 						},
-						["Instance Leader"] = {
-							["b"] = 0.03529411926865578,
+						["Party"] = {
+							["r"] = 0.6666666865348816,
+							["g"] = 0.6666666865348816,
+							["b"] = 1,
+						},
+						["Whisper"] = {
+							["r"] = 1,
+							["g"] = 0.501960813999176,
+							["b"] = 1,
+						},
+						["Raid"] = {
+							["r"] = 1,
+							["g"] = 0.4980392456054688,
+							["b"] = 0,
+						},
+						["Raid Warning"] = {
+							["r"] = 1,
 							["g"] = 0.2823529541492462,
+							["b"] = 0,
+						},
+						["Party Leader"] = {
+							["r"] = 0.4627451300621033,
+							["g"] = 0.7843137979507446,
+							["b"] = 1,
+						},
+						["Instance"] = {
+							["r"] = 1,
+							["g"] = 0.4980392456054688,
+							["b"] = 0,
+						},
+						["PremadeFilter"] = {
+							["b"] = 0.7529412508010864,
+							["g"] = 0.7529412508010864,
 							["r"] = 1,
 						},
-						["Raid Leader"] = {
-							["b"] = 0.03529411926865578,
-							["g"] = 0.2823529541492462,
-							["r"] = 1,
-						},
-						["Community:2005851:1"] = {
+						["Community"] = {
 							["b"] = 1,
 							["g"] = 0.7725490927696228,
 							["r"] = 0.5098039507865906,
 						},
-						["LookingForGroup"] = {
-							["r"] = 1,
-							["g"] = 0.7529412508010864,
-							["b"] = 0.7529412508010864,
-						},
-						["Party"] = {
-							["b"] = 1,
-							["g"] = 0.6666666865348816,
-							["r"] = 0.6666666865348816,
-						},
-						["Whisper"] = {
-							["b"] = 1,
-							["g"] = 0.501960813999176,
-							["r"] = 1,
-						},
-						["Raid"] = {
-							["b"] = 0,
-							["g"] = 0.4980392456054688,
-							["r"] = 1,
-						},
-						["Raid Warning"] = {
-							["b"] = 0,
-							["g"] = 0.2823529541492462,
-							["r"] = 1,
-						},
-						["Party Leader"] = {
-							["b"] = 1,
-							["g"] = 0.7843137979507446,
-							["r"] = 0.4627451300621033,
-						},
-						["Instance"] = {
-							["b"] = 0,
-							["g"] = 0.4980392456054688,
-							["r"] = 1,
-						},
 						["Yell"] = {
-							["b"] = 0.250980406999588,
-							["g"] = 0.250980406999588,
 							["r"] = 1,
+							["g"] = 0.250980406999588,
+							["b"] = 0.250980406999588,
 						},
 						["LocalDefense"] = {
+							["r"] = 1,
+							["g"] = 0.7529412508010864,
 							["b"] = 0.7529412508010864,
-							["g"] = 0.7529412508010864,
-							["r"] = 1,
-						},
-						["Officer"] = {
-							["b"] = 0.250980406999588,
-							["g"] = 0.7529412508010864,
-							["r"] = 0.250980406999588,
-						},
-						["Say"] = {
-							["b"] = 1,
-							["g"] = 1,
-							["r"] = 1,
-						},
-						["Trade"] = {
-							["b"] = 0.7529412508010864,
-							["g"] = 0.7529412508010864,
-							["r"] = 1,
-						},
-						["Guild"] = {
-							["b"] = 0.250980406999588,
-							["g"] = 1,
-							["r"] = 0.250980406999588,
 						},
 						["Real ID Whisper"] = {
-							["b"] = 0.9647059440612793,
-							["g"] = 1,
 							["r"] = 0,
+							["g"] = 1,
+							["b"] = 0.9647059440612793,
 						},
-						["PremadeFilter"] = {
+						["Guild"] = {
+							["r"] = 0.250980406999588,
+							["g"] = 1,
+							["b"] = 0.250980406999588,
+						},
+						["Trade"] = {
 							["r"] = 1,
 							["g"] = 0.7529412508010864,
 							["b"] = 0.7529412508010864,
+						},
+						["Say"] = {
+							["r"] = 1,
+							["g"] = 1,
+							["b"] = 1,
+						},
+						["Community:372426211:1"] = {
+							["r"] = 0.5098039507865906,
+							["g"] = 0.7725490927696228,
+							["b"] = 1,
+						},
+						["Community:372135111:1"] = {
+							["r"] = 0.5098039507865906,
+							["g"] = 0.7725490927696228,
+							["b"] = 1,
+						},
+						["Officer"] = {
+							["r"] = 0.250980406999588,
+							["g"] = 0.7529412508010864,
+							["b"] = 0.250980406999588,
 						},
 					},
 				},
@@ -128,9 +154,9 @@ ChatterDB = {
 					["frames"] = {
 						["FRAME_1"] = {
 							["borderColor"] = {
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
 							["background"] = "Details Ground",
 							["border"] = "Details BarBorder 3",
@@ -151,13 +177,19 @@ ChatterDB = {
 		},
 		["Server Positioning"] = {
 		},
-		["JustifyText"] = {
+		["Mousewheel Scroll"] = {
 		},
 		["Timestamps"] = {
 		},
 		["EditBox"] = {
 		},
-		["Highlight"] = {
+		["ChatFont"] = {
+			["profiles"] = {
+				["Default"] = {
+					["font"] = "Friz Quadrata TT",
+					["fontsize"] = 12,
+				},
+			},
 		},
 		["ChatTabs"] = {
 			["profiles"] = {
@@ -174,57 +206,61 @@ ChatterDB = {
 		},
 		["Editbox History"] = {
 			["realm"] = {
+				["Thunderlord"] = {
+					["history"] = {
+						"/sexy", -- [1]
+						"/sexymap", -- [2]
+						"/sexymap", -- [3]
+						"/camp", -- [4]
+					},
+				},
 				["Tichondrius"] = {
 					["history"] = {
-						"/chatter", -- [1]
-						"/camp", -- [2]
-						"/ebb", -- [3]
-						"/wa", -- [4]
-						"/ebb", -- [5]
-						"/wa", -- [6]
-						"/suf", -- [7]
-						"/bartender", -- [8]
-						"/details", -- [9]
-						"/details options", -- [10]
-						"/chatter", -- [11]
-						"/bartender", -- [12]
-						"/camp", -- [13]
-						"/camp", -- [14]
-						"/chatter", -- [15]
-						"/plater", -- [16]
-						"/details scroll", -- [17]
-						"/camp", -- [18]
-						"/wa", -- [19]
-						"/wa", -- [20]
-						"/wa", -- [21]
-						"/suf", -- [22]
-						"/wa", -- [23]
-						"/camp", -- [24]
-						"/details me", -- [25]
-						"/wa", -- [26]
-						"/wa", -- [27]
-						"/wa", -- [28]
-						"/wa", -- [29]
-						"/wa", -- [30]
+						"/p stay spread to wings", -- [1]
+						"/pull 6", -- [2]
+						"/p Fuck", -- [3]
+						"/p My bad", -- [4]
+						"/p messed up necrotic", -- [5]
+						"/p bad rop", -- [6]
+						"/p Big pull here", -- [7]
+						"/p wait for it to all group up", -- [8]
+						"/p big pull", -- [9]
+						"/p dont start early", -- [10]
+						"/p on dps", -- [11]
+						"/p Another big pull next", -- [12]
+						"/p since we have CA", -- [13]
+						"/p nEXT PULL IS BIG PULL WITH URN", -- [14]
+						"/p great", -- [15]
+						"/p Okay", -- [16]
+						"/p Done with trash", -- [17]
+						"/p Good job =)", -- [18]
+						"/p Hug right", -- [19]
+						"/p check weapon oils", -- [20]
+						"/pull 5", -- [21]
+						"/p Brad with REbecca at diamond", -- [22]
+						"/pull 5", -- [23]
+						"/p !keys", -- [24]
+						"/p Im done for the night", -- [25]
+						"/p Gotta sleepy", -- [26]
+						"/p Fun keys all =)", -- [27]
+						" You going to bed?", -- [28]
+						" Oh okay.", -- [29]
+						" Fun =)", -- [30]
 						"/camp", -- [31]
+						"/wa", -- [32]
 					},
 				},
 			},
 		},
-		["ChatFont"] = {
-			["profiles"] = {
-				["Default"] = {
-					["font"] = "Friz Quadrata TT",
-					["fontsize"] = 12,
-				},
-			},
+		["Highlight"] = {
 		},
-		["Mousewheel Scroll"] = {
+		["JustifyText"] = {
 		},
 	},
 	["profileKeys"] = {
-		["Mistgarr - Tichondrius"] = "Default",
 		["Fangarr - Tichondrius"] = "Default",
+		["Raingarr - Thunderlord"] = "Default",
+		["Mistgarr - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

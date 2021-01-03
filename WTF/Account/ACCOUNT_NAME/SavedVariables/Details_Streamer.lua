@@ -2,18 +2,18 @@
 Details_StreamerDB = {
 	["characters"] = {
 		["Angarr - Thunderlord"] = "Raingarr - Tichondrius",
-		["Raingarr - Thunderlord"] = "Raingarr - Tichondrius",
-		["Angarr - Blackrock"] = "Raingarr - Tichondrius",
 		["Shadegarr - Tichondrius"] = "Raingarr - Tichondrius",
+		["Angarr - Blackrock"] = "Raingarr - Tichondrius",
+		["Raingarr - Thunderlord"] = "Raingarr - Tichondrius",
 		["Agraxx - Wyrmrest Accord"] = "Raingarr - Tichondrius",
-		["Paingarr - Sargeras"] = "Raingarr - Tichondrius",
+		["Flashlyte - Blackrock"] = "Raingarr - Tichondrius",
 		["Fangarr - Tichondrius"] = "Raingarr - Tichondrius",
 		["Raingarr - Tichondrius"] = "Raingarr - Tichondrius",
 		["Mistgarr - Tichondrius"] = "Raingarr - Tichondrius",
-		["Ignorc - Blackrock"] = "Raingarr - Tichondrius",
-		["Theogarr - Thunderlord"] = "Raingarr - Tichondrius",
 		["Glaivegarr - Blackrock"] = "Raingarr - Tichondrius",
-		["Flashlyte - Blackrock"] = "Raingarr - Tichondrius",
+		["Theogarr - Thunderlord"] = "Raingarr - Tichondrius",
+		["Ignorc - Blackrock"] = "Raingarr - Tichondrius",
+		["Paingarr - Sargeras"] = "Raingarr - Tichondrius",
 		["Skren - Thunderlord"] = "Raingarr - Tichondrius",
 	},
 	["profiles"] = {
@@ -42,17 +42,17 @@ Details_StreamerDB = {
 			},
 			["arrow_anchor_x"] = 0,
 			["row_texture"] = "Details Serenity",
-			["arrow_anchor_y"] = 0,
+			["use_spark"] = true,
 			["main_frame_locked"] = true,
+			["arrow_anchor_y"] = 0,
+			["enabled"] = false,
+			["arrow_size"] = 10,
 			["row_color"] = {
 				0.1, -- [1]
 				0.1, -- [2]
 				0.1, -- [3]
 				0.4, -- [4]
 			},
-			["enabled"] = false,
-			["arrow_size"] = 10,
-			["y"] = 156.0001068115234,
 			["row_spacement"] = 21,
 			["main_frame_color"] = {
 				0, -- [1]
@@ -62,6 +62,7 @@ Details_StreamerDB = {
 			},
 			["main_frame_strata"] = "LOW",
 			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+			["y"] = 156.0001068115234,
 			["per_second"] = {
 				["enabled"] = false,
 				["point"] = "CENTER",
@@ -73,10 +74,9 @@ Details_StreamerDB = {
 				["update_speed"] = 0.05,
 				["size"] = 32,
 			},
-			["font_size"] = 10,
 			["x"] = 5.726291783503257e-05,
 			["font_face"] = "Friz Quadrata TT",
-			["use_spark"] = true,
+			["font_size"] = 10,
 			["author"] = "Details! Team",
 			["point"] = "BOTTOMLEFT",
 			["row_height"] = 20,

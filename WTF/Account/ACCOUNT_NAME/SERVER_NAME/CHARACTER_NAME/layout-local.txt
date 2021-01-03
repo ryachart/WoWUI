@@ -48,17 +48,3 @@ X: 8
 Y: -53
 W: 570
 H: 155
-Frame: ItemRefTooltip
-FrameLevel: 1
-Anchor: TOPLEFT
-X: 387
-Y: -111
-W: 292
-H: 550
-Frame: WeakAurasOptions
-FrameLevel: 1
-Anchor: TOP
-X: 171
-Y: -32
-W: 830
-H: 665

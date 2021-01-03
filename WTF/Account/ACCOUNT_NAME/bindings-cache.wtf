@@ -12,7 +12,7 @@ bind 2 ACTIONBUTTON3
 bind 3 ACTIONBUTTON4
 bind 4 ACTIONBUTTON5
 bind 5 ACTIONBUTTON6
-bind 6 NONE
+bind 6 CLICK BT4Button29:LeftButton
 bind 7 CLICK BongosActionButton7:LeftButton
 bind 8 NONE
 bind 9 CLICK BongosActionButton9:LeftButton

@@ -9,9 +9,10 @@ VER 3 000000000000002A "HealingCD" "463901"
 #showtooltip
 /cast Spiritual Healing Potion
 END
-VER 3 0000000000000031 "Healthstone" "INV_MISC_QUESTIONMARK"
+VER 3 0000000000000031 "Healthstone" "132848"
 #showtooltip Healthstone
 /use Healthstone
+/p {cross}{star} Tank CD pls!! {star}{cross}
 END
 VER 3 0000000000000016 "Illidan Start" "Ability_Ambush"
 /script PlaySoundFile("Sound\\Creature\\Illidan\\BLACK_Illidan_01.wav")
