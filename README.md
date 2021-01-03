@@ -1,5 +1,7 @@
 # Angarr UI
 
+Designed for 1920x1080 resolution, but similar aspect ratios and sizes should work fine after meddling with positions and anchors a bit.
+
 Special thanks to [Luxthos](https://www.luxthos.com/) for his WeakAuras packages for the classes I play.
 
 Please consider using the [WeakAurasCompanion app](https://weakauras.wtf/) to get updates for my WeakAuras and others.
