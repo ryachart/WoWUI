@@ -14,7 +14,7 @@ Preview (1/2/2021):
 > Written with [StackEdit](https://stackedit.io/).
 
 ## Install Instructions
-* Download the latest Release and unpack it.
+* In the top right of this page, click [Code] and then [Download Zip].  Extract the contents.
 * Download and install [WowUp](https://wowup.io).
 * Set aside your existing Interface/ and WTF/ Folder from your Retail WoW Directory. (Copy to Desktop is Fine)
 * Copy the Interface/ and WTF/ Folders from the release into your Retail WoW Directory.
