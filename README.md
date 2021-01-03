@@ -7,11 +7,11 @@ Please consider using the [WeakAurasCompanion app](https://weakauras.wtf/) to ge
 Please consider using [WowUp](https://wowup.io/) to update your addons regularly.
 
 ## Helpful Tips
+* Install Instructions are below the preview image.
 * Filter Debuffs that appear on Player and Party Frames by opening /suf and going to Aura Filters > Manage Aura Filters > Blacklists > PlayerDebuffsBlocklist
 
 Preview (1/2/2021):
 ![](https://github.com/ryachart/WoWUI/blob/main/MistgarrUI.gif?raw=true)
-> Written with [StackEdit](https://stackedit.io/).
 
 ## Install Instructions
 * In the top right of this page, click [Code] and then [Download Zip].  Extract the contents.
@@ -26,3 +26,6 @@ Preview (1/2/2021):
 * Login to your main character.  If it warns about out of date addons double check Wowup for updates and then click Load Anyway and then check the Addons loaded to make sure they are all loaded.
 * After login, the chat window may be in your bottom left corner.  Right click on the General Tab after mousing over it to unlock it and move it to the top left.
 * After login, you will need to type /sexymap and in the profile tab select "Use Global Profile" to use the Global Profile.
+
+
+> Written with [StackEdit](https://stackedit.io/).
