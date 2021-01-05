@@ -27,6 +27,7 @@ Please consider using [WowUp](https://wowup.io/) to update your addons regularly
 * Login to your main character.  If it warns about out of date addons double check Wowup for updates and then click Load Anyway and then check the Addons loaded to make sure they are all loaded.
 * After login, the chat window may be in your bottom left corner.  Right click on the General Tab after mousing over it to unlock it and move it to the top left.
 * After login, you will need to type /sexymap and in the profile tab select "Use Global Profile" to use the Global Profile.
+* IMPORTANT: If you are not a monk, mage, or shaman, I probably don't have a set of [Luxthos Weak Auras](https://www.luxthos.com/weakauras/general-weakauras-for-world-of-warcraft-shadowlands/) ready for you.  Go to this link and import them using /wa to open the Weak Auras menu once you're setup.
 
 
 > Written with [StackEdit](https://stackedit.io/).
