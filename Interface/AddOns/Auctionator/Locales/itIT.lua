@@ -312,6 +312,12 @@ L["SPLASH_903_DESCRIPTION"] = "Correzione di bug, e un paio di nuove funzionalit
 L["SPLASH_903_FEATURES_1"] = "Aggiunto un nuovo pulsante \"Esporta Risultati\" alla scheda Vendi, che permette di esportare i risultati in formato CSV, adatto per l'importazione in Excel."
 L["SPLASH_903_FEATURES_2"] = "Gli oggetti Preferiti nella scheda Vendi restano sempre visibili anche se non sono più presenti nelle tue sacche. Questa modifica reimposta la tua lista Preferiti."
 L["SPLASH_903_FEATURES_HEADER"] = "Caratteristiche"
+--[[Translation missing --]]
+L["SPLASH_904_DESCRIPTION"] = "Bugfixes and a new history view"
+--[[Translation missing --]]
+L["SPLASH_904_FEATURES_1"] = "Right-clicking on a result in the Shopping tab will now open a dialog showing its price history."
+--[[Translation missing --]]
+L["SPLASH_904_FEATURES_HEADER"] = "Features"
 L["SPLASH_HIDE_MESSAGE"] = "Non visualizzare fino ad un prossimo aggiornamento"
 L["SPLASH_SCREEN_HEADER"] = "Benvenuto su Auctionator"
 L["STACK_AUCTION_INFO"] = "%s per %s (a %s ognuno)"

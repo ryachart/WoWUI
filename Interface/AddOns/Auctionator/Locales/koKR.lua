@@ -344,6 +344,12 @@ L["SPLASH_903_FEATURES_1"] = "A new \"Export Results\" button has been added to 
 L["SPLASH_903_FEATURES_2"] = "Favourite items in the Selling tab now stay visible even if they are no longer in your bag. This update resets your favourites list."
 --[[Translation missing --]]
 L["SPLASH_903_FEATURES_HEADER"] = "Features"
+--[[Translation missing --]]
+L["SPLASH_904_DESCRIPTION"] = "Bugfixes and a new history view"
+--[[Translation missing --]]
+L["SPLASH_904_FEATURES_1"] = "Right-clicking on a result in the Shopping tab will now open a dialog showing its price history."
+--[[Translation missing --]]
+L["SPLASH_904_FEATURES_HEADER"] = "Features"
 L["SPLASH_HIDE_MESSAGE"] = "다음 업데이트까지 보이지 않기"
 L["SPLASH_SCREEN_HEADER"] = "옥셔네이터에 오신걸 환영합니다!"
 L["STACK_AUCTION_INFO"] = "%s  (전체 %s, 각 %s)"

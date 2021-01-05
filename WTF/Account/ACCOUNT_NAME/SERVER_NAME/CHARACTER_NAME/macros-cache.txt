@@ -14,7 +14,7 @@ VER 3 0100000000000019 "DetoxMouseover" "460692"
 END
 VER 3 010000000000000C "EMBlackout" "SPELL_MONK_ENVELOPINGMIST"
 #showtooltip
-/cast [@mouseover, exists, help]Enveloping Mist;[harm]Blackout Kick;[target,exists]Enveloping Mist
+/cast [@mouseover,help,exists]Enveloping Mist;[@target,harm,exists]Blackout Kick;[@target]Enveloping Mist
 END
 VER 3 0100000000000014 "FocusInpt" "608940"
 #showtooltip
@@ -44,7 +44,7 @@ VER 3 010000000000001A "SerpentCursor" "620831"
 END
 VER 3 010000000000000B "SMMouseover" "606550"
 #showtooltip
-/cast [@mouseover,exists,help]Soothing Mist; Soothing Mist;
+/cast [@mouseover,help,exists]Soothing Mist; Soothing Mist;
 END
 VER 3 0100000000000012 "TrinketSEF" "INV_MISC_QUESTIONMARK"
 #showtooltip Storm, Earth, and Fire

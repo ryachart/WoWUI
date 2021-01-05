@@ -105,12 +105,9 @@ L["CONFIG_SELLING_LIFO_HEADER"] = "Vendiendo"
 L["CONFIG_SELLING_LIFO_TEXT"] = [=[Opciones para establecer porcentajes de descuento o valores y duración de la mayoría de los objetos. Sin un descuento, estas categorías de objetos se agrupan y el último objeto añadido es el primero en venderse. Puede que no sea necesario descontar.
 
 ]=]
---[[Translation missing --]]
-L["CONFIG_SELLING_MISSING_FAVOURITES"] = "Always show favourite items, including when not in your bag."
---[[Translation missing --]]
-L["CONFIG_SELLING_MISSING_FAVOURITES_TOOLTIP_HEADER"] = "Missing favourites visible"
---[[Translation missing --]]
-L["CONFIG_SELLING_MISSING_FAVOURITES_TOOLTIP_TEXT"] = "Show favourite items in the bag view even when they aren't in your bag."
+L["CONFIG_SELLING_MISSING_FAVOURITES"] = "Mostrar siempre objetos favoritos, incluso cuando no están en tu bolsa."
+L["CONFIG_SELLING_MISSING_FAVOURITES_TOOLTIP_HEADER"] = "Favoritos que faltan visibles"
+L["CONFIG_SELLING_MISSING_FAVOURITES_TOOLTIP_TEXT"] = "Muestra los objetos favoritos en la vista de bolsa incluso cuando no están en tu bolsa."
 L["CONFIG_SELLING_NOT_LIFO_HEADER"] = "Vendiendo Equipo/Mascotas"
 L["CONFIG_SELLING_NOT_LIFO_TEXT"] = "Opciones para establecer porcentajes de descuento o valores y duración del equipo y mascotas enjauladas. Estas categorías de objetos se enumeran individualmente y un comprador puede elegir cuál quiere. El descuento puede ser útil."
 L["CONFIG_SELLING_TEXT"] = "Opciones para cambiar el comportamiento de la pestaña Venta"
@@ -166,8 +163,7 @@ L["ENGAGE_HEADER"] = "Iniciar con Auctionator"
 L["EXACT_SEARCH"] = "Búsqueda exacta"
 L["EXPORT"] = "Exportar"
 L["EXPORT_AS"] = "Exportar cómo:"
---[[Translation missing --]]
-L["EXPORT_RESULTS"] = "Export Results"
+L["EXPORT_RESULTS"] = "Exportar resultados"
 L["EXPORT_STRING"] = "Cadena para compartir"
 L["EXPORT_WHISPER"] = "Susurrar a"
 L["FAVOURITES"] = "Favoritos"
@@ -328,14 +324,16 @@ L["SPLASH_901_FEATURES_HEADER"] = "Nuevas características"
 L["SPLASH_902_DESCRIPTION"] = "Junto con las diversas correcciones de errores, hay una característica nueva."
 L["SPLASH_902_FEATURES_1"] = "Una nueva sección \"Tu historial\" en la pestaña Ventas para mostrar los precios de subastas anteriores que haya creado."
 L["SPLASH_902_FEATURES_HEADER"] = "Nuevas características"
+L["SPLASH_903_DESCRIPTION"] = "Una corrección de errores y un par de funciones nuevas."
+L["SPLASH_903_FEATURES_1"] = "Se ha añadido un nuevo botón de \"Exportar resultados\" a la pestaña Compras para exportar los resultados de búsqueda actuales en formato CSV, adecuado para importarlos a Excel."
+L["SPLASH_903_FEATURES_2"] = "Los objetos favoritos en la pestaña Venta ahora permanecen visibles incluso si ya no están en tu bolsa. Esta actualización restablece tu lista de favoritos."
+L["SPLASH_903_FEATURES_HEADER"] = "Características"
 --[[Translation missing --]]
-L["SPLASH_903_DESCRIPTION"] = "One bugfix, and a couple of new features."
+L["SPLASH_904_DESCRIPTION"] = "Bugfixes and a new history view"
 --[[Translation missing --]]
-L["SPLASH_903_FEATURES_1"] = "A new \"Export Results\" button has been added to the Shopping tab to export the current search results in CSV format, suitable for importing into Excel."
+L["SPLASH_904_FEATURES_1"] = "Right-clicking on a result in the Shopping tab will now open a dialog showing its price history."
 --[[Translation missing --]]
-L["SPLASH_903_FEATURES_2"] = "Favourite items in the Selling tab now stay visible even if they are no longer in your bag. This update resets your favourites list."
---[[Translation missing --]]
-L["SPLASH_903_FEATURES_HEADER"] = "Features"
+L["SPLASH_904_FEATURES_HEADER"] = "Features"
 L["SPLASH_HIDE_MESSAGE"] = "No mostrar hasta la próxima actualización"
 L["SPLASH_SCREEN_HEADER"] = "Bienvenido a Auctionator"
 L["STACK_AUCTION_INFO"] = "%s para %s (en %s cada una)"

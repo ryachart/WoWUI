@@ -312,6 +312,12 @@ L["SPLASH_903_DESCRIPTION"] = "一个错误修正，和一些新功能。"
 L["SPLASH_903_FEATURES_1"] = "购物清单标签页新增了一个“导出结果”按钮，以 CSV 格式导出当前搜索结果，适用于导入到 Excel 中。"
 L["SPLASH_903_FEATURES_2"] = "销售标签页中的收藏物品现在即使不再位于你的背包中依然能保持可见。这项更新会重置你的收藏列表。"
 L["SPLASH_903_FEATURES_HEADER"] = "功能"
+--[[Translation missing --]]
+L["SPLASH_904_DESCRIPTION"] = "Bugfixes and a new history view"
+--[[Translation missing --]]
+L["SPLASH_904_FEATURES_1"] = "Right-clicking on a result in the Shopping tab will now open a dialog showing its price history."
+--[[Translation missing --]]
+L["SPLASH_904_FEATURES_HEADER"] = "Features"
 L["SPLASH_HIDE_MESSAGE"] = "下次更新前不要再显示"
 L["SPLASH_SCREEN_HEADER"] = "欢迎使用拍卖小帮手 Auctionator"
 L["STACK_AUCTION_INFO"] = "%s 总共 %s (每个 %s)"

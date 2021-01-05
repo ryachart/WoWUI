@@ -4,37 +4,37 @@ ElkBuffBarsDB = {
 		["LibDualSpec-1.0"] = {
 		},
 	},
+	["global"] = {
+		["maxtimes"] = {
+			["TENCH"] = {
+				[6188] = 1719.939,
+			},
+		},
+		["build"] = "36949",
+	},
 	["profileKeys"] = {
 		["Angarr - Thunderlord"] = "Default",
 		["Angarr - Blackrock"] = "Default",
 		["Shadegarr - Tichondrius"] = "Default",
 		["Fangarr - Tichondrius"] = "Default",
 		["Mistgarr - Tichondrius"] = "Default",
-		["Glaivegarr - Blackrock"] = "Default",
-		["Flashlyte - Blackrock"] = "Default",
-		["Raingarr - Thunderlord"] = "Default",
-		["Paingarr - Sargeras"] = "Default",
 		["Ignorc - Blackrock"] = "Default",
-	},
-	["global"] = {
-		["maxtimes"] = {
-			["TENCH"] = {
-				[6188] = 1607.8,
-			},
-		},
-		["build"] = "36949",
+		["Paingarr - Sargeras"] = "Default",
+		["Raingarr - Thunderlord"] = "Default",
+		["Flashlyte - Blackrock"] = "Default",
+		["Glaivegarr - Blackrock"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
 			["bargroups"] = {
 				{
-					["sorting"] = "timemax",
+					["anchorshown"] = false,
+					["anchortext"] = "BUFFS",
 					["scale"] = 1,
-					["id"] = 1,
 					["barspacing"] = 0,
 					["alpha"] = 0.5,
-					["y"] = 1072.500122070313,
 					["configmode"] = false,
+					["y"] = 1072.500122070313,
 					["x"] = 1427.000610351563,
 					["growup"] = false,
 					["filter"] = {
@@ -86,30 +86,35 @@ ElkBuffBarsDB = {
 							1, -- [3]
 							1, -- [4]
 						},
-						["height"] = 20,
+						["textTL"] = "NAMERANKCOUNT",
 						["textTLfont"] = "Friz Quadrata TT",
 						["tooltipcaster"] = true,
 						["textTRfontsize"] = 14,
 						["iconcountfont"] = "Friz Quadrata TT",
 						["timeformat"] = "CONDENSED",
-						["iconcountfontsize"] = 14,
+						["barcolor"] = {
+							0.3, -- [1]
+							0.5, -- [2]
+							1, -- [3]
+							0.8, -- [4]
+						},
 						["iconcountanchor"] = "CENTER",
-						["textTLfontsize"] = 14,
+						["timelessfull"] = false,
 						["textBRcolor"] = {
 							1, -- [1]
 							1, -- [2]
 							1, -- [3]
 						},
-						["bartexture"] = "Details Flat",
-						["width"] = 220,
+						["textTLfontsize"] = 14,
+						["textTLstyle"] = "",
 						["textTRcolor"] = {
 							1, -- [1]
 							1, -- [2]
 							1, -- [3]
 							1, -- [4]
 						},
-						["barright"] = false,
-						["textBLfont"] = "Friz Quadrata TT",
+						["bartexture"] = "Details Flat",
+						["debufftypecolor"] = true,
 						["iconcountcolor"] = {
 							1, -- [1]
 							1, -- [2]
@@ -117,28 +122,23 @@ ElkBuffBarsDB = {
 							1, -- [4]
 						},
 						["textBLstyle"] = "",
-						["textTLstyle"] = "",
-						["debufftypecolor"] = true,
+						["iconcountfontsize"] = 14,
+						["textBLfont"] = "Friz Quadrata TT",
 						["textBLfontsize"] = 14,
+						["barright"] = false,
 						["spark"] = true,
-						["timelessfull"] = false,
-						["barcolor"] = {
-							0.3, -- [1]
-							0.5, -- [2]
-							1, -- [3]
-							0.8, -- [4]
-						},
+						["width"] = 220,
 						["padding"] = 1,
 						["textBLalign"] = "LEFT",
-						["textTL"] = "NAMERANKCOUNT",
+						["height"] = 20,
 					},
-					["anchortext"] = "BUFFS",
-					["anchorshown"] = false,
+					["id"] = 1,
+					["sorting"] = "timemax",
 				}, -- [1]
 				{
-					["sorting"] = "timeleft",
-					["id"] = 2,
+					["anchorshown"] = false,
 					["scale"] = 1,
+					["id"] = 2,
 					["barspacing"] = 0,
 					["alpha"] = 1,
 					["stickto"] = 1,
@@ -186,30 +186,35 @@ ElkBuffBarsDB = {
 							1, -- [3]
 							1, -- [4]
 						},
-						["height"] = 20,
+						["textTL"] = "NAMERANKCOUNT",
 						["textTLfont"] = "Friz Quadrata TT",
 						["tooltipcaster"] = true,
 						["textTRfontsize"] = 14,
 						["iconcountfont"] = "Friz Quadrata TT",
 						["timeformat"] = "CONDENSED",
-						["iconcountfontsize"] = 14,
+						["barcolor"] = {
+							1, -- [1]
+							0, -- [2]
+							0, -- [3]
+							0.8, -- [4]
+						},
 						["iconcountanchor"] = "CENTER",
-						["textTLfontsize"] = 14,
+						["timelessfull"] = false,
 						["textBRcolor"] = {
 							1, -- [1]
 							1, -- [2]
 							1, -- [3]
 						},
-						["bartexture"] = "Details Flat",
-						["width"] = 220,
+						["textTLfontsize"] = 14,
+						["textTLstyle"] = "",
 						["textTRcolor"] = {
 							1, -- [1]
 							1, -- [2]
 							1, -- [3]
 							1, -- [4]
 						},
-						["barright"] = false,
-						["textBLfont"] = "Friz Quadrata TT",
+						["bartexture"] = "Details Flat",
+						["debufftypecolor"] = true,
 						["iconcountcolor"] = {
 							1, -- [1]
 							1, -- [2]
@@ -217,28 +222,23 @@ ElkBuffBarsDB = {
 							1, -- [4]
 						},
 						["textBLstyle"] = "",
-						["textTLstyle"] = "",
-						["debufftypecolor"] = true,
+						["iconcountfontsize"] = 14,
+						["textBLfont"] = "Friz Quadrata TT",
 						["textBLfontsize"] = 14,
+						["barright"] = false,
 						["spark"] = false,
-						["timelessfull"] = false,
-						["barcolor"] = {
-							1, -- [1]
-							0, -- [2]
-							0, -- [3]
-							0.8, -- [4]
-						},
+						["width"] = 220,
 						["padding"] = 1,
 						["textBLalign"] = "LEFT",
-						["textTL"] = "NAMERANKCOUNT",
+						["height"] = 20,
 					},
 					["stickside"] = "",
-					["anchorshown"] = false,
+					["sorting"] = "timemax",
 				}, -- [2]
 				{
-					["sorting"] = "timeleft",
-					["id"] = 3,
+					["anchorshown"] = false,
 					["scale"] = 1,
+					["id"] = 3,
 					["barspacing"] = 0,
 					["alpha"] = 0.5,
 					["stickto"] = 2,
@@ -286,30 +286,35 @@ ElkBuffBarsDB = {
 							1, -- [3]
 							1, -- [4]
 						},
-						["height"] = 20,
+						["textTL"] = "NAMERANKCOUNT",
 						["textTLfont"] = "Friz Quadrata TT",
 						["tooltipcaster"] = true,
 						["textTRfontsize"] = 14,
 						["iconcountfont"] = "Friz Quadrata TT",
 						["timeformat"] = "CONDENSED",
-						["iconcountfontsize"] = 14,
+						["barcolor"] = {
+							0.5, -- [1]
+							0, -- [2]
+							0.5, -- [3]
+							0.8, -- [4]
+						},
 						["iconcountanchor"] = "CENTER",
-						["textTLfontsize"] = 14,
+						["timelessfull"] = false,
 						["textBRcolor"] = {
 							1, -- [1]
 							1, -- [2]
 							1, -- [3]
 						},
-						["bartexture"] = "Details Flat",
-						["width"] = 220,
+						["textTLfontsize"] = 14,
+						["textTLstyle"] = "",
 						["textTRcolor"] = {
 							1, -- [1]
 							1, -- [2]
 							1, -- [3]
 							1, -- [4]
 						},
-						["barright"] = false,
-						["textBLfont"] = "Friz Quadrata TT",
+						["bartexture"] = "Details Flat",
+						["debufftypecolor"] = true,
 						["iconcountcolor"] = {
 							1, -- [1]
 							1, -- [2]
@@ -317,23 +322,18 @@ ElkBuffBarsDB = {
 							1, -- [4]
 						},
 						["textBLstyle"] = "",
-						["textTLstyle"] = "",
-						["debufftypecolor"] = true,
+						["iconcountfontsize"] = 14,
+						["textBLfont"] = "Friz Quadrata TT",
 						["textBLfontsize"] = 14,
+						["barright"] = false,
 						["spark"] = false,
-						["timelessfull"] = false,
-						["barcolor"] = {
-							0.5, -- [1]
-							0, -- [2]
-							0.5, -- [3]
-							0.8, -- [4]
-						},
+						["width"] = 220,
 						["padding"] = 1,
 						["textBLalign"] = "LEFT",
-						["textTL"] = "NAMERANKCOUNT",
+						["height"] = 20,
 					},
 					["stickside"] = "",
-					["anchorshown"] = false,
+					["sorting"] = "timemax",
 				}, -- [3]
 			},
 			["groupspacing"] = 0,

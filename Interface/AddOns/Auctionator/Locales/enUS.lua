@@ -246,6 +246,10 @@ AUCTIONATOR_LOCALES.enUS = function()
   L["SPLASH_903_FEATURES_1"] = "A new \"Export Results\" button has been added to the Shopping tab to export the current search results in CSV format, suitable for importing into Excel."
   L["SPLASH_903_FEATURES_2"] = "Favourite items in the Selling tab now stay visible even if they are no longer in your bag. This update resets your favourites list."
 
+  L["SPLASH_904_DESCRIPTION"] = "Bugfixes and a new history view"
+  L["SPLASH_904_FEATURES_HEADER"] = "Features"
+  L["SPLASH_904_FEATURES_1"] = "Right-clicking on a result in the Shopping tab will now open a dialog showing its price history."
+
   L["SPLASH_HIDE_MESSAGE"] = "Do not show until next update"
 
   L["LIST_ADD_ITEM_HEADER"] = "Add Shopping List Item"
@@ -272,6 +276,7 @@ AUCTIONATOR_LOCALES.enUS = function()
   L["SELECT_ALL"] = "Select All"
   L["UNSELECT_ALL"] = "Unselect All"
   L["CONFIRM"] = "Confirm"
+  L["ITEM_PRICE_HISTORY"] = "Item Price History"
 
   L["ANY_LOWER"] = "any"
 
@@ -365,6 +370,7 @@ AUCTIONATOR_LOCALES.enUS = function()
 
   L["HIDE"] = "Hide"
   L["RESTORE_ALL"] = "Restore All"
+  L["UNHIDE_ALL_HIDDEN_ITEMS"] = "Unhide all hidden items"
   L["FAVOURITES"] = "Favourites"
   L["ADD_FAVOURITE"] = "Add Favourite"
   L["REMOVE_FAVOURITE"] = "Remove Favourite"

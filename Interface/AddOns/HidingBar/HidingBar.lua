@@ -1,6 +1,7 @@
 local addon, L = ...
 local config, UIParent = _G[addon.."ConfigAddon"], UIParent
 local hidingBar = CreateFrame("FRAME", addon.."Addon", UIParent, "HidingBarAddonPanel")
+hidingBar:SetClampedToScreen(true)
 hidingBar.cover = CreateFrame("FRAME", nil, hidingBar)
 hidingBar.cover:Hide()
 hidingBar.cover:SetAllPoints()
@@ -23,6 +24,9 @@ local ignoreFrameList = {
 	["HelpOpenWebTicketButton"] = true,
 	["MinimapBackdrop"] = true,
 	["GarrisonLandingPageMinimapButton"] = true,
+	["MinimapZoomIn"] = true,
+	["MinimapZoomOut"] = true,
+	["MiniMapWorldMapButton"] = true,
 }
 
 
@@ -79,7 +83,7 @@ function hidingBar:ADDON_LOADED(addonName)
 		self.db.config = self.db.config or {}
 		self.config = self.db.config
 		self.config.orientation = self.config.orientation or 0
-		self.config.expand = self.config.expand or 0
+		self.config.expand = self.config.expand or 2
 		self.config.frameStrata = self.config.frameStrata or 2
 		self.config.fadeOpacity = self.config.fadeOpacity or .2
 		self.config.lineWidth = self.config.lineWidth or 4
@@ -195,11 +199,13 @@ function hidingBar:init()
 			end
 		end
 
-		self:grabMinimapAddonsButtons(t)
+		self:grabMinimapAddonsButtons(Minimap, t)
+		self:grabMinimapAddonsButtons(MinimapBackdrop, t)
 
 		if self.config.grabMinimapAfter then
 			C_Timer.After(tonumber(self.config.grabMinimapAfterN) or 1, function()
-				self:grabMinimapAddonsButtons(t)
+				self:grabMinimapAddonsButtons(Minimap, t)
+				self:grabMinimapAddonsButtons(MinimapBackdrop, t)
 				self:sort()
 				self:setButtonSize()
 				self:applyLayout()
@@ -447,6 +453,104 @@ function hidingBar:init()
 			proxyMail:HookScript("OnLeave", leave)
 			tinsert(self.minimapButtons, proxyMail)
 		end
+
+		-- ZOOM IN & ZOOM OUT
+		for _, zoom in next, {MinimapZoomIn, MinimapZoomOut} do
+			local name = zoom:GetName()
+			if self:ignoreCheck(name) then
+				self.config.mbtnSettings[name].tstmp = t
+				self:setHooks(zoom)
+
+				if self.MSQ_MButton then
+					zoom.icon = zoom:CreateTexture(nil, "ARTWORK")
+					zoom.icon:SetTexture(zoom:GetNormalTexture():GetTexture())
+					zoom.icon:SetAllPoints()
+					zoom.data = {iconCoords = {.24, .79, .21, .76}}
+					zoom.icon.dSetTexCoord = zoom.icon.SetTexCoord
+					zoom.icon.SetTexCoord = setTexCoord
+					zoom:SetScript("OnMouseDown", function(self) self.icon:SetScale(.9) end)
+					zoom:SetScript("OnMouseUp", function(self) self.icon:SetScale(1) end)
+					local data = {
+						_Pushed = zoom:GetPushedTexture(),
+						Icon = zoom.icon,
+						Highlight = zoom:GetHighlightTexture(),
+					}
+					self.MSQ_MButton_Data[zoom] = data
+					self.MSQ_MButton:AddButton(zoom, data, nil,  true)
+					self:MSQ_MButton_Update(zoom)
+				else
+					zoom.icon = zoom:GetNormalTexture()
+				end
+
+				zoom.click = zoom:GetScript("OnClick")
+				zoom.Disable = function(zoom)
+					zoom:SetScript("OnClick", nil)
+					zoom.icon:SetDesaturated(true)
+					zoom:GetPushedTexture():SetDesaturated(true)
+				end
+				zoom.Enable = function(zoom)
+					zoom:SetScript("OnClick", zoom.click)
+					zoom.icon:SetDesaturated(false)
+					zoom:GetPushedTexture():SetDesaturated(false)
+				end
+				if not zoom:IsEnabled() then
+					zoom:Disable()
+				end
+
+				self.SetClipsChildren(zoom, true)
+				self.SetAlpha(zoom, 1)
+				self.SetHitRectInsets(zoom, 0, 0, 0, 0)
+				getmetatable(zoom).__index.Enable(zoom)
+				self.SetParent(zoom, self)
+				self.HookScript(zoom, "OnEnter", enter)
+				self.HookScript(zoom, "OnLeave", leave)
+				tinsert(self.minimapButtons, zoom)
+			end
+		end
+
+		-- WORLD MAP BUTTON
+		if self:ignoreCheck("MiniMapWorldMapButton") then
+			self.config.mbtnSettings["MiniMapWorldMapButton"].tstmp = t
+			local mapButton = MiniMapWorldMapButton
+			self:setHooks(mapButton)
+			mapButton.puched = mapButton:GetPushedTexture()
+			mapButton.highligt = mapButton:GetHighlightTexture()
+
+			if self.MSQ_MButton then
+				mapButton.icon = mapButton:CreateTexture(nil, "ARTWORK")
+				mapButton.icon:SetTexture("Interface/QuestFrame/UI-QuestMap_Button")
+				mapButton.icon:SetAllPoints()
+				mapButton.data = {iconCoords = {.125, .875, 0, .5}}
+				mapButton.icon.dSetTexCoord = mapButton.icon.SetTexCoord
+				mapButton.icon.SetTexCoord = setTexCoord
+				mapButton:SetScript("OnMouseDown", function(self) self.icon:SetScale(.9) end)
+				mapButton:SetScript("OnMouseUp", function(self) self.icon:SetScale(1) end)
+				local data = {
+					_Pushed = mapButton.puched,
+					Icon = mapButton.icon,
+					Highlight = mapButton.highligt,
+				}
+				self.MSQ_MButton_Data[mapButton] = data
+				self.MSQ_MButton:AddButton(mapButton, data, nil,  true)
+				self:MSQ_MButton_Update(mapButton)
+			else
+				mapButton.icon = mapButton:GetNormalTexture()
+				mapButton.icon:SetTexture("Interface/QuestFrame/UI-QuestMap_Button")
+				mapButton.icon:SetTexCoord(.125, .875, 0, .5)
+				mapButton.puched:SetTexture("Interface/QuestFrame/UI-QuestMap_Button")
+				mapButton.puched:SetTexCoord(.125, .875, .5, 1)
+				mapButton.highligt:SetTexture("Interface/BUTTONS/ButtonHilight-Square")
+				mapButton.highligt:SetAllPoints()
+			end
+
+			self.SetClipsChildren(mapButton, true)
+			self.SetAlpha(mapButton, 1)
+			self.SetHitRectInsets(mapButton, 0, 0, 0, 0)
+			self.SetParent(mapButton, self)
+			self.HookScript(mapButton, "OnEnter", enter)
+			self.HookScript(mapButton, "OnLeave", leave)
+			tinsert(self.minimapButtons, mapButton)
+		end
 	end
 
 	local tstmp = self.db.tstmp or t
@@ -567,8 +671,8 @@ function hidingBar:addButton(name, data, update)
 end
 
 
-function hidingBar:grabMinimapAddonsButtons(t)
-	for _, child in ipairs({Minimap:GetChildren()}) do
+function hidingBar:grabMinimapAddonsButtons(parentFrame, t)
+	for _, child in ipairs({parentFrame:GetChildren()}) do
 		local name = child:GetName()
 		local width, height = child:GetSize()
 		if not ignoreFrameList[name] and self:ignoreCheck(name) and max(width, height) > 16 and math.abs(width - height) < 5 then
@@ -583,7 +687,7 @@ function hidingBar:grabMinimapAddonsButtons(t)
 					self:setHooks(child)
 				end
 
-				if child:GetObjectType() == "Button" and self.MSQ_MButton then
+				if self.MSQ_MButton and child:GetObjectType() == "Button" then
 					self:setMButtonRegions(child)
 				end
 
@@ -661,7 +765,7 @@ function hidingBar:setMButtonRegions(btn)
 				icon = region
 			end
 			if name:find("highlight") or layer == "HIGHLIGHT" then
-				highligt = region
+				highlight = region
 			end
 		end
 	end
@@ -670,9 +774,11 @@ function hidingBar:setMButtonRegions(btn)
 			_Border = border,
 			_Background = background,
 			Icon = icon,
-			Highlight = highligt,
+			Highlight = highlight,
 		}
 		self.MSQ_MButton_Data[btn] = data
+	elseif highlight then
+		data = {Highlight = highlight}
 	end
 	self.MSQ_MButton:AddButton(btn, data, nil, true)
 	self:MSQ_MButton_Update(btn)
@@ -879,34 +985,39 @@ end
 
 function hidingBar:setBarAnchor(anchor)
 	if not self.config.freeMove or self.config.anchor == anchor then return end
-	local position, secondPosition
+	local x, y, position, secondPosition = self:GetCenter()
+	self.config.anchor = anchor
+	local width, height = self:applyLayout()
+	width, height = width / 2, height / 2
 
 	if anchor == "left" or anchor == "right" then
 		if self.config.expand == 0 then
-			position = self:GetTop()
+			position = y + height
+		elseif self.config.expand == 1 then
+			position = y - height
 		else
-			position = self:GetBottom()
+			position = y
 		end
 	else
 		if self.config.expand == 0 then
-			position = self:GetLeft()
+			position = x - width
+		elseif self.config.expand == 1 then
+			position = x + width
 		else
-			position = self:GetRight()
+			position = x
 		end
 	end
 
 	if anchor == "left" then
-		secondPosition = self:GetLeft()
+		secondPosition = x - width
 	elseif anchor == "right" then
-		secondPosition = self:GetRight() - UIParent:GetWidth()
+		secondPosition = x + width - UIParent:GetWidth()
 	elseif anchor == "top" then
-		secondPosition = self:GetTop() - UIParent:GetHeight()
+		secondPosition = y + height - UIParent:GetHeight()
 	else
-		secondPosition = self:GetBottom()
+		secondPosition = y - height
 	end
 
-	self.config.anchor = anchor
-	self:applyLayout()
 	self:setBarPosition(position, secondPosition)
 end
 
@@ -921,6 +1032,11 @@ function hidingBar:setBarExpand(expand)
 		delta = -self:GetWidth()
 	end
 
+	if self.config.expand == 2 or expand == 2 then
+		delta = delta / 2
+		if self.config.expand == 1 then delta = -delta end
+	end
+
 	if expand == 0 then
 		position = self.position + delta
 	else
@@ -932,54 +1048,60 @@ function hidingBar:setBarExpand(expand)
 end
 
 
-function hidingBar:setBarPosition(position, secondPosition)
-	local width, height = self:GetSize()
-	local scale = UIParent:GetScale()
-	local anchor = self.config.anchor
+do
+	local pointForExpand = {
+		left   = {[0] = "TOPLEFT",    "BOTTOMLEFT",  "LEFT"},
+		right  = {[0] = "TOPRIGHT",   "BOTTOMRIGHT", "RIGHT"},
+		top    = {[0] = "TOPLEFT",    "TOPRIGHT",    "TOP"},
+		bottom = {[0] = "BOTTOMLEFT", "BOTTOMRIGHT", "BOTTOM"},
+	}
 
-	if position then
-		self.position = position
-		self.config.position = position * scale
-	end
+	function hidingBar:setBarPosition(position, secondPosition)
+		local width, height = self:GetSize()
+		local scale = UIParent:GetScale()
+		local anchor = self.config.anchor
 
-	if secondPosition then
-		self.secondPosition = secondPosition
-		self.config.secondPosition = secondPosition * scale
-	end
+		if position then
+			self.position = position
+			self.config.position = position * scale
+		end
 
-	if not self.position then
-		if not self.config.position then
-			if anchor == "left" or anchor =="right" then
-				self.config.position = WorldFrame:GetHeight() / 2 - height / 2 * scale
-			else
-				self.config.position = WorldFrame:GetWidth() / 2 - width / 2 * scale
+		if secondPosition then
+			self.secondPosition = secondPosition
+			self.config.secondPosition = secondPosition * scale
+		end
+
+		if not self.position then
+			if not self.config.position then
+				if anchor == "left" or anchor =="right" then
+					self.config.position = WorldFrame:GetHeight() / 2
+				else
+					self.config.position = WorldFrame:GetWidth() / 2
+				end
 			end
+			self.position = self.config.position / scale
 		end
-		self.position = self.config.position / scale
-	end
 
-	if not self.secondPosition then
-		if not self.config.secondPosition then
-			self.config.secondPosition = 0
+		if not self.secondPosition then
+			if not self.config.secondPosition then
+				self.config.secondPosition = 0
+			end
+			self.secondPosition = self.config.secondPosition / scale
 		end
-		self.secondPosition = self.config.secondPosition / scale
-	end
 
-	config:updateCoords()
+		config:updateCoords()
 
-	self:ClearAllPoints()
-	if anchor == "left" then
-		local point = self.config.expand == 0 and "TOPLEFT" or "BOTTOMLEFT"
-		self:SetPoint(point, UIParent, "BOTTOMLEFT", self.secondPosition, self.position)
-	elseif anchor == "right" then
-		local point = self.config.expand == 0 and "TOPRIGHT" or "BOTTOMRIGHT"
-		self:SetPoint(point, UIParent, "BOTTOMRIGHT", self.secondPosition, self.position)
-	elseif anchor == "top" then
-		local point = self.config.expand == 0 and "TOPLEFT" or "TOPRIGHT"
-		self:SetPoint(point, UIParent, "TOPLEFT", self.position, self.secondPosition)
-	else
-		local point = self.config.expand == 0 and "BOTTOMLEFT" or "BOTTOMRIGHT"
-		self:SetPoint(point, UIParent, "BOTTOMLEFT", self.position, self.secondPosition)
+		local point = pointForExpand[anchor][self.config.expand]
+		self:ClearAllPoints()
+		if anchor == "left" then
+			self:SetPoint(point, UIParent, "BOTTOMLEFT", self.secondPosition, self.position)
+		elseif anchor == "right" then
+			self:SetPoint(point, UIParent, "BOTTOMRIGHT", self.secondPosition, self.position)
+		elseif anchor == "top" then
+			self:SetPoint(point, UIParent, "TOPLEFT", self.position, self.secondPosition)
+		else
+			self:SetPoint(point, UIParent, "BOTTOMLEFT", self.position, self.secondPosition)
+		end
 	end
 end
 
@@ -1024,16 +1146,30 @@ function hidingBar:dragBar()
 	end
 
 	if anchor == "left" or anchor == "right" then
-		local delta = self.config.expand == 0 and -height or height
-		position = y - delta / 2
+		local delta
+		if self.config.expand == 0 then
+			delta = -height / 2
+		elseif self.config.expand == 1 then
+			delta = height / 2
+		else
+			delta = 0
+		end
+		position = y - delta
 		if self.config.freeMove then
 			local dhWidth = self.drag:GetWidth() / 2
 			delta = anchor == "left" and width + dhWidth or UIwidth - width - dhWidth
 			secondPosition = x - delta
 		end
 	else
-		local delta = self.config.expand == 0 and width or -width
-		position = x - delta / 2
+		local delta
+		if self.config.expand == 0 then
+			delta = width / 2
+		elseif self.config.expand == 1 then
+			delta = -width / 2
+		else
+			delta = 0
+		end
+		position = x - delta
 		if self.config.freeMove then
 			local dhHeight = self.drag:GetHeight() / 2
 			delta = anchor == "top" and UIheight - height - dhHeight or height + dhHeight
