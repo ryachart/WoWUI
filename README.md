@@ -1,5 +1,5 @@
 # Angarr UI
-Preview (1/2/2021):
+Preview (1/5/2021):
 ![](https://github.com/ryachart/WoWUI/blob/main/MistgarrUI.gif?raw=true)
 
 ## Description
