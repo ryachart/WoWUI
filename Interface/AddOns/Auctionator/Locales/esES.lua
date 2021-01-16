@@ -328,12 +328,9 @@ L["SPLASH_903_DESCRIPTION"] = "Una corrección de errores y un par de funciones 
 L["SPLASH_903_FEATURES_1"] = "Se ha añadido un nuevo botón de \"Exportar resultados\" a la pestaña Compras para exportar los resultados de búsqueda actuales en formato CSV, adecuado para importarlos a Excel."
 L["SPLASH_903_FEATURES_2"] = "Los objetos favoritos en la pestaña Venta ahora permanecen visibles incluso si ya no están en tu bolsa. Esta actualización restablece tu lista de favoritos."
 L["SPLASH_903_FEATURES_HEADER"] = "Características"
---[[Translation missing --]]
-L["SPLASH_904_DESCRIPTION"] = "Bugfixes and a new history view"
---[[Translation missing --]]
-L["SPLASH_904_FEATURES_1"] = "Right-clicking on a result in the Shopping tab will now open a dialog showing its price history."
---[[Translation missing --]]
-L["SPLASH_904_FEATURES_HEADER"] = "Features"
+L["SPLASH_904_DESCRIPTION"] = "Corrección de errores y una nueva vista del historial"
+L["SPLASH_904_FEATURES_1"] = "Al hacer clic con el botón derecho en un resultado en la pestaña Compras, ahora se abrirá un cuadro de diálogo que muestra su historial de precios."
+L["SPLASH_904_FEATURES_HEADER"] = "Caracteristicas"
 L["SPLASH_HIDE_MESSAGE"] = "No mostrar hasta la próxima actualización"
 L["SPLASH_SCREEN_HEADER"] = "Bienvenido a Auctionator"
 L["STACK_AUCTION_INFO"] = "%s para %s (en %s cada una)"

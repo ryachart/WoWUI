@@ -5,11 +5,13 @@ VER 3 0100000000000015 "BlackoutKickTrin" "574575"
 END
 VER 3 0100000000000017 "BreathOfTrinket" "615339"
 #showtooltip Breath of Fire
+/cancelqueuedspell
 /use 14
 /cast Breath of Fire
 END
 VER 3 0100000000000019 "DetoxMouseover" "460692"
 #showtooltip Detox
+/cancelqueuedspell
 /cast [@mouseover,exists,help]Detox; Detox;
 END
 VER 3 010000000000000C "EMBlackout" "SPELL_MONK_ENVELOPINGMIST"
@@ -20,22 +22,23 @@ VER 3 0100000000000014 "FocusInpt" "608940"
 #showtooltip
 /cast [@focus,exists]Spear Hand Strike; Spear Hand Strike
 END
-VER 3 0100000000000016 "KegTrinket" "594274"
+VER 3 0100000000000016 "KegSmash" "594274"
 #showtooltip Keg Smash
-/use 13
+/cancelqueuedspell
 /cast Keg Smash
 END
-VER 3 0100000000000013 "ManaTeaTrinkets" "136099"
+VER 3 0100000000000013 "ManaTeaTrinkets" "574571"
 #showtooltip Invoke Yu'lon, the Jade Serpent
 /use 13
 /cast Invoke Yu'lon, the Jade Serpent
 END
-VER 3 0100000000000011 "PalmVivify" "606551"
+VER 3 010000000000001B "PalmViv" "606551"
 #showtooltip
-/cast [help]Vivify;[harm]Tiger Palm
+/cast [@mouseover,help,exists]Vivify;[harm]Tiger Palm;[help]Vivify;
 END
 VER 3 010000000000000E "RemMouseover" "ABILITY_MONK_RENEWINGMISTS"
 #showtooltip Renewing Mist
+/cancelqueuedspell
 /cast [@mouseover, help, exists]Renewing Mist;Renewing Mist
 END
 VER 3 010000000000001A "SerpentCursor" "620831"
@@ -48,7 +51,9 @@ VER 3 010000000000000B "SMMouseover" "606550"
 END
 VER 3 0100000000000012 "TrinketSEF" "INV_MISC_QUESTIONMARK"
 #showtooltip Storm, Earth, and Fire
+/cancelqueuedspell
 /use 13
+/use 14
 /cast Storm, Earth, and Fire
 END
 VER 3 010000000000000D "VivifyRSK" "ABILITY_MONK_VIVIFY"

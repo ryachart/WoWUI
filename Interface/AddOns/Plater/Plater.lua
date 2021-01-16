@@ -821,6 +821,8 @@ Plater.DefaultSpellRangeListF = {
 
 	--if true, the animation will update its settings before play
 	local IS_EDITING_SPELL_ANIMATIONS = false
+	
+	local HOOKED_BLIZZARD_PLATEFRAMES = {}
 
 	--store a list of friendly players in the player friends list
 	Plater.FriendsCache = {}
@@ -1469,6 +1471,7 @@ Plater.DefaultSpellRangeListF = {
 		["nameplateOtherAtBase"] = true,
 		["nameplateOtherTopInset"] = true,
 		["nameplateOverlapV"] = true,
+		["nameplateOverlapH"] = true,
 		["nameplatePersonalHideDelaySeconds"] = true,
 		["nameplatePersonalShowAlways"] = true,
 		["nameplatePersonalShowInCombat"] = true,
@@ -2908,10 +2911,14 @@ Plater.DefaultSpellRangeListF = {
 				unitFrame.ShowUIParentAnimation:Play()
 			end
 			
-			if (not plateFrame.UnitFrame.HasPlaterHooksRegistered) then
+			--if (not plateFrame.UnitFrame.HasPlaterHooksRegistered) then
+			if not HOOKED_BLIZZARD_PLATEFRAMES[tostring(plateFrame.UnitFrame)] then
+				--print(HOOKED_BLIZZARD_PLATEFRAMES[tostring(plateFrame.UnitFrame)], tostring(plateFrame.UnitFrame), plateFrame.UnitFrame.HasPlaterHooksRegistered)
                 --hook the retail nameplate
-                plateFrame.UnitFrame:HookScript("OnShow", Plater.OnRetailNamePlateShow)
-                plateFrame.UnitFrame.HasPlaterHooksRegistered = true
+                --plateFrame.UnitFrame:HookScript("OnShow", Plater.OnRetailNamePlateShow)
+				hooksecurefunc(plateFrame.UnitFrame, "Show", Plater.OnRetailNamePlateShow)
+                --plateFrame.UnitFrame.HasPlaterHooksRegistered = true
+				HOOKED_BLIZZARD_PLATEFRAMES[tostring(plateFrame.UnitFrame)] = true
 				
             end
 			
@@ -3047,12 +3054,12 @@ Plater.DefaultSpellRangeListF = {
 			Plater.QuickHealthUpdate (unitFrame)
 			healthBar.IsAnimating = false
 			
-			if (not DB_USE_HEALTHCUTOFF) then
-				healthBar.healthCutOff:Hide()
-				healthBar.executeRange:Hide()
-				healthBar.ExecuteGlowUp:Hide()
-				healthBar.ExecuteGlowDown:Hide()
-			end
+			--hide execute indicators
+			healthBar.healthCutOff:Hide()
+			healthBar.executeRange:Hide()
+			healthBar.ExecuteGlowUp:Hide()
+			healthBar.ExecuteGlowDown:Hide()
+			
 			
 			local actorType
 			
@@ -3349,7 +3356,7 @@ Plater.DefaultSpellRangeListF = {
 			CompactUnitFrame_UnregisterEvents (self)
 		end
 		if (CompactUnitFrame_ClearWidgetSet) then
-			CompactUnitFrame_ClearWidgetSet (self)
+			--CompactUnitFrame_ClearWidgetSet (self)
 		end
 		--this is quite drastical and might break other stuff on retail nameplates in dungeons/raids:
 		--self.WidgetContainer = nil
@@ -4478,8 +4485,9 @@ function Plater.OnInit() --private --~oninit ~init
 		end
 	end)
 	
-	-- hook to the InterfaceOptionsFrame and update the nameplate sizes, as blizzard somehow messes things up there on hide...
+	-- hook to the InterfaceOptionsFrame and VideoOptionsFrame to update the nameplate sizes, as blizzard somehow messes things up there on hide...
 	InterfaceOptionsFrame:HookScript('OnHide',Plater.UpdatePlateClickSpace)
+	VideoOptionsFrame:HookScript('OnHide',Plater.UpdatePlateClickSpace)
 end
 
 
@@ -9113,10 +9121,21 @@ end
 		end
 		
 		if (scriptType == "script") then
-			--scripts = DF.table.copy({}, Plater.db.profile.script_data)
+			--cleanup first
+			for scriptId, scriptObject in ipairs (Plater.db.profile.script_data) do
+				scriptObject.scriptId = nil
+			end
+			
+			--copy
 			scripts = copyHookTables({}, Plater.db.profile.script_data)
+			
 		elseif (scriptType == "hook") then
-			--scripts = DF.table.copy({}, Plater.db.profile.hook_data)
+			--cleanup first
+			for scriptId, scriptObject in ipairs (Plater.db.profile.hook_data) do
+				scriptObject.scriptId = nil
+			end
+			
+			--copy
 			scripts = copyHookTables({}, Plater.db.profile.hook_data)
 		end
 		
@@ -9191,6 +9210,7 @@ end
 		["Plater"] = {
 			["CompileAllScripts"] = true,
 			["GetAllScripts"] = true,
+			["GetAllScriptsAsPrioSortedCopy"] = true,
 			["ScriptMetaFunctions"] = true,
 			["DecompressData"] = true,
 			["CompressData"] = true,

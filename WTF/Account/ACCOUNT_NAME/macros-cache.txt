@@ -1,3 +1,8 @@
+VER 3 0000000000000036 "CelestialBrew" "1360979"
+#showtooltip
+/cancelqueuedspell
+/cast Celestial Brew
+END
 VER 3 000000000000001E "Focus" "135766"
 /focus
 END
@@ -17,6 +22,10 @@ END
 VER 3 0000000000000016 "Illidan Start" "Ability_Ambush"
 /script PlaySoundFile("Sound\\Creature\\Illidan\\BLACK_Illidan_01.wav")
 END
+VER 3 0000000000000033 "MouseoverCocoon" "627485"
+#showtooltip
+/cast [@mouseover,help,exists]Life Cocoon; Life Cocoon
+END
 VER 3 0000000000000012 "Mumble" "Ability_Creature_Cursed_05"
 /raid Please Join me in Mumble (Get it @ mumble.com)
 /raid helios.typefrag.com port: 59660 pw: hotcakes
@@ -25,4 +34,18 @@ VER 3 0000000000000012 "Mumble" "Ability_Creature_Cursed_05"
 END
 VER 3 000000000000002E "ReleaseSpirit" "897136"
 /run RepopMe()
+END
+VER 3 0000000000000034 "TLustMouseover" "651727"
+#showtooltip Tiger's Lust
+/cast [@mouseover,help,exists]Tiger's Lust; Tiger's Lust
+END
+VER 3 0000000000000038 "TouchOfDeathCQ" "606552"
+#showtooltip Touch of Death
+/cancelqueuedspell
+/cast Touch of Death
+END
+VER 3 0000000000000037 "WhirlingDragon" "988194"
+#showtooltip
+/cancelqueuedspell
+/cast Whirling Dragon Punch
 END

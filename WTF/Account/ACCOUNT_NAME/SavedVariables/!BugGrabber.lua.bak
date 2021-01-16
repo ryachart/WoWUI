@@ -1,8 +1,8 @@
 
 BugGrabberDB = {
 	["stopnag"] = 90002,
-	["session"] = 470,
 	["lastSanitation"] = 3,
+	["session"] = 513,
 	["errors"] = {
 		{
 			["message"] = "Interface\\AddOns\\AstralKeys\\MinimapButton.lua:21: attempt to index field 'general' (a nil value)",
@@ -747,8 +747,8 @@ BugGrabberDB = {
 		}, -- [96]
 		{
 			["message"] = "(null)",
-			["session"] = 372,
 			["time"] = "2019/11/05 20:37:11",
+			["session"] = 372,
 			["counter"] = 73,
 		}, -- [97]
 		{
@@ -879,5 +879,35 @@ BugGrabberDB = {
 			["session"] = 470,
 			["counter"] = 7,
 		}, -- [114]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'Auctionator' tried to call the protected function 'CompactRaidGroup3Member3:Show()'.",
+			["time"] = "2021/01/05 12:45:56",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:376: in function `CompactUnitFrame_UpdateVisible'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:307: in function `CompactUnitFrame_UpdateAll'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:126: in function <Interface\\FrameXML\\CompactUnitFrame.lua:57>",
+			["session"] = 472,
+			["counter"] = 1,
+		}, -- [115]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'Auctionator' tried to call the protected function 'CompactRaidFrameContainer:Hide()'.",
+			["time"] = "2021/01/06 16:44:43",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface\\AddOns\\Blizzard_CompactRaidFrames\\Blizzard_CompactRaidFrameManager.lua\"]:530: in function `CompactRaidFrameManager_UpdateContainerVisibility'\n[string \"@Interface\\AddOns\\Blizzard_CompactRaidFrames\\Blizzard_CompactRaidFrameManager.lua\"]:475: in function <...mpactRaidFrames\\Blizzard_CompactRaidFrameManager.lua:464>\n[string \"@Interface\\AddOns\\Blizzard_CompactRaidFrames\\Blizzard_CompactRaidFrameManager.lua\"]:514: in function `CompactRaidFrameManager_SetSetting'\n[string \"@Interface\\AddOns\\Blizzard_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua\"]:594: in function `func'\n[string \"@Interface\\AddOns\\Blizzard_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua\"]:571: in function `CompactUnitFrameProfiles_ApplyProfile'\n[string \"@Interface\\AddOns\\Blizzard_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua\"]:174: in function `CompactUnitFrameProfiles_ApplyCurrentSettings'\n[string \"@Interface\\AddOns\\Blizzard_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua\"]:83: in function `CompactUnitFrameProfiles_CancelChanges'\n[string \"@Interface\\AddOns\\Blizzard_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua\"]:76: in function <...rd_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua:74>\n[string \"=[C]\"]: in function `pcall'\n[string \"@Interface\\FrameXML\\InterfaceOptionsFrame.lua\"]:215: in function <Interface\\FrameXML\\InterfaceOptionsFrame.lua:214>\n[string \"=[C]\"]: ?\n[string \"@Interface\\FrameXML\\InterfaceOptionsFrame.lua\"]:250: in function <Interface\\FrameXML\\InterfaceOptionsFrame.lua:246>\n[string \"=[C]\"]: in function `Click'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:4304: in function `ToggleGameMenu'\n[string \"TOGGLEGAMEMENU\"]:1: in function <[string \"TOGGLEGAMEMENU\"]:1>",
+			["session"] = 483,
+			["counter"] = 1,
+		}, -- [116]
+		{
+			["message"] = "Interface\\SharedXML\\OptionsPanelTemplates.lua:149: attempt to call method 'SetValue' (a nil value)",
+			["time"] = "2021/01/08 18:17:39",
+			["locals"] = "checkButton = DBM_GUI_Option_387 {\n 0 = <userdata>\n myheight = 25\n newValue = \"1\"\n mytype = \"checkbutton\"\n SetPoint = <function> defined @Interface\\AddOns\\DBM-GUI\\modules\\PanelPrototype.lua:255\n SetPointOld = <function> defined =[C]:-1\n}\nisChecked = true\nsetting = \"1\"\n(*temporary) = nil\n(*temporary) = DBM_GUI_Option_387 {\n 0 = <userdata>\n myheight = 25\n newValue = \"1\"\n mytype = \"checkbutton\"\n SetPoint = <function> defined @Interface\\AddOns\\DBM-GUI\\modules\\PanelPrototype.lua:255\n SetPointOld = <function> defined =[C]:-1\n}\n(*temporary) = \"1\"\n(*temporary) = \"attempt to call method 'SetValue' (a nil value)\"\n",
+			["stack"] = "[string \"@Interface\\SharedXML\\OptionsPanelTemplates.lua\"]:149: in function `BlizzardOptionsPanel_CheckButton_SetNewValue'\n[string \"@Interface\\SharedXML\\OptionsPanelTemplates.lua\"]:129: in function `BlizzardOptionsPanel_CheckButton_OnClick'\n[string \"*:OnClick\"]:6: in function <[string \"*:OnClick\"]:1>",
+			["session"] = 492,
+			["counter"] = 1,
+		}, -- [117]
+		{
+			["message"] = "Interface\\SharedXML\\FrameUtil.lua:57: Action[FrameMeasurement] failed because[Can't measure restricted regions]: attempted from: <unnamed>:GetScaledRect().",
+			["time"] = "2021/01/09 17:07:22",
+			["locals"] = "(*temporary) = <unnamed> {\n FadeOutAnim = <unnamed> {\n }\n OnEnter = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:40\n Label = <unnamed> {\n }\n OutAnimFinished = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:133\n tooltipYOffset = 0\n GetWidgetWidth = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:122\n widgetType = 2\n GetWidgetHeight = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:126\n SetTooltipOwner = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:36\n Setup = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateStatusBar.lua:38\n UpdateMouseEnabled = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:12\n partitionPool = <table> {\n }\n InAnimFinished = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:130\n widgetContainer = <unnamed> {\n }\n FadeInAnim = <unnamed> {\n }\n SetFontColor = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:103\n AnimOut = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:171\n layoutDirection = 0\n outAnimType = 0\n inAnimType = 0\n widgetTag = \"\"\n AnimIn = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:155\n orderIndex = 1\n hasTimer = false\n SetEnabledState = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:111\n ResetAnimState = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:149\n 0 = <userdata>\n OnLoad = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateStatusBar.lua:115\n OnReset = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateStatusBar.lua:120\n GetOutAnim = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:143\n GetInAnim = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:137\n OnLeave = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:81\n widgetSetID = 268\n SetTooltip = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:22\n widgetID = 2167\n Bar = <unnamed> {\n }\n tooltipAnchor = \"ANCHOR_BOTTOMLEFT\"\n tooltipXOffset = 0\n SetMouse = <function> defined @Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetTemplateBase.lua:3\n}\n",
+			["stack"] = "[string \"=[C]\"]: in function `GetScaledRect'\n[string \"@Interface\\SharedXML\\FrameUtil.lua\"]:57: in function `GetUnscaledFrameRect'\n[string \"@Interface\\SharedXML\\LayoutFrame.lua\"]:288: in function <Interface\\SharedXML\\LayoutFrame.lua:287>\n[string \"@Interface\\SharedXML\\LayoutFrame.lua\"]:325: in function `Layout'\n[string \"@Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetManager.lua\"]:137: in function `layoutFunc'\n[string \"@Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetManager.lua\"]:480: in function `UpdateWidgetLayout'\n[string \"@Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetManager.lua\"]:456: in function `ProcessAllWidgets'\n[string \"@Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetManager.lua\"]:182: in function `RegisterForWidgetSet'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:1131: in function `CompactUnitFrame_UpdateWidgetSet'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:329: in function `CompactUnitFrame_UpdateAll'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:194: in function `CompactUnitFrame_SetUnit'\n[string \"@Interface\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua\"]:417: in function `OnAdded'\n[string \"@Interface\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua\"]:118: in function `OnNamePlateAdded'\n[string \"@Interface\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua\"]:56: in function <...e\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua:47>",
+			["session"] = 494,
+			["counter"] = 1,
+		}, -- [118]
 	},
 }

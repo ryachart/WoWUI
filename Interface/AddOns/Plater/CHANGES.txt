@@ -1,40 +1,126 @@
-lightweight tag 51c3300914ec490d1fdce8d4b3c6ea27c97cf22a Plater-v9.0.1.323-Retail
-Author:	Tercio Jose <terciob19@hotmail.com>
-Date:	Thu Dec 24 20:41:16 2020 -0300
+lightweight tag de61395103f7e5d1b4782213f0b36c8c06e8c86c Plater-v9.0.2.324-Retail
+Author:	Continuity <continuity@gmx.net>
+Date:	Sat Jan 9 22:59:46 2021 +0100
 
-commit 51c3300914ec490d1fdce8d4b3c6ea27c97cf22a
-Author: Tercio Jose <terciob19@hotmail.com>
-Date:   Thu Dec 24 20:41:16 2020 -0300
-
-    Ingame Change Logs
-
-commit 5ee64c4af8ac8fd8a236ca0968e20bf895b22421
-Author: Tercio Jose <terciob19@hotmail.com>
-Date:   Thu Dec 24 20:37:24 2020 -0300
-
-    Added script to show the time to die of Spiteful affix units
-
-commit 368c747f01b76b117a48c0a12f4b75092189ec5b
-Author: Tercio Jose <terciob19@hotmail.com>
-Date:   Thu Dec 24 18:34:50 2020 -0300
-
-    df update
-
-commit 368c747f01b76b117a48c0a12f4b75092189ec5b
-Author: Tercio Jose <terciob19@hotmail.com>
-Date:   Thu Dec 24 18:34:50 2020 -0300
-
-    df update
-
-commit ff946583ded032e855506b33e2ba7c4679820af0
+commit de61395103f7e5d1b4782213f0b36c8c06e8c86c
 Author: Continuity <continuity@gmx.net>
-Date:   Tue Dec 22 19:52:45 2020 +0100
+Date:   Sat Jan 9 22:59:46 2021 +0100
 
-    - updating Aura Reorder to use new internal sorting
+    - updating changelog
 
-commit ff946583ded032e855506b33e2ba7c4679820af0
+commit a6f38818e3e20b48e95c73daf34927165847642f
 Author: Continuity <continuity@gmx.net>
-Date:   Tue Dec 22 19:52:45 2020 +0100
+Date:   Sat Jan 9 02:12:13 2021 +0100
 
-    - updating Aura Reorder to use new internal sorting
+    - renaming option
+
+commit 20fb18f6b3b5c2fcf4536237612ecdae16304df6
+Author: Continuity <continuity@gmx.net>
+Date:   Sat Jan 9 02:10:58 2021 +0100
+
+    - tooltip correction
+
+commit 150e865a2cb3ef23b09ba01e8f7827d304c97afe
+Author: Continuity <continuity@gmx.net>
+Date:   Sat Jan 9 02:08:17 2021 +0100
+
+    - clarifictaion on stacking nameplates option tooltip
+
+commit 8bcf8c5aa500c98ae5f7e09b05148b32847b5ad3
+Author: Continuity <continuity@gmx.net>
+Date:   Sat Jan 9 02:08:03 2021 +0100
+
+    - Fixing typo
+
+commit 2acbf460019ea681d1a9507e5fcccea80a3149bb
+Author: Continuity <continuity@gmx.net>
+Date:   Sat Jan 9 02:07:55 2021 +0100
+
+    - adding option for nameplateOverlapH
+
+commit 150b4648777d7740695782397a36d94d8da85869
+Author: Continuity <continuity@gmx.net>
+Date:   Sat Jan 9 02:06:12 2021 +0100
+
+    - DF lib update
+
+commit f3bbf856229431bda08dd56854b1b06a6c52c119
+Author: Fredrick Robehmed <freddy090909@gmail.com>
+Date:   Thu Jan 7 11:21:34 2021 -0600
+
+    Add glyphed Shaman hexes.
+
+commit f3bbf856229431bda08dd56854b1b06a6c52c119
+Author: Fredrick Robehmed <freddy090909@gmail.com>
+Date:   Thu Jan 7 11:21:34 2021 -0600
+
+    Add glyphed Shaman hexes.
+
+commit 5ecd6be81f1636ba42e73d99f5e3746895604d13
+Author: Continuity <continuity@gmx.net>
+Date:   Wed Jan 6 23:26:22 2021 +0100
+
+    - update clickspace on videooptions frame as well
+
+commit 94a2d389554c0d4c4ed21685012dcbd0e7b7a71e
+Author: Continuity <continuity@gmx.net>
+Date:   Wed Jan 6 18:58:40 2021 +0100
+
+    - adjust CVar text
+
+commit 576c26a11b0719596a9c9f9bf72df1cf0b784e55
+Author: Continuity <continuity@gmx.net>
+Date:   Mon Jan 4 23:44:48 2021 +0100
+
+    - creating the aura show animation on the icon and border
+    
+    this might fix the font issues around font animation in #73 and #80
+
+commit e13cae0a64c8d20ce2e177b9d6ada21795b067a1
+Author: Continuity <continuity@gmx.net>
+Date:   Sat Jan 2 02:46:30 2021 +0100
+
+    - cleanup scriptId properly to mitigate nasty issues
+
+commit 858faf1c092597eccdcfeff6711f337206757fe5
+Author: Continuity <continuity@gmx.net>
+Date:   Fri Jan 1 02:08:17 2021 +0100
+
+    - fixing typo
+
+commit 34b45137b56c4e43368df0f369e3ff936256bba2
+Author: Continuity <continuity@gmx.net>
+Date:   Thu Dec 31 23:31:04 2020 +0100
+
+    - DF lib update
+
+commit c58104929d464b84d2c9f9f71870dd5316c6f074
+Author: Continuity <continuity@gmx.net>
+Date:   Thu Dec 31 23:21:05 2020 +0100
+
+    - another try at fixing the widget error...
+
+commit 3f25ca1abacefc5ed9e303aa1b376df4ec649f55
+Author: Continuity <continuity@gmx.net>
+Date:   Thu Dec 31 13:32:31 2020 +0100
+
+    - DF lib update
+
+commit 7e0cb5c9b2050f1d1b552d34ce8ab5277bc1e019
+Author: Continuity <continuity@gmx.net>
+Date:   Thu Dec 31 01:26:42 2020 +0100
+
+    - correcting CCs for auto-tracking
+
+commit 83213a221d1f55d787959a30665079f402957aed
+Author: Continuity <continuity@gmx.net>
+Date:   Wed Dec 30 11:57:04 2020 +0100
+
+    - update for spiteful script (target, coloring)
+
+commit ea5d0362c3d3e5efe247fe0c04d7f77bad01822d
+Author: Continuity <continuity@gmx.net>
+Date:   Wed Dec 30 11:51:16 2020 +0100
+
+    - always hide execute indicators on added
 

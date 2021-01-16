@@ -2,21 +2,24 @@
 SimulationCraftDB = {
 	["profileKeys"] = {
 		["Angarr - Thunderlord"] = "Angarr - Thunderlord",
+		["Arantir - Lightbringer"] = "Arantir - Lightbringer",
 		["Angarr - Blackrock"] = "Angarr - Blackrock",
 		["Raingarr - Thunderlord"] = "Raingarr - Thunderlord",
 		["Agraxx - Wyrmrest Accord"] = "Agraxx - Wyrmrest Accord",
-		["Shadegarr - Tichondrius"] = "Shadegarr - Tichondrius",
+		["Flashlyte - Blackrock"] = "Flashlyte - Blackrock",
 		["Fangarr - Tichondrius"] = "Fangarr - Tichondrius",
 		["Raingarr - Tichondrius"] = "Raingarr - Tichondrius",
 		["Mistgarr - Tichondrius"] = "Mistgarr - Tichondrius",
-		["Paingarr - Sargeras"] = "Paingarr - Sargeras",
-		["Ignorc - Blackrock"] = "Ignorc - Blackrock",
+		["Shadegarr - Tichondrius"] = "Shadegarr - Tichondrius",
 		["Glaivegarr - Blackrock"] = "Glaivegarr - Blackrock",
-		["Flashlyte - Blackrock"] = "Flashlyte - Blackrock",
+		["Ignorc - Blackrock"] = "Ignorc - Blackrock",
+		["Paingarr - Sargeras"] = "Paingarr - Sargeras",
 		["Skren - Thunderlord"] = "Skren - Thunderlord",
 	},
 	["profiles"] = {
 		["Angarr - Thunderlord"] = {
+		},
+		["Arantir - Lightbringer"] = {
 		},
 		["Angarr - Blackrock"] = {
 		},
@@ -27,7 +30,7 @@ SimulationCraftDB = {
 		},
 		["Agraxx - Wyrmrest Accord"] = {
 		},
-		["Shadegarr - Tichondrius"] = {
+		["Flashlyte - Blackrock"] = {
 		},
 		["Fangarr - Tichondrius"] = {
 		},
@@ -41,13 +44,13 @@ SimulationCraftDB = {
 				["minimapPos"] = 339.8142043464709,
 			},
 		},
-		["Paingarr - Sargeras"] = {
-		},
-		["Ignorc - Blackrock"] = {
+		["Shadegarr - Tichondrius"] = {
 		},
 		["Glaivegarr - Blackrock"] = {
 		},
-		["Flashlyte - Blackrock"] = {
+		["Ignorc - Blackrock"] = {
+		},
+		["Paingarr - Sargeras"] = {
 		},
 		["Skren - Thunderlord"] = {
 		},
