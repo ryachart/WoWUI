@@ -9,6 +9,27 @@ MADB = {
 		["default"] = {
 			["name"] = "default",
 			["frames"] = {
+				["ObjectiveTrackerFrameMover"] = {
+					["orgPos"] = {
+						"TOPRIGHT", -- [1]
+						"MinimapCluster", -- [2]
+						"BOTTOMRIGHT", -- [3]
+						-10, -- [4]
+						0, -- [5]
+					},
+					["name"] = "ObjectiveTrackerFrameMover",
+					["orgHeight"] = 700.0000610351562,
+					["height"] = 620,
+					["orgWidth"] = 235.0000610351563,
+					["width"] = 235.0000610351563,
+					["pos"] = {
+						"TOPRIGHT", -- [1]
+						"MinimapCluster", -- [2]
+						"BOTTOMRIGHT", -- [3]
+						-9.9998779296875, -- [4]
+						-79.99993896484375, -- [5]
+					},
+				},
 				["PlayerPowerBarAltMover"] = {
 					["orgPos"] = {
 						"BOTTOM", -- [1]
@@ -18,29 +39,33 @@ MADB = {
 						155, -- [5]
 					},
 					["name"] = "PlayerPowerBarAltMover",
+					["scale"] = 1.093751549720764,
 					["pos"] = {
 						"BOTTOM", -- [1]
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
-						-374.0001220703125, -- [4]
-						67.00006103515625, -- [5]
+						-537.5991681954569, -- [4]
+						245.0280914306641, -- [5]
 					},
+					["orgScale"] = 1,
 				},
-				["UIPanelMover1"] = {
+				["UIWidgetPowerBarContainerFrame"] = {
 					["orgPos"] = {
-						"TOPLEFT", -- [1]
+						"BOTTOM", -- [1]
 						"UIParent", -- [2]
-						"TOPLEFT", -- [3]
+						"BOTTOM", -- [3]
 						0, -- [4]
-						-104, -- [5]
+						140, -- [5]
 					},
-					["name"] = "UIPanelMover1",
+					["name"] = "UIWidgetPowerBarContainerFrame",
+					["scale"] = 86.00003552436405,
+					["orgScale"] = 1,
 					["pos"] = {
-						"TOPLEFT", -- [1]
+						"BOTTOM", -- [1]
 						"UIParent", -- [2]
-						"TOPLEFT", -- [3]
-						4.99993896484375, -- [4]
-						-278.9998168945313, -- [5]
+						"BOTTOM", -- [3]
+						-4.552322920528703, -- [4]
+						2.279074668884277, -- [5]
 					},
 				},
 				["TalkingHeadFrame"] = {
@@ -56,8 +81,25 @@ MADB = {
 						"BOTTOM", -- [1]
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
-						-671.0001586675644, -- [4]
-						875.9999389648438, -- [5]
+						-643.0001363754272, -- [4]
+						742.9999389648438, -- [5]
+					},
+				},
+				["PetActionButtonsMover"] = {
+					["orgPos"] = {
+						"CENTER", -- [1]
+						"UIParent", -- [2]
+						"CENTER", -- [3]
+						0, -- [4]
+						0, -- [5]
+					},
+					["name"] = "PetActionButtonsMover",
+					["pos"] = {
+						"CENTER", -- [1]
+						"UIParent", -- [2]
+						"CENTER", -- [3]
+						371.9993286132813, -- [4]
+						-521.9997077260123, -- [5]
 					},
 				},
 				["BossBanner"] = {
@@ -90,107 +132,16 @@ MADB = {
 						"LEFT", -- [1]
 						"TargetFrame", -- [2]
 						"RIGHT", -- [3]
-						-24.99996042269441, -- [4]
-						5.000004210451166, -- [5]
-					},
-				},
-				["UIPanelMover3"] = {
-					["orgPos"] = {
-						"TOPLEFT", -- [1]
-						"UIParent", -- [2]
-						"TOPLEFT", -- [3]
-						772, -- [4]
-						-104, -- [5]
-					},
-					["name"] = "UIPanelMover3",
-					["pos"] = {
-						"TOPLEFT", -- [1]
-						"UIParent", -- [2]
-						"TOPLEFT", -- [3]
-						775.0001831054688, -- [4]
-						-276.9999389648438, -- [5]
-					},
-				},
-				["UIWidgetPowerBarContainerFrame"] = {
-					["orgPos"] = {
-						"BOTTOM", -- [1]
-						"UIParent", -- [2]
-						"BOTTOM", -- [3]
-						0, -- [4]
-						140, -- [5]
-					},
-					["name"] = "UIWidgetPowerBarContainerFrame",
-					["scale"] = 86.00003552436405,
-					["pos"] = {
-						"BOTTOM", -- [1]
-						"UIParent", -- [2]
-						"BOTTOM", -- [3]
-						-6.424415644375139, -- [4]
-						0.7209357619285583, -- [5]
-					},
-					["orgScale"] = 1,
-				},
-				["PetActionButtonsMover"] = {
-					["orgPos"] = {
-						"CENTER", -- [1]
-						"UIParent", -- [2]
-						"CENTER", -- [3]
-						0, -- [4]
-						0, -- [5]
-					},
-					["name"] = "PetActionButtonsMover",
-					["pos"] = {
-						"CENTER", -- [1]
-						"UIParent", -- [2]
-						"CENTER", -- [3]
-						0, -- [4]
-						0, -- [5]
-					},
-				},
-				["ObjectiveTrackerFrameMover"] = {
-					["orgPos"] = {
-						"TOPRIGHT", -- [1]
-						"MinimapCluster", -- [2]
-						"BOTTOMRIGHT", -- [3]
-						-10, -- [4]
-						0, -- [5]
-					},
-					["name"] = "ObjectiveTrackerFrameMover",
-					["orgHeight"] = 700.0000610351562,
-					["height"] = 620,
-					["orgWidth"] = 235.0000610351563,
-					["pos"] = {
-						"TOPRIGHT", -- [1]
-						"MinimapCluster", -- [2]
-						"BOTTOMRIGHT", -- [3]
-						-9.9998779296875, -- [4]
-						-79.99993896484375, -- [5]
-					},
-					["width"] = 235.0000610351563,
-				},
-				["UIPanelMover2"] = {
-					["orgPos"] = {
-						"TOPLEFT", -- [1]
-						"UIParent", -- [2]
-						"TOPLEFT", -- [3]
-						384, -- [4]
-						-104, -- [5]
-					},
-					["name"] = "UIPanelMover2",
-					["pos"] = {
-						"TOPLEFT", -- [1]
-						"UIParent", -- [2]
-						"TOPLEFT", -- [3]
-						389.9999694824219, -- [4]
-						-277.999755859375, -- [5]
+						-92.99941615096695, -- [4]
+						-110.0001711904765, -- [5]
 					},
 				},
 			},
 		},
 	},
-	["tooltips"] = true,
-	["squareMM"] = false,
-	["playSound"] = false,
-	["noMMMW"] = false,
 	["closeGUIOnEscape"] = false,
+	["squareMM"] = false,
+	["noMMMW"] = false,
+	["playSound"] = false,
+	["tooltips"] = true,
 }

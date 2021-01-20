@@ -3,10 +3,10 @@ FriendGroups_SavedVars = {
 	["hide_high_level"] = false,
 	["colour_classes"] = true,
 	["collapsed"] = {
-		[""] = false,
-		["Main Alliance"] = false,
+		[""] = true,
+		["Main Alliance"] = true,
 		["Classic Mains"] = true,
-		["Main Horde"] = true,
+		["Main Horde"] = false,
 	},
 	["hide_offline"] = false,
 }

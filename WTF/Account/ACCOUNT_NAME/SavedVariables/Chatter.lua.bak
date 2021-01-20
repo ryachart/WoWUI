@@ -26,6 +26,12 @@ ChatterDB = {
 						["invite"] = "invite",
 					},
 				},
+				["Default2"] = {
+					["words"] = {
+						["inv"] = "inv",
+						["invite"] = "invite",
+					},
+				},
 			},
 		},
 		["ChannelColors"] = {
@@ -144,6 +150,105 @@ ChatterDB = {
 						},
 					},
 				},
+				["Default2"] = {
+					["colors"] = {
+						["Guild"] = {
+							["b"] = 0.250980406999588,
+							["g"] = 1,
+							["r"] = 0.250980406999588,
+						},
+						["Instance Leader"] = {
+							["b"] = 0.03529411926865578,
+							["g"] = 0.2823529541492462,
+							["r"] = 1,
+						},
+						["Raid Leader"] = {
+							["b"] = 0.03529411926865578,
+							["g"] = 0.2823529541492462,
+							["r"] = 1,
+						},
+						["Community:2005851:1"] = {
+							["b"] = 1,
+							["g"] = 0.7725490927696228,
+							["r"] = 0.5098039507865906,
+						},
+						["Community:372426211:1"] = {
+							["b"] = 1,
+							["g"] = 0.7725490927696228,
+							["r"] = 0.5098039507865906,
+						},
+						["Party"] = {
+							["b"] = 1,
+							["g"] = 0.6666666865348816,
+							["r"] = 0.6666666865348816,
+						},
+						["Whisper"] = {
+							["b"] = 1,
+							["g"] = 0.501960813999176,
+							["r"] = 1,
+						},
+						["Raid"] = {
+							["b"] = 0,
+							["g"] = 0.4980392456054688,
+							["r"] = 1,
+						},
+						["Raid Warning"] = {
+							["b"] = 0,
+							["g"] = 0.2823529541492462,
+							["r"] = 1,
+						},
+						["Party Leader"] = {
+							["b"] = 1,
+							["g"] = 0.7843137979507446,
+							["r"] = 0.4627451300621033,
+						},
+						["Community:372135111:1"] = {
+							["b"] = 1,
+							["g"] = 0.7725490927696228,
+							["r"] = 0.5098039507865906,
+						},
+						["Yell"] = {
+							["b"] = 0.250980406999588,
+							["g"] = 0.250980406999588,
+							["r"] = 1,
+						},
+						["LocalDefense"] = {
+							["b"] = 0.7529412508010864,
+							["g"] = 0.7529412508010864,
+							["r"] = 1,
+						},
+						["Real ID Whisper"] = {
+							["b"] = 0.9647059440612793,
+							["g"] = 1,
+							["r"] = 0,
+						},
+						["Trade"] = {
+							["b"] = 0.7529412508010864,
+							["g"] = 0.7529412508010864,
+							["r"] = 1,
+						},
+						["Instance"] = {
+							["b"] = 0,
+							["g"] = 0.4980392456054688,
+							["r"] = 1,
+						},
+						["General"] = {
+							["b"] = 0.7529412508010864,
+							["g"] = 0.7529412508010864,
+							["r"] = 1,
+						},
+						["Say"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+						["Officer"] = {
+							["b"] = 0.250980406999588,
+							["g"] = 0.7529412508010864,
+							["r"] = 0.250980406999588,
+						},
+					},
+				},
 			},
 		},
 		["StickyChannels"] = {
@@ -161,7 +266,27 @@ ChatterDB = {
 							["background"] = "Details Ground",
 							["border"] = "Details BarBorder 3",
 							["backgroundColor"] = {
-								["a"] = 0.4518067240715027,
+								["a"] = 0.03012001514434815,
+							},
+						},
+						["FRAME_3"] = {
+							["combatLogFix"] = true,
+						},
+						["FRAME_4"] = {
+							["combatLogFix"] = true,
+							["backgroundColor"] = {
+								["a"] = 0.2108430862426758,
+							},
+						},
+						["FRAME_2"] = {
+							["backgroundColor"] = {
+								["a"] = 0.3915660977363586,
+							},
+						},
+						["FRAME_10"] = {
+							["combatLogFix"] = true,
+							["backgroundColor"] = {
+								["a"] = 0.2590357661247253,
 							},
 						},
 					},
@@ -214,42 +339,47 @@ ChatterDB = {
 						"/sexymap", -- [3]
 						"/camp", -- [4]
 						"/camp", -- [5]
+						" In that 2 we did, your DPS was impeccable.  It was top notch.  You were amazing.  The added difficulty of the 5 and the 7 took your DPS down a bit I think.  Is the survive weakaura distracting you too much?", -- [6]
+						" Do you feel like the explosives distract you a lot?", -- [7]
+						"/wa", -- [8]
+						"/camp", -- [9]
+						"/camp", -- [10]
 					},
 				},
 				["Tichondrius"] = {
 					["history"] = {
-						"/wa", -- [1]
-						"/p What if we finish the show and then cuddle and then sleep", -- [2]
-						"/camp", -- [3]
-						"/camp", -- [4]
-						" Heyo", -- [5]
-						" are we doing anything?", -- [6]
-						" You still wanna?", -- [7]
-						"/p What key do y'all wanna do?", -- [8]
-						"/p Have you done this one before?", -- [9]
-						"/p Cool", -- [10]
-						"/p This has Raging, so I need help from Marixx and Smauug.  When mobs hit 30% health you'll need to cast Soothe Beast on them", -- [11]
-						"/cw Jesstara-Thunderlord Are you combusting first pull or 2nd? ", -- [12]
-						"/dbm", -- [13]
-						"/suf", -- [14]
-						"/p Getting whatever you can get is good", -- [15]
-						"/p here we go", -- [16]
-						"/readycheck", -- [17]
-						"/mdt", -- [18]
-						"/p Yeah great key =)", -- [19]
-						"/p gz on the weapon", -- [20]
-						"/cw Jesstara-Thunderlord It was a lower item level the last time we simmed it", -- [21]
-						"/camp", -- [22]
-						"/wa", -- [23]
-						"/suf", -- [24]
-						"/wa", -- [25]
-						"/dbm", -- [26]
-						"/wa", -- [27]
-						"/wa", -- [28]
-						"/dbm", -- [29]
-						"/dbm", -- [30]
-						"/camp", -- [31]
-						"/camp", -- [32]
+						"/camp", -- [1]
+						"/cw Guvante-Thunderlord I will heal so you can tank tonight ", -- [2]
+						"/cw Guvante-Thunderlord Maybe we'll see", -- [3]
+						"/cw Guvante-Thunderlord Is gill not gonna heal?", -- [4]
+						"/cw Guvante-Thunderlord 4/20 is fine for heals.", -- [5]
+						"/cw Guvante-Thunderlord that's the mythic ratio", -- [6]
+						"/cw Guvante-Thunderlord yeah", -- [7]
+						"/cw Guvante-Thunderlord Nah", -- [8]
+						"/raid That one says it doesnt work for me", -- [9]
+						"/raid It says the system is down", -- [10]
+						"/macro", -- [11]
+						"/raid Maybe good to call it a night", -- [12]
+						"/raid We got a boss heh", -- [13]
+						"/raid Nothing works for me", -- [14]
+						"/raid Red error message", -- [15]
+						"/raid It's okay", -- [16]
+						"/raid honestly", -- [17]
+						"/raid You dont need me to hear anything", -- [18]
+						"/raid Just kill", -- [19]
+						"/raid I allowed it in the firewall", -- [20]
+						"/raid It's okay guys", -- [21]
+						"/raid Even if we did Im not rebinding hotkeys", -- [22]
+						"/raid So I wouldnt talk hah", -- [23]
+						"/raid And I mostly dont listen either.", -- [24]
+						"/raid If Im honest.", -- [25]
+						"/raid And then realize that's just hearing my keyboard from Jess's mic", -- [26]
+						"/raid I mash them buttons alot hah", -- [27]
+						"/cw Elyk-WyrmrestAccord healing raids is fun too haha.", -- [28]
+						" Hunting some demons?", -- [29]
+						" You playin for a bit?", -- [30]
+						"/p Oh wow grats!", -- [31]
+						"/raid Can I get a summon pls?", -- [32]
 					},
 				},
 			},
@@ -267,7 +397,7 @@ ChatterDB = {
 	},
 	["profileKeys"] = {
 		["Fangarr - Tichondrius"] = "Default",
-		["Mistgarr - Tichondrius"] = "Default",
+		["Mistgarr - Tichondrius"] = "Default2",
 		["Shadegarr - Tichondrius"] = "Default",
 		["Raingarr - Thunderlord"] = "Default",
 		["Arantir - Lightbringer"] = "Default",
@@ -279,6 +409,8 @@ ChatterDB = {
 				["Automatic Whisper Windows"] = true,
 			},
 			["welcomeMessaged"] = true,
+		},
+		["Default2"] = {
 		},
 	},
 }

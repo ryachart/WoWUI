@@ -1,8 +1,8 @@
 
 BugGrabberDB = {
 	["stopnag"] = 90002,
-	["session"] = 514,
 	["lastSanitation"] = 3,
+	["session"] = 539,
 	["errors"] = {
 		{
 			["message"] = "Interface\\AddOns\\AstralKeys\\MinimapButton.lua:21: attempt to index field 'general' (a nil value)",
@@ -747,8 +747,8 @@ BugGrabberDB = {
 		}, -- [96]
 		{
 			["message"] = "(null)",
-			["session"] = 372,
 			["time"] = "2019/11/05 20:37:11",
+			["session"] = 372,
 			["counter"] = 73,
 		}, -- [97]
 		{
@@ -760,41 +760,33 @@ BugGrabberDB = {
 			["counter"] = 250,
 		}, -- [98]
 		{
-			["message"] = "...ns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:395: attempt to index a nil value",
-			["time"] = "2020/12/04 21:02:29",
-			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n GetGlobalPosition = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:311\n PanTo = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:318\n BountyRing = <unnamed> {\n }\n OnMouseUpAction = <function> defined @Interface\\AddOns\\Blizzard_SharedMapDataProviders\\WorldQuestDataProvider.lua:473\n OnMouseDownAction = <function> defined @Interface\\AddOns\\Blizzard_SharedMapDataProviders\\WorldQuestDataProvider.lua:467\n OnCanvasScaleChanged = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:328\n GetNudgeSourceZoomedInMagnitude = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:233\n SetScaleStyle = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:359\n GetNudgeSourcePinZoomedInNudgeFactor = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:269\n UpdateTooltip = <function> defined @Interface\\AddOns\\Blizzard_SharedMapDataProviders\\WorldQuestDataProvider.lua:435\n GetMap = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:257\n OnCanvasSizeChanged = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:337\n ApplyCurrentPosition = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:394\n IsIgnoringGlobalPinScale = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:345\n Glow = <unnamed> {\n }\n GetNudgeZoomFactor = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:291\n OnMouseUp = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:178\n OnAcquired = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:144\n PanAndZoomTo = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:323\n SelectedGlow = <unnamed> {\n }\n RefreshVisuals = <function> defined @Interface\\AddOns\\Blizzard_SharedMapDataProviders\\WorldQuestDataProvider.lua:399\n ApplyCurrentAlpha = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:415\n OnLoad = <function> defined @Interface\\AddOns\\Blizzard_AnimaDiversionUI\\AD_WorldQuestDataProvider.lua:9\n TrackedCheck = <unnamed> {\n }\n UpdateSupertrackedHighlight = <function> defined @Interface\\AddOns\\Blizzard_SharedMapDataProviders\\WorldQuestDataProvider.lua:430\n OnReleased = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:148\n IgnoresNudging = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:253\n startAlpha = 0.600000\n normalizedY = 0.634206\n normalizedX = 0.505410\n worldQuestType = 2\n ClearNudgeSettings = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:199\n OnMapInsetMouseLeave = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:195\n tagInfo = <table> {\n }\n SetNudgeFactor = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:286\n UseFrameLevelType = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:423\n GetNudgeSourcePinZoomedOutNudgeFactor = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:265\n GetNudgeFactor = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:282\n startScale = 0.412500\n OnClick = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:152\n OnMouseClickAction = <function> defined @Interface\\AddOns\\Blizzard_SharedMapDataProviders\\WorldQuestDataProvider.lua:443\n GetNudgeSourceRadius = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:220\n numObjectives = 3\n worldQuest = true\n dataProvider = <table> {\n }\n zoomedInNudge = 0.250000\n questID = 58505\n TimeLowFrame = <unnamed> {\n }\n GetNudgeTargetFactor = <functi",
-			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua\"]:395: in function `ApplyCurrentPosition'\n[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua\"]:279: in function `SetNudgeVector'\n[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\Blizzard_MapCanvas.lua\"]:327: in function `CalculatePinNudging'\n[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\Blizzard_MapCanvas.lua\"]:365: in function `UpdatePinNudging'\n[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\Blizzard_MapCanvas.lua\"]:29: in function <...ace\\AddOns\\Blizzard_MapCanvas\\Blizzard_MapCanvas.lua:28>",
-			["session"] = 386,
-			["counter"] = 495,
-		}, -- [99]
-		{
 			["message"] = "Interface\\AddOns\\Prat-3.0-3.9.1\\modules\\Editbox.lua:687: Usage: HookScript(object, method, [handler]): 'object' - nil or table expected got string",
 			["time"] = "2020/12/26 10:54:51",
 			["stack"] = "[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua\"]:130: in function <...e\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0.lua:118>\n[string \"@Interface\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua\"]:367: in function `HookScript'\n[string \"@Interface\\AddOns\\Prat-3.0-3.9.1\\modules\\Editbox.lua\"]:687: in function <Interface\\AddOns\\Prat-3.0\\modules\\Editbox.lua:684>\n[string \"@Interface\\AddOns\\Prat-3.0-3.9.1\\modules\\Editbox.lua\"]:747: in function `OnModuleEnable'\n[string \"@Interface\\AddOns\\Prat-3.0-3.9.1\\addon\\modules.lua\"]:189: in function <Interface\\AddOns\\Prat-3.0\\addon\\modules.lua:178>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:70: in function <...ace\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:65>\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:527: in function `EnableAddon'\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:540: in function `EnableAddon'\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:630: in function <...ace\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:615>",
 			["session"] = 393,
 			["counter"] = 2,
-		}, -- [100]
+		}, -- [99]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'FriendGroups' tried to call the protected function 'MultiBarBottomRightButton3:Hide()'.",
 			["time"] = "2020/12/26 15:55:26",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:481: in function `HideGrid'\n[string \"@Interface\\FrameXML\\MultiActionBars.lua\"]:139: in function `MultiActionBar_UpdateGrid'\n[string \"@Interface\\FrameXML\\MultiActionBars.lua\"]:128: in function `MultiActionBar_HideAllGrids'\n[string \"@Interface\\FrameXML\\SpellBookFrame.lua\"]:464: in function <Interface\\FrameXML\\SpellBookFrame.lua:451>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:2894: in function `SetUIPanel'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:2925: in function `MoveUIPanel'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:2968: in function `HideUIPanel'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:2627: in function <Interface\\FrameXML\\UIParent.lua:2619>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:3488: in function <Interface\\FrameXML\\UIParent.lua:3471>\n[string \"=[C]\"]: in function `HideUIPanel'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:3650: in function `CloseWindows'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:3686: in function <Interface\\FrameXML\\UIParent.lua:3676>\n[string \"=[C]\"]: in function `securecall'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:4329: in function `ToggleGameMenu'\n[string \"TOGGLEGAMEMENU\"]:1: in function <[string \"TOGGLEGAMEMENU\"]:1>",
 			["session"] = 404,
 			["counter"] = 1,
-		}, -- [101]
+		}, -- [100]
 		{
 			["message"] = "[ADDON_ACTION_FORBIDDEN] AddOn 'Auctionator' tried to call the protected function 'UseQuestLogSpecialItem()'.",
 			["time"] = "2020/12/16 21:31:28",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `UseQuestLogSpecialItem'\n[string \"@Interface\\AddOns\\Blizzard_ObjectiveTracker\\Blizzard_ObjectiveTrackerShared.lua\"]:95: in function <...ObjectiveTracker\\Blizzard_ObjectiveTrackerShared.lua:88>",
 			["session"] = 417,
 			["counter"] = 2,
-		}, -- [102]
+		}, -- [101]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'FriendGroups' tried to call the protected function 'RaidFrame:SetParent()'.",
 			["time"] = "2020/12/05 15:06:58",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `SetParent'\n[string \"@Interface\\FrameXML\\RaidFrame.lua\"]:346: in function `ClaimRaidFrame'\n[string \"@Interface\\FrameXML\\FriendsFrame.lua\"]:368: in function `FriendsFrame_Update'\n[string \"@Interface\\FrameXML\\FriendsFrame.lua\"]:323: in function `FriendsFrame_OnShow'\n[string \"@Interface\\FrameXML\\FriendsFrame.lua\"]:448: in function <Interface\\FrameXML\\FriendsFrame.lua:446>",
 			["session"] = 425,
 			["counter"] = 4,
-		}, -- [103]
+		}, -- [102]
 		{
 			["message"] = "...e\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua:180: Attempting to rehook already active hook PushBack.",
 			["time"] = "2020/12/24 15:34:32",
@@ -802,28 +794,28 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua\"]:180: in function <...e\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0.lua:118>\n[string \"@Interface\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua\"]:283: in function `Hook'\n[string \"@Interface\\AddOns\\Glass\\Glass\\Components\\SlidingMessageFrame.lua\"]:183: in function `Init'\n[string \"@Interface\\AddOns\\Glass\\Glass\\Modules\\UIManager.lua\"]:102: in function <Interface\\AddOns\\Glass\\Glass\\Modules\\UIManager.lua:99>\n[string \"=(tail call)\"]: ?\n[string \"@Interface\\FrameXML\\FloatingChatFrame.lua\"]:2560: in function <Interface\\FrameXML\\FloatingChatFrame.lua:2549>",
 			["session"] = 431,
 			["counter"] = 14,
-		}, -- [104]
+		}, -- [103]
 		{
 			["message"] = "[ADDON_ACTION_FORBIDDEN] AddOn 'Details' tried to call the protected function 'UseQuestLogSpecialItem()'.",
 			["time"] = "2020/12/31 00:04:16",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `UseQuestLogSpecialItem'\n[string \"@Interface\\AddOns\\Blizzard_ObjectiveTracker\\Blizzard_ObjectiveTrackerShared.lua\"]:95: in function <...ObjectiveTracker\\Blizzard_ObjectiveTrackerShared.lua:88>",
 			["session"] = 432,
 			["counter"] = 1,
-		}, -- [105]
+		}, -- [104]
 		{
 			["message"] = "Interface\\AddOns\\Plater\\libs\\DF\\fw.lua:2423: attempt to index a number value",
 			["time"] = "2021/01/02 13:41:20",
 			["stack"] = "[string \"@Interface\\AddOns\\Plater\\Plater_OptionsPanel.lua\"]:605: in function <Interface\\AddOns\\Plater\\Plater_OptionsPanel.lua:604>\n[string \"=[C]\"]: in function `xpcall'\n[string \"@Interface\\AddOns\\Plater\\libs\\DF\\fw.lua\"]:3404: in function `CoreDispatch'\n[string \"@Interface\\AddOns\\Plater\\libs\\DF\\button.lua\"]:918: in function <Interface\\AddOns\\Plater\\libs\\DF\\button.lua:831>",
 			["session"] = 451,
 			["counter"] = 1,
-		}, -- [106]
+		}, -- [105]
 		{
 			["message"] = "[ADDON_ACTION_FORBIDDEN] AddOn 'Chatter' tried to call the protected function 'Logout()'.",
 			["time"] = "2021/01/02 14:56:26",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Logout'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:1706: in function `?'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:5073: in function `ChatEdit_ParseText'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4757: in function `ChatEdit_SendText'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4793: in function `ChatEdit_OnEnterPressed'\n[string \"*:OnEnterPressed\"]:1: in function <[string \"*:OnEnterPressed\"]:1>",
 			["session"] = 453,
 			["counter"] = 1,
-		}, -- [107]
+		}, -- [106]
 		{
 			["message"] = "...\\AddOns\\Chatter\\Libs\\LibDialog-1.0\\LibDialog-1.0-8.lua:894: attempt to call method 'SetBackdrop' (a nil value)",
 			["time"] = "2021/01/02 17:04:30",
@@ -831,7 +823,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\Chatter\\Libs\\LibDialog-1.0\\LibDialog-1.0-8.lua\"]:894: in function `Reset'\n[string \"@Interface\\AddOns\\Chatter\\Libs\\LibDialog-1.0\\LibDialog-1.0-8.lua\"]:579: in function <...\\AddOns\\Chatter\\Libs\\LibDialog-1.0\\LibDialog-1.0.lua:553>\n[string \"@Interface\\AddOns\\Chatter\\Libs\\LibDialog-1.0\\LibDialog-1.0-8.lua\"]:819: in function `Spawn'\n[string \"@Interface\\AddOns\\Chatter\\Modules\\UrlCopy.lua\"]:258: in function <Interface\\AddOns\\Chatter\\Modules\\UrlCopy.lua:251>\n[string \"=(tail call)\"]: ?\n[string \"@Interface\\AddOns\\TheUndermineJournal\\libs\\LibExtraTip\\LibExtraTip.lua\"]:425: in function `SetHyperlink'\n[string \"@Interface\\FrameXML\\ItemRef.lua\"]:611: in function `ItemRefSetHyperlink'\n[string \"@Interface\\FrameXML\\ItemRef.lua\"]:378: in function <Interface\\FrameXML\\ItemRef.lua:11>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Blizzard_CombatLog\\Blizzard_CombatLog.lua\"]:3520: in function <...ace\\AddOns\\Blizzard_CombatLog\\Blizzard_CombatLog.lua:3461>\n[string \"=[C]\"]: in function `SetItemRef'\n[string \"@Interface\\AddOns\\Glass\\Glass\\Modules\\Hyperlinks.lua\"]:50: in function `listener'\n[string \"@Interface\\AddOns\\Glass\\Glass\\init.lua\"]:116: in function `Dispatch'\n[string \"@Interface\\AddOns\\Glass\\Glass\\Components\\MessageLine.lua\"]:38: in function <...erface\\AddOns\\Glass\\Glass\\Components\\MessageLine.lua:37>",
 			["session"] = 459,
 			["counter"] = 2,
-		}, -- [108]
+		}, -- [107]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'ShadowedUnitFrames' tried to call the protected function 'SUFHeaderraid:SetAttribute()'.",
 			["time"] = "2021/01/02 20:54:51",
@@ -839,7 +831,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface\\AddOns\\ShadowedUnitFrames\\modules\\units.lua\"]:804: in function `SetHeaderAttributes'\n[string \"@Interface\\AddOns\\ShadowedUnitFrames\\modules\\units.lua\"]:755: in function `ReloadHeader'\n[string \"@Interface\\AddOns\\ShadowedUF_Options\\config.lua\"]:3650: in function <Interface\\AddOns\\ShadowedUF_Options\\config.lua:3647>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceConfig-3.0-3\\AceConfigDialog-3.0\\AceConfigDialog-3.0-79.lua\"]:51: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:49>\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceConfig-3.0-3\\AceConfigDialog-3.0\\AceConfigDialog-3.0-79.lua\"]:843: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:664>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0-41.lua\"]:72: in function <...terface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0.lua:70>\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0-41.lua\"]:306: in function `Fire'\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceGUI-3.0-41\\widgets\\AceGUIWidget-DropDown.lua\"]:437: in function <...ue\\Libs\\AceGUI-3.0\\widgets\\AceGUIWidget-DropDown.lua:428>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0-41.lua\"]:72: in function <...terface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0.lua:70>\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0-41.lua\"]:306: in function `Fire'\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceGUI-3.0-41\\widgets\\AceGUIWidget-DropDown-Items.lua\"]:351: in function <...s\\AceGUI-3.0\\widgets\\AceGUIWidget-DropDown-Items.lua:341>",
 			["session"] = 460,
 			["counter"] = 1,
-		}, -- [109]
+		}, -- [108]
 		{
 			["message"] = "Interface\\AddOns\\FriendListColors\\core.lua:600: attempt to perform arithmetic on a nil value",
 			["time"] = "2021/01/02 18:21:06",
@@ -847,7 +839,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\FriendListColors\\core.lua\"]:600: in function <Interface\\AddOns\\FriendListColors\\core.lua:580>\n[string \"=[C]\"]: in function `ChatEdit_UpdateHeader'\n[string \"@Interface\\AddOns\\Chatter\\Modules\\EditBox.lua\"]:448: in function <Interface\\AddOns\\Chatter\\Modules\\EditBox.lua:447>\n[string \"=(tail call)\"]: ?\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4364: in function <Interface\\FrameXML\\ChatFrame.lua:4340>\n[string \"=[C]\"]: in function `ChatEdit_ActivateChat'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4329: in function `ChatEdit_OnEditFocusGained'\n[string \"*:OnEditFocusGained\"]:1: in function <[string \"*:OnEditFocusGained\"]:1>\n[string \"=[C]\"]: in function `SetFocus'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4353: in function <Interface\\FrameXML\\ChatFrame.lua:4340>\n[string \"=[C]\"]: in function `ChatEdit_ActivateChat'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:3962: in function `ChatFrame_OpenChat'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4051: in function `ChatFrame_SendBNetTell'\n[string \"@Interface\\FrameXML\\ItemRef.lua\"]:98: in function <Interface\\FrameXML\\ItemRef.lua:11>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Blizzard_CombatLog\\Blizzard_CombatLog.lua\"]:3520: in function <...ace\\AddOns\\Blizzard_CombatLog\\Blizzard_CombatLog.lua:3461>\n[string \"=[C]\"]: in function `SetItemRef'\n[string \"@Interface\\AddOns\\Glass\\Glass\\Modules\\Hyperlinks.lua\"]:50: in function `listener'\n[string \"@Interface\\AddOns\\Glass\\Glass\\init.lua\"]:116: in function `Dispatch'\n[string \"@Interface\\AddOns\\Glass\\Glass\\Components\\MessageLine.lua\"]:38: in function <...erface\\AddOns\\Glass\\Glass\\Components\\MessageLine.lua:37>",
 			["session"] = 460,
 			["counter"] = 22,
-		}, -- [110]
+		}, -- [109]
 		{
 			["message"] = "Interface\\SharedXML\\Backdrop.lua:251: TexCoord out of range",
 			["time"] = "2021/01/03 21:04:10",
@@ -855,7 +847,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `SetTexCoord'\n[string \"@Interface\\SharedXML\\Backdrop.lua\"]:251: in function <Interface\\SharedXML\\Backdrop.lua:250>\n[string \"@Interface\\SharedXML\\Backdrop.lua\"]:281: in function `SetupTextureCoordinates'\n[string \"@Interface\\SharedXML\\Backdrop.lua\"]:227: in function <Interface\\SharedXML\\Backdrop.lua:225>\n[string \"=[C]\"]: in function `GetWidth'\n[string \"@Interface\\FrameXML\\SecureGroupHeaders.lua\"]:239: in function <Interface\\FrameXML\\SecureGroupHeaders.lua:130>\n[string \"@Interface\\FrameXML\\SecureGroupHeaders.lua\"]:495: in function `SecureGroupHeader_Update'\n[string \"@Interface\\FrameXML\\SecureGroupHeaders.lua\"]:71: in function <Interface\\FrameXML\\SecureGroupHeaders.lua:66>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface\\AddOns\\ShadowedUnitFrames\\modules\\units.lua\"]:806: in function `SetHeaderAttributes'\n[string \"@Interface\\AddOns\\ShadowedUnitFrames\\modules\\units.lua\"]:755: in function `ReloadHeader'\n[string \"@Interface\\AddOns\\ShadowedUF_Options\\config.lua\"]:3778: in function <Interface\\AddOns\\ShadowedUF_Options\\config.lua:3760>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceConfig-3.0-3\\AceConfigDialog-3.0\\AceConfigDialog-3.0-79.lua\"]:51: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:49>\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceConfig-3.0-3\\AceConfigDialog-3.0\\AceConfigDialog-3.0-79.lua\"]:843: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:664>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0-41.lua\"]:72: in function <...terface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0.lua:70>\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0-41.lua\"]:306: in function `Fire'\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceGUI-3.0-41\\widgets\\AceGUIWidget-DropDown.lua\"]:437: in function <...ue\\Libs\\AceGUI-3.0\\widgets\\AceGUIWidget-DropDown.lua:428>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0-41.lua\"]:72: in function <...terface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0.lua:70>\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceGUI-3.0\\AceGUI-3.0-41.lua\"]:306: in function `Fire'\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceGUI-3.0-41\\widgets\\AceGUIWidget-DropDown-Items.lua\"]:351: in function <...s\\AceGUI-3.0\\widgets\\AceGUIWidget-DropDown-Items.lua:341>",
 			["session"] = 464,
 			["counter"] = 10,
-		}, -- [111]
+		}, -- [110]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'AngryKeystones' tried to call the protected function 'CompactRaidGroup1:unusedFunc()'.",
 			["time"] = "2021/01/03 22:13:59",
@@ -863,14 +855,14 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `unusedFunc'\n[string \"@Interface\\AddOns\\Blizzard_CompactRaidFrames\\Blizzard_CompactRaidFrameContainer.lua\"]:160: in function `CompactRaidFrameContainer_LayoutFrames'\n[string \"@Interface\\AddOns\\Blizzard_CompactRaidFrames\\Blizzard_CompactRaidFrameContainer.lua\"]:130: in function `CompactRaidFrameContainer_TryUpdate'\n[string \"@Interface\\AddOns\\Blizzard_CompactRaidFrames\\Blizzard_CompactRaidFrameContainer.lua\"]:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>",
 			["session"] = 464,
 			["counter"] = 1,
-		}, -- [112]
+		}, -- [111]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'FriendGroups' tried to call the protected function 'RaidFrame:Hide()'.",
 			["time"] = "2020/12/06 23:17:05",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface\\FrameXML\\FriendsFrame.lua\"]:85: in function `FriendsFrame_ShowSubFrame'\n[string \"@Interface\\FrameXML\\FriendsFrame.lua\"]:347: in function `FriendsFrame_Update'\n[string \"@Interface\\FrameXML\\FriendsFrame.lua\"]:323: in function <Interface\\FrameXML\\FriendsFrame.lua:304>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:2910: in function `SetUIPanel'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:2755: in function `ShowUIPanel'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:2623: in function <Interface\\FrameXML\\UIParent.lua:2619>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:3468: in function <Interface\\FrameXML\\UIParent.lua:3447>\n[string \"=[C]\"]: in function `ShowUIPanel'\n[string \"@Interface\\FrameXML\\FriendsFrame.lua\"]:1088: in function `ToggleFriendsFrame'\n[string \"TOGGLESOCIAL\"]:1: in function <[string \"TOGGLESOCIAL\"]:1>",
 			["session"] = 468,
 			["counter"] = 2,
-		}, -- [113]
+		}, -- [112]
 		{
 			["message"] = "...terface\\AddOns\\Details_Streamer\\Details_Streamer.lua:2023: table index is nil",
 			["time"] = "2020/11/05 21:56:40",
@@ -878,21 +870,21 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\Details_Streamer\\Details_Streamer.lua\"]:2023: in function <...terface\\AddOns\\Details_Streamer\\Details_Streamer.lua:1872>\n[string \"=(tail call)\"]: ?",
 			["session"] = 470,
 			["counter"] = 7,
-		}, -- [114]
+		}, -- [113]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'Auctionator' tried to call the protected function 'CompactRaidGroup3Member3:Show()'.",
 			["time"] = "2021/01/05 12:45:56",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:376: in function `CompactUnitFrame_UpdateVisible'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:307: in function `CompactUnitFrame_UpdateAll'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:126: in function <Interface\\FrameXML\\CompactUnitFrame.lua:57>",
 			["session"] = 472,
 			["counter"] = 1,
-		}, -- [115]
+		}, -- [114]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'Auctionator' tried to call the protected function 'CompactRaidFrameContainer:Hide()'.",
 			["time"] = "2021/01/06 16:44:43",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface\\AddOns\\Blizzard_CompactRaidFrames\\Blizzard_CompactRaidFrameManager.lua\"]:530: in function `CompactRaidFrameManager_UpdateContainerVisibility'\n[string \"@Interface\\AddOns\\Blizzard_CompactRaidFrames\\Blizzard_CompactRaidFrameManager.lua\"]:475: in function <...mpactRaidFrames\\Blizzard_CompactRaidFrameManager.lua:464>\n[string \"@Interface\\AddOns\\Blizzard_CompactRaidFrames\\Blizzard_CompactRaidFrameManager.lua\"]:514: in function `CompactRaidFrameManager_SetSetting'\n[string \"@Interface\\AddOns\\Blizzard_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua\"]:594: in function `func'\n[string \"@Interface\\AddOns\\Blizzard_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua\"]:571: in function `CompactUnitFrameProfiles_ApplyProfile'\n[string \"@Interface\\AddOns\\Blizzard_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua\"]:174: in function `CompactUnitFrameProfiles_ApplyCurrentSettings'\n[string \"@Interface\\AddOns\\Blizzard_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua\"]:83: in function `CompactUnitFrameProfiles_CancelChanges'\n[string \"@Interface\\AddOns\\Blizzard_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua\"]:76: in function <...rd_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua:74>\n[string \"=[C]\"]: in function `pcall'\n[string \"@Interface\\FrameXML\\InterfaceOptionsFrame.lua\"]:215: in function <Interface\\FrameXML\\InterfaceOptionsFrame.lua:214>\n[string \"=[C]\"]: ?\n[string \"@Interface\\FrameXML\\InterfaceOptionsFrame.lua\"]:250: in function <Interface\\FrameXML\\InterfaceOptionsFrame.lua:246>\n[string \"=[C]\"]: in function `Click'\n[string \"@Interface\\FrameXML\\UIParent.lua\"]:4304: in function `ToggleGameMenu'\n[string \"TOGGLEGAMEMENU\"]:1: in function <[string \"TOGGLEGAMEMENU\"]:1>",
 			["session"] = 483,
 			["counter"] = 1,
-		}, -- [116]
+		}, -- [115]
 		{
 			["message"] = "Interface\\SharedXML\\OptionsPanelTemplates.lua:149: attempt to call method 'SetValue' (a nil value)",
 			["time"] = "2021/01/08 18:17:39",
@@ -900,7 +892,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\SharedXML\\OptionsPanelTemplates.lua\"]:149: in function `BlizzardOptionsPanel_CheckButton_SetNewValue'\n[string \"@Interface\\SharedXML\\OptionsPanelTemplates.lua\"]:129: in function `BlizzardOptionsPanel_CheckButton_OnClick'\n[string \"*:OnClick\"]:6: in function <[string \"*:OnClick\"]:1>",
 			["session"] = 492,
 			["counter"] = 1,
-		}, -- [117]
+		}, -- [116]
 		{
 			["message"] = "Interface\\SharedXML\\FrameUtil.lua:57: Action[FrameMeasurement] failed because[Can't measure restricted regions]: attempted from: <unnamed>:GetScaledRect().",
 			["time"] = "2021/01/09 17:07:22",
@@ -908,7 +900,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `GetScaledRect'\n[string \"@Interface\\SharedXML\\FrameUtil.lua\"]:57: in function `GetUnscaledFrameRect'\n[string \"@Interface\\SharedXML\\LayoutFrame.lua\"]:288: in function <Interface\\SharedXML\\LayoutFrame.lua:287>\n[string \"@Interface\\SharedXML\\LayoutFrame.lua\"]:325: in function `Layout'\n[string \"@Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetManager.lua\"]:137: in function `layoutFunc'\n[string \"@Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetManager.lua\"]:480: in function `UpdateWidgetLayout'\n[string \"@Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetManager.lua\"]:456: in function `ProcessAllWidgets'\n[string \"@Interface\\AddOns\\Blizzard_UIWidgets\\Blizzard_UIWidgetManager.lua\"]:182: in function `RegisterForWidgetSet'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:1131: in function `CompactUnitFrame_UpdateWidgetSet'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:329: in function `CompactUnitFrame_UpdateAll'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:194: in function `CompactUnitFrame_SetUnit'\n[string \"@Interface\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua\"]:417: in function `OnAdded'\n[string \"@Interface\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua\"]:118: in function `OnNamePlateAdded'\n[string \"@Interface\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua\"]:56: in function <...e\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua:47>",
 			["session"] = 494,
 			["counter"] = 1,
-		}, -- [118]
+		}, -- [117]
 		{
 			["message"] = "Interface\\FrameXML\\UnitPopup.lua:1481: Usage: CheckInteractDistance(\"unit\", distIndex)",
 			["time"] = "2021/01/16 00:33:17",
@@ -916,6 +908,49 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `CheckInteractDistance'\n[string \"@Interface\\FrameXML\\UnitPopup.lua\"]:1481: in function <Interface\\FrameXML\\UnitPopup.lua:1476>\n[string \"@Interface\\FrameXML\\UnitPopup.lua\"]:1531: in function `UnitPopup_OnUpdate'\n[string \"*:OnUpdate\"]:3: in function <[string \"*:OnUpdate\"]:1>",
 			["session"] = 514,
 			["counter"] = 16,
+		}, -- [118]
+		{
+			["message"] = "...ns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:395: attempt to index a nil value",
+			["time"] = "2020/12/04 21:02:29",
+			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n GetGlobalPosition = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:311\n PanTo = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:318\n BountyRing = <unnamed> {\n }\n OnMouseUpAction = <function> defined @Interface\\AddOns\\Blizzard_SharedMapDataProviders\\WorldQuestDataProvider.lua:473\n OnMouseDownAction = <function> defined @Interface\\AddOns\\Blizzard_SharedMapDataProviders\\WorldQuestDataProvider.lua:467\n OnCanvasScaleChanged = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:328\n GetNudgeSourceZoomedInMagnitude = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:233\n SetScaleStyle = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:359\n GetNudgeSourcePinZoomedInNudgeFactor = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:269\n UpdateTooltip = <function> defined @Interface\\AddOns\\Blizzard_SharedMapDataProviders\\WorldQuestDataProvider.lua:435\n GetMap = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:257\n OnCanvasSizeChanged = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:337\n ApplyCurrentPosition = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:394\n IsIgnoringGlobalPinScale = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:345\n Glow = <unnamed> {\n }\n GetNudgeZoomFactor = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:291\n OnMouseUp = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:178\n OnAcquired = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:144\n PanAndZoomTo = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:323\n SelectedGlow = <unnamed> {\n }\n RefreshVisuals = <function> defined @Interface\\AddOns\\Blizzard_SharedMapDataProviders\\WorldQuestDataProvider.lua:399\n ApplyCurrentAlpha = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:415\n OnLoad = <function> defined @Interface\\AddOns\\Blizzard_AnimaDiversionUI\\AD_WorldQuestDataProvider.lua:9\n TrackedCheck = <unnamed> {\n }\n UpdateSupertrackedHighlight = <function> defined @Interface\\AddOns\\Blizzard_SharedMapDataProviders\\WorldQuestDataProvider.lua:430\n OnReleased = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:148\n IgnoresNudging = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:253\n startAlpha = 0.600000\n normalizedY = 0.634206\n normalizedX = 0.505410\n worldQuestType = 2\n ClearNudgeSettings = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:199\n OnMapInsetMouseLeave = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:195\n tagInfo = <table> {\n }\n SetNudgeFactor = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:286\n UseFrameLevelType = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:423\n GetNudgeSourcePinZoomedOutNudgeFactor = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:265\n GetNudgeFactor = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:282\n startScale = 0.412500\n OnClick = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:152\n OnMouseClickAction = <function> defined @Interface\\AddOns\\Blizzard_SharedMapDataProviders\\WorldQuestDataProvider.lua:443\n GetNudgeSourceRadius = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua:220\n numObjectives = 3\n worldQuest = true\n dataProvider = <table> {\n }\n zoomedInNudge = 0.250000\n questID = 58505\n TimeLowFrame = <unnamed> {\n }\n GetNudgeTargetFactor = <functi",
+			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua\"]:395: in function `ApplyCurrentPosition'\n[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_DataProviderBase.lua\"]:279: in function `SetNudgeVector'\n[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\Blizzard_MapCanvas.lua\"]:327: in function `CalculatePinNudging'\n[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\Blizzard_MapCanvas.lua\"]:365: in function `UpdatePinNudging'\n[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\Blizzard_MapCanvas.lua\"]:29: in function <...ace\\AddOns\\Blizzard_MapCanvas\\Blizzard_MapCanvas.lua:28>",
+			["session"] = 526,
+			["counter"] = 525,
 		}, -- [119]
+		{
+			["message"] = "Interface\\AddOns\\Chatter\\Modules\\EditBox.lua:348: attempt to index field '?' (a nil value)",
+			["time"] = "2021/01/18 17:15:19",
+			["stack"] = "[string \"@Interface\\AddOns\\Chatter\\Modules\\EditBox.lua\"]:348: in function <Interface\\AddOns\\Chatter\\Modules\\EditBox.lua:318>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:70: in function <...ace\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:65>\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:527: in function <...ace\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:520>\n[string \"=(tail call)\"]: ?\n[string \"@Interface\\AddOns\\Chatter\\Chatter-1.7.3.lua\"]:240: in function `UpdateConfig'\n[string \"@Interface\\AddOns\\Chatter\\Chatter-1.7.3.lua\"]:226: in function <Interface\\AddOns\\Chatter\\Chatter.lua:222>",
+			["session"] = 526,
+			["counter"] = 1,
+		}, -- [120]
+		{
+			["message"] = "...nterface\\AddOns\\Chatter\\Modules\\ChatFrameBorders.lua:221: attempt to index field '?' (a nil value)",
+			["time"] = "2021/01/18 17:15:19",
+			["stack"] = "[string \"@Interface\\AddOns\\Chatter\\Modules\\ChatFrameBorders.lua\"]:221: in function <...nterface\\AddOns\\Chatter\\Modules\\ChatFrameBorders.lua:217>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:70: in function <...ace\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:65>\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:527: in function <...ace\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:520>\n[string \"=(tail call)\"]: ?\n[string \"@Interface\\AddOns\\Chatter\\Chatter-1.7.3.lua\"]:240: in function `UpdateConfig'\n[string \"@Interface\\AddOns\\Chatter\\Chatter-1.7.3.lua\"]:226: in function <Interface\\AddOns\\Chatter\\Chatter.lua:222>",
+			["session"] = 526,
+			["counter"] = 1,
+		}, -- [121]
+		{
+			["message"] = "...e\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua:180: Attempting to rehook already active hook OnHyperlinkEnter.",
+			["time"] = "2021/01/18 17:15:19",
+			["stack"] = "[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua\"]:180: in function <...e\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0.lua:118>\n[string \"@Interface\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua\"]:367: in function `HookScript'\n[string \"@Interface\\AddOns\\Chatter\\Modules\\LinkHover.lua\"]:32: in function <Interface\\AddOns\\Chatter\\Modules\\LinkHover.lua:23>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:70: in function <...ace\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:65>\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:527: in function <...ace\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:520>\n[string \"=(tail call)\"]: ?\n[string \"@Interface\\AddOns\\Chatter\\Chatter-1.7.3.lua\"]:240: in function `UpdateConfig'\n[string \"@Interface\\AddOns\\Chatter\\Chatter-1.7.3.lua\"]:226: in function <Interface\\AddOns\\Chatter\\Chatter.lua:222>",
+			["session"] = 526,
+			["counter"] = 1,
+		}, -- [122]
+		{
+			["message"] = "...e\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua:180: Attempting to rehook already active hook OnTextChanged.",
+			["time"] = "2021/01/18 17:15:19",
+			["stack"] = "[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua\"]:180: in function <...e\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0.lua:118>\n[string \"@Interface\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua\"]:367: in function `HookScript'\n[string \"@Interface\\AddOns\\Chatter\\Modules\\GroupSay.lua\"]:25: in function <Interface\\AddOns\\Chatter\\Modules\\GroupSay.lua:18>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:70: in function <...ace\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:65>\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:527: in function <...ace\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:520>\n[string \"=(tail call)\"]: ?\n[string \"@Interface\\AddOns\\Chatter\\Chatter-1.7.3.lua\"]:240: in function `UpdateConfig'\n[string \"@Interface\\AddOns\\Chatter\\Chatter-1.7.3.lua\"]:226: in function <Interface\\AddOns\\Chatter\\Chatter.lua:222>",
+			["session"] = 526,
+			["counter"] = 1,
+		}, -- [123]
+		{
+			["message"] = "...e\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua:180: Attempting to rehook already active hook AddMessage.",
+			["time"] = "2021/01/18 17:15:19",
+			["stack"] = "[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua\"]:180: in function <...e\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0.lua:118>\n[string \"@Interface\\AddOns\\Bartender4\\libs\\AceHook-3.0\\AceHook-3.0-9.lua\"]:322: in function `RawHook'\n[string \"@Interface\\AddOns\\Chatter\\Modules\\ClickInvite.lua\"]:98: in function <Interface\\AddOns\\Chatter\\Modules\\ClickInvite.lua:83>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:70: in function <...ace\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:65>\n[string \"@Interface\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:527: in function <...ace\\AddOns\\Masque\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:520>\n[string \"=(tail call)\"]: ?\n[string \"@Interface\\AddOns\\Chatter\\Chatter-1.7.3.lua\"]:240: in function `UpdateConfig'\n[string \"@Interface\\AddOns\\Chatter\\Chatter-1.7.3.lua\"]:226: in function <Interface\\AddOns\\Chatter\\Chatter.lua:222>",
+			["session"] = 526,
+			["counter"] = 5,
+		}, -- [124]
 	},
 }

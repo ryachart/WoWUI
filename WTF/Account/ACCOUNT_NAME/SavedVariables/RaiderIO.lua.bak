@@ -1,10 +1,8 @@
 
 RaiderIO_Config = {
 }
-RaiderIO_LastCharacter = "us-Raingarr-thunderlord"
+RaiderIO_LastCharacter = "us-Mistgarr-tichondrius"
 RaiderIO_MissingCharacters = {
-	["us-Twavis-mannoroth"] = true,
-	["us-Valdrena-thunderlord"] = true,
-	["us-Nedstarkz-destromath"] = true,
+	["us-Eighth-zuljin"] = true,
 }
 RaiderIO_CachedRuns = nil

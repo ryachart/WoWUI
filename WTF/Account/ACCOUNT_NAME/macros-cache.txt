@@ -3,6 +3,11 @@ VER 3 0000000000000036 "CelestialBrew" "1360979"
 /cancelqueuedspell
 /cast Celestial Brew
 END
+VER 3 0000000000000039 "EFTrinket" "1360978"
+#showtooltip Essence Font
+/use 13
+/cast Essence Font
+END
 VER 3 000000000000001E "Focus" "135766"
 /focus
 END

@@ -20,7 +20,7 @@ VER 3 010000000000000C "EMBlackout" "SPELL_MONK_ENVELOPINGMIST"
 END
 VER 3 0100000000000014 "FocusInpt" "608940"
 #showtooltip
-/cast [@focus,exists]Spear Hand Strike; Spear Hand Strike
+/cast [@focus,exists,nohelp]Spear Hand Strike; Spear Hand Strike
 END
 VER 3 0100000000000016 "KegSmash" "594274"
 #showtooltip Keg Smash
@@ -29,7 +29,7 @@ VER 3 0100000000000016 "KegSmash" "594274"
 END
 VER 3 0100000000000013 "ManaTeaTrinkets" "574571"
 #showtooltip Invoke Yu'lon, the Jade Serpent
-/use 13
+/use 14
 /cast Invoke Yu'lon, the Jade Serpent
 END
 VER 3 010000000000001B "PalmViv" "606551"
