@@ -1,4 +1,0 @@
-
-TUJTooltipsHidden = false
-TUJTooltipsSettings = {
-}
