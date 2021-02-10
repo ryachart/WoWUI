@@ -4,6 +4,47 @@ ElkBuffBarsDB = {
 		["LibDualSpec-1.0"] = {
 		},
 	},
+	["global"] = {
+		["maxcharges"] = {
+			["DEBUFF"] = {
+				["Torment: Might of the Upper Reaches"] = 10,
+				["Burst"] = 7,
+				["Vile Spit"] = 2,
+				["Bone Shrapnel"] = 2,
+				["Assassinate"] = 5,
+				["Winter's Chill"] = 2,
+				["Aural Fracture"] = 5,
+				["Thrash"] = 3,
+				["Infectious Rain"] = 4,
+				["Corrosive Gunk"] = 3,
+				["Concentrated Plague"] = 3,
+			},
+			["BUFF"] = {
+				["Thrill Seeker"] = 7,
+				["Chi Energy"] = 30,
+				["Soul Remnant's Blessing"] = 24,
+				["Chain Reaction"] = 2,
+				["Slimy Morsel"] = 9,
+				["Purified Chi"] = 8,
+				["Earth Shield"] = 9,
+				["Fevered Incantation"] = 3,
+				["Solidify"] = 2,
+				["Unnatural Power"] = 13,
+				["Ironfur"] = 3,
+				["Elusive Brawler"] = 11,
+				["Slime Injected"] = 5,
+				["Earthwarden"] = 3,
+				["Blood Waltz"] = 4,
+				["Let Go of the Past"] = 3,
+			},
+		},
+		["maxtimes"] = {
+			["TENCH"] = {
+				[6200] = 3599.497,
+			},
+		},
+		["build"] = "37474",
+	},
 	["profileKeys"] = {
 		["Angarr - Thunderlord"] = "Default",
 		["Angarr - Blackrock"] = "Default",
@@ -11,47 +52,23 @@ ElkBuffBarsDB = {
 		["Fangarr - Tichondrius"] = "Default",
 		["Ignorc - Blackrock"] = "Default",
 		["Mistgarr - Tichondrius"] = "Default",
-		["Flashlyte - Blackrock"] = "Default",
-		["Glaivegarr - Blackrock"] = "Default",
-		["Raingarr - Thunderlord"] = "Default",
 		["Paingarr - Sargeras"] = "Default",
+		["Raingarr - Thunderlord"] = "Default",
+		["Glaivegarr - Blackrock"] = "Default",
+		["Flashlyte - Blackrock"] = "Default",
 		["Arantir - Lightbringer"] = "Default",
-	},
-	["global"] = {
-		["maxcharges"] = {
-			["DEBUFF"] = {
-				["Focused Annihilation"] = 2,
-				["Radiant Spark Vulnerability"] = 4,
-				["Agony"] = 10,
-				["Everfrost"] = 10,
-				["Shadow Embrace"] = 3,
-			},
-			["BUFF"] = {
-				["Fireball"] = 2,
-				["Smoldering Stygia"] = 10,
-				["Purified Chi"] = 4,
-				["Incanter's Flow"] = 3,
-				["Echoing Reprimand"] = 3,
-				["Let Go of the Past"] = 3,
-				["Elusive Brawler"] = 12,
-				["Fevered Incantation"] = 3,
-				["Uber Strike"] = 5,
-				["Fallen Armaments"] = 3,
-			},
-		},
-		["build"] = "37474",
 	},
 	["profiles"] = {
 		["Default"] = {
 			["bargroups"] = {
 				{
-					["sorting"] = "timemax",
+					["anchorshown"] = false,
+					["configmode"] = false,
 					["id"] = 1,
-					["scale"] = 1,
 					["barspacing"] = 0,
 					["alpha"] = 0.5,
-					["y"] = 1074.500122070313,
 					["anchortext"] = "BUFFS",
+					["y"] = 1074.500122070313,
 					["x"] = 1413.000610351563,
 					["growup"] = false,
 					["filter"] = {
@@ -103,26 +120,35 @@ ElkBuffBarsDB = {
 							1, -- [3]
 							1, -- [4]
 						},
-						["height"] = 20,
+						["textTL"] = "NAMERANKCOUNT",
 						["textTLfont"] = "Friz Quadrata TT",
 						["tooltipcaster"] = true,
 						["textTRfontsize"] = 14,
 						["iconcountfont"] = "Friz Quadrata TT",
 						["timeformat"] = "CONDENSED",
-						["width"] = 220,
+						["barcolor"] = {
+							0.3, -- [1]
+							0.5, -- [2]
+							1, -- [3]
+							0.8, -- [4]
+						},
 						["iconcountanchor"] = "CENTER",
+						["textBRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+						},
+						["timelessfull"] = false,
+						["textTLfontsize"] = 14,
+						["textTLstyle"] = "",
 						["textTRcolor"] = {
 							1, -- [1]
 							1, -- [2]
 							1, -- [3]
 							1, -- [4]
 						},
-						["timelessfull"] = false,
 						["barright"] = false,
-						["iconcountfontsize"] = 14,
-						["spark"] = true,
-						["bartexture"] = "Details Flat",
-						["textBLfont"] = "Friz Quadrata TT",
+						["debufftypecolor"] = true,
 						["iconcountcolor"] = {
 							1, -- [1]
 							1, -- [2]
@@ -130,32 +156,23 @@ ElkBuffBarsDB = {
 							1, -- [4]
 						},
 						["textBLstyle"] = "",
-						["textTLstyle"] = "",
-						["debufftypecolor"] = true,
+						["width"] = 220,
+						["textBLfont"] = "Friz Quadrata TT",
 						["textBLfontsize"] = 14,
-						["textTLfontsize"] = 14,
-						["textBRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-						},
-						["barcolor"] = {
-							0.3, -- [1]
-							0.5, -- [2]
-							1, -- [3]
-							0.8, -- [4]
-						},
+						["bartexture"] = "Details Flat",
+						["spark"] = true,
+						["iconcountfontsize"] = 14,
 						["padding"] = 1,
 						["textBLalign"] = "LEFT",
-						["textTL"] = "NAMERANKCOUNT",
+						["height"] = 20,
 					},
-					["configmode"] = false,
-					["anchorshown"] = false,
+					["scale"] = 1,
+					["sorting"] = "timemax",
 				}, -- [1]
 				{
-					["sorting"] = "timemax",
-					["id"] = 2,
+					["anchorshown"] = false,
 					["scale"] = 1,
+					["id"] = 2,
 					["barspacing"] = 0,
 					["alpha"] = 1,
 					["stickto"] = 1,
@@ -203,26 +220,35 @@ ElkBuffBarsDB = {
 							1, -- [3]
 							1, -- [4]
 						},
-						["height"] = 20,
+						["textTL"] = "NAMERANKCOUNT",
 						["textTLfont"] = "Friz Quadrata TT",
 						["tooltipcaster"] = true,
 						["textTRfontsize"] = 14,
 						["iconcountfont"] = "Friz Quadrata TT",
 						["timeformat"] = "CONDENSED",
-						["width"] = 220,
+						["barcolor"] = {
+							1, -- [1]
+							0, -- [2]
+							0, -- [3]
+							0.8, -- [4]
+						},
 						["iconcountanchor"] = "CENTER",
+						["textBRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+						},
+						["timelessfull"] = false,
+						["textTLfontsize"] = 14,
+						["textTLstyle"] = "",
 						["textTRcolor"] = {
 							1, -- [1]
 							1, -- [2]
 							1, -- [3]
 							1, -- [4]
 						},
-						["timelessfull"] = false,
 						["barright"] = false,
-						["iconcountfontsize"] = 14,
-						["spark"] = false,
-						["bartexture"] = "Details Flat",
-						["textBLfont"] = "Friz Quadrata TT",
+						["debufftypecolor"] = true,
 						["iconcountcolor"] = {
 							1, -- [1]
 							1, -- [2]
@@ -230,32 +256,23 @@ ElkBuffBarsDB = {
 							1, -- [4]
 						},
 						["textBLstyle"] = "",
-						["textTLstyle"] = "",
-						["debufftypecolor"] = true,
+						["width"] = 220,
+						["textBLfont"] = "Friz Quadrata TT",
 						["textBLfontsize"] = 14,
-						["textTLfontsize"] = 14,
-						["textBRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-						},
-						["barcolor"] = {
-							1, -- [1]
-							0, -- [2]
-							0, -- [3]
-							0.8, -- [4]
-						},
+						["bartexture"] = "Details Flat",
+						["spark"] = false,
+						["iconcountfontsize"] = 14,
 						["padding"] = 1,
 						["textBLalign"] = "LEFT",
-						["textTL"] = "NAMERANKCOUNT",
+						["height"] = 20,
 					},
 					["stickside"] = "",
-					["anchorshown"] = false,
+					["sorting"] = "timemax",
 				}, -- [2]
 				{
-					["sorting"] = "timemax",
-					["id"] = 3,
+					["anchorshown"] = false,
 					["scale"] = 1,
+					["id"] = 3,
 					["barspacing"] = 0,
 					["alpha"] = 0.5,
 					["stickto"] = 2,
@@ -303,26 +320,35 @@ ElkBuffBarsDB = {
 							1, -- [3]
 							1, -- [4]
 						},
-						["height"] = 20,
+						["textTL"] = "NAMERANKCOUNT",
 						["textTLfont"] = "Friz Quadrata TT",
 						["tooltipcaster"] = true,
 						["textTRfontsize"] = 14,
 						["iconcountfont"] = "Friz Quadrata TT",
 						["timeformat"] = "CONDENSED",
-						["width"] = 220,
+						["barcolor"] = {
+							0.5, -- [1]
+							0, -- [2]
+							0.5, -- [3]
+							0.8, -- [4]
+						},
 						["iconcountanchor"] = "CENTER",
+						["textBRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+						},
+						["timelessfull"] = false,
+						["textTLfontsize"] = 14,
+						["textTLstyle"] = "",
 						["textTRcolor"] = {
 							1, -- [1]
 							1, -- [2]
 							1, -- [3]
 							1, -- [4]
 						},
-						["timelessfull"] = false,
 						["barright"] = false,
-						["iconcountfontsize"] = 14,
-						["spark"] = false,
-						["bartexture"] = "Details Flat",
-						["textBLfont"] = "Friz Quadrata TT",
+						["debufftypecolor"] = true,
 						["iconcountcolor"] = {
 							1, -- [1]
 							1, -- [2]
@@ -330,27 +356,18 @@ ElkBuffBarsDB = {
 							1, -- [4]
 						},
 						["textBLstyle"] = "",
-						["textTLstyle"] = "",
-						["debufftypecolor"] = true,
+						["width"] = 220,
+						["textBLfont"] = "Friz Quadrata TT",
 						["textBLfontsize"] = 14,
-						["textTLfontsize"] = 14,
-						["textBRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-						},
-						["barcolor"] = {
-							0.5, -- [1]
-							0, -- [2]
-							0.5, -- [3]
-							0.8, -- [4]
-						},
+						["bartexture"] = "Details Flat",
+						["spark"] = false,
+						["iconcountfontsize"] = 14,
 						["padding"] = 1,
 						["textBLalign"] = "LEFT",
-						["textTL"] = "NAMERANKCOUNT",
+						["height"] = 20,
 					},
 					["stickside"] = "LEFT",
-					["anchorshown"] = false,
+					["sorting"] = "timemax",
 				}, -- [3]
 			},
 			["groupspacing"] = 0,

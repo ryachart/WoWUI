@@ -3,26 +3,6 @@ Bartender4DB = {
 	["namespaces"] = {
 		["StatusTrackingBar"] = {
 			["profiles"] = {
-				["Mistgarr - Tichondrius"] = {
-					["enabled"] = true,
-					["version"] = 3,
-					["position"] = {
-						["y"] = 62,
-						["x"] = -515,
-						["point"] = "BOTTOM",
-						["scale"] = 1.264999985694885,
-					},
-				},
-				["Shadegarr - Tichondrius"] = {
-					["enabled"] = true,
-					["version"] = 3,
-					["position"] = {
-						["scale"] = 1.264999985694885,
-						["x"] = -515,
-						["point"] = "BOTTOM",
-						["y"] = 62,
-					},
-				},
 				["Default"] = {
 					["enabled"] = true,
 					["position"] = {
@@ -36,6 +16,26 @@ Bartender4DB = {
 						["vehicleui"] = false,
 					},
 					["version"] = 3,
+				},
+				["Shadegarr - Tichondrius"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["scale"] = 1.264999985694885,
+						["x"] = -515,
+						["point"] = "BOTTOM",
+						["y"] = 62,
+					},
+				},
+				["Mistgarr - Tichondrius"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["y"] = 62,
+						["x"] = -515,
+						["point"] = "BOTTOM",
+						["scale"] = 1.264999985694885,
+					},
 				},
 				["Arantir - Lightbringer"] = {
 					["enabled"] = true,
@@ -51,139 +51,6 @@ Bartender4DB = {
 		},
 		["ActionBars"] = {
 			["profiles"] = {
-				["Mistgarr - Tichondrius"] = {
-					["actionbars"] = {
-						{
-							["padding"] = 6,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 41.75,
-								["x"] = -510,
-								["point"] = "BOTTOM",
-							},
-						}, -- [1]
-						{
-							["enabled"] = false,
-							["version"] = 3,
-							["position"] = {
-								["y"] = -227.4998474121094,
-								["x"] = -231.5001831054688,
-								["point"] = "CENTER",
-							},
-						}, -- [2]
-						{
-							["padding"] = 5,
-							["rows"] = 12,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 610,
-								["x"] = -82,
-								["point"] = "BOTTOMRIGHT",
-							},
-						}, -- [3]
-						{
-							["padding"] = 5,
-							["rows"] = 12,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 610,
-								["x"] = -42,
-								["point"] = "BOTTOMRIGHT",
-							},
-						}, -- [4]
-						{
-							["padding"] = 6,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 110,
-								["x"] = 3,
-								["point"] = "BOTTOM",
-							},
-						}, -- [5]
-						{
-							["padding"] = 6,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 110,
-								["x"] = -510,
-								["point"] = "BOTTOM",
-							},
-						}, -- [6]
-						{
-						}, -- [7]
-						{
-						}, -- [8]
-						nil, -- [9]
-						{
-						}, -- [10]
-					},
-				},
-				["Shadegarr - Tichondrius"] = {
-					["actionbars"] = {
-						{
-							["padding"] = 6,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 41.75,
-								["x"] = -510,
-								["point"] = "BOTTOM",
-							},
-						}, -- [1]
-						{
-							["enabled"] = false,
-							["version"] = 3,
-							["position"] = {
-								["y"] = -227.4998474121094,
-								["x"] = -231.5001831054688,
-								["point"] = "CENTER",
-							},
-						}, -- [2]
-						{
-							["rows"] = 12,
-							["padding"] = 5,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 610,
-								["x"] = -82,
-								["point"] = "BOTTOMRIGHT",
-							},
-						}, -- [3]
-						{
-							["rows"] = 12,
-							["padding"] = 5,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 610,
-								["x"] = -42,
-								["point"] = "BOTTOMRIGHT",
-							},
-						}, -- [4]
-						{
-							["padding"] = 6,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 110,
-								["x"] = 3,
-								["point"] = "BOTTOM",
-							},
-						}, -- [5]
-						{
-							["padding"] = 6,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 110,
-								["x"] = -510,
-								["point"] = "BOTTOM",
-							},
-						}, -- [6]
-						{
-						}, -- [7]
-						{
-						}, -- [8]
-						[10] = {
-						},
-					},
-				},
 				["Default"] = {
 					["actionbars"] = {
 						{
@@ -197,6 +64,7 @@ Bartender4DB = {
 							["padding"] = 6,
 							["visibility"] = {
 								["combat"] = false,
+								["always"] = false,
 							},
 						}, -- [1]
 						{
@@ -209,8 +77,9 @@ Bartender4DB = {
 							},
 							["padding"] = 6,
 							["visibility"] = {
-								["overridebar"] = false,
 								["combat"] = false,
+								["always"] = false,
+								["overridebar"] = false,
 								["vehicleui"] = false,
 							},
 						}, -- [2]
@@ -279,7 +148,7 @@ Bartender4DB = {
 						}, -- [10]
 					},
 				},
-				["Arantir - Lightbringer"] = {
+				["Shadegarr - Tichondrius"] = {
 					["actionbars"] = {
 						{
 							["padding"] = 6,
@@ -345,19 +214,152 @@ Bartender4DB = {
 						},
 					},
 				},
+				["Mistgarr - Tichondrius"] = {
+					["actionbars"] = {
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 41.75,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["y"] = -227.4998474121094,
+								["x"] = -231.5001831054688,
+								["point"] = "CENTER",
+							},
+						}, -- [2]
+						{
+							["rows"] = 12,
+							["padding"] = 5,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -82,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [3]
+						{
+							["rows"] = 12,
+							["padding"] = 5,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [4]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 110,
+								["x"] = 3,
+								["point"] = "BOTTOM",
+							},
+						}, -- [5]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 110,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						nil, -- [9]
+						{
+						}, -- [10]
+					},
+				},
+				["Arantir - Lightbringer"] = {
+					["actionbars"] = {
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 41.75,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["y"] = -227.4998474121094,
+								["x"] = -231.5001831054688,
+								["point"] = "CENTER",
+							},
+						}, -- [2]
+						{
+							["rows"] = 12,
+							["padding"] = 5,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -82,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [3]
+						{
+							["rows"] = 12,
+							["padding"] = 5,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [4]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 110,
+								["x"] = 3,
+								["point"] = "BOTTOM",
+							},
+						}, -- [5]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 110,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						[10] = {
+						},
+					},
+				},
 			},
 		},
 		["LibDualSpec-1.0"] = {
 		},
 		["ExtraActionBar"] = {
 			["profiles"] = {
-				["Mistgarr - Tichondrius"] = {
-					["version"] = 3,
+				["Default"] = {
 					["position"] = {
-						["y"] = 223.0000305175781,
-						["x"] = -31.50006103515625,
+						["y"] = 261.9309997558594,
+						["x"] = -359.6001586914063,
 						["point"] = "BOTTOM",
 					},
+					["version"] = 3,
 				},
 				["Shadegarr - Tichondrius"] = {
 					["version"] = 3,
@@ -367,13 +369,13 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
-				["Default"] = {
+				["Mistgarr - Tichondrius"] = {
+					["version"] = 3,
 					["position"] = {
-						["y"] = 261.9309997558594,
-						["x"] = -359.6001586914063,
+						["y"] = 223.0000305175781,
+						["x"] = -31.50006103515625,
 						["point"] = "BOTTOM",
 					},
-					["version"] = 3,
 				},
 				["Arantir - Lightbringer"] = {
 					["version"] = 3,
@@ -387,15 +389,16 @@ Bartender4DB = {
 		},
 		["MicroMenu"] = {
 			["profiles"] = {
-				["Mistgarr - Tichondrius"] = {
-					["padding"] = -2,
+				["Default"] = {
 					["version"] = 3,
+					["rows"] = 11,
 					["position"] = {
-						["y"] = 41.75,
-						["x"] = 37.5,
-						["point"] = "BOTTOM",
+						["y"] = 192.5001220703125,
+						["x"] = -5,
+						["point"] = "LEFT",
 						["scale"] = 1,
 					},
+					["padding"] = -2,
 				},
 				["Shadegarr - Tichondrius"] = {
 					["padding"] = -2,
@@ -407,16 +410,15 @@ Bartender4DB = {
 						["y"] = 41.75,
 					},
 				},
-				["Default"] = {
+				["Mistgarr - Tichondrius"] = {
+					["padding"] = -2,
 					["version"] = 3,
-					["rows"] = 11,
 					["position"] = {
-						["y"] = 192.5001220703125,
-						["x"] = -5,
-						["point"] = "LEFT",
+						["y"] = 41.75,
+						["x"] = 37.5,
+						["point"] = "BOTTOM",
 						["scale"] = 1,
 					},
-					["padding"] = -2,
 				},
 				["Arantir - Lightbringer"] = {
 					["padding"] = -2,
@@ -432,12 +434,14 @@ Bartender4DB = {
 		},
 		["BagBar"] = {
 			["profiles"] = {
-				["Mistgarr - Tichondrius"] = {
+				["Default"] = {
+					["rows"] = 5,
+					["onebag"] = true,
 					["version"] = 3,
 					["position"] = {
-						["y"] = 38.5,
-						["x"] = 345,
-						["point"] = "BOTTOM",
+						["y"] = -186.7295532226563,
+						["x"] = -3.000002145767212,
+						["point"] = "LEFT",
 					},
 				},
 				["Shadegarr - Tichondrius"] = {
@@ -448,14 +452,12 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Default"] = {
-					["rows"] = 5,
-					["onebag"] = true,
+				["Mistgarr - Tichondrius"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = -186.7295532226563,
-						["x"] = -3.000002145767212,
-						["point"] = "LEFT",
+						["y"] = 38.5,
+						["x"] = 345,
+						["point"] = "BOTTOM",
 					},
 				},
 				["Arantir - Lightbringer"] = {
@@ -470,14 +472,13 @@ Bartender4DB = {
 		},
 		["BlizzardArt"] = {
 			["profiles"] = {
-				["Mistgarr - Tichondrius"] = {
-					["enabled"] = true,
-					["version"] = 3,
+				["Default"] = {
 					["position"] = {
 						["y"] = 47,
 						["x"] = -512,
 						["point"] = "BOTTOM",
 					},
+					["version"] = 3,
 				},
 				["Shadegarr - Tichondrius"] = {
 					["enabled"] = true,
@@ -488,15 +489,7 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Default"] = {
-					["position"] = {
-						["y"] = 47,
-						["x"] = -512,
-						["point"] = "BOTTOM",
-					},
-					["version"] = 3,
-				},
-				["Arantir - Lightbringer"] = {
+				["Mistgarr - Tichondrius"] = {
 					["enabled"] = true,
 					["version"] = 3,
 					["position"] = {
@@ -505,113 +498,12 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-			},
-		},
-		["Vehicle"] = {
-			["profiles"] = {
-				["Mistgarr - Tichondrius"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
-					},
-				},
-				["Shadegarr - Tichondrius"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
-					},
-				},
-				["Default"] = {
-					["position"] = {
-						["y"] = -201.2775268554688,
-						["x"] = 450.189208984375,
-						["point"] = "CENTER",
-					},
-					["version"] = 3,
-				},
 				["Arantir - Lightbringer"] = {
+					["enabled"] = true,
 					["version"] = 3,
 					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
-					},
-				},
-			},
-		},
-		["StanceBar"] = {
-			["profiles"] = {
-				["Mistgarr - Tichondrius"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = -14.99996185302734,
-						["x"] = -82.5,
-						["point"] = "CENTER",
-					},
-				},
-				["Shadegarr - Tichondrius"] = {
-					["version"] = 3,
-					["position"] = {
-						["scale"] = 1,
-						["x"] = -460,
-						["point"] = "BOTTOM",
-						["y"] = 143,
-					},
-				},
-				["Default"] = {
-					["position"] = {
-						["y"] = -129.8757934570313,
-						["x"] = 432.7863464355469,
-						["point"] = "LEFT",
-						["scale"] = 1,
-					},
-					["version"] = 3,
-				},
-				["Arantir - Lightbringer"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = -14.99996185302734,
-						["x"] = -82.5,
-						["point"] = "CENTER",
-					},
-				},
-			},
-		},
-		["PetBar"] = {
-			["profiles"] = {
-				["Mistgarr - Tichondrius"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 143,
-						["x"] = -460,
-						["point"] = "BOTTOM",
-					},
-				},
-				["Shadegarr - Tichondrius"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 143,
-						["x"] = -120,
-						["point"] = "BOTTOM",
-					},
-				},
-				["Default"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = -201.9434204101563,
-						["x"] = 244.1744384765625,
-						["point"] = "LEFT",
-					},
-				},
-				["Arantir - Lightbringer"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 143,
-						["x"] = -460,
+						["y"] = 47,
+						["x"] = -512,
 						["point"] = "BOTTOM",
 					},
 				},
@@ -677,6 +569,116 @@ Bartender4DB = {
 				},
 			},
 		},
+		["Vehicle"] = {
+			["profiles"] = {
+				["Default"] = {
+					["position"] = {
+						["y"] = -201.2775268554688,
+						["x"] = 450.189208984375,
+						["point"] = "CENTER",
+					},
+					["version"] = 3,
+				},
+				["Shadegarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
+				["Mistgarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
+				["Arantir - Lightbringer"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
+			},
+		},
+		["PetBar"] = {
+			["profiles"] = {
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = -201.9434204101563,
+						["x"] = 244.1744384765625,
+						["point"] = "LEFT",
+					},
+				},
+				["Shadegarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 143,
+						["x"] = -120,
+						["point"] = "BOTTOM",
+					},
+				},
+				["Mistgarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 143,
+						["x"] = -460,
+						["point"] = "BOTTOM",
+					},
+				},
+				["Arantir - Lightbringer"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 143,
+						["x"] = -460,
+						["point"] = "BOTTOM",
+					},
+				},
+			},
+		},
+		["StanceBar"] = {
+			["profiles"] = {
+				["Default"] = {
+					["position"] = {
+						["y"] = -129.8757934570313,
+						["x"] = 432.7863464355469,
+						["point"] = "LEFT",
+						["scale"] = 1,
+					},
+					["version"] = 3,
+				},
+				["Shadegarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["scale"] = 1,
+						["x"] = -460,
+						["point"] = "BOTTOM",
+						["y"] = 143,
+					},
+				},
+				["Mistgarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = -14.99996185302734,
+						["x"] = -82.5,
+						["point"] = "CENTER",
+					},
+				},
+				["Arantir - Lightbringer"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = -14.99996185302734,
+						["x"] = -82.5,
+						["point"] = "CENTER",
+					},
+				},
+			},
+		},
 	},
 	["profileKeys"] = {
 		["Angarr - Thunderlord"] = "Default",
@@ -690,9 +692,13 @@ Bartender4DB = {
 		["Arantir - Lightbringer"] = "Default",
 	},
 	["profiles"] = {
-		["Mistgarr - Tichondrius"] = {
-			["focuscastmodifier"] = false,
+		["Default"] = {
+			["selfcastmodifier"] = false,
 			["blizzardVehicle"] = true,
+			["focuscastmodifier"] = false,
+			["minimapIcon"] = {
+				["minimapPos"] = 62.83491322859041,
+			},
 			["outofrange"] = "hotkey",
 		},
 		["Shadegarr - Tichondrius"] = {
@@ -700,13 +706,9 @@ Bartender4DB = {
 			["blizzardVehicle"] = true,
 			["outofrange"] = "hotkey",
 		},
-		["Default"] = {
-			["minimapIcon"] = {
-				["minimapPos"] = 62.83491322859041,
-			},
-			["blizzardVehicle"] = true,
+		["Mistgarr - Tichondrius"] = {
 			["focuscastmodifier"] = false,
-			["selfcastmodifier"] = false,
+			["blizzardVehicle"] = true,
 			["outofrange"] = "hotkey",
 		},
 		["Arantir - Lightbringer"] = {
