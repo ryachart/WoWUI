@@ -9,44 +9,6 @@ MADB = {
 		["default"] = {
 			["name"] = "default",
 			["frames"] = {
-				["UIWidgetPowerBarContainerFrame"] = {
-					["orgPos"] = {
-						"BOTTOM", -- [1]
-						"UIParent", -- [2]
-						"BOTTOM", -- [3]
-						0, -- [4]
-						140, -- [5]
-					},
-					["name"] = "UIWidgetPowerBarContainerFrame",
-					["scale"] = 86.00003552436405,
-					["pos"] = {
-						"BOTTOM", -- [1]
-						"UIParent", -- [2]
-						"BOTTOM", -- [3]
-						-4.552321490017229, -- [4]
-						2.279076099395752, -- [5]
-					},
-					["orgScale"] = 1,
-				},
-				["PlayerPowerBarAltMover"] = {
-					["orgPos"] = {
-						"BOTTOM", -- [1]
-						"UIParent", -- [2]
-						"BOTTOM", -- [3]
-						0, -- [4]
-						155, -- [5]
-					},
-					["name"] = "PlayerPowerBarAltMover",
-					["scale"] = 1.093751549720764,
-					["pos"] = {
-						"BOTTOM", -- [1]
-						"UIParent", -- [2]
-						"BOTTOM", -- [3]
-						-537.599198713035, -- [4]
-						245.028076171875, -- [5]
-					},
-					["orgScale"] = 1,
-				},
 				["ObjectiveTrackerFrameMover"] = {
 					["orgPos"] = {
 						"TOPRIGHT", -- [1]
@@ -59,6 +21,7 @@ MADB = {
 					["orgHeight"] = 700.0000610351562,
 					["height"] = 620,
 					["orgWidth"] = 235.0000610351563,
+					["width"] = 235.0000610351563,
 					["pos"] = {
 						"TOPRIGHT", -- [1]
 						"MinimapCluster", -- [2]
@@ -66,7 +29,44 @@ MADB = {
 						-9.9998779296875, -- [4]
 						-79.99993896484375, -- [5]
 					},
-					["width"] = 235.0000610351563,
+				},
+				["PlayerPowerBarAltMover"] = {
+					["orgPos"] = {
+						"BOTTOM", -- [1]
+						"UIParent", -- [2]
+						"BOTTOM", -- [3]
+						0, -- [4]
+						155, -- [5]
+					},
+					["name"] = "PlayerPowerBarAltMover",
+					["scale"] = 1.093751549720764,
+					["orgScale"] = 1,
+					["pos"] = {
+						"BOTTOM", -- [1]
+						"UIParent", -- [2]
+						"BOTTOM", -- [3]
+						-537.599198713035, -- [4]
+						245.028076171875, -- [5]
+					},
+				},
+				["UIWidgetPowerBarContainerFrame"] = {
+					["orgPos"] = {
+						"BOTTOM", -- [1]
+						"UIParent", -- [2]
+						"BOTTOM", -- [3]
+						0, -- [4]
+						140, -- [5]
+					},
+					["name"] = "UIWidgetPowerBarContainerFrame",
+					["scale"] = 86.00003552436405,
+					["orgScale"] = 1,
+					["pos"] = {
+						"BOTTOM", -- [1]
+						"UIParent", -- [2]
+						"BOTTOM", -- [3]
+						-4.552321490017229, -- [4]
+						2.279076099395752, -- [5]
+					},
 				},
 				["TalkingHeadFrame"] = {
 					["orgPos"] = {
@@ -139,10 +139,10 @@ MADB = {
 			},
 		},
 	},
-	["tooltips"] = true,
+	["closeGUIOnEscape"] = false,
 	["modifiedFramesOnly"] = true,
 	["squareMM"] = false,
-	["playSound"] = false,
 	["noMMMW"] = false,
-	["closeGUIOnEscape"] = false,
+	["playSound"] = false,
+	["tooltips"] = true,
 }
