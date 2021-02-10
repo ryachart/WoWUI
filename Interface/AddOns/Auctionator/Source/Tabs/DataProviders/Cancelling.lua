@@ -80,7 +80,6 @@ function AuctionatorCancellingDataProviderMixin:OnLoad()
 end
 
 function AuctionatorCancellingDataProviderMixin:OnShow()
-
   Auctionator.EventBus:Register(self, EVENT_BUS_EVENTS)
 
   self:QueryAuctions()
@@ -101,6 +100,11 @@ function AuctionatorCancellingDataProviderMixin:QueryAuctions()
   Auctionator.AH.QueryOwnedAuctions({{sortOrder = 1, reverseSort = true}})
 end
 
+function AuctionatorCancellingDataProviderMixin:NoQueryRefresh()
+  self.onPreserveScroll()
+  self:PopulateAuctions()
+end
+
 local COMPARATORS = {
   price = Auctionator.Utilities.NumberComparator,
   bidPrice = Auctionator.Utilities.NumberComparator,
@@ -118,15 +122,18 @@ function AuctionatorCancellingDataProviderMixin:Sort(fieldName, sortDirection)
     return comparator(left, right)
   end)
 
-  self.onUpdate(self.results)
+  self:SetDirty()
 end
 
 function AuctionatorCancellingDataProviderMixin:OnEvent(eventName, auctionID, ...)
   if eventName == "AUCTION_CANCELED" then
-    if tIndexOf(self.waitingforCancellation, auctionID) ~= nil then
+    if (tIndexOf(self.waitingforCancellation, auctionID) ~= nil and
+        tIndexOf(self.beenCancelled, auctionID) == nil) then
       table.insert(self.beenCancelled, auctionID)
+      self:NoQueryRefresh()
+    else
+      self:QueryAuctions()
     end
-    self:QueryAuctions()
 
   elseif eventName == "OWNED_AUCTIONS_UPDATED" then
     self:PopulateAuctions()
@@ -141,7 +148,8 @@ function AuctionatorCancellingDataProviderMixin:ReceiveEvent(eventName, eventDat
 
   elseif eventName == Auctionator.Cancelling.Events.UndercutScanStart then
     self.undercutInfo = {}
-    self:PopulateAuctions()
+
+    self:NoQueryRefresh()
 
   elseif eventName == Auctionator.Cancelling.Events.UndercutStatus then
     local isUndercut = ...
@@ -150,7 +158,8 @@ function AuctionatorCancellingDataProviderMixin:ReceiveEvent(eventName, eventDat
     else
       self.undercutInfo[eventData] = AUCTIONATOR_L_UNDERCUT_NO
     end
-    self:PopulateAuctions()
+
+    self:NoQueryRefresh()
   end
 end
 

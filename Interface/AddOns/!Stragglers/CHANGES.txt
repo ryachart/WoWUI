@@ -1,0 +1,16 @@
+lightweight tag 7a3bf33be07df1eafb705c4ebbe9abbc2b2051c6 v1.0.2
+Author:	Niklas Waern <dualcoding@gmail.com>
+Date:	Sun Sep 10 12:29:36 2017 +0200
+
+commit 59ceefb223f08d8c5e44bd8c71c3b7a69bbdaacd
+Author: Niklas Waern <dualcoding@gmail.com>
+Date:   Sun Sep 10 12:28:01 2017 +0200
+
+    fix bug that led to wrong bgcolor in startup+
+
+commit 59ceefb223f08d8c5e44bd8c71c3b7a69bbdaacd
+Author: Niklas Waern <dualcoding@gmail.com>
+Date:   Sun Sep 10 12:28:01 2017 +0200
+
+    fix bug that led to wrong bgcolor in startup+
+

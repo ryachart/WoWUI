@@ -18,12 +18,12 @@ ElkBuffBarsDB = {
 		["Arantir - Lightbringer"] = "Default",
 	},
 	["global"] = {
-		["maxtimes"] = {
-			["TENCH"] = {
-				[6188] = 3305.203,
+		["maxcharges"] = {
+			["BUFF"] = {
+				["Bron's Call to Action"] = 21,
 			},
 		},
-		["build"] = "37176",
+		["build"] = "37474",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -95,7 +95,7 @@ ElkBuffBarsDB = {
 						["timeformat"] = "CONDENSED",
 						["iconcountfontsize"] = 14,
 						["iconcountanchor"] = "CENTER",
-						["spark"] = true,
+						["textTLfontsize"] = 14,
 						["textBRcolor"] = {
 							1, -- [1]
 							1, -- [2]
@@ -103,7 +103,12 @@ ElkBuffBarsDB = {
 						},
 						["bartexture"] = "Details Flat",
 						["width"] = 220,
-						["textTLfontsize"] = 14,
+						["textTRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
 						["barright"] = false,
 						["textBLfont"] = "Friz Quadrata TT",
 						["iconcountcolor"] = {
@@ -116,12 +121,7 @@ ElkBuffBarsDB = {
 						["textTLstyle"] = "",
 						["debufftypecolor"] = true,
 						["textBLfontsize"] = 14,
-						["textTRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
+						["spark"] = true,
 						["timelessfull"] = false,
 						["barcolor"] = {
 							0.3, -- [1]
@@ -195,7 +195,7 @@ ElkBuffBarsDB = {
 						["timeformat"] = "CONDENSED",
 						["iconcountfontsize"] = 14,
 						["iconcountanchor"] = "CENTER",
-						["spark"] = false,
+						["textTLfontsize"] = 14,
 						["textBRcolor"] = {
 							1, -- [1]
 							1, -- [2]
@@ -203,7 +203,12 @@ ElkBuffBarsDB = {
 						},
 						["bartexture"] = "Details Flat",
 						["width"] = 220,
-						["textTLfontsize"] = 14,
+						["textTRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
 						["barright"] = false,
 						["textBLfont"] = "Friz Quadrata TT",
 						["iconcountcolor"] = {
@@ -216,12 +221,7 @@ ElkBuffBarsDB = {
 						["textTLstyle"] = "",
 						["debufftypecolor"] = true,
 						["textBLfontsize"] = 14,
-						["textTRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
+						["spark"] = false,
 						["timelessfull"] = false,
 						["barcolor"] = {
 							1, -- [1]
@@ -295,7 +295,7 @@ ElkBuffBarsDB = {
 						["timeformat"] = "CONDENSED",
 						["iconcountfontsize"] = 14,
 						["iconcountanchor"] = "CENTER",
-						["spark"] = false,
+						["textTLfontsize"] = 14,
 						["textBRcolor"] = {
 							1, -- [1]
 							1, -- [2]
@@ -303,7 +303,12 @@ ElkBuffBarsDB = {
 						},
 						["bartexture"] = "Details Flat",
 						["width"] = 220,
-						["textTLfontsize"] = 14,
+						["textTRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
 						["barright"] = false,
 						["textBLfont"] = "Friz Quadrata TT",
 						["iconcountcolor"] = {
@@ -316,12 +321,7 @@ ElkBuffBarsDB = {
 						["textTLstyle"] = "",
 						["debufftypecolor"] = true,
 						["textBLfontsize"] = 14,
-						["textTRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
+						["spark"] = false,
 						["timelessfull"] = false,
 						["barcolor"] = {
 							0.5, -- [1]

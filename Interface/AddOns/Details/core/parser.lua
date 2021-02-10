@@ -4522,6 +4522,11 @@ local SPELL_POWER_PAIN = SPELL_POWER_PAIN or (PowerEnum and PowerEnum.Pain) or 1
 		end
 		
 		local encounterID, encounterName, difficultyID, raidSize = _select (1, ...)
+		local zoneName, _, _, _, _, _, _, zoneMapID = _GetInstanceInfo()
+
+		if (_detalhes.InstancesToStoreData[zoneMapID]) then
+			Details.current_exp_raid_encounters[encounterID] = true
+		end
 		
 		if (not _detalhes.WhoAggroTimer and _detalhes.announce_firsthit.enabled) then
 			_detalhes.WhoAggroTimer = C_Timer.NewTimer (0.5, who_aggro)
@@ -4534,19 +4539,17 @@ local SPELL_POWER_PAIN = SPELL_POWER_PAIN or (PowerEnum and PowerEnum.Pain) or 1
 		end
 
 		_current_encounter_id = encounterID
-		Details:Msg("encounter started:", encounterID, encounterName)
+		--Details:Msg("encounter started:", encounterID, encounterName)
 		_detalhes.boss1_health_percent = 1
 		
 		local dbm_mod, dbm_time = _detalhes.encounter_table.DBM_Mod, _detalhes.encounter_table.DBM_ModTime
 		_table_wipe (_detalhes.encounter_table)
 		
-		local zoneName, _, _, _, _, _, _, zoneMapID = _GetInstanceInfo()
-		
 		--print (encounterID, encounterName, difficultyID, raidSize)
 		_detalhes.encounter_table.phase = 1
 		
 		--store the encounter time inside the encounter table for the encounter plugin
-		_detalhes.encounter_table ["start"] = _GetTime()
+		_detalhes.encounter_table.start = GetTime()
 		_detalhes.encounter_table ["end"] = nil
 --		local encounterID = Details.encounter_table.id
 		_detalhes.encounter_table.id = encounterID
@@ -4585,6 +4588,8 @@ local SPELL_POWER_PAIN = SPELL_POWER_PAIN or (PowerEnum and PowerEnum.Pain) or 1
 		end
 		
 		_detalhes:SendEvent ("COMBAT_ENCOUNTER_START", nil, ...)
+
+		--print ("encounter staerted at:", _detalhes.encounter_table.start)
 	end
 	
 	function _detalhes.parser_functions:ENCOUNTER_END (...)

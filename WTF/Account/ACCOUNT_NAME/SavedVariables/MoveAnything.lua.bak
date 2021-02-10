@@ -40,14 +40,14 @@ MADB = {
 					},
 					["name"] = "PlayerPowerBarAltMover",
 					["scale"] = 1.093751549720764,
+					["orgScale"] = 1,
 					["pos"] = {
 						"BOTTOM", -- [1]
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
-						-537.5991681954569, -- [4]
-						245.0280914306641, -- [5]
+						-537.599198713035, -- [4]
+						245.028076171875, -- [5]
 					},
-					["orgScale"] = 1,
 				},
 				["UIWidgetPowerBarContainerFrame"] = {
 					["orgPos"] = {
@@ -64,8 +64,8 @@ MADB = {
 						"BOTTOM", -- [1]
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
-						-4.552322920528703, -- [4]
-						2.279074668884277, -- [5]
+						-4.552321490017229, -- [4]
+						2.279076099395752, -- [5]
 					},
 				},
 				["TalkingHeadFrame"] = {
@@ -81,8 +81,8 @@ MADB = {
 						"BOTTOM", -- [1]
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
-						-643.0001363754272, -- [4]
-						742.9999389648438, -- [5]
+						-19.99981689453125, -- [4]
+						797, -- [5]
 					},
 				},
 				["PetActionButtonsMover"] = {
@@ -133,13 +133,14 @@ MADB = {
 						"TargetFrame", -- [2]
 						"RIGHT", -- [3]
 						-92.99941615096695, -- [4]
-						-110.0001711904765, -- [5]
+						-110.0001101553203, -- [5]
 					},
 				},
 			},
 		},
 	},
 	["closeGUIOnEscape"] = false,
+	["modifiedFramesOnly"] = true,
 	["squareMM"] = false,
 	["noMMMW"] = false,
 	["playSound"] = false,

@@ -42,13 +42,7 @@ function AuctionatorUndercutScanMixin:StartScan()
   self.StartScanButton:SetEnabled(false)
   self:SetCancel()
 
-  if C_AuctionHouse.GetNumOwnedAuctions() > 0 then
-    self.scanIndex = C_AuctionHouse.GetNumOwnedAuctions() + 1
-    self:NextStep()
-
-  else
-    self:GetParent().DataProvider:QueryAuctions()
-  end
+  self:GetParent().DataProvider:QueryAuctions()
 end
 
 function AuctionatorUndercutScanMixin:SetCancel()
@@ -79,7 +73,7 @@ function AuctionatorUndercutScanMixin:NextStep()
   Auctionator.Debug.Message("next step")
   self.scanIndex = self.scanIndex - 1
 
-  if self.scanIndex < 1 then
+  if self.scanIndex < 1 or self.scanIndex > C_AuctionHouse.GetNumOwnedAuctions() then
     self:EndScan()
     return
   end

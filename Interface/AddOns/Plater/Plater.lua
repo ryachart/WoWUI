@@ -701,6 +701,56 @@ Plater.DefaultSpellRangeListF = {
 	[1444] = 40, --> DAMAGER (low-level chars)
 }
 
+local class_specs_coords = {
+	[577] = {128/512, 192/512, 256/512, 320/512}, --> havoc demon hunter
+	[581] = {192/512, 256/512, 256/512, 320/512}, --> vengeance demon hunter
+
+	[250] = {0, 64/512, 0, 64/512}, --> blood dk
+	[251] = {64/512, 128/512, 0, 64/512}, --> frost dk
+	[252] = {128/512, 192/512, 0, 64/512}, --> unholy dk
+	
+	[102] = {192/512, 256/512, 0, 64/512}, -->  druid balance
+	[103] = {256/512, 320/512, 0, 64/512}, -->  druid feral
+	[104] = {320/512, 384/512, 0, 64/512}, -->  druid guardian
+	[105] = {384/512, 448/512, 0, 64/512}, -->  druid resto
+
+	[253] = {448/512, 512/512, 0, 64/512}, -->  hunter bm
+	[254] = {0, 64/512, 64/512, 128/512}, --> hunter marks
+	[255] = {64/512, 128/512, 64/512, 128/512}, --> hunter survivor
+	
+	[62] = {(128/512) + 0.001953125, 192/512, 64/512, 128/512}, --> mage arcane
+	[63] = {192/512, 256/512, 64/512, 128/512}, --> mage fire
+	[64] = {256/512, 320/512, 64/512, 128/512}, --> mage frost
+	
+	[268] = {320/512, 384/512, 64/512, 128/512}, --> monk bm
+	[269] = {448/512, 512/512, 64/512, 128/512}, --> monk ww
+	[270] = {384/512, 448/512, 64/512, 128/512}, --> monk mw
+	
+	[65] = {0, 64/512, 128/512, 192/512}, --> paladin holy
+	[66] = {64/512, 128/512, 128/512, 192/512}, --> paladin protect
+	[70] = {(128/512) + 0.001953125, 192/512, 128/512, 192/512}, --> paladin ret
+	
+	[256] = {192/512, 256/512, 128/512, 192/512}, --> priest disc
+	[257] = {256/512, 320/512, 128/512, 192/512}, --> priest holy
+	[258] = {(320/512) + (0.001953125 * 4), 384/512, 128/512, 192/512}, --> priest shadow
+	
+	[259] = {384/512, 448/512, 128/512, 192/512}, --> rogue assassination
+	[260] = {448/512, 512/512, 128/512, 192/512}, --> rogue combat
+	[261] = {0, 64/512, 192/512, 256/512}, --> rogue sub
+	
+	[262] = {64/512, 128/512, 192/512, 256/512}, --> shaman elemental
+	[263] = {128/512, 192/512, 192/512, 256/512}, --> shamel enhancement
+	[264] = {192/512, 256/512, 192/512, 256/512}, --> shaman resto
+	
+	[265] = {256/512, 320/512, 192/512, 256/512}, --> warlock aff
+	[266] = {320/512, 384/512, 192/512, 256/512}, --> warlock demo
+	[267] = {384/512, 448/512, 192/512, 256/512}, --> warlock destro
+	
+	[71] = {448/512, 512/512, 192/512, 256/512}, --> warrior arms
+	[72] = {0, 64/512, 256/512, 320/512}, --> warrior fury
+	[73] = {64/512, 128/512, 256/512, 320/512}, --> warrior protect
+}
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --> cached value ~cache
 --Plater allocate several values in memory to save performance (cpu), this may increase memory usage
@@ -823,6 +873,8 @@ Plater.DefaultSpellRangeListF = {
 	local IS_EDITING_SPELL_ANIMATIONS = false
 	
 	local HOOKED_BLIZZARD_PLATEFRAMES = {}
+	
+	local CLASS_INFO_CACHE = {}
 
 	--store a list of friendly players in the player friends list
 	Plater.FriendsCache = {}
@@ -1750,15 +1802,20 @@ Plater.DefaultSpellRangeListF = {
 			local castBar = unitFrame.castBar
 			local buffFrame1 = unitFrame.BuffFrame
 			local buffFrame2 = unitFrame.BuffFrame2
+			local buffSpecial = unitFrame.ExtraIconFrame
+			
 			--strata
 			unitFrame:SetFrameStrata (profile.ui_parent_base_strata)
 			castBar:SetFrameStrata (profile.ui_parent_cast_strata)
 			buffFrame1:SetFrameStrata (profile.ui_parent_buff_strata)
 			buffFrame2:SetFrameStrata (profile.ui_parent_buff2_strata)
+			buffSpecial:SetFrameStrata (profile.ui_parent_buff_special_strata)
+			
 			--level
 			castBar:SetFrameLevel (profile.ui_parent_cast_level)
 			buffFrame1:SetFrameLevel (profile.ui_parent_buff_level)
 			buffFrame2:SetFrameLevel (profile.ui_parent_buff2_level)
+			buffSpecial:SetFrameLevel (profile.ui_parent_buff_special_level)
 			
 			--raid-target marker adjust:
 			unitFrame.PlaterRaidTargetFrame:SetFrameStrata(unitFrame.healthBar:GetFrameStrata())
@@ -2246,6 +2303,7 @@ Plater.DefaultSpellRangeListF = {
 			
 			local pvpType, isFFA, faction = GetZonePVPInfo()
 			Plater.ZonePvpType = pvpType
+			Plater.UpdateBgPlayerRoleCache()
 			
 			local name, instanceType, difficultyID, difficultyName, maxPlayers, dynamicDifficulty, isDynamic, instanceMapID, instanceGroupSize = GetInstanceInfo()
 			
@@ -4485,6 +4543,18 @@ function Plater.OnInit() --private --~oninit ~init
 		end
 	end)
 	
+	-- fill class-info cache data
+	for classID = 1, MAX_CLASSES do
+		local _, classFile = GetClassInfo(classID)
+		CLASS_INFO_CACHE[classFile] = {}
+		for i = 1, GetNumSpecializationsForClassID(classID) do
+			local specID, maleName, _, iconID, role = GetSpecializationInfoForClassID(classID, i, 2) -- male
+			local _, femaleName, _, iconID, role = GetSpecializationInfoForClassID(classID, i, 3) -- female
+			CLASS_INFO_CACHE[classFile][maleName] = {role = role, specID = specID, iconID = iconID}
+			CLASS_INFO_CACHE[classFile][femaleName] = CLASS_INFO_CACHE[classFile][maleName]
+		end
+	end
+	
 	-- hook to the InterfaceOptionsFrame and VideoOptionsFrame to update the nameplate sizes, as blizzard somehow messes things up there on hide...
 	InterfaceOptionsFrame:HookScript('OnHide',Plater.UpdatePlateClickSpace)
 	VideoOptionsFrame:HookScript('OnHide',Plater.UpdatePlateClickSpace)
@@ -6330,7 +6400,7 @@ end
 		--check for quest color
 		if (IS_IN_OPEN_WORLD and actorType == ACTORTYPE_ENEMY_NPC and DB_PLATE_CONFIG [actorType].quest_enabled) then --actorType == ACTORTYPE_FRIENDLY_NPC or 
 			local isQuestMob = Plater.IsQuestObjective (plateFrame)
-			if (isQuestMob and not Plater.IsUnitTapDenied (plateFrame.unitFrame.unit)) then
+			if (isQuestMob and DB_PLATE_CONFIG [actorType].quest_color_enabled and not Plater.IsUnitTapDenied (plateFrame.unitFrame.unit)) then
 				if (plateFrame [MEMBER_REACTION] == UNITREACTION_NEUTRAL) then
 					Plater.ChangeHealthBarColor_Internal (healthBar, unpack (DB_PLATE_CONFIG [actorType].quest_color_neutral))
 					
@@ -6377,7 +6447,9 @@ end
 				end
 			
 			elseif (IS_IN_OPEN_WORLD and DB_PLATE_CONFIG [actorType].quest_enabled and Plater.IsQuestObjective (plateFrame)) then
-				Plater.ChangeHealthBarColor_Internal (healthBar, unpack (DB_PLATE_CONFIG [actorType].quest_color))
+				if (DB_PLATE_CONFIG [actorType].quest_color_enabled) then
+					Plater.ChangeHealthBarColor_Internal (healthBar, unpack (DB_PLATE_CONFIG [actorType].quest_color))
+				end
 
 				healthBar:Show()
 				buffFrame:Show()
@@ -6777,13 +6849,43 @@ end
 			if (config.indicator_enemyclass) then
 				Plater.AddIndicator (plateFrame, "classicon")
 			end
-			if (config.indicator_spec) then 
-				--> check if the user is using details
-				if (Details and Details.realversion >= 134) then
-					local spec = Details:GetSpecByGUID (plateFrame [MEMBER_GUID])
-					if (spec) then
-						local texture, L, R, T, B = Details:GetSpecIcon (spec)
-						Plater.AddIndicator (plateFrame, "specicon", texture, L, R, T, B)
+			if (config.indicator_spec) then
+				-- use BG info if available
+				local texture, L, R, T, B = Plater.GetSpecIconForUnitFromBG(plateFrame [MEMBER_UNITID])
+				if texture then
+					Plater.AddIndicator (plateFrame, "specicon", texture, L, R, T, B)
+				else
+					--> check if the user is using details
+					if (Details and Details.realversion >= 134) then
+						local spec = Details:GetSpecByGUID (plateFrame [MEMBER_GUID])
+						if (spec) then
+							local texture, L, R, T, B = Details:GetSpecIcon (spec)
+							Plater.AddIndicator (plateFrame, "specicon", texture, L, R, T, B)
+						end
+					end
+				end
+			end
+		
+		elseif (actorType == ACTORTYPE_FRIENDLY_PLAYER) then
+			if (config.indicator_friendlyfaction) then
+				Plater.AddIndicator (plateFrame, UnitFactionGroup (plateFrame.unitFrame [MEMBER_UNITID]))
+			end
+			if (config.indicator_friendlyclass) then
+				Plater.AddIndicator (plateFrame, "classicon")
+			end
+			if (config.indicator_friendlyspec) then
+				-- use BG info if available
+				local texture, L, R, T, B = Plater.GetSpecIconForUnitFromBG(plateFrame [MEMBER_UNITID])
+				if texture then
+					Plater.AddIndicator (plateFrame, "specicon", texture, L, R, T, B)
+				else
+					--> check if the user is using details
+					if (Details and Details.realversion >= 134) then
+						local spec = Details:GetSpecByGUID (plateFrame [MEMBER_GUID])
+						if (spec) then
+							local texture, L, R, T, B = Details:GetSpecIcon (spec)
+							Plater.AddIndicator (plateFrame, "specicon", texture, L, R, T, B)
+						end
 					end
 				end
 			end
@@ -7612,7 +7714,9 @@ end
 		local time, token, hidding, sourceGUID, sourceName, sourceFlag, sourceFlag2, targetGUID, targetName, targetFlag, targetFlag2, spellID, spellName, spellType, amount, overKill, school, resisted, blocked, absorbed, isCritical = CombatLogGetCurrentEventInfo()
 		local func = parserFunctions [token]
 		if (func) then
-			return func (time, token, hidding, sourceGUID, sourceName, sourceFlag, sourceFlag2, targetGUID, targetName, targetFlag, targetFlag2, spellID, spellName, spellType, amount, overKill, school, resisted, blocked, absorbed, isCritical)
+			Plater.StartLogPerformanceCore("Plater-Core", "Events", token)
+			func (time, token, hidding, sourceGUID, sourceName, sourceFlag, sourceFlag2, targetGUID, targetName, targetFlag, targetFlag2, spellID, spellName, spellType, amount, overKill, school, resisted, blocked, absorbed, isCritical)
+			Plater.EndLogPerformanceCore("Plater-Core", "Events", token)
 		end
 	end
 
@@ -8041,6 +8145,45 @@ end
 		end
 		
 		return assignedRole
+	end
+	
+	
+	local BG_PLAYER_CACHE = {}
+	function Plater.UpdateBgPlayerRoleCache()
+		local curNumScores = GetNumBattlefieldScores()
+		wipe(BG_PLAYER_CACHE)
+		for i = 1, curNumScores do
+			local name, _, _, _, _, faction, race, class, classToken, _, _, _, _, _, _, talentSpec = GetBattlefieldScore(i)
+			if name then
+				BG_PLAYER_CACHE[name] = {faction = faction, race = race, class = class, classToken = classToken, talentSpec = talentSpec}
+			end
+		end
+	end
+	
+	function Plater.GetSpecIconForUnitFromBG(unit)
+		local name = GetUnitName(unit, true)
+		if not BG_PLAYER_CACHE[name] then
+			Plater.UpdateBgPlayerRoleCache()
+		end
+		
+		local cache = BG_PLAYER_CACHE[name]
+		if cache then
+			return Plater.GetSpecIcon(CLASS_INFO_CACHE[cache.classToken] and CLASS_INFO_CACHE[cache.classToken][cache.talentSpec] and CLASS_INFO_CACHE[cache.classToken][cache.talentSpec].specID)
+		end
+		return nil
+	end
+	
+	function Plater.GetSpecIcon(spec)
+		if (spec) then
+			if (spec > 600) then --hack to new spec ids on new leveling zones from level 1-10
+				spec = 65
+			end
+			if (useAlpha) then
+				return [[Interface\AddOns\Plater\images\spec_icons_normal_alpha]], unpack (class_specs_coords [spec])
+			else
+				return [[Interface\AddOns\Plater\images\spec_icons_normal]], unpack (class_specs_coords [spec])
+			end
+		end
 	end
 	
 	--similar to Plater.GetSettings, but can be called from scripts
@@ -9320,6 +9463,7 @@ end
 			["UpdateUIParentTargetLevels"] = true,
 			["RefreshTankCache"] = true,
 			["ForceFindPetOwner"] = true,
+			["UpdateBgPlayerRoleCache"] = false,
 		},
 		
 		["DetailsFramework"] = {
@@ -10424,53 +10568,6 @@ end
 			end
 		end
 	end
-
-	--make an indexScriptTable for the script object using indexes instead of key to decrease the size of the string to be exported
-	--function Plater.PrepareTableToExport (scriptObject)
-	function Plater.PrepareTableToExport_OLD (scriptObject)
-		
-		if (scriptObject.Hooks) then
-			--script for hooks
-			local t = {}
-			
-			t [1] = scriptObject.Name
-			t [2] = scriptObject.Icon
-			t [3] = scriptObject.Desc
-			t [4] = scriptObject.Author
-			t [5] = scriptObject.Time
-			t [6] = scriptObject.Revision
-			t [7] = scriptObject.PlaterCore
-			t [8] = scriptObject.LoadConditions
-			t [9] = {}
-
-			for hookName, hookCode in pairs (scriptObject.Hooks) do
-				t [9] [hookName] = hookCode
-			end
-			
-			return t
-		else
-			--regular script for aura cast or unitID
-			local t = {}
-			
-			t [1] = scriptObject.ScriptType
-			t [2] = scriptObject.Name
-			t [3] = scriptObject.SpellIds
-			t [4] = scriptObject.NpcNames
-			t [5] = scriptObject.Icon
-			t [6] = scriptObject.Desc
-			t [7] = scriptObject.Author
-			t [8] = scriptObject.Time
-			t [9] = scriptObject.Revision
-			t [10] = scriptObject.PlaterCore
-			
-			for i = 1, #Plater.CodeTypeNames do
-				local memberName = Plater.CodeTypeNames [i]
-				t [#t + 1] = scriptObject [memberName]
-			end
-			
-			return t
-		end
-	end
 	
 	--function Plater.PrepareTableToExportStringIndexes (scriptObject)
 	function Plater.PrepareTableToExport (scriptObject)
@@ -10861,13 +10958,13 @@ function SlashCmdList.PLATER (msg, editbox)
 		
 		return
 	
-	elseif (msg == "profstart") then
-		Plater.EnableProfiling()
+	elseif (msg == "profstart" or msg == "profstartcore") then
+		Plater.EnableProfiling(true)
 		
 		return
 	
-	elseif (msg == "profstartcore") then
-		Plater.EnableProfiling(true)
+	elseif (msg == "profstartmods") then
+		Plater.EnableProfiling(false)
 		
 		return
 	

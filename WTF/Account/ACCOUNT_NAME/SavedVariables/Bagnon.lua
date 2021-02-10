@@ -172,7 +172,7 @@ Bagnon_Sets = {
 	},
 	["mineColor"] = {
 	},
-	["version"] = "9.0.4",
+	["version"] = "9.0.5",
 	["leatherColor"] = {
 	},
 	["enchantColor"] = {

@@ -3,10 +3,23 @@ VER 3 0000000000000036 "CelestialBrew" "1360979"
 /cancelqueuedspell
 /cast Celestial Brew
 END
+VER 3 000000000000003A "ChainHarvest" "3565725"
+#showtooltip
+/cast [@mouseover,help,nodead]Chain Harvest;Chain Harvest;
+END
+VER 3 000000000000003D "DefensiveTalent" "620827"
+#showtooltip
+/cast [talent:5/1]Inner Strength; [talent:5/2] Diffuse Magic; [talent:5/3] Dampen Harm
+END
 VER 3 0000000000000039 "EFTrinket" "1360978"
 #showtooltip Essence Font
 /use 13
 /cast Essence Font
+END
+VER 3 000000000000003E "EnergyTalent" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopmacro [channeling:Fists of Fury]
+/cast [talent:3/1]Ascension;[talent:3/2] Fist of the White Tiger; [talent:3/3] Energizing Elixir
 END
 VER 3 000000000000001E "Focus" "135766"
 /focus
@@ -19,6 +32,10 @@ VER 3 000000000000002A "HealingCD" "463901"
 #showtooltip
 /cast Spiritual Healing Potion
 END
+VER 3 000000000000003F "Healthstone" "607512"
+#showtooltip
+/use Healthstone
+END
 VER 3 0000000000000031 "Healthstone" "132848"
 #showtooltip Healthstone
 /use Healthstone
@@ -27,9 +44,19 @@ END
 VER 3 0000000000000016 "Illidan Start" "Ability_Ambush"
 /script PlaySoundFile("Sound\\Creature\\Illidan\\BLACK_Illidan_01.wav")
 END
+VER 3 000000000000003C "MonkEngRez" "132132"
+#showtooltip
+/cast [nocombat, spec:2]Reawaken
+/cast [nocombat, help, @mouseover] Resuscitate
+/cast [@mouseover,help,dead, combat]Disposable Spectrophasic Reanimator;
+END
 VER 3 0000000000000033 "MouseoverCocoon" "627485"
 #showtooltip
 /cast [@mouseover,help,exists]Life Cocoon; Life Cocoon
+END
+VER 3 0000000000000040 "MouseoverHealTri" "INV_MISC_QUESTIONMARK"
+#showtooltip  Tuft of Smoldering Plumage;
+/use [@mouseover, nodead, help] Tuft of Smoldering Plumage;
 END
 VER 3 0000000000000012 "Mumble" "Ability_Creature_Cursed_05"
 /raid Please Join me in Mumble (Get it @ mumble.com)
@@ -42,7 +69,7 @@ VER 3 000000000000002E "ReleaseSpirit" "897136"
 END
 VER 3 0000000000000034 "TLustMouseover" "651727"
 #showtooltip Tiger's Lust
-/cast [@mouseover,help,exists]Tiger's Lust; Tiger's Lust
+/cast [@mouseover,help,exists,nodead]Tiger's Lust;[@player] Tiger's Lust
 END
 VER 3 0000000000000038 "TouchOfDeathCQ" "606552"
 #showtooltip Touch of Death

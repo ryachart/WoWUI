@@ -314,6 +314,12 @@ L["SPLASH_903_FEATURES_HEADER"] = "Features"
 L["SPLASH_904_DESCRIPTION"] = "Bugfixes und eine neue Verlaufsansicht"
 L["SPLASH_904_FEATURES_1"] = "Im Einkaufen-Reiter kann mit einem Rechtsklick auf ein Ergebnis der Preisverlauf angezeigt werden."
 L["SPLASH_904_FEATURES_HEADER"] = "Funktionen"
+--[[Translation missing --]]
+L["SPLASH_905_DESCRIPTION"] = "Bugfixes and minor visual changes"
+--[[Translation missing --]]
+L["SPLASH_905_UPDATES_1"] = "Smoother interactions in the Cancelling tab."
+--[[Translation missing --]]
+L["SPLASH_905_UPDATES_HEADER"] = "Updates"
 L["SPLASH_HIDE_MESSAGE"] = "Erst beim nächsten Update wieder anzeigen"
 L["SPLASH_SCREEN_HEADER"] = "Willkommen bei Auctionator"
 L["STACK_AUCTION_INFO"] = "%s für %s (jedes zu %s)"

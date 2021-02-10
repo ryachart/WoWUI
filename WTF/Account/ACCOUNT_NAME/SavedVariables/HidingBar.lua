@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1611106620,
+	["tstmp"] = 1612901118,
 	["config"] = {
 		["lineWidth"] = 4,
 		["secondPosition"] = 0,
@@ -9,28 +9,28 @@ HidingBarDB = {
 				["tstmp"] = 1609009379,
 			},
 			["Bartender4"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["DBM"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["ElkBuffBars"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["Prat"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["ExRT"] = {
 				["tstmp"] = 1609009379,
 			},
 			["WeakAuras"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["BagnonLauncher"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["Masque"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 		},
 		["grabMinimap"] = true,
@@ -45,15 +45,15 @@ HidingBarDB = {
 		["size"] = 10,
 		["buttonSize"] = 32,
 		["frameStrata"] = 2,
-		["mbtnPosition"] = 0,
+		["grabMinimapAfterN"] = 1,
 		["lineColor"] = {
 			0.8, -- [1]
 			0.6, -- [2]
 			0, -- [3]
 		},
-		["grabMinimapAfterN"] = 1,
-		["position"] = 630.0444721566305,
 		["orientation"] = 0,
+		["position"] = 630.0444721566305,
+		["mbtnPosition"] = 0,
 		["bgColor"] = {
 			0.1, -- [1]
 			0.1, -- [2]
@@ -63,28 +63,28 @@ HidingBarDB = {
 		["fadeOpacity"] = 0.2,
 		["mbtnSettings"] = {
 			["LibDBIcon10_Details"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["LibDBIcon10_ElkBuffBars"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["LibDBIcon10_MythicDungeonTools"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["LibDBIcon10_DBM"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["LibDBIcon10_SimulationCraft"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["LibDBIcon10_DetailsStreamer"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["LibDBIcon10_WeakAuras"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["LibDBIcon10_Bartender4"] = {
-				["tstmp"] = 1611106620,
+				["tstmp"] = 1612901118,
 			},
 			["LibDBIcon10_ExorsusRaidTools"] = {
 				["tstmp"] = 1609009379,

@@ -6383,6 +6383,11 @@ local relevance_options = {
 				local plateConfig = Plater.db.profile.plate_config
 
 				plateConfig.global_health_width = value
+				
+				-- do not propagate during import or profile switch!
+				if not PlaterOptionsPanelFrame:IsShown() or profilesFrame.IsImporting then
+					return
+				end
 
 				--change the health bars
 				plateConfig.friendlyplayer.health[1] = value
@@ -6429,6 +6434,11 @@ local relevance_options = {
 				local plateConfig = Plater.db.profile.plate_config
 
 				plateConfig.global_health_height = value
+				
+				-- do not propagate during import or profile switch!
+				if not PlaterOptionsPanelFrame:IsShown() or profilesFrame.IsImporting then
+					return
+				end
 
 				plateConfig.friendlyplayer.health[2] = value
 				plateConfig.friendlyplayer.health_incombat[2] = value
@@ -6933,17 +6943,6 @@ local relevance_options = {
 		
 		{
 			type = "toggle",
-			get = function() return Plater.db.profile.indicator_faction end,
-			set = function (self, fixedparam, value) 
-				Plater.db.profile.indicator_faction = value
-				Plater.UpdateAllPlates()
-			end,
-			name = "Enemy Faction Icon",
-			desc = "Show horde or alliance icon.",
-		},
-		
-		{
-			type = "toggle",
 			get = function() return Plater.db.profile.indicator_pet end,
 			set = function (self, fixedparam, value) 
 				Plater.db.profile.indicator_pet = value
@@ -7019,6 +7018,16 @@ local relevance_options = {
 		},
 		{
 			type = "toggle",
+			get = function() return Plater.db.profile.indicator_faction end,
+			set = function (self, fixedparam, value) 
+				Plater.db.profile.indicator_faction = value
+				Plater.UpdateAllPlates()
+			end,
+			name = "Enemy Faction Icon",
+			desc = "Show horde or alliance icon.",
+		},
+		{
+			type = "toggle",
 			get = function() return Plater.db.profile.indicator_enemyclass end,
 			set = function (self, fixedparam, value) 
 				Plater.db.profile.indicator_enemyclass = value
@@ -7036,7 +7045,37 @@ local relevance_options = {
 				Plater.UpdateAllPlates()
 			end,
 			name = "Enemy Spec",
-			desc = "Enemy player spec icon.\n\n|cFFFFFF00Important|r: must have Details! Damage Meter installed.",
+			desc = "Enemy player spec icon.\n\n|cFFFFFF00Important|r: must have Details! Damage Meter installed to work outside of BG/Arena.",
+		},
+		{
+			type = "toggle",
+			get = function() return Plater.db.profile.indicator_friendlyfaction end,
+			set = function (self, fixedparam, value) 
+				Plater.db.profile.indicator_friendlyfaction = value
+				Plater.UpdateAllPlates()
+			end,
+			name = "Friendly Faction Icon",
+			desc = "Show horde or alliance icon.",
+		},
+		{
+			type = "toggle",
+			get = function() return Plater.db.profile.indicator_friendlyclass end,
+			set = function (self, fixedparam, value) 
+				Plater.db.profile.indicator_friendlyclass = value
+				Plater.UpdateAllPlates()
+			end,
+			name = "Friendly Class",
+			desc = "Friendly player class icon.",
+		},
+		{
+			type = "toggle",
+			get = function() return Plater.db.profile.indicator_friendlyspec end,
+			set = function (self, fixedparam, value) 
+				Plater.db.profile.indicator_friendlyspec = value
+				Plater.UpdateAllPlates()
+			end,
+			name = "Friendly Spec",
+			desc = "Friendly player spec icon.\n\n|cFFFFFF00Important|r: must have Details! Damage Meter installed to work outside of BG/Arena.",
 		},
 		{
 			type = "range",
@@ -9040,35 +9079,6 @@ end
 			desc = "Modify the way friendly npcs are shown.\n\n|cFFFFFF00Important|r: This option is dependent on the client`s nameplate state (on/off).",
 		},
 		
-		{
-			type = "toggle",
-			get = function() return Plater.db.profile.plate_config.friendlynpc.quest_enabled end,
-			set = function (self, fixedparam, value) 
-				Plater.db.profile.plate_config.friendlynpc.quest_enabled = value
-				-- this seems to be gone as of 18.12.2020
-				--if value then
-					--SetCVar("showQuestTrackingTooltips", 1)
-				--end
-				Plater.UpdateAllPlates()
-			end,
-			name = "Use Quest Color",
-			desc = "Use a different color when a unit is objective of a quest.",
-		},
-		{
-			type = "color",
-			get = function()
-				local color = Plater.db.profile.plate_config.friendlynpc.quest_color
-				return {color[1], color[2], color[3], color[4]}
-			end,
-			set = function (self, r, g, b, a) 
-				local color = Plater.db.profile.plate_config.friendlynpc.quest_color
-				color[1], color[2], color[3], color[4] = r, g, b, a
-				Plater.UpdateAllPlates()
-			end,
-			name = "Quest Color",
-			desc = "Nameplate has this color when a friendly npc unit is a quest objective.",
-		},		
-		
 		{type = "blank"},
 		
 		{type = "label", get = function() return "Aura Frame:" end, text_template = DF:GetTemplate ("font", "ORANGE_FONT_TEMPLATE")},
@@ -9172,6 +9182,7 @@ end
 			desc = "The color of the text.",
 		},
 
+		{type = "blank"},
 		{type = "label", get = function() return "Npc Title Text When no Health Bar Shown:" end, text_template = DF:GetTemplate ("font", "ORANGE_FONT_TEMPLATE")},
 		--profession text size
 		{
@@ -9978,6 +9989,47 @@ end
 			desc = "Adjust the position on the Y axis.\n\n|cFFFFFF00Important|r: right click to type the value.",
 		},
 		
+		{type = "blank"},
+		{type = "label", get = function() return "Quest Tracking Settings:" end, text_template = DF:GetTemplate ("font", "ORANGE_FONT_TEMPLATE")},
+		{
+			type = "toggle",
+			get = function() return Plater.db.profile.plate_config.friendlynpc.quest_enabled end,
+			set = function (self, fixedparam, value) 
+				Plater.db.profile.plate_config.friendlynpc.quest_enabled = value
+				-- this seems to be gone as of 18.12.2020
+				--if value then
+					--SetCVar("showQuestTrackingTooltips", 1)
+				--end
+				Plater.UpdateAllPlates()
+			end,
+			name = "Track Quests Progress",
+			desc = "Track Quests Progress on enemy npc units.",
+		},
+		{
+			type = "toggle",
+			get = function() return Plater.db.profile.plate_config.friendlynpc.quest_color_enabled end,
+			set = function (self, fixedparam, value) 
+				Plater.db.profile.plate_config.friendlynpc.quest_color_enabled = value
+				Plater.UpdateAllPlates()
+			end,
+			name = "Use Quest Color",
+			desc = "Enemy npc units which are objective of a quest have a different color.\nRequries 'Track Quests Progress' to be active.",
+		},
+		{
+			type = "color",
+			get = function()
+				local color = Plater.db.profile.plate_config.friendlynpc.quest_color
+				return {color[1], color[2], color[3], color[4]}
+			end,
+			set = function (self, r, g, b, a) 
+				local color = Plater.db.profile.plate_config.friendlynpc.quest_color
+				color[1], color[2], color[3], color[4] = r, g, b, a
+				Plater.UpdateAllPlates()
+			end,
+			name = "Quest Color",
+			desc = "Nameplate has this color when a friendly npc unit is a quest objective.",
+		},
+		
 	}
 	
 	_G.C_Timer.After(0.780, function() --~delay
@@ -10029,49 +10081,6 @@ end
 				values = function() return copy_settings_options end,
 				name = "Copy",
 				desc = "Copy settings from another tab.\n\nWhen selecting an option a confirmation box is shown to confirm the copy.",
-			},
-			
-			{
-				type = "toggle",
-				get = function() return Plater.db.profile.plate_config.enemynpc.quest_enabled end,
-				set = function (self, fixedparam, value) 
-					Plater.db.profile.plate_config.enemynpc.quest_enabled = value
-					-- this seems to be gone as of 18.12.2020
-					--if value then
-						--SetCVar("showQuestTrackingTooltips", 1)
-					--end
-					Plater.UpdateAllPlates()
-				end,
-				name = "Use Quest Color",
-				desc = "Enemy npc units which are objective of a quest have a different color.",
-			},
-			{
-				type = "color",
-				get = function()
-					local color = Plater.db.profile.plate_config.enemynpc.quest_color_enemy
-					return {color[1], color[2], color[3], color[4]}
-				end,
-				set = function (self, r, g, b, a) 
-					local color = Plater.db.profile.plate_config.enemynpc.quest_color_enemy
-					color[1], color[2], color[3], color[4] = r, g, b, a
-					Plater.UpdateAllPlates()
-				end,
-				name = "Quest Color (hostile npc)",
-				desc = "Nameplate has this color when a hostile mob is a quest objective.",
-			},
-			{
-				type = "color",
-				get = function()
-					local color = Plater.db.profile.plate_config.enemynpc.quest_color_neutral
-					return {color[1], color[2], color[3], color[4]}
-				end,
-				set = function (self, r, g, b, a) 
-					local color = Plater.db.profile.plate_config.enemynpc.quest_color_neutral
-					color[1], color[2], color[3], color[4] = r, g, b, a
-					Plater.UpdateAllPlates()
-				end,
-				name = "Quest Color (neutral npc)",
-				desc = "Nameplate has this color when a neutral mob is a quest objective.",
 			},
 			
 			{type = "blank"},
@@ -10194,6 +10203,7 @@ end
 			},
 			--]=]
 			
+			{type = "blank"},
 			{type = "label", get = function() return "Npc Title Text When no Health Bar Shown:" end, text_template = DF:GetTemplate ("font", "ORANGE_FONT_TEMPLATE")},
 			--profession text size
 			{
@@ -10998,6 +11008,61 @@ end
 				name = L["OPTIONS_YOFFSET"],
 				desc = "Adjust the position on the Y axis.\n\n|cFFFFFF00Important|r: right click to type the value.",
 			},
+			
+			{type = "blank"},
+			{type = "label", get = function() return "Quest Tracking Settings:" end, text_template = DF:GetTemplate ("font", "ORANGE_FONT_TEMPLATE")},
+			{
+				type = "toggle",
+				get = function() return Plater.db.profile.plate_config.enemynpc.quest_enabled end,
+				set = function (self, fixedparam, value) 
+					Plater.db.profile.plate_config.enemynpc.quest_enabled = value
+					-- this seems to be gone as of 18.12.2020
+					--if value then
+						--SetCVar("showQuestTrackingTooltips", 1)
+					--end
+					Plater.UpdateAllPlates()
+				end,
+				name = "Track Quests Progress",
+				desc = "Track Quests Progress on enemy npc units.",
+			},
+			{
+				type = "toggle",
+				get = function() return Plater.db.profile.plate_config.enemynpc.quest_color_enabled end,
+				set = function (self, fixedparam, value) 
+					Plater.db.profile.plate_config.enemynpc.quest_color_enabled = value
+					Plater.UpdateAllPlates()
+				end,
+				name = "Use Quest Color",
+				desc = "Enemy npc units which are objective of a quest have a different color.\nRequries 'Track Quests Progress' to be active.",
+			},
+			{
+				type = "color",
+				get = function()
+					local color = Plater.db.profile.plate_config.enemynpc.quest_color_enemy
+					return {color[1], color[2], color[3], color[4]}
+				end,
+				set = function (self, r, g, b, a) 
+					local color = Plater.db.profile.plate_config.enemynpc.quest_color_enemy
+					color[1], color[2], color[3], color[4] = r, g, b, a
+					Plater.UpdateAllPlates()
+				end,
+				name = "Quest Color (hostile npc)",
+				desc = "Nameplate has this color when a hostile mob is a quest objective.",
+			},
+			{
+				type = "color",
+				get = function()
+					local color = Plater.db.profile.plate_config.enemynpc.quest_color_neutral
+					return {color[1], color[2], color[3], color[4]}
+				end,
+				set = function (self, r, g, b, a) 
+					local color = Plater.db.profile.plate_config.enemynpc.quest_color_neutral
+					color[1], color[2], color[3], color[4] = r, g, b, a
+					Plater.UpdateAllPlates()
+				end,
+				name = "Quest Color (neutral npc)",
+				desc = "Nameplate has this color when a neutral mob is a quest objective.",
+			},
 
 		}
 
@@ -11158,7 +11223,15 @@ end
 			values = function() return build_framelevel_table ("ui_parent_buff2_strata") end,
 			name = "Aura Frame 2",
 			desc = "Which strata aura frame 2 will be placed in.",
-		},		
+		},
+		
+		{
+			type = "select",
+			get = function() return Plater.db.profile.ui_parent_buff_special_strata end,
+			values = function() return build_framelevel_table ("ui_parent_buff_special_strata") end,
+			name = "Buff Special Frame",
+			desc = "Which strata buff special frame frame will be placed in.",
+		},
 		
 		{type = "blank"},
 		{type = "label", get = function() return "Frame Levels:" end, text_template = DF:GetTemplate ("font", "ORANGE_FONT_TEMPLATE")},
@@ -11205,6 +11278,21 @@ end
 			max = 5000,
 			step = 1,
 			name = "Aura Frame 2",
+			desc = "Move frames up or down within the strata channel.",
+		},
+		
+		{
+			type = "range",
+			get = function() return Plater.db.profile.ui_parent_buff_special_level end,
+			set = function (self, fixedparam, value) 
+				Plater.db.profile.ui_parent_buff_special_level = value
+				Plater.RefreshDBUpvalues()
+				Plater.UpdateAllPlates()
+			end,
+			min = 1,
+			max = 5000,
+			step = 1,
+			name = "Buff Special Frame",
 			desc = "Move frames up or down within the strata channel.",
 		},
 		

@@ -5,12 +5,32 @@ ElkBuffBarsDB = {
 		},
 	},
 	["global"] = {
-		["maxtimes"] = {
-			["TENCH"] = {
-				[6188] = 3270.781,
+		["maxcharges"] = {
+			["DEBUFF"] = {
+				["Agony"] = 10,
+				["Weapons of Order"] = 4,
+				["Festering Wound"] = 6,
+				["Death's Due"] = 6,
+				["Unholy Blight"] = 4,
+				["Everfrost"] = 10,
+				["Winter's Chill"] = 2,
+				["Shattered Psyche"] = 5,
+				["Thrash"] = 3,
+				["Everchill Brambles"] = 7,
+				["Razorice"] = 5,
+				["Tethering Shot Stacking Slow"] = 2,
+			},
+			["BUFF"] = {
+				["Tranquility"] = 5,
+				["Let Go of the Past"] = 3,
+				["Balance of All Things"] = 2,
+				["Elusive Brawler"] = 2,
+				["Invoke Chi-Ji, the Red Crane"] = 3,
+				["Blood Waltz"] = 4,
+				["Prayer of Mending"] = 3,
 			},
 		},
-		["build"] = "37176",
+		["build"] = "37474",
 	},
 	["profileKeys"] = {
 		["Angarr - Thunderlord"] = "Default",
@@ -106,14 +126,9 @@ ElkBuffBarsDB = {
 							1, -- [2]
 							1, -- [3]
 						},
-						["textTRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["textTLstyle"] = "",
 						["spark"] = true,
+						["textTLstyle"] = "",
+						["textTLfontsize"] = 14,
 						["bartexture"] = "Details Flat",
 						["debufftypecolor"] = true,
 						["iconcountcolor"] = {
@@ -127,7 +142,12 @@ ElkBuffBarsDB = {
 						["textBLfont"] = "Friz Quadrata TT",
 						["textBLfontsize"] = 14,
 						["barright"] = false,
-						["textTLfontsize"] = 14,
+						["textTRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
 						["width"] = 220,
 						["padding"] = 1,
 						["textBLalign"] = "LEFT",
@@ -206,14 +226,9 @@ ElkBuffBarsDB = {
 							1, -- [2]
 							1, -- [3]
 						},
-						["textTRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["textTLstyle"] = "",
 						["spark"] = false,
+						["textTLstyle"] = "",
+						["textTLfontsize"] = 14,
 						["bartexture"] = "Details Flat",
 						["debufftypecolor"] = true,
 						["iconcountcolor"] = {
@@ -227,7 +242,12 @@ ElkBuffBarsDB = {
 						["textBLfont"] = "Friz Quadrata TT",
 						["textBLfontsize"] = 14,
 						["barright"] = false,
-						["textTLfontsize"] = 14,
+						["textTRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
 						["width"] = 220,
 						["padding"] = 1,
 						["textBLalign"] = "LEFT",
@@ -306,14 +326,9 @@ ElkBuffBarsDB = {
 							1, -- [2]
 							1, -- [3]
 						},
-						["textTRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["textTLstyle"] = "",
 						["spark"] = false,
+						["textTLstyle"] = "",
+						["textTLfontsize"] = 14,
 						["bartexture"] = "Details Flat",
 						["debufftypecolor"] = true,
 						["iconcountcolor"] = {
@@ -327,7 +342,12 @@ ElkBuffBarsDB = {
 						["textBLfont"] = "Friz Quadrata TT",
 						["textBLfontsize"] = 14,
 						["barright"] = false,
-						["textTLfontsize"] = 14,
+						["textTRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
 						["width"] = 220,
 						["padding"] = 1,
 						["textBLalign"] = "LEFT",

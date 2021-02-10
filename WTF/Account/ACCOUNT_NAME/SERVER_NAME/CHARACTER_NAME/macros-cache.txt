@@ -1,8 +1,3 @@
-VER 3 0100000000000015 "BlackoutKickTrin" "574575"
-#showtooltip Blackout Kick
-/use 13
-/cast Blackout Kick
-END
 VER 3 0100000000000017 "BreathOfTrinket" "615339"
 #showtooltip Breath of Fire
 /cancelqueuedspell
@@ -16,7 +11,7 @@ VER 3 0100000000000019 "DetoxMouseover" "460692"
 END
 VER 3 010000000000000C "EMBlackout" "SPELL_MONK_ENVELOPINGMIST"
 #showtooltip
-/cast [@mouseover,help,exists]Enveloping Mist;[@target,harm,exists]Blackout Kick;[@target]Enveloping Mist
+/cast [@mouseover,help,nodead,exists]Enveloping Mist;[@target,harm,exists]Blackout Kick;[@target]Enveloping Mist
 END
 VER 3 0100000000000014 "FocusInpt" "608940"
 #showtooltip
@@ -25,6 +20,7 @@ END
 VER 3 0100000000000016 "KegSmash" "594274"
 #showtooltip Keg Smash
 /cancelqueuedspell
+/cancelaura Blessing of Protection
 /cast Keg Smash
 END
 VER 3 0100000000000013 "ManaTeaTrinkets" "574571"
@@ -34,7 +30,9 @@ VER 3 0100000000000013 "ManaTeaTrinkets" "574571"
 END
 VER 3 010000000000001B "PalmViv" "606551"
 #showtooltip
-/cast [@mouseover,help,exists]Vivify;[harm]Tiger Palm;[help]Vivify;
+/stopmacro [channeling:Fists of Fury]
+/cast [channeling:Soothing Mist,@mouseover]Vivify;
+/cast [@mouseover,help,exists,nodead]Vivify;[@mouseover,harm, nodead]Tiger Palm;Tiger Palm
 END
 VER 3 010000000000000E "RemMouseover" "ABILITY_MONK_RENEWINGMISTS"
 #showtooltip Renewing Mist
@@ -52,11 +50,11 @@ END
 VER 3 0100000000000012 "TrinketSEF" "INV_MISC_QUESTIONMARK"
 #showtooltip Storm, Earth, and Fire
 /cancelqueuedspell
-/use 13
-/use 14
 /cast Storm, Earth, and Fire
 END
-VER 3 010000000000000D "VivifyRSK" "ABILITY_MONK_VIVIFY"
-#showtooltip Vivify
-/cast [@mouseover, exists, help]Vivify;[harm]Rising Sun Kick;[help.target,exists]Vivify;[harm,target,exists]Rising Sun Kick
+VER 3 010000000000001C "Xuen" "620832"
+#showtooltip Xuen, the White Tiger
+/cancelqueuedspell
+/use 13
+/cast Invoke Xuen, the White Tiger
 END

@@ -317,6 +317,12 @@ L["SPLASH_903_FEATURES_HEADER"] = "traits"
 L["SPLASH_904_DESCRIPTION"] = "Bogues et vue de l'historique"
 L["SPLASH_904_FEATURES_1"] = "Un clic droit sur un résultat dans l'onglet d'achat affichera désormais l'historique du prix."
 L["SPLASH_904_FEATURES_HEADER"] = "Fonctionnalités"
+--[[Translation missing --]]
+L["SPLASH_905_DESCRIPTION"] = "Bugfixes and minor visual changes"
+--[[Translation missing --]]
+L["SPLASH_905_UPDATES_1"] = "Smoother interactions in the Cancelling tab."
+--[[Translation missing --]]
+L["SPLASH_905_UPDATES_HEADER"] = "Updates"
 L["SPLASH_HIDE_MESSAGE"] = "Ne pas afficher avant la prochaine mise à jour"
 L["SPLASH_SCREEN_HEADER"] = "Bienvenue sur Auctionator"
 L["STACK_AUCTION_INFO"] = "%s pour %s (à %s chacun)"

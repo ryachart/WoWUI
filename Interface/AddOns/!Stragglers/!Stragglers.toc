@@ -1,0 +1,16 @@
+## Interface: 70300
+## Title: !Stragglers
+## Notes: Find out what addons are slowing you down.
+## Author: dualcoding
+
+#SavedVariables: StragglersDB
+
+## X-Category: Development tools
+
+src/callers.lua
+src/namespaces.lua
+src/times.lua
+src/ui_utility.lua
+src/ui_data.lua
+src/ui.lua
+src/eventhandlers.lua
