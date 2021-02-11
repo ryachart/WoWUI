@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1612990605,
+	["tstmp"] = 1613011534,
 	["config"] = {
 		["lineWidth"] = 4,
 		["secondPosition"] = 0,
@@ -9,28 +9,28 @@ HidingBarDB = {
 				["tstmp"] = 1609009379,
 			},
 			["Bartender4"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["DBM"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["ElkBuffBars"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["Prat"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["ExRT"] = {
 				["tstmp"] = 1609009379,
 			},
 			["BagnonLauncher"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["WeakAuras"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["Masque"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 		},
 		["grabMinimap"] = true,
@@ -52,25 +52,25 @@ HidingBarDB = {
 		["frameStrata"] = 2,
 		["mbtnSettings"] = {
 			["LibDBIcon10_Details"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["LibDBIcon10_ElkBuffBars"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["LibDBIcon10_MythicDungeonTools"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["LibDBIcon10_DBM"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["LibDBIcon10_SimulationCraft"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["LibDBIcon10_DetailsStreamer"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["LibDBIcon10_WeakAuras"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 			["LibDBIcon10_PitBull4"] = {
 				["tstmp"] = 1609009379,
@@ -79,7 +79,7 @@ HidingBarDB = {
 				["tstmp"] = 1609009379,
 			},
 			["LibDBIcon10_Bartender4"] = {
-				["tstmp"] = 1612990605,
+				["tstmp"] = 1613011534,
 			},
 		},
 		["lineColor"] = {

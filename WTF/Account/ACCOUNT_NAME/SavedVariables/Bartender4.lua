@@ -65,6 +65,7 @@ Bartender4DB = {
 							["visibility"] = {
 								["combat"] = false,
 								["always"] = false,
+								["nocombat"] = false,
 							},
 						}, -- [1]
 						{

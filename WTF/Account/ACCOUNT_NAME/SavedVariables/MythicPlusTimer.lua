@@ -1295,6 +1295,21 @@ MythicPlusTimerDB = {
 			["elapsed_time"] = 2130,
 			["deathcount"] = 19,
 			["quantity_completed"] = true,
+			["time_left_3"] = 0,
+			["zone_name"] = "Plaguefall",
+			["affixes_key"] = "affixes-9-11-13",
+			["time_left"] = 150,
+			["deathcount_visible"] = true,
+			["steps"] = 5,
+			["death_names"] = {
+				["Jamura-Sargeras"] = 2,
+				["Bathildis-WyrmrestAccord"] = 6,
+				["Mistgarr"] = 4,
+				["Elyk-WyrmrestAccord"] = 4,
+				["Jesstara-Thunderlord"] = 3,
+			},
+			["current_zone_id"] = 2289,
+			["is_reaping"] = false,
 			["times"] = {
 				647, -- [1]
 				1379, -- [2]
@@ -1312,21 +1327,6 @@ MythicPlusTimerDB = {
 				["2last_best_time_zone"] = 586,
 				["2last_best_time_zone_level"] = 1017,
 			},
-			["zone_name"] = "Plaguefall",
-			["time_left_3"] = 0,
-			["time_left"] = 150,
-			["deathcount_visible"] = true,
-			["steps"] = 5,
-			["death_names"] = {
-				["Jamura-Sargeras"] = 2,
-				["Bathildis-WyrmrestAccord"] = 6,
-				["Mistgarr"] = 4,
-				["Elyk-WyrmrestAccord"] = 4,
-				["Jesstara-Thunderlord"] = 3,
-			},
-			["affixes_key"] = "affixes-9-11-13",
-			["is_reaping"] = false,
-			["current_zone_id"] = 2289,
 			["max_time"] = 2280,
 			["affixes"] = {
 				9, -- [1]

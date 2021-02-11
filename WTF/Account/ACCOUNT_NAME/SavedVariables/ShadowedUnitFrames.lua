@@ -251,13 +251,65 @@ ShadowedUFDB = {
 					["tl"] = {
 						["y"] = -12,
 					},
+					["bl"] = {
+						["width"] = 16,
+						["x"] = 2,
+						["height"] = 16,
+					},
+					["28276"] = {
+						["enabled"] = true,
+						["anchorTo"] = "$parent",
+						["friendly"] = true,
+						["width"] = 16,
+						["anchorPoint"] = "BLI",
+						["x"] = 2,
+						["hostile"] = true,
+						["height"] = 16,
+						["name"] = "Bottom Left 3",
+						["alpha"] = 1,
+						["y"] = 20,
+					},
+					["br"] = {
+						["y"] = 12,
+					},
+					["28332"] = {
+						["enabled"] = true,
+						["anchorTo"] = "$parent",
+						["friendly"] = true,
+						["width"] = 16,
+						["anchorPoint"] = "BLI",
+						["x"] = 18,
+						["hostile"] = true,
+						["height"] = 16,
+						["name"] = "Bottom Left 2",
+						["alpha"] = 1,
+						["y"] = 4,
+					},
 				},
 				["auras"] = {
-					["33763"] = "{r=0.23137254901961;group=\"Druid\";indicator=\"tl\";g=1;player=true;alpha=1;duration=true;b=0.2;priority=0;icon=true;iconTexture=\"Interface\\\\Icons\\\\INV_Misc_Herb_Felblossom\";}",
+					["774"] = "{r=0.57647058823529;group=\"Druid\";indicator=\"bl\";g=0.28235294117647;player=true;alpha=1;duration=true;b=0.6156862745098;priority=100;icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Nature_Rejuvenation\";}",
 					["119611"] = "{r=0.26274509803922;group=\"Monk\";indicator=\"bl\";g=0.76078431372549;player=true;duration=true;alpha=1;b=0.53725490196078;priority=0;icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_monk_renewingmists\";}",
+					["Enveloping Mist"] = "{r=0;group=\"Monk\";indicator=\"28276\";g=0;player=true;duration=true;b=0;priority=0;icon=true;iconTexture=775461;}",
+					["Bonedust Brew"] = "{r=0;group=\"Monk\";indicator=\"\";g=0;player=true;duration=true;b=0;priority=0;icon=true;iconTexture=3578227;}",
 					["48438"] = "{r=0.55294117647059;group=\"Druid\";indicator=\"tr\";g=1;player=true;alpha=1;duration=true;b=0.3921568627451;priority=100;icon=true;iconTexture=\"Interface\\\\Icons\\\\Ability_Druid_Flourish\";}",
 					["61295"] = "{r=0.17647058823529;group=\"Shaman\";indicator=\"bl\";g=0.4;player=true;alpha=1;duration=true;b=1;priority=0;icon=true;iconTexture=\"Interface\\\\Icons\\\\spell_nature_riptide\";}",
-					["774"] = "{r=0.57647058823529;group=\"Druid\";indicator=\"bl\";g=0.28235294117647;player=true;alpha=1;duration=true;b=0.6156862745098;priority=100;icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Nature_Rejuvenation\";}",
+					["Tuft of Smoldering Plumage"] = "{r=0;group=\"Monk\";indicator=\"c\";g=0;player=false;duration=true;priority=0;icon=true;b=0;}",
+					["Essence Font"] = "{b=0;group=\"Monk\";indicator=\"28332\";g=0;player=true;duration=true;r=0;priority=0;icon=true;iconTexture=1360978;}",
+					["33763"] = "{r=0.23137254901961;group=\"Druid\";indicator=\"tl\";g=1;player=true;alpha=1;duration=true;b=0.2;priority=0;icon=true;iconTexture=\"Interface\\\\Icons\\\\INV_Misc_Herb_Felblossom\";}",
+				},
+				["filters"] = {
+					["28276"] = {
+						["curable"] = {
+						},
+						["boss"] = {
+						},
+					},
+					["28332"] = {
+						["curable"] = {
+						},
+						["boss"] = {
+						},
+					},
 				},
 			},
 			["positions"] = {
@@ -331,12 +383,12 @@ ShadowedUFDB = {
 					["anchorTo"] = "$parent",
 				},
 				["boss"] = {
-					["top"] = 633.5999285366779,
-					["x"] = 818.4893427358838,
+					["y"] = 284.4441909154193,
+					["x"] = 821.3338740547624,
 					["point"] = "BOTTOMLEFT",
+					["bottom"] = 284.4441909154193,
+					["top"] = 504.8887709061273,
 					["relativePoint"] = "BOTTOMLEFT",
-					["bottom"] = 434.4887692014345,
-					["y"] = 434.4887692014345,
 				},
 				["maintank"] = {
 					["anchorPoint"] = "C",
@@ -429,15 +481,16 @@ ShadowedUFDB = {
 						["Volatile Solvent: Mechanical"] = true,
 						["Torment: Might of the Upper Reaches"] = true,
 						["Torment: Breath of Coldheart"] = true,
-						["Moderate Stagger"] = true,
 						["Sign of the Emissary"] = true,
+						["Moderate Stagger"] = true,
 						["Sign of the Warrior"] = true,
+						["Volatile Solvent: Humanoid"] = true,
 						["Alchemist Stone"] = true,
 						["Ace of Voracity"] = true,
 						["Fatigued"] = true,
 						["Torment: Mort'regar's Echoes"] = true,
-						["Volatile Solvent: Humanoid"] = true,
-						["Sign of Battle"] = true,
+						["Thunder Focus Tea"] = true,
+						["buffs"] = true,
 						["Windwalking"] = true,
 						["Blood Waltz"] = true,
 						["Temporal Displacement"] = true,
@@ -447,14 +500,14 @@ ShadowedUFDB = {
 						["Splintered Heart of Al'ar"] = true,
 						["Mana Divining Stone"] = true,
 						["Spectral Flask of Power"] = true,
-						["buffs"] = true,
 						["Challenger's Burden"] = true,
 						["Volatile Solvent: Elemental"] = true,
 						["Sign of the Scourge"] = true,
 						["Torment: Soulforge Heat"] = true,
+						["Sign of Battle"] = true,
 						["Fleshcraft"] = true,
 						["Depleted Shell"] = true,
-						["Thunder Focus Tea"] = true,
+						["Sign of the Critter"] = true,
 						["Water Shield"] = true,
 						["Accursed"] = true,
 					},
@@ -1705,7 +1758,7 @@ ShadowedUFDB = {
 						["height"] = 0.5,
 						["debuffs"] = {
 							["enabled"] = true,
-							["selfScale"] = 1.2,
+							["selfScale"] = 1,
 							["anchorOn"] = false,
 							["enlarge"] = {
 								["SELF"] = false,
@@ -2301,8 +2354,7 @@ ShadowedUFDB = {
 							["enabled"] = true,
 							["anchorOn"] = false,
 							["anchorPoint"] = "BR",
-							["maxRows"] = 2,
-							["perRow"] = 5,
+							["maxRows"] = 1,
 							["x"] = -78,
 							["y"] = 0,
 							["size"] = 16,
@@ -2311,8 +2363,7 @@ ShadowedUFDB = {
 							["enabled"] = true,
 							["anchorOn"] = false,
 							["y"] = 0,
-							["maxRows"] = 2,
-							["perRow"] = 5,
+							["maxRows"] = 1,
 							["anchorPoint"] = "BL",
 							["x"] = 0,
 							["show"] = {
@@ -2655,31 +2706,30 @@ ShadowedUFDB = {
 						["height"] = 0.5,
 						["debuffs"] = {
 							["enabled"] = true,
-							["selfScale"] = 1.2,
+							["selfScale"] = 1,
 							["anchorOn"] = false,
 							["enlarge"] = {
 								["SELF"] = false,
 								["REMOVABLE"] = false,
 								["BOSS"] = false,
 							},
-							["y"] = -45,
-							["x"] = 0,
-							["maxRows"] = 1,
-							["perRow"] = 3,
+							["y"] = 0,
+							["x"] = 95,
+							["maxRows"] = 3,
+							["perRow"] = 1,
 							["show"] = {
 								["relevant"] = false,
 							},
-							["anchorPoint"] = "TL",
-							["size"] = 14,
+							["anchorPoint"] = "LB",
+							["size"] = 18,
 						},
 						["buffs"] = {
-							["enabled"] = true,
+							["perRow"] = 3,
 							["selfScale"] = 1.2,
 							["anchorOn"] = true,
-							["perRow"] = 3,
+							["maxRows"] = 2,
 							["y"] = -28,
 							["x"] = 8,
-							["maxRows"] = 2,
 							["anchorPoint"] = "TL",
 							["show"] = {
 								["relevant"] = true,
@@ -2693,7 +2743,7 @@ ShadowedUFDB = {
 							["text"] = "",
 						}, -- [1]
 						{
-							["text"] = "[curhp]",
+							["text"] = "[( )missinghp]",
 							["anchorPoint"] = "TRI",
 							["y"] = -6,
 							["size"] = 4,
@@ -4190,10 +4240,15 @@ ShadowedUFDB = {
 							["size"] = 20,
 						},
 						["buffs"] = {
+							["temporary"] = true,
 							["y"] = 0,
 							["maxRows"] = 1,
 							["anchorPoint"] = "BL",
 							["x"] = 0,
+							["show"] = {
+								["relevant"] = true,
+								["misc"] = false,
+							},
 							["size"] = 16,
 						},
 					},
@@ -4281,13 +4336,14 @@ ShadowedUFDB = {
 						["order"] = 70,
 						["height"] = 0.4,
 					},
-					["incAbsorb"] = {
+					["auraIndicators"] = {
+						["enabled"] = true,
 						["height"] = 0.5,
-						["cap"] = 1,
 					},
 					["comboPoints"] = {
 						["anchorTo"] = "$parent",
 						["order"] = 60,
+						["isBar"] = false,
 						["growth"] = "LEFT",
 						["anchorPoint"] = "BR",
 						["x"] = -3,
@@ -4412,7 +4468,6 @@ ShadowedUFDB = {
 						["height"] = 0.4,
 					},
 					["chi"] = {
-						["enabled"] = false,
 						["anchorTo"] = "$parent",
 						["order"] = 60,
 						["showAlways"] = true,
@@ -4420,18 +4475,20 @@ ShadowedUFDB = {
 						["anchorPoint"] = "BR",
 						["x"] = -3,
 						["spacing"] = -4,
-						["height"] = 0.4,
+						["height"] = 1,
 						["y"] = 6,
 						["size"] = 14,
 					},
 					["staggerBar"] = {
-						["enabled"] = false,
+						["vertical"] = false,
+						["reverse"] = false,
+						["height"] = 1,
 						["background"] = true,
 						["order"] = 70,
-						["height"] = 0.3,
 					},
-					["auraIndicators"] = {
+					["incAbsorb"] = {
 						["height"] = 0.5,
+						["cap"] = 1,
 					},
 					["fader"] = {
 						["inactiveAlpha"] = 0.6,
@@ -5106,6 +5163,7 @@ ShadowedUFDB = {
 					["range"] = {
 						["height"] = 0.5,
 						["oorAlpha"] = 0.6000000000000001,
+						["enabled"] = true,
 					},
 					["auras"] = {
 						["height"] = 0.5,
@@ -5115,9 +5173,13 @@ ShadowedUFDB = {
 							["anchorOn"] = true,
 							["y"] = 0,
 							["x"] = 0,
-							["enabled"] = true,
+							["show"] = {
+								["relevant"] = true,
+								["misc"] = false,
+							},
 							["anchorPoint"] = "BL",
 							["maxRows"] = 3,
+							["enabled"] = true,
 							["size"] = 28,
 						},
 						["buffs"] = {
@@ -5126,7 +5188,7 @@ ShadowedUFDB = {
 							["anchorOn"] = false,
 							["enabled"] = true,
 							["y"] = 0,
-							["x"] = -6,
+							["x"] = -2,
 							["anchorPoint"] = "RT",
 							["maxRows"] = 3,
 							["size"] = 28,
@@ -5139,7 +5201,7 @@ ShadowedUFDB = {
 							["y"] = 0,
 							["x"] = 1,
 							["anchorTo"] = "$parent",
-							["size"] = 0,
+							["size"] = 5,
 							["enabled"] = true,
 							["anchorPoint"] = "CLI",
 							["rank"] = true,
@@ -5150,9 +5212,9 @@ ShadowedUFDB = {
 							["anchorTo"] = "$parent",
 							["y"] = 0,
 							["anchorPoint"] = "CRI",
-							["size"] = 0,
+							["size"] = 5,
 						},
-						["autoHide"] = false,
+						["autoHide"] = true,
 						["height"] = 0.6,
 						["background"] = true,
 						["icon"] = "LEFT",
@@ -5176,7 +5238,10 @@ ShadowedUFDB = {
 						["reactionType"] = "npc",
 					},
 					["text"] = {
-						nil, -- [1]
+						{
+							["width"] = 0.8,
+							["size"] = 5,
+						}, -- [1]
 						{
 							["text"] = "[( )perhp]",
 						}, -- [2]
@@ -5411,15 +5476,15 @@ ShadowedUFDB = {
 			},
 			["backdrop"] = {
 				["inset"] = 3,
-				["edgeSize"] = 5,
-				["tileSize"] = 1,
+				["edgeSize"] = 10,
+				["tileSize"] = 0,
 				["borderColor"] = {
 					["a"] = 1,
-					["r"] = 0.3,
-					["g"] = 0.3,
-					["b"] = 0.5,
+					["r"] = 0,
+					["g"] = 0,
+					["b"] = 0,
 				},
-				["clip"] = 1,
+				["clip"] = 0,
 				["backgroundTexture"] = "None",
 				["backgroundColor"] = {
 					["a"] = 0.8,
@@ -5427,7 +5492,7 @@ ShadowedUFDB = {
 					["g"] = 0,
 					["b"] = 0,
 				},
-				["borderTexture"] = "None",
+				["borderTexture"] = "Blizzard Tooltip",
 			},
 			["classColors"] = {
 				["HUNTER"] = {
