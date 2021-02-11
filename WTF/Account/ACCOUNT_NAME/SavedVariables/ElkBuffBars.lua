@@ -20,31 +20,27 @@ ElkBuffBarsDB = {
 	["global"] = {
 		["maxcharges"] = {
 			["DEBUFF"] = {
-				["Liquefying Ooze"] = 3,
-				["Crumbling Foundation"] = 4,
-				["Soultaint"] = 5,
+				["Soul Split"] = 2,
+				["Agonizing Backlash"] = 2,
 				["Festering Wound"] = 6,
-				["Judgment of Light"] = 25,
-				["Shattered Psyche"] = 5,
-				["Deathly Fixation"] = 4,
-				["Empyreal Ordnance"] = 5,
-				["Death's Due"] = 4,
-				["Thrash"] = 3,
-				["Everchill Brambles"] = 10,
+				["Triple Bite"] = 3,
 				["Unholy Blight"] = 4,
-				["Razorice"] = 5,
+				["Debilitating Poison"] = 3,
+				["Winter's Chill"] = 2,
+				["Bloodletting"] = 2,
+				["Thrash"] = 3,
+				["Dying Breath"] = 5,
+				["Flagellation"] = 15,
+				["Mirrors of Torment"] = 3,
 			},
 			["BUFF"] = {
-				["Redirected Anima"] = 7,
-				["Prayer of Mending"] = 10,
-				["Spirit Wolf"] = 4,
-				["Soul Fragments"] = 5,
-				["Blood Waltz"] = 4,
-				["Ravenous Hunger"] = 4,
-				["Chi Energy"] = 5,
-				["Invoke Chi-Ji, the Red Crane"] = 3,
-				["Earth Shield"] = 9,
-				["Teachings of the Monastery"] = 3,
+				["Luck of the Draw"] = 3,
+				["Growing Menace"] = 5,
+				["Chain Reaction"] = 3,
+				["Ironfur"] = 9,
+				["Incanter's Flow"] = 4,
+				["Earthwarden"] = 3,
+				["Kindled Soul"] = 100,
 			},
 		},
 		["build"] = "37474",
@@ -119,7 +115,12 @@ ElkBuffBarsDB = {
 						["timeformat"] = "CONDENSED",
 						["iconcountfontsize"] = 14,
 						["iconcountanchor"] = "CENTER",
-						["spark"] = true,
+						["textTRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
 						["textBRcolor"] = {
 							1, -- [1]
 							1, -- [2]
@@ -127,7 +128,7 @@ ElkBuffBarsDB = {
 						},
 						["bartexture"] = "Details Flat",
 						["width"] = 220,
-						["textTLfontsize"] = 14,
+						["spark"] = true,
 						["barright"] = false,
 						["textBLfont"] = "Friz Quadrata TT",
 						["iconcountcolor"] = {
@@ -140,12 +141,7 @@ ElkBuffBarsDB = {
 						["textTLstyle"] = "",
 						["debufftypecolor"] = true,
 						["textBLfontsize"] = 14,
-						["textTRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
+						["textTLfontsize"] = 14,
 						["timelessfull"] = false,
 						["barcolor"] = {
 							0.3, -- [1]
@@ -219,7 +215,12 @@ ElkBuffBarsDB = {
 						["timeformat"] = "CONDENSED",
 						["iconcountfontsize"] = 14,
 						["iconcountanchor"] = "CENTER",
-						["spark"] = false,
+						["textTRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
 						["textBRcolor"] = {
 							1, -- [1]
 							1, -- [2]
@@ -227,7 +228,7 @@ ElkBuffBarsDB = {
 						},
 						["bartexture"] = "Details Flat",
 						["width"] = 220,
-						["textTLfontsize"] = 14,
+						["spark"] = false,
 						["barright"] = false,
 						["textBLfont"] = "Friz Quadrata TT",
 						["iconcountcolor"] = {
@@ -240,12 +241,7 @@ ElkBuffBarsDB = {
 						["textTLstyle"] = "",
 						["debufftypecolor"] = true,
 						["textBLfontsize"] = 14,
-						["textTRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
+						["textTLfontsize"] = 14,
 						["timelessfull"] = false,
 						["barcolor"] = {
 							1, -- [1]
@@ -319,7 +315,12 @@ ElkBuffBarsDB = {
 						["timeformat"] = "CONDENSED",
 						["iconcountfontsize"] = 14,
 						["iconcountanchor"] = "CENTER",
-						["spark"] = false,
+						["textTRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
 						["textBRcolor"] = {
 							1, -- [1]
 							1, -- [2]
@@ -327,7 +328,7 @@ ElkBuffBarsDB = {
 						},
 						["bartexture"] = "Details Flat",
 						["width"] = 220,
-						["textTLfontsize"] = 14,
+						["spark"] = false,
 						["barright"] = false,
 						["textBLfont"] = "Friz Quadrata TT",
 						["iconcountcolor"] = {
@@ -340,12 +341,7 @@ ElkBuffBarsDB = {
 						["textTLstyle"] = "",
 						["debufftypecolor"] = true,
 						["textBLfontsize"] = 14,
-						["textTRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
+						["textTLfontsize"] = 14,
 						["timelessfull"] = false,
 						["barcolor"] = {
 							0.5, -- [1]

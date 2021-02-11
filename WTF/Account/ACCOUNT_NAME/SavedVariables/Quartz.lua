@@ -22,8 +22,8 @@ Quartz3DB = {
 			["profiles"] = {
 				["Default"] = {
 					["targetname"] = true,
-					["w"] = 360,
-					["y"] = -238.5000610351563,
+					["w"] = 280,
+					["y"] = -260,
 					["point"] = "CENTER",
 					["x"] = 0,
 					["texture"] = "Smooth",
@@ -73,6 +73,7 @@ Quartz3DB = {
 	},
 	["profileKeys"] = {
 		["Mistgarr - Tichondrius"] = "Default",
+		["Fangarr - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

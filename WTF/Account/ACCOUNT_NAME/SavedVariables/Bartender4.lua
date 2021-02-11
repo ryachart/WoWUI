@@ -391,8 +391,8 @@ Bartender4DB = {
 		["MicroMenu"] = {
 			["profiles"] = {
 				["Default"] = {
-					["version"] = 3,
 					["rows"] = 11,
+					["version"] = 3,
 					["position"] = {
 						["y"] = 192.5001220703125,
 						["x"] = -5,
@@ -400,6 +400,10 @@ Bartender4DB = {
 						["scale"] = 1,
 					},
 					["padding"] = -2,
+					["visibility"] = {
+						["overridebar"] = false,
+						["vehicleui"] = false,
+					},
 				},
 				["Shadegarr - Tichondrius"] = {
 					["padding"] = -2,
@@ -574,10 +578,11 @@ Bartender4DB = {
 			["profiles"] = {
 				["Default"] = {
 					["position"] = {
-						["y"] = -129.8757934570313,
-						["x"] = 432.7863464355469,
-						["point"] = "LEFT",
+						["y"] = -167.9434204101563,
+						["x"] = -435.7025146484375,
+						["point"] = "CENTER",
 						["scale"] = 1,
+						["growHorizontal"] = "LEFT",
 					},
 					["version"] = 3,
 				},

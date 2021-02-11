@@ -15,7 +15,7 @@ MADB = {
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
 						0, -- [4]
-						160, -- [5]
+						195, -- [5]
 					},
 					["name"] = "CastingBarFrame",
 					["hidden"] = true,
@@ -73,7 +73,7 @@ MADB = {
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
 						0, -- [4]
-						140, -- [5]
+						175, -- [5]
 					},
 					["name"] = "UIWidgetPowerBarContainerFrame",
 					["scale"] = 86.00003552436405,
