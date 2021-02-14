@@ -1,2 +1,6 @@
 WTF/Account/ACCOUNT_NAME/SavedVariables/Blizzard_Communities.lua*
 *.lua.bak
+Interface/AddOns/RaiderIO*
+Interface/AddOns/WoWUp/
+Interface/AddOns/wowup_data_addon/
+Interface/AddOns/TheUndermineJournal/
