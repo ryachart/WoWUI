@@ -4,3 +4,17 @@ Interface/AddOns/RaiderIO*
 Interface/AddOns/WoWUp/
 Interface/AddOns/wowup_data_addon/
 Interface/AddOns/TheUndermineJournal/
+WTF/Account/ACCOUNT_NAME/SavedVariables/!BugGrabber.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/BagBrother.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/Blizzard_CombatLog.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/DBM-Challenges.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/Details_Streamer.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/EasyFrames.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/FriendGroups.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/FriendListColors.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/MethodDungeonTools.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/Prat-3.0.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/RaiderIO.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/Simulationcraft.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/WeakAurasArchive.lua
+WTF/Account/ACCOUNT_NAME/SavedVariables/WowUp.lua

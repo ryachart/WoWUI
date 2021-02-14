@@ -18,6 +18,8 @@ Quartz3DB = {
 		},
 		["Range"] = {
 		},
+		["Mirror"] = {
+		},
 		["Player"] = {
 			["profiles"] = {
 				["Default"] = {
@@ -29,8 +31,6 @@ Quartz3DB = {
 					["texture"] = "Smooth",
 				},
 			},
-		},
-		["EnemyCasts"] = {
 		},
 		["GCD"] = {
 		},
@@ -61,7 +61,7 @@ Quartz3DB = {
 		},
 		["Interrupt"] = {
 		},
-		["Mirror"] = {
+		["EnemyCasts"] = {
 		},
 		["Latency"] = {
 			["profiles"] = {
@@ -99,9 +99,9 @@ Quartz3DB = {
 				["GCD"] = false,
 				["Focus"] = false,
 				["Target"] = false,
-				["Buff"] = false,
-				["Mirror"] = false,
 				["Pet"] = false,
+				["Mirror"] = false,
+				["Buff"] = false,
 			},
 			["timetextcolor"] = {
 				nil, -- [1]

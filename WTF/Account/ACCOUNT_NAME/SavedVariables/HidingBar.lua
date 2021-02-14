@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1613075904,
+	["tstmp"] = 1613291606,
 	["config"] = {
 		["lineWidth"] = 4,
 		["secondPosition"] = 0,
@@ -9,28 +9,28 @@ HidingBarDB = {
 				["tstmp"] = 1609009379,
 			},
 			["Bartender4"] = {
-				["tstmp"] = 1613075904,
+				["tstmp"] = 1613291606,
 			},
 			["DBM"] = {
-				["tstmp"] = 1613075904,
+				["tstmp"] = 1613291606,
 			},
 			["ElkBuffBars"] = {
-				["tstmp"] = 1613075904,
+				["tstmp"] = 1613291606,
 			},
 			["Prat"] = {
-				["tstmp"] = 1613075904,
+				["tstmp"] = 1613291606,
 			},
 			["ExRT"] = {
-				["tstmp"] = 1609009379,
-			},
-			["BagnonLauncher"] = {
-				["tstmp"] = 1613075904,
+				["tstmp"] = 1613291606,
 			},
 			["WeakAuras"] = {
-				["tstmp"] = 1613075904,
+				["tstmp"] = 1613291606,
+			},
+			["BagnonLauncher"] = {
+				["tstmp"] = 1613291606,
 			},
 			["Masque"] = {
-				["tstmp"] = 1613075904,
+				["tstmp"] = 1613291606,
 			},
 		},
 		["grabMinimap"] = true,
@@ -42,64 +42,66 @@ HidingBarDB = {
 		["showDelay"] = 0,
 		["hideDelay"] = 0.75,
 		["anchor"] = "right",
+		["barTypePosition"] = 0,
 		["size"] = 10,
 		["omb"] = {
 			["anchor"] = "right",
-			["hide"] = true,
 			["size"] = 31,
+			["hide"] = true,
+			["lock"] = false,
 		},
 		["buttonSize"] = 32,
 		["frameStrata"] = 2,
-		["mbtnSettings"] = {
-			["LibDBIcon10_Details"] = {
-				["tstmp"] = 1613075904,
-			},
-			["LibDBIcon10_ElkBuffBars"] = {
-				["tstmp"] = 1613075904,
-			},
-			["LibDBIcon10_PitBull4"] = {
-				["tstmp"] = 1609009379,
-			},
-			["LibDBIcon10_MythicDungeonTools"] = {
-				["tstmp"] = 1613075904,
-			},
-			["LibDBIcon10_WowUp"] = {
-				["tstmp"] = 1613075904,
-			},
-			["LibDBIcon10_SimulationCraft"] = {
-				["tstmp"] = 1613075904,
-			},
-			["LibDBIcon10_DetailsStreamer"] = {
-				["tstmp"] = 1613075904,
-			},
-			["LibDBIcon10_WeakAuras"] = {
-				["tstmp"] = 1613075904,
-			},
-			["LibDBIcon10_ExorsusRaidTools"] = {
-				["tstmp"] = 1609009379,
-			},
-			["LibDBIcon10_Bartender4"] = {
-				["tstmp"] = 1613075904,
-			},
-			["LibDBIcon10_DBM"] = {
-				["tstmp"] = 1613075904,
-			},
-		},
+		["grabMinimapAfterN"] = 1,
 		["lineColor"] = {
 			0.8, -- [1]
 			0.6, -- [2]
 			0, -- [3]
 		},
+		["orientation"] = 0,
 		["position"] = 630.0444721566305,
-		["fadeOpacity"] = 0.2,
-		["grabMinimapAfterN"] = 1,
+		["mbtnPosition"] = 0,
 		["bgColor"] = {
 			0.1, -- [1]
 			0.1, -- [2]
 			0.1, -- [3]
 			0.7, -- [4]
 		},
-		["mbtnPosition"] = 0,
-		["orientation"] = 0,
+		["fadeOpacity"] = 0.2,
+		["mbtnSettings"] = {
+			["LibDBIcon10_Details"] = {
+				["tstmp"] = 1613291606,
+			},
+			["LibDBIcon10_ElkBuffBars"] = {
+				["tstmp"] = 1613291606,
+			},
+			["LibDBIcon10_DBM"] = {
+				["tstmp"] = 1613291606,
+			},
+			["LibDBIcon10_MythicDungeonTools"] = {
+				["tstmp"] = 1613291606,
+			},
+			["LibDBIcon10_WowUp"] = {
+				["tstmp"] = 1613291606,
+			},
+			["LibDBIcon10_SimulationCraft"] = {
+				["tstmp"] = 1613291606,
+			},
+			["LibDBIcon10_PitBull4"] = {
+				["tstmp"] = 1609009379,
+			},
+			["LibDBIcon10_WeakAuras"] = {
+				["tstmp"] = 1613291606,
+			},
+			["LibDBIcon10_Bartender4"] = {
+				["tstmp"] = 1613291606,
+			},
+			["LibDBIcon10_ExorsusRaidTools"] = {
+				["tstmp"] = 1613291606,
+			},
+			["LibDBIcon10_DetailsStreamer"] = {
+				["tstmp"] = 1613291606,
+			},
+		},
 	},
 }
