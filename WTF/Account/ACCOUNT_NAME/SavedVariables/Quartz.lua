@@ -20,7 +20,17 @@ Quartz3DB = {
 		},
 		["Mirror"] = {
 		},
-		["EnemyCasts"] = {
+		["Player"] = {
+			["profiles"] = {
+				["Default"] = {
+					["targetname"] = true,
+					["w"] = 320,
+					["y"] = -260,
+					["point"] = "CENTER",
+					["x"] = 0,
+					["texture"] = "Smooth",
+				},
+			},
 		},
 		["GCD"] = {
 		},
@@ -51,17 +61,7 @@ Quartz3DB = {
 		},
 		["Interrupt"] = {
 		},
-		["Player"] = {
-			["profiles"] = {
-				["Default"] = {
-					["targetname"] = true,
-					["w"] = 320,
-					["y"] = -260,
-					["point"] = "CENTER",
-					["x"] = 0,
-					["texture"] = "Smooth",
-				},
-			},
+		["EnemyCasts"] = {
 		},
 		["Latency"] = {
 			["profiles"] = {
@@ -72,8 +72,9 @@ Quartz3DB = {
 		},
 	},
 	["profileKeys"] = {
-		["Mistgarr - Tichondrius"] = "Default",
 		["Fangarr - Tichondrius"] = "Default",
+		["Mistgarr - Tichondrius"] = "Default",
+		["Glaivegarr - Blackrock"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -99,8 +100,8 @@ Quartz3DB = {
 				["GCD"] = false,
 				["Focus"] = false,
 				["Target"] = false,
-				["Mirror"] = false,
 				["Pet"] = false,
+				["Mirror"] = false,
 				["Buff"] = false,
 			},
 			["timetextcolor"] = {

@@ -9,9 +9,6 @@ MADB = {
 		["default"] = {
 			["name"] = "default",
 			["frames"] = {
-				["QuestChoiceFrame"] = {
-					["name"] = "QuestChoiceFrame",
-				},
 				["PlayerPowerBarAltMover"] = {
 					["orgPos"] = {
 						"BOTTOM", -- [1]
@@ -81,6 +78,23 @@ MADB = {
 						"BOTTOM", -- [3]
 						0, -- [4]
 						160, -- [5]
+					},
+				},
+				["PlayerBuffsMover"] = {
+					["orgPos"] = {
+						"TOPRIGHT", -- [1]
+						"UIParent", -- [2]
+						"TOPRIGHT", -- [3]
+						-205.0000152587891, -- [4]
+						-13, -- [5]
+					},
+					["name"] = "PlayerBuffsMover",
+					["pos"] = {
+						"TOPRIGHT", -- [1]
+						"UIParent", -- [2]
+						"TOPRIGHT", -- [3]
+						-254.9998779296875, -- [4]
+						-11, -- [5]
 					},
 				},
 				["ObjectiveTrackerFrameMover"] = {
