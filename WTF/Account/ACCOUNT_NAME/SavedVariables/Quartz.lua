@@ -20,17 +20,7 @@ Quartz3DB = {
 		},
 		["Mirror"] = {
 		},
-		["Player"] = {
-			["profiles"] = {
-				["Default"] = {
-					["targetname"] = true,
-					["w"] = 320,
-					["y"] = -260,
-					["point"] = "CENTER",
-					["x"] = 0,
-					["texture"] = "Smooth",
-				},
-			},
+		["EnemyCasts"] = {
 		},
 		["GCD"] = {
 		},
@@ -61,7 +51,17 @@ Quartz3DB = {
 		},
 		["Interrupt"] = {
 		},
-		["EnemyCasts"] = {
+		["Player"] = {
+			["profiles"] = {
+				["Default"] = {
+					["targetname"] = true,
+					["w"] = 320,
+					["y"] = -260,
+					["point"] = "CENTER",
+					["x"] = 0,
+					["texture"] = "Smooth",
+				},
+			},
 		},
 		["Latency"] = {
 			["profiles"] = {
@@ -72,9 +72,15 @@ Quartz3DB = {
 		},
 	},
 	["profileKeys"] = {
-		["Fangarr - Tichondrius"] = "Default",
-		["Mistgarr - Tichondrius"] = "Default",
 		["Glaivegarr - Blackrock"] = "Default",
+		["Shadegarr - Tichondrius"] = "Default",
+		["Fangarr - Tichondrius"] = "Default",
+		["Flashsmite - Blackrock"] = "Default",
+		["Mistgarr - Tichondrius"] = "Default",
+		["Huntgarr - Thunderlord"] = "Default",
+		["Ignorc - Blackrock"] = "Default",
+		["Flashlyte - Blackrock"] = "Default",
+		["Paingarr - Sargeras"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -100,8 +106,8 @@ Quartz3DB = {
 				["GCD"] = false,
 				["Focus"] = false,
 				["Target"] = false,
-				["Pet"] = false,
 				["Mirror"] = false,
+				["Pet"] = false,
 				["Buff"] = false,
 			},
 			["timetextcolor"] = {

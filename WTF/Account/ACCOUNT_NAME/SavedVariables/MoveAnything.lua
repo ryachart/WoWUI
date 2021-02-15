@@ -68,7 +68,7 @@ MADB = {
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
 						0, -- [4]
-						160, -- [5]
+						115.0000076293945, -- [5]
 					},
 					["name"] = "CastingBarFrame",
 					["hidden"] = true,
@@ -85,7 +85,7 @@ MADB = {
 						"TOPRIGHT", -- [1]
 						"UIParent", -- [2]
 						"TOPRIGHT", -- [3]
-						-205.0000152587891, -- [4]
+						-205, -- [4]
 						-13, -- [5]
 					},
 					["name"] = "PlayerBuffsMover",
@@ -158,7 +158,7 @@ MADB = {
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
 						0, -- [4]
-						140, -- [5]
+						95.00000762939453, -- [5]
 					},
 					["name"] = "UIWidgetPowerBarContainerFrame",
 					["scale"] = 86.00003552436405,

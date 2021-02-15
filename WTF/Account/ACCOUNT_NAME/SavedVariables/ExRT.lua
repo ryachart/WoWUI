@@ -44,9 +44,15 @@ VExRT = {
 		["Strata"] = "HIGH",
 	},
 	["ProfileKeys"] = {
-		["Mistgarr-Tichondrius"] = "default",
 		["Fangarr-Tichondrius"] = "default",
+		["Paingarr-Sargeras"] = "default",
+		["Mistgarr-Tichondrius"] = "default",
+		["Ignorc-Blackrock"] = "default",
 		["Glaivegarr-Blackrock"] = "default",
+		["Flashlyte-Blackrock"] = "default",
+		["Shadegarr-Tichondrius"] = "default",
+		["Huntgarr-Thunderlord"] = "default",
+		["Flashsmite-Blackrock"] = "default",
 	},
 	["Encounter"] = {
 		["names"] = {
@@ -88,6 +94,29 @@ VExRT = {
 			[1051] = "General Umbriss",
 		},
 		["list"] = {
+			["Huntgarr"] = {
+			},
+			["Fangarr"] = {
+				"^2387^1^1613252883^64^1^5^121.08^", -- [1]
+				"^2388^1^1613253266^53^1^5^119.84^", -- [2]
+				"^2389^1^1613253616^83^1^5^119.91^", -- [3]
+				"^2390^1^1613253725^84^1^5^119.91^", -- [4]
+				"^2382^1^1613263955^49^1^5^95.19^", -- [5]
+				"^2384^1^1613264443^78^1^5^121.88^", -- [6]
+				"^2385^1^1613264742^46^1^5^121.88^", -- [7]
+				"^2386^1^1613264889^102^1^5^121.88^", -- [8]
+				"^2397^1^1613286645^35^1^5^91.53^", -- [9]
+				"^2392^1^1613286872^54^1^5^92.12^", -- [10]
+				"^2393^1^1613287066^51^1^5^103.98^", -- [11]
+				"^2387^1^1613341371^51^1^5^82.81^", -- [12]
+				"^2388^1^1613341848^58^1^5^109.47^", -- [13]
+				"^2389^1^1613342261^83^1^5^110.01^", -- [14]
+				"^2390^1^1613342384^72^1^5^110.01^Nault-Eitrigg", -- [15]
+				"^2387^1^1613342724^49^1^5^101.56^", -- [16]
+				"^2388^1^1613343108^53^1^5^98.25^", -- [17]
+				"^2389^1^1613343462^78^1^5^100.42^", -- [18]
+				"^2390^1^1613343560^57^1^5^100.42^Nault-Eitrigg", -- [19]
+			},
 			["Mistgarr"] = {
 				"^2360^8^1613108953^139^1^5^217.03^Mailfurion-Stormrage", -- [1]
 				"^2361^8^1613109711^103^1^5^217.03^Jesstara-Thunderlord", -- [2]
@@ -144,29 +173,18 @@ VExRT = {
 				"^2399^14^1613374029^366^0^20^203.97^Rachallin-Thunderlord", -- [53]
 				"^2399^14^1613374729^199^0^18^203.85^Marixx-Thunderlord", -- [54]
 			},
-			["Fangarr"] = {
-				"^2387^1^1613252883^64^1^5^121.08^", -- [1]
-				"^2388^1^1613253266^53^1^5^119.84^", -- [2]
-				"^2389^1^1613253616^83^1^5^119.91^", -- [3]
-				"^2390^1^1613253725^84^1^5^119.91^", -- [4]
-				"^2382^1^1613263955^49^1^5^95.19^", -- [5]
-				"^2384^1^1613264443^78^1^5^121.88^", -- [6]
-				"^2385^1^1613264742^46^1^5^121.88^", -- [7]
-				"^2386^1^1613264889^102^1^5^121.88^", -- [8]
-				"^2397^1^1613286645^35^1^5^91.53^", -- [9]
-				"^2392^1^1613286872^54^1^5^92.12^", -- [10]
-				"^2393^1^1613287066^51^1^5^103.98^", -- [11]
-				"^2387^1^1613341371^51^1^5^82.81^", -- [12]
-				"^2388^1^1613341848^58^1^5^109.47^", -- [13]
-				"^2389^1^1613342261^83^1^5^110.01^", -- [14]
-				"^2390^1^1613342384^72^1^5^110.01^Nault-Eitrigg", -- [15]
-				"^2387^1^1613342724^49^1^5^101.56^", -- [16]
-				"^2388^1^1613343108^53^1^5^98.25^", -- [17]
-				"^2389^1^1613343462^78^1^5^100.42^", -- [18]
-				"^2390^1^1613343560^57^1^5^100.42^Nault-Eitrigg", -- [19]
+			["Paingarr"] = {
+			},
+			["Flashsmite"] = {
+			},
+			["Flashlyte"] = {
+			},
+			["Shadegarr"] = {
 			},
 			["Glaivegarr"] = {
 				"^1051^1^1613366284^55^1^5^43.09^", -- [1]
+			},
+			["Ignorc"] = {
 			},
 		},
 	},
@@ -219,52 +237,56 @@ VExRT = {
 			["Marixx-Thunderlord"] = 105,
 			["Foodforheals-WyrmrestAccord"] = 257,
 			["Avienndha-Korgath"] = 252,
+			["Flashlyte"] = 65,
 			["Capricorne-WyrmrestAccord"] = 102,
 			["Sabery-Whisperwind"] = 256,
 			["Nonarswifey-Dragonblight"] = 257,
 			["Mjoll-Andorhal"] = 66,
+			["Savannasedai-Thunderlord"] = 72,
 			["Weatherworn-Proudmoore"] = 62,
 			["Vultriks-Area52"] = 64,
 			["Problemz-Proudmoore"] = 256,
 			["Sybriena-SilverHand"] = 267,
 			["Kelexx-Korgath"] = 258,
 			["Jaxxey-ThoriumBrotherhood"] = 71,
-			["Jesstara-Thunderlord"] = 63,
 			["Epicbazooka-Tichondrius"] = 257,
-			["Hoxie-SilverHand"] = 252,
+			["Assistances-BleedingHollow"] = 102,
+			["Fangarr"] = 104,
+			["Secutina-Stormrage"] = 71,
+			["Vyndalin-Mal'Ganis"] = 63,
 			["Daphna-Thunderlord"] = 258,
 			["Kadad-EmeraldDream"] = 269,
 			["Ducksaas-Thunderlord"] = 264,
 			["Glaivegarr"] = 581,
-			["Assistances-BleedingHollow"] = 102,
+			["Hoxie-SilverHand"] = 252,
 			["Twoprime-Lightbringer"] = 252,
-			["Vyndalin-Mal'Ganis"] = 63,
-			["Vincentio-Zul'jin"] = 270,
+			["Riptcagé-Thunderlord"] = 577,
+			["Sikkagar"] = 254,
 			["Azrial-Thunderlord"] = 254,
 			["Roaroo-Stormrage"] = 254,
-			["Sikkagar"] = 254,
+			["Surati"] = 64,
 			["Roxxë-Quel'Thalas"] = 264,
 			["Eilana-Thunderlord"] = 257,
-			["Riptcagé-Thunderlord"] = 577,
-			["Guvante-Thunderlord"] = 66,
-			["Auroraxsky"] = 257,
-			["Surati"] = 64,
 			["Mizzron-Thunderlord"] = 259,
-			["Cristalina-Proudmoore"] = 63,
+			["Guvante-Thunderlord"] = 66,
+			["Shadegarr"] = 260,
 			["Gigasloth-Korgath"] = 581,
+			["Cristalina-Proudmoore"] = 63,
+			["Unclechumbus-Hyjal"] = 104,
+			["Auroraxsky"] = 257,
 			["Frymeareaver-Whisperwind"] = 261,
 			["Nalkwa-WyrmrestAccord"] = 65,
-			["Unclechumbus-Hyjal"] = 104,
-			["Silenal-Thunderlord"] = 254,
 			["Feistypants-Whisperwind"] = 269,
-			["Boogeymanz-Mannoroth"] = 254,
+			["Silenal-Thunderlord"] = 254,
 			["Liquidqt"] = 269,
+			["Boogeymanz-Mannoroth"] = 254,
+			["Paingarr"] = 250,
 			["Lolithryx-Thunderlord"] = 269,
 			["Rachallin-Thunderlord"] = 72,
-			["Fangarr"] = 104,
-			["Secutina-Stormrage"] = 71,
 			["Monkheadahh-Area52"] = 269,
-			["Savannasedai-Thunderlord"] = 72,
+			["Jesstara-Thunderlord"] = 63,
+			["Vincentio-Zul'jin"] = 270,
+			["Ignorc"] = 266,
 		},
 		["NoRaid"] = true,
 		["CDECol"] = {
@@ -456,8 +478,8 @@ VExRT = {
 			["Mailfurion-Stormrage"] = "1613111277:3:1:322721:279-6-1:342270:259-6-0:320668:271-5-2:256-6-2:320659",
 			["Mjoll-Andorhal"] = "1613264889:1:7:328266:216-1-1:328261",
 			["Problemz-Proudmoore"] = "1613114102:2:3:340159:71-6-2:319982:77-5-1:332755:72-6-2:75-5-1:332754",
-			["Cristalina-Proudmoore"] = "1613246188:3:6:325066:30-5-1:325067:29-5-0:325072:45-6-2:38-6-1:325068",
 			["Feistypants-Whisperwind"] = "1613262532:3:1:322721:22-5-1:342270:37-5-0:320668:15-1-2:33-5-2:320659",
+			["Cristalina-Proudmoore"] = "1613246188:3:6:325066:30-5-1:325067:29-5-0:325072:45-6-2:38-6-1:325068",
 			["Kelexx-Korgath"] = "1613374729:1:7:328266:107-4-1:328261:66-4-2:328263:115-4-1:71-5-2:328257",
 			["Roaroo-Stormrage"] = "1613246188:3:1:322721:140-5-1:342270:178-5-0:320687:173-4-2:170-6-2:320659",
 			["Nonarswifey-Dragonblight"] = "1613374729:3:2:319217:69-5-0:116-3-1:319213:85-5-0:71-5-2:319214",
@@ -503,10 +525,10 @@ VExRT = {
 	},
 	["RaidCheck"] = {
 		["ReadyCheckFrameOnlyRL"] = true,
-		["ReadyCheckFrameTimerFade"] = 4,
+		["ReadyCheckTop"] = 924.5001220703125,
 		["BuffsCheck"] = true,
 		["ReadyCheckFrame"] = true,
-		["ReadyCheckTop"] = 924.5001220703125,
+		["ReadyCheckFrameTimerFade"] = 4,
 		["ReadyCheckLeft"] = 1138.000244140625,
 		["WeaponEnch"] = {
 			["Mistgarr-Tichondrius"] = 171437,
