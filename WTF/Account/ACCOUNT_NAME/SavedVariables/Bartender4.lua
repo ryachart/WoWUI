@@ -514,42 +514,6 @@ Bartender4DB = {
 				},
 			},
 		},
-		["Vehicle"] = {
-			["profiles"] = {
-				["Mistgarr - Tichondrius"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
-					},
-				},
-				["Shadegarr - Tichondrius"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
-					},
-				},
-				["Default"] = {
-					["position"] = {
-						["y"] = -201.2775268554688,
-						["x"] = 450.189208984375,
-						["point"] = "CENTER",
-					},
-					["version"] = 3,
-				},
-				["Arantir - Lightbringer"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
-					},
-				},
-			},
-		},
 		["StanceBar"] = {
 			["profiles"] = {
 				["Mistgarr - Tichondrius"] = {
@@ -589,6 +553,42 @@ Bartender4DB = {
 				},
 			},
 		},
+		["Vehicle"] = {
+			["profiles"] = {
+				["Mistgarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
+				["Shadegarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
+				["Default"] = {
+					["position"] = {
+						["y"] = -201.2775268554688,
+						["x"] = 450.189208984375,
+						["point"] = "CENTER",
+					},
+					["version"] = 3,
+				},
+				["Arantir - Lightbringer"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
+			},
+		},
 		["PetBar"] = {
 			["profiles"] = {
 				["Mistgarr - Tichondrius"] = {
@@ -610,8 +610,8 @@ Bartender4DB = {
 				["Default"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = -201.9434204101563,
-						["x"] = 244.1744384765625,
+						["y"] = -230.9502258300781,
+						["x"] = 246.5365600585938,
 						["point"] = "LEFT",
 					},
 				},

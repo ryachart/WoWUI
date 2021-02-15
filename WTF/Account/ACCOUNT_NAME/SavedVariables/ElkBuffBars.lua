@@ -5,6 +5,31 @@ ElkBuffBarsDB = {
 		},
 	},
 	["global"] = {
+		["maxcharges"] = {
+			["DEBUFF"] = {
+				["Bruising Strike"] = 3,
+				["Agony"] = 8,
+			},
+			["BUFF"] = {
+				["Redirected Anima"] = 8,
+				["Hit Scheme"] = 3,
+				["Deathtouched Brew"] = 11,
+				["Seeker's Scroll"] = 100,
+				["Unnatural Power"] = 5,
+				["Secret Spices"] = 50,
+				["Chi Energy"] = 10,
+				["Purified Chi"] = 7,
+				["Shining Light"] = 4,
+				["Invoke Chi-Ji, the Red Crane"] = 3,
+				["Uber Strike"] = 6,
+				["Blood Waltz"] = 4,
+				["Soul Remnant's Blessing"] = 46,
+				["Elusive Brawler"] = 19,
+				["Fevered Incantation"] = 3,
+				["Inner Flames"] = 12,
+				["Fading Away"] = 15,
+			},
+		},
 		["build"] = "37474",
 	},
 	["profileKeys"] = {
@@ -25,11 +50,11 @@ ElkBuffBarsDB = {
 			["bargroups"] = {
 				{
 					["anchorshown"] = false,
-					["anchortext"] = "BUFFS",
-					["scale"] = 1,
+					["configmode"] = false,
+					["id"] = 1,
 					["barspacing"] = 0,
 					["alpha"] = 0.5,
-					["configmode"] = false,
+					["anchortext"] = "BUFFS",
 					["y"] = 1074.500122070313,
 					["x"] = 1413.000610351563,
 					["growup"] = false,
@@ -95,16 +120,21 @@ ElkBuffBarsDB = {
 							0.8, -- [4]
 						},
 						["iconcountanchor"] = "CENTER",
-						["timelessfull"] = false,
 						["textBRcolor"] = {
 							1, -- [1]
 							1, -- [2]
 							1, -- [3]
 						},
-						["spark"] = true,
-						["textTLstyle"] = "",
+						["timelessfull"] = false,
 						["textTLfontsize"] = 14,
-						["bartexture"] = "Details Flat",
+						["textTLstyle"] = "",
+						["textTRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["barright"] = false,
 						["debufftypecolor"] = true,
 						["iconcountcolor"] = {
 							1, -- [1]
@@ -113,22 +143,17 @@ ElkBuffBarsDB = {
 							1, -- [4]
 						},
 						["textBLstyle"] = "",
-						["iconcountfontsize"] = 14,
+						["width"] = 220,
 						["textBLfont"] = "Friz Quadrata TT",
 						["textBLfontsize"] = 14,
-						["barright"] = false,
-						["textTRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["width"] = 220,
+						["bartexture"] = "Details Flat",
+						["spark"] = true,
+						["iconcountfontsize"] = 14,
 						["padding"] = 1,
 						["textBLalign"] = "LEFT",
 						["height"] = 20,
 					},
-					["id"] = 1,
+					["scale"] = 1,
 					["sorting"] = "timemax",
 				}, -- [1]
 				{
@@ -195,16 +220,21 @@ ElkBuffBarsDB = {
 							0.8, -- [4]
 						},
 						["iconcountanchor"] = "CENTER",
-						["timelessfull"] = false,
 						["textBRcolor"] = {
 							1, -- [1]
 							1, -- [2]
 							1, -- [3]
 						},
-						["spark"] = false,
-						["textTLstyle"] = "",
+						["timelessfull"] = false,
 						["textTLfontsize"] = 14,
-						["bartexture"] = "Details Flat",
+						["textTLstyle"] = "",
+						["textTRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["barright"] = false,
 						["debufftypecolor"] = true,
 						["iconcountcolor"] = {
 							1, -- [1]
@@ -213,17 +243,12 @@ ElkBuffBarsDB = {
 							1, -- [4]
 						},
 						["textBLstyle"] = "",
-						["iconcountfontsize"] = 14,
+						["width"] = 220,
 						["textBLfont"] = "Friz Quadrata TT",
 						["textBLfontsize"] = 14,
-						["barright"] = false,
-						["textTRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["width"] = 220,
+						["bartexture"] = "Details Flat",
+						["spark"] = false,
+						["iconcountfontsize"] = 14,
 						["padding"] = 1,
 						["textBLalign"] = "LEFT",
 						["height"] = 20,
@@ -295,16 +320,21 @@ ElkBuffBarsDB = {
 							0.8, -- [4]
 						},
 						["iconcountanchor"] = "CENTER",
-						["timelessfull"] = false,
 						["textBRcolor"] = {
 							1, -- [1]
 							1, -- [2]
 							1, -- [3]
 						},
-						["spark"] = false,
-						["textTLstyle"] = "",
+						["timelessfull"] = false,
 						["textTLfontsize"] = 14,
-						["bartexture"] = "Details Flat",
+						["textTLstyle"] = "",
+						["textTRcolor"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["barright"] = false,
 						["debufftypecolor"] = true,
 						["iconcountcolor"] = {
 							1, -- [1]
@@ -313,17 +343,12 @@ ElkBuffBarsDB = {
 							1, -- [4]
 						},
 						["textBLstyle"] = "",
-						["iconcountfontsize"] = 14,
+						["width"] = 220,
 						["textBLfont"] = "Friz Quadrata TT",
 						["textBLfontsize"] = 14,
-						["barright"] = false,
-						["textTRcolor"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["width"] = 220,
+						["bartexture"] = "Details Flat",
+						["spark"] = false,
+						["iconcountfontsize"] = 14,
 						["padding"] = 1,
 						["textBLalign"] = "LEFT",
 						["height"] = 20,
