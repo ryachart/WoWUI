@@ -5,47 +5,7 @@ AngryKeystones_Config = {
 }
 AngryKeystones_Data = {
 	["state"] = {
-		["mapID"] = 377,
-		["splits"] = {
-			497, -- [1]
-			1065, -- [2]
-			1684, -- [3]
-			1935, -- [4]
-			1540, -- [5]
-			["party1Name"] = "Mistgarr",
-			["party1Class"] = "Monk",
-			["party4Class"] = "Hunter",
-			["party2Name"] = "Elyk",
-			["patch"] = "9.0.2",
-			["timeLimit"] = 2580,
-			["level"] = 8,
-			["timeElapsed"] = 1934.8,
-			["party3Role"] = "DAMAGER",
-			["affixes3"] = 13,
-			["party5Role"] = "HEALER",
-			["party3Name"] = "Jesstara",
-			["affixes2"] = 11,
-			["party1Role"] = "TANK",
-			["party4Name"] = "Honiahaka",
-			["party4Role"] = "DAMAGER",
-			["party3Class"] = "Mage",
-			["wasEnergized"] = true,
-			["affixes1"] = 9,
-			["party5Class"] = "Druid",
-			["mapID"] = 2291,
-			["party2Role"] = "DAMAGER",
-			["date"] = 1613460353,
-			["party2Class"] = "Mage",
-			["party5Name"] = "Sutarman",
-		},
 		["playerDeaths"] = {
-		},
-		["splitNames"] = {
-			"Hakkar the Soulflayer defeated", -- [1]
-			"The Manastorms defeated", -- [2]
-			"Dealer Xy'exa defeated", -- [3]
-			"Mueh'zala defeated", -- [4]
-			"Enemy Forces", -- [5]
 		},
 	},
 	["splits"] = {
