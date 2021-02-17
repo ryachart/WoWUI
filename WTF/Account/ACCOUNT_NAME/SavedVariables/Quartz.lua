@@ -18,7 +18,7 @@ Quartz3DB = {
 		},
 		["Range"] = {
 		},
-		["Mirror"] = {
+		["EnemyCasts"] = {
 		},
 		["Player"] = {
 			["profiles"] = {
@@ -61,7 +61,7 @@ Quartz3DB = {
 		},
 		["Interrupt"] = {
 		},
-		["EnemyCasts"] = {
+		["Mirror"] = {
 		},
 		["Latency"] = {
 			["profiles"] = {
@@ -77,10 +77,10 @@ Quartz3DB = {
 		["Fangarr - Tichondrius"] = "Default",
 		["Flashsmite - Blackrock"] = "Default",
 		["Mistgarr - Tichondrius"] = "Default",
-		["Huntgarr - Thunderlord"] = "Default",
-		["Flashlyte - Blackrock"] = "Default",
-		["Paingarr - Sargeras"] = "Default",
 		["Ignorc - Blackrock"] = "Default",
+		["Paingarr - Sargeras"] = "Default",
+		["Flashlyte - Blackrock"] = "Default",
+		["Huntgarr - Thunderlord"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -106,9 +106,9 @@ Quartz3DB = {
 				["GCD"] = false,
 				["Focus"] = false,
 				["Target"] = false,
+				["Buff"] = false,
 				["Pet"] = false,
 				["Mirror"] = false,
-				["Buff"] = false,
 			},
 			["timetextcolor"] = {
 				nil, -- [1]

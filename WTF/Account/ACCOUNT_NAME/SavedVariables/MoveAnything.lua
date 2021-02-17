@@ -19,6 +19,7 @@ MADB = {
 					},
 					["name"] = "PlayerPowerBarAltMover",
 					["scale"] = 1.093751549720764,
+					["orgScale"] = 1,
 					["pos"] = {
 						"BOTTOM", -- [1]
 						"UIParent", -- [2]
@@ -26,7 +27,6 @@ MADB = {
 						-308.1137403390116, -- [4]
 						555.8848266601562, -- [5]
 					},
-					["orgScale"] = 1,
 				},
 				["TalkingHeadFrame"] = {
 					["orgPos"] = {
@@ -109,6 +109,7 @@ MADB = {
 					["orgHeight"] = 700.0000610351562,
 					["height"] = 620,
 					["orgWidth"] = 235.0000610351563,
+					["width"] = 235.0000610351563,
 					["pos"] = {
 						"TOPRIGHT", -- [1]
 						"MinimapCluster", -- [2]
@@ -116,7 +117,6 @@ MADB = {
 						-9.9998779296875, -- [4]
 						-79.99993896484375, -- [5]
 					},
-					["width"] = 235.0000610351563,
 				},
 				["PetActionButtonsMover"] = {
 					["orgPos"] = {
@@ -133,6 +133,25 @@ MADB = {
 						"CENTER", -- [3]
 						371.9993286132813, -- [4]
 						-521.9997077260123, -- [5]
+					},
+				},
+				["UIWidgetPowerBarContainerFrame"] = {
+					["orgPos"] = {
+						"BOTTOM", -- [1]
+						"UIParent", -- [2]
+						"BOTTOM", -- [3]
+						0, -- [4]
+						140, -- [5]
+					},
+					["name"] = "UIWidgetPowerBarContainerFrame",
+					["scale"] = 86.00003552436405,
+					["orgScale"] = 1,
+					["pos"] = {
+						"BOTTOM", -- [1]
+						"UIParent", -- [2]
+						"BOTTOM", -- [3]
+						1.377910081180281, -- [4]
+						5.127909183502197, -- [5]
 					},
 				},
 				["TargetFramePowerBarAltMover"] = {
@@ -152,31 +171,12 @@ MADB = {
 						-110.0001101553203, -- [5]
 					},
 				},
-				["UIWidgetPowerBarContainerFrame"] = {
-					["orgPos"] = {
-						"BOTTOM", -- [1]
-						"UIParent", -- [2]
-						"BOTTOM", -- [3]
-						0, -- [4]
-						140, -- [5]
-					},
-					["name"] = "UIWidgetPowerBarContainerFrame",
-					["scale"] = 86.00003552436405,
-					["pos"] = {
-						"BOTTOM", -- [1]
-						"UIParent", -- [2]
-						"BOTTOM", -- [3]
-						1.377910081180281, -- [4]
-						5.127909183502197, -- [5]
-					},
-					["orgScale"] = 1,
-				},
 			},
 		},
 	},
-	["tooltips"] = true,
-	["squareMM"] = false,
-	["playSound"] = false,
-	["noMMMW"] = false,
 	["closeGUIOnEscape"] = false,
+	["squareMM"] = false,
+	["noMMMW"] = false,
+	["playSound"] = false,
+	["tooltips"] = true,
 }
