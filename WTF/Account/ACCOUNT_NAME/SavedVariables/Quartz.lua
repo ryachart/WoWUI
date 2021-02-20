@@ -2,6 +2,11 @@
 Quartz3DB = {
 	["namespaces"] = {
 		["Swing"] = {
+			["profiles"] = {
+				["Default"] = {
+					["swingposition"] = "bottom",
+				},
+			},
 		},
 		["Buff"] = {
 		},
@@ -18,19 +23,19 @@ Quartz3DB = {
 		},
 		["Range"] = {
 		},
-		["EnemyCasts"] = {
-		},
 		["Player"] = {
 			["profiles"] = {
 				["Default"] = {
 					["targetname"] = true,
 					["w"] = 320,
-					["y"] = -260,
+					["y"] = -140.9995727539063,
 					["point"] = "CENTER",
-					["x"] = 0,
+					["x"] = 3,
 					["texture"] = "Smooth",
 				},
 			},
+		},
+		["EnemyCasts"] = {
 		},
 		["GCD"] = {
 		},
@@ -107,8 +112,8 @@ Quartz3DB = {
 				["Focus"] = false,
 				["Target"] = false,
 				["Buff"] = false,
-				["Pet"] = false,
 				["Mirror"] = false,
+				["Pet"] = false,
 			},
 			["timetextcolor"] = {
 				nil, -- [1]
