@@ -3,6 +3,16 @@ Bartender4DB = {
 	["namespaces"] = {
 		["StatusTrackingBar"] = {
 			["profiles"] = {
+				["Felgarr - Thunderlord"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["scale"] = 1.264999985694885,
+						["x"] = -515,
+						["point"] = "BOTTOM",
+						["y"] = 62,
+					},
+				},
 				["Ignorc - Blackrock"] = {
 					["enabled"] = true,
 					["version"] = 3,
@@ -51,6 +61,16 @@ Bartender4DB = {
 						["x"] = -515,
 						["point"] = "BOTTOM",
 						["scale"] = 1.264999985694885,
+					},
+				},
+				["Theofang - Thunderlord"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["scale"] = 1.264999985694885,
+						["x"] = -515,
+						["point"] = "BOTTOM",
+						["y"] = 62,
 					},
 				},
 				["Default"] = {
@@ -102,6 +122,72 @@ Bartender4DB = {
 		},
 		["ActionBars"] = {
 			["profiles"] = {
+				["Felgarr - Thunderlord"] = {
+					["actionbars"] = {
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 41.75,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["y"] = -227.4998474121094,
+								["x"] = -231.5001831054688,
+								["point"] = "CENTER",
+							},
+						}, -- [2]
+						{
+							["rows"] = 12,
+							["padding"] = 5,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -82,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [3]
+						{
+							["rows"] = 12,
+							["padding"] = 5,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [4]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 110,
+								["x"] = 3,
+								["point"] = "BOTTOM",
+							},
+						}, -- [5]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 110,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						[10] = {
+						},
+					},
+				},
 				["Ignorc - Blackrock"] = {
 					["actionbars"] = {
 						{
@@ -434,9 +520,76 @@ Bartender4DB = {
 						}, -- [10]
 					},
 				},
+				["Theofang - Thunderlord"] = {
+					["actionbars"] = {
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 41.75,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["y"] = -227.4998474121094,
+								["x"] = -231.5001831054688,
+								["point"] = "CENTER",
+							},
+						}, -- [2]
+						{
+							["padding"] = 5,
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -82,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [3]
+						{
+							["padding"] = 5,
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [4]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 110,
+								["x"] = 3,
+								["point"] = "BOTTOM",
+							},
+						}, -- [5]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 110,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						[10] = {
+						},
+					},
+				},
 				["Default"] = {
 					["actionbars"] = {
 						{
+							["fadeout"] = true,
 							["version"] = 3,
 							["position"] = {
 								["y"] = -117.4693948368658,
@@ -446,12 +599,15 @@ Bartender4DB = {
 							},
 							["padding"] = 0,
 							["visibility"] = {
+								["custom"] = true,
 								["combat"] = false,
 								["always"] = false,
+								["customdata"] = "fade [combat]show",
 								["nocombat"] = false,
 							},
 						}, -- [1]
 						{
+							["fadeout"] = true,
 							["version"] = 3,
 							["position"] = {
 								["y"] = -87.62095689208945,
@@ -468,6 +624,7 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
+							["fadeout"] = true,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 1.778751471319993,
@@ -483,6 +640,7 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
+							["fadeout"] = true,
 							["version"] = 3,
 							["position"] = {
 								["y"] = -27.63306537320023,
@@ -498,6 +656,7 @@ Bartender4DB = {
 							},
 						}, -- [4]
 						{
+							["fadeout"] = true,
 							["version"] = 3,
 							["position"] = {
 								["y"] = -56.75152283834905,
@@ -735,6 +894,14 @@ Bartender4DB = {
 		},
 		["ExtraActionBar"] = {
 			["profiles"] = {
+				["Felgarr - Thunderlord"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = -252.4999389648438,
+						["x"] = -63.50006103515625,
+						["point"] = "CENTER",
+					},
+				},
 				["Ignorc - Blackrock"] = {
 					["version"] = 3,
 					["position"] = {
@@ -775,6 +942,14 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
+				["Theofang - Thunderlord"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = -252.4999389648438,
+						["x"] = -63.50006103515625,
+						["point"] = "CENTER",
+					},
+				},
 				["Default"] = {
 					["position"] = {
 						["y"] = 160.9582214355469,
@@ -811,6 +986,16 @@ Bartender4DB = {
 		},
 		["MicroMenu"] = {
 			["profiles"] = {
+				["Felgarr - Thunderlord"] = {
+					["padding"] = -2,
+					["version"] = 3,
+					["position"] = {
+						["scale"] = 1,
+						["x"] = 37.5,
+						["point"] = "BOTTOM",
+						["y"] = 41.75,
+					},
+				},
 				["Ignorc - Blackrock"] = {
 					["padding"] = -2,
 					["version"] = 3,
@@ -861,9 +1046,19 @@ Bartender4DB = {
 						["scale"] = 1,
 					},
 				},
+				["Theofang - Thunderlord"] = {
+					["padding"] = -2,
+					["version"] = 3,
+					["position"] = {
+						["scale"] = 1,
+						["x"] = 37.5,
+						["point"] = "BOTTOM",
+						["y"] = 41.75,
+					},
+				},
 				["Default"] = {
 					["rows"] = 3,
-					["version"] = 3,
+					["fadeout"] = true,
 					["position"] = {
 						["y"] = 5,
 						["x"] = 345.4889526367188,
@@ -875,6 +1070,7 @@ Bartender4DB = {
 						["overridebar"] = false,
 						["vehicleui"] = false,
 					},
+					["version"] = 3,
 				},
 				["Glaivegarr - Blackrock"] = {
 					["padding"] = -2,
@@ -910,6 +1106,14 @@ Bartender4DB = {
 		},
 		["BagBar"] = {
 			["profiles"] = {
+				["Felgarr - Thunderlord"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 38.5,
+						["x"] = 345,
+						["point"] = "BOTTOM",
+					},
+				},
 				["Ignorc - Blackrock"] = {
 					["version"] = 3,
 					["position"] = {
@@ -950,13 +1154,22 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
+				["Theofang - Thunderlord"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 38.5,
+						["x"] = 345,
+						["point"] = "BOTTOM",
+					},
+				},
 				["Default"] = {
 					["rows"] = 5,
 					["onebag"] = true,
+					["fadeout"] = true,
 					["version"] = 3,
 					["position"] = {
 						["y"] = 3.000244140625,
-						["x"] = 445.5333862304688,
+						["x"] = 447.5335083007813,
 						["point"] = "TOPLEFT",
 					},
 				},
@@ -988,6 +1201,15 @@ Bartender4DB = {
 		},
 		["BlizzardArt"] = {
 			["profiles"] = {
+				["Felgarr - Thunderlord"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47,
+						["x"] = -512,
+						["point"] = "BOTTOM",
+					},
+				},
 				["Ignorc - Blackrock"] = {
 					["enabled"] = true,
 					["version"] = 3,
@@ -1025,6 +1247,15 @@ Bartender4DB = {
 					},
 				},
 				["Mistgarr - Tichondrius"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47,
+						["x"] = -512,
+						["point"] = "BOTTOM",
+					},
+				},
+				["Theofang - Thunderlord"] = {
 					["enabled"] = true,
 					["version"] = 3,
 					["position"] = {
@@ -1132,6 +1363,14 @@ Bartender4DB = {
 		},
 		["StanceBar"] = {
 			["profiles"] = {
+				["Felgarr - Thunderlord"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = -14.99996185302734,
+						["x"] = -82.5,
+						["point"] = "CENTER",
+					},
+				},
 				["Ignorc - Blackrock"] = {
 					["version"] = 3,
 					["position"] = {
@@ -1173,10 +1412,18 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
+				["Theofang - Thunderlord"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 123.4999923706055,
+						["x"] = 398.5000305175781,
+						["point"] = "BOTTOMLEFT",
+					},
+				},
 				["Default"] = {
 					["position"] = {
-						["y"] = -188.9433288574219,
-						["x"] = -239.7022094726563,
+						["y"] = -186.9430694580078,
+						["x"] = -437.7023315429688,
 						["point"] = "CENTER",
 						["scale"] = 1,
 						["growHorizontal"] = "LEFT",
@@ -1211,6 +1458,14 @@ Bartender4DB = {
 		},
 		["PetBar"] = {
 			["profiles"] = {
+				["Felgarr - Thunderlord"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 143,
+						["x"] = -460,
+						["point"] = "BOTTOM",
+					},
+				},
 				["Ignorc - Blackrock"] = {
 					["version"] = 3,
 					["position"] = {
@@ -1251,12 +1506,20 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
+				["Theofang - Thunderlord"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 143,
+						["x"] = -460,
+						["point"] = "BOTTOM",
+					},
+				},
 				["Default"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = -254.9161487724141,
-						["x"] = -251.6125793123974,
-						["point"] = "CENTER",
+						["y"] = -188.9159996738454,
+						["x"] = 294.9624853852911,
+						["point"] = "LEFT",
 						["scale"] = 0.8500000238418579,
 						["growHorizontal"] = "LEFT",
 					},
@@ -1290,6 +1553,14 @@ Bartender4DB = {
 		},
 		["Vehicle"] = {
 			["profiles"] = {
+				["Felgarr - Thunderlord"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
 				["Ignorc - Blackrock"] = {
 					["version"] = 3,
 					["position"] = {
@@ -1323,6 +1594,14 @@ Bartender4DB = {
 					},
 				},
 				["Mistgarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
+				["Theofang - Thunderlord"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 42.50006103515625,
@@ -1366,22 +1645,29 @@ Bartender4DB = {
 		},
 	},
 	["profileKeys"] = {
-		["Angarr - Thunderlord"] = "Default",
+		["Felgarr - Thunderlord"] = "Default",
 		["Ignorc - Blackrock"] = "Default",
+		["Angarr - Thunderlord"] = "Default",
+		["Paingarr - Sargeras"] = "Default",
 		["Angarr - Blackrock"] = "Default",
 		["Shadegarr - Tichondrius"] = "Default",
-		["Paingarr - Sargeras"] = "Default",
+		["Glaivegarr - Blackrock"] = "Default",
 		["Flashsmite - Blackrock"] = "Default",
-		["Huntgarr - Thunderlord"] = "Default",
+		["Fangarr - Tichondrius"] = "Default",
 		["Raingarr - Tichondrius"] = "Default",
 		["Mistgarr - Tichondrius"] = "Default",
-		["Glaivegarr - Blackrock"] = "Default",
 		["Raingarr - Thunderlord"] = "Default",
-		["Fangarr - Tichondrius"] = "Default",
+		["Huntgarr - Thunderlord"] = "Default",
+		["Theofang - Thunderlord"] = "Theofang - Thunderlord",
 		["Flashlyte - Blackrock"] = "Default",
 		["Arantir - Lightbringer"] = "Default",
 	},
 	["profiles"] = {
+		["Felgarr - Thunderlord"] = {
+			["focuscastmodifier"] = false,
+			["blizzardVehicle"] = true,
+			["outofrange"] = "hotkey",
+		},
 		["Ignorc - Blackrock"] = {
 			["focuscastmodifier"] = false,
 			["blizzardVehicle"] = true,
@@ -1407,14 +1693,20 @@ Bartender4DB = {
 			["blizzardVehicle"] = true,
 			["outofrange"] = "hotkey",
 		},
-		["Default"] = {
-			["selfcastmodifier"] = false,
-			["blizzardVehicle"] = true,
-			["snapping"] = false,
+		["Theofang - Thunderlord"] = {
 			["focuscastmodifier"] = false,
+			["blizzardVehicle"] = true,
+			["outofrange"] = "hotkey",
+		},
+		["Default"] = {
 			["minimapIcon"] = {
 				["minimapPos"] = 62.83491322859041,
+				["hide"] = true,
 			},
+			["blizzardVehicle"] = true,
+			["focuscastmodifier"] = false,
+			["snapping"] = false,
+			["selfcastmodifier"] = false,
 			["outofrange"] = "hotkey",
 		},
 		["Glaivegarr - Blackrock"] = {

@@ -77,15 +77,19 @@ Quartz3DB = {
 		},
 	},
 	["profileKeys"] = {
+		["Felgarr - Thunderlord"] = "Default",
+		["Angarr - Thunderlord"] = "Default",
 		["Glaivegarr - Blackrock"] = "Default",
 		["Shadegarr - Tichondrius"] = "Default",
-		["Fangarr - Tichondrius"] = "Default",
+		["Ignorc - Blackrock"] = "Default",
+		["Theofang - Thunderlord"] = "Default",
 		["Flashsmite - Blackrock"] = "Default",
 		["Mistgarr - Tichondrius"] = "Default",
-		["Ignorc - Blackrock"] = "Default",
 		["Paingarr - Sargeras"] = "Default",
-		["Flashlyte - Blackrock"] = "Default",
 		["Huntgarr - Thunderlord"] = "Default",
+		["Raingarr - Thunderlord"] = "Default",
+		["Flashlyte - Blackrock"] = "Default",
+		["Fangarr - Tichondrius"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

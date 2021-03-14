@@ -132,6 +132,23 @@ MADB = {
 						2.999908447265625, -- [5]
 					},
 				},
+				["ZoneTextFrame"] = {
+					["orgPos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						"TOP", -- [3]
+						0, -- [4]
+						-127.9999923706055, -- [5]
+					},
+					["name"] = "ZoneTextFrame",
+					["pos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						"TOP", -- [3]
+						-5, -- [4]
+						-226.9998168945313, -- [5]
+					},
+				},
 				["UIWidgetTopCenterContainerFrame"] = {
 					["orgPos"] = {
 						"TOP", -- [1]

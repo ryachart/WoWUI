@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1613787333,
+	["tstmp"] = 1615674673,
 	["config"] = {
 		["lineWidth"] = 4,
 		["secondPosition"] = 0,
@@ -9,28 +9,28 @@ HidingBarDB = {
 				["tstmp"] = 1609009379,
 			},
 			["Bartender4"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
 			["DBM"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
 			["ElkBuffBars"] = {
 				["tstmp"] = 1613366703,
 			},
 			["Prat"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
 			["ExRT"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
 			["BagnonLauncher"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
 			["WeakAuras"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
 			["Masque"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
 		},
 		["grabMinimap"] = true,
@@ -54,37 +54,40 @@ HidingBarDB = {
 		["frameStrata"] = 2,
 		["mbtnSettings"] = {
 			["LibDBIcon10_Details"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
 			["LibDBIcon10_ElkBuffBars"] = {
 				["tstmp"] = 1613366703,
+			},
+			["LibDBIcon10_ExorsusRaidTools"] = {
+				["tstmp"] = 1615674673,
 			},
 			["LibDBIcon10_PitBull4"] = {
 				["tstmp"] = 1609009379,
 			},
 			["LibDBIcon10_MythicDungeonTools"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
 			["LibDBIcon10_WowUp"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
 			["LibDBIcon10_SimulationCraft"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
 			["LibDBIcon10_DetailsStreamer"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
 			["LibDBIcon10_WeakAuras"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
 			},
-			["LibDBIcon10_ExorsusRaidTools"] = {
-				["tstmp"] = 1613787333,
-			},
-			["LibDBIcon10_Bartender4"] = {
-				["tstmp"] = 1613787333,
+			["LibDBIcon10_Plater"] = {
+				["tstmp"] = 1615674673,
 			},
 			["LibDBIcon10_DBM"] = {
-				["tstmp"] = 1613787333,
+				["tstmp"] = 1615674673,
+			},
+			["LibDBIcon10_Bartender4"] = {
+				["tstmp"] = 1615513221,
 			},
 		},
 		["lineColor"] = {
