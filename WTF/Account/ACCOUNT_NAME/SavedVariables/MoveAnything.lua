@@ -75,8 +75,8 @@ MADB = {
 						"TOPRIGHT", -- [1]
 						"UIParent", -- [2]
 						"TOPRIGHT", -- [3]
-						-254.9998779296875, -- [4]
-						-11, -- [5]
+						-294.9996337890625, -- [4]
+						-10, -- [5]
 					},
 				},
 				["UIWidgetPowerBarContainerFrame"] = {
@@ -428,6 +428,7 @@ MADB = {
 		},
 	},
 	["closeGUIOnEscape"] = false,
+	["modifiedFramesOnly"] = true,
 	["squareMM"] = false,
 	["noMMMW"] = false,
 	["playSound"] = false,

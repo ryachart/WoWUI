@@ -1,28 +1,10 @@
-lightweight tag 2787c386fd6753d648e29296f87797050027dec7 v9.0.2.109
+tag 7481ff4aebf26a210cbcd1f91f8f775f0a00b7d9 v9.0.5.110
 Author:	Tercio Jose <terciob19@hotmail.com>
-Date:	Tue Dec 22 17:41:35 2020 -0300
+Date:	Sat Mar 13 14:54:19 2021 -0300
 
-commit 2787c386fd6753d648e29296f87797050027dec7
+commit 8fd7a7ae7cec9a459923f57b8d160659dc9eb8f5
 Author: Tercio Jose <terciob19@hotmail.com>
-Date:   Tue Dec 22 17:41:35 2020 -0300
+Date:   Sat Mar 13 14:54:00 2021 -0300
 
-    ToC update
-
-commit 4781930d92cb528c1db64c5ffd89baf47b67b32a
-Author: Tercio Jose <terciob19@hotmail.com>
-Date:   Tue Dec 22 17:40:55 2020 -0300
-
-    sync version with github
-
-commit 10d2a7bf13faf19b99346ceb84cded777ae6e65f
-Author: Tercio Jose <terciob19@hotmail.com>
-Date:   Tue Dec 22 17:39:56 2020 -0300
-
-    Don't run on old versions of Details!
-
-commit ddb40eda84f754ea65c379526317b2701a433bf9
-Author: Tercio Jose <terciob19@hotmail.com>
-Date:   Tue Nov 3 09:59:33 2020 -0300
-
-    Update to 9.0.1
+    ToC Update
 

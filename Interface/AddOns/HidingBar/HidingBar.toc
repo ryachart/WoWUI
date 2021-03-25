@@ -1,7 +1,7 @@
-## Interface: 90002
+## Interface: 90005
 ## Title: HidingBar
 ## Author: sfmict
-## Version: v9.0.24
+## Version: v9.0.28
 ## Notes: Convenient hiding panel
 ## SavedVariables: HidingBarDB
 ## OptionalDeps: Masque

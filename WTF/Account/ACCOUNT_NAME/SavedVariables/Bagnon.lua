@@ -93,7 +93,7 @@ Bagnon_Sets = {
 			["x"] = 95.00000762939453,
 		},
 		["guild"] = {
-			["y"] = -225.4999389648438,
+			["y"] = -225.4996948242188,
 			["rules"] = {
 				"all", -- [1]
 				"all/normal", -- [2]
@@ -173,7 +173,7 @@ Bagnon_Sets = {
 	},
 	["mineColor"] = {
 	},
-	["version"] = "9.0.5",
+	["version"] = "9.0.6",
 	["refrigeColor"] = {
 	},
 	["enchantColor"] = {

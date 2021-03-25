@@ -1,9 +1,47 @@
 local GlobalAddonName, ExRT = ...
 
 ExRT.Options.Changelog = [=[
+v.4500
+* Raid cooldowns: Added options for custom (customizable) cooldown text on icons
+* Raid cooldowns: Added option "Ignore active time for texts"
+* Raid cooldowns: Added option "Column strata"
+* Raid cooldowns: Added option "Unavailable only via timer"
+* Raid Check: added option for soulstone buff for raid overview window
+* Note: WA firing events are unique by line data now instead only by name (this will be possible now: {time:1:30,wa:defCD} Def CD {time:3:00,wa:defCD} Def CD)
+* Added "/rt help" command for list all chat commands
+* Bugfixes
+
+v.4490
+* Raid Check: fixed Sharpened & Weighted weapon buffs
+* Raid Check: added option "Use flask only from cauldron"
+* Raid cooldowns: fixed frame strata for icons that attaches to raidframes
+* Note: added support for glow syntax (ex. {time:1:30,glow} - shows non-disabled glow if players name is in line and timer is less than 5 seconds, {time:1:30,glowall} - shows non-disabled glow for all players if timer is less than 5 seconds)
+* Bugfixes
+
+v.4480
+* 9.0.5 update
+* Note: added support for multiple WA events per line with timer (ex. {time:1:30,SCC:17:2,wa:eventName1,wa:eventName2})
+* Note: added support for phases with name (ex. {time:1:30,p:Shade of Kael'thas})
+* Note: added support for custom phases (ex. {p,SCC:17:2}Until end of the fight{/p} or {p,SCC:17:2,SCC:17:3}Until second condition{/p})
+* Note: added option "Completely hide lines with passed timers"
+* Note: added option "Glowing note with own timer less than 5 seconds"
+* Raid cooldowns: fixed frame strata for icons that attaches to raidframes
+* Raid Check: added option for chat report for missing armor kits and weapon temporary enchants (players without an addon will be marked as "no addon", but included to missing list)
+* Minor fixes
+
+v.4480-Classic
+* Raid Groups: added option "Keep positions in groups"
+* Minor fixes
+
 v.4460
 * Raid check: consumables on ready check: flask icon is clickable now
 * Note: added "Set as personal note" button
+* Bugfixes
+* Minor updates
+
+v.4460-Classic
+* Note: added "Set as personal note" button
+* Raid Groups: now does not keep exact position in groups to reduce swap events
 * Bugfixes
 * Minor updates
 
@@ -337,5 +375,4 @@ v.3940
 
 v.3930
 * BFA Update
-
 ]=]

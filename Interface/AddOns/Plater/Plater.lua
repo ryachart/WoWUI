@@ -72,13 +72,24 @@ local LibSharedMedia = LibStub:GetLibrary ("LibSharedMedia-3.0") -- https://www.
 local LCG = LibStub:GetLibrary("LibCustomGlow-1.0") -- https://github.com/Stanzilla/LibCustomGlow
 local LibRangeCheck = LibStub:GetLibrary ("LibRangeCheck-2.0") -- https://www.curseforge.com/wow/addons/librangecheck-2-0/
 local LibTranslit = LibStub:GetLibrary ("LibTranslit-1.0") -- https://github.com/Vardex/LibTranslit
+local LDB = LibStub ("LibDataBroker-1.1", true)
+local LDBIcon = LDB and LibStub ("LibDBIcon-1.0", true)
 local _
 
 local Plater = DF:CreateAddOn ("Plater", "PlaterDB", PLATER_DEFAULT_SETTINGS, { --options table
 	name = "Plater Nameplates",
 	type = "group",
 	args = {
-		
+		openOptions = {
+			name = "Open Plater Options",
+			desc = "Opens the Plater Options Menu.",
+			type = "execute",
+			func = function()
+				InterfaceOptionsFrame:Hide()
+				HideUIPanel(GameMenuFrame)
+				Plater.OpenOptionsPanel()
+			end,
+		},
 	}
 })
 Plater.versionString = GetAddOnMetadata("Plater_dev", "Version") or GetAddOnMetadata("Plater", "Version")
@@ -424,6 +435,8 @@ Plater.TargetIndicators = {
 		desaturated = false,
 		width = 8,
 		height = 10,
+		autoScale = true,
+		--scale = 1,
 		x = 2,
 		y = 2,
 	},
@@ -434,6 +447,8 @@ Plater.TargetIndicators = {
 		desaturated = true,
 		width = 10,
 		height = 10,
+		autoScale = true,
+		--scale = 1,
 		x = 2,
 		y = 2,
 	},
@@ -444,6 +459,8 @@ Plater.TargetIndicators = {
 		desaturated = 1,
 		width = 4,
 		height = 4,
+		autoScale = false,
+		--scale = 1,
 		x = 2,
 		y = 2,
 	},
@@ -459,6 +476,8 @@ Plater.TargetIndicators = {
 		desaturated = false,
 		width = 6,
 		height = 6,
+		autoScale = true,
+		--scale = 1,
 		x = 1,
 		y = 1,
 	},
@@ -472,7 +491,11 @@ Plater.TargetIndicators = {
 		desaturated = false,
 		width = 18,
 		height = 12,
-		x = 18,
+		wscale = 1,
+		hscale = 1.2,
+		autoScale = true,
+		--scale = 1,
+		x = 14,
 		y = 0,
 	},
 	
@@ -485,6 +508,10 @@ Plater.TargetIndicators = {
 		desaturated = false,
 		width = 8,
 		height = 12,
+		wscale = 1,
+		hscale = 1.2,
+		autoScale = true,
+		--scale = 1,
 		x = 0,
 		y = 0,
 	},
@@ -499,6 +526,10 @@ Plater.TargetIndicators = {
 		width = 8,
 		height = 12,
 		alpha = 0.7,
+		wscale = 1,
+		hscale = 1.2,
+		autoScale = true,
+		--scale = 1,
 		x = 0,
 		y = 0,
 		color = "red",
@@ -513,6 +544,10 @@ Plater.TargetIndicators = {
 		desaturated = false,
 		width = 6,
 		height = 12,
+		wscale = 1,
+		hscale = 1.2,
+		autoScale = true,
+		--scale = 1,
 		x = 3,
 		y = 0,
 		blend = "ADD",
@@ -908,6 +943,75 @@ local class_specs_coords = {
 		Plater.ActorTypeSettingsCache [ACTORTYPE_PLAYER] = DF.table.copy ({}, namePlateConfig [ACTORTYPE_PLAYER])
 		
 		Plater.ActorTypeSettingsCache.RefreshID = PLATER_REFRESH_ID
+	end
+	
+	function Plater.InitLDB()
+		if LDB then
+			local databroker = LDB:NewDataObject ("Plater", {
+				type = "data source",
+				icon = [[Interface\AddOns\Plater\images\cast_bar]],
+				text = "Plater",
+				
+				HotCornerIgnore = true,
+				
+				OnClick = function (self, button)
+				
+					if (button == "LeftButton") then
+						if (PlaterOptionsPanelFrame and PlaterOptionsPanelFrame:IsShown()) then
+							PlaterOptionsPanelFrame:Hide()
+							return true
+						end
+						Plater.OpenOptionsPanel()
+					
+					elseif (button == "RightButton") then
+					
+						GameTooltip:Hide()
+						local GameCooltip = GameCooltip2
+						
+						GameCooltip:Reset()
+						GameCooltip:SetType ("menu")
+						GameCooltip:SetOption ("ButtonsYMod", -5)
+						GameCooltip:SetOption ("HeighMod", 5)
+						GameCooltip:SetOption ("TextSize", 10)
+						
+						--> disable minimap icon
+						local disable_minimap = function()
+							PlaterDBChr.minimap.hide = not PlaterDBChr.minimap.hide
+							
+							if (PlaterDBChr.minimap.hide) then
+								LDBIcon:Hide ("Plater")
+							else
+								LDBIcon:Show ("Plater")
+							end
+							LDBIcon:Refresh ("Plater", PlaterDBChr.minimap)
+						end
+						GameCooltip:AddMenu (1, disable_minimap, true, nil, nil, "Hide/Show Minimap Icon", nil, true)
+						GameCooltip:AddIcon ([[Interface\Buttons\UI-Panel-HideButton-Disabled]], 1, 1, 14, 14, 7/32, 24/32, 8/32, 24/32, "gray")
+						
+						--GameCooltip:SetBackdrop (1, _detalhes.tooltip_backdrop, nil, _detalhes.tooltip_border_color)
+						GameCooltip:SetWallpaper (1, [[Interface\SPELLBOOK\Spellbook-Page-1]], {.6, 0.1, 0.64453125, 0}, {.8, .8, .8, 0.2}, true)
+						
+						GameCooltip:SetOwner (self, "topright", "bottomleft")
+						GameCooltip:ShowCooltip()
+					
+					end
+					
+				end,
+				OnTooltipShow = function (tooltip)
+					tooltip:AddLine ("Plater Nameplates", 1, 1, 1)
+					tooltip:AddLine ("|cFFCFCFCFLeft click|r: Show/Hide Options Window")
+					tooltip:AddLine ("|cFFCFCFCFRight click|r: Quick Menu")
+				end,
+			})
+			
+			if (databroker and not LDBIcon:IsRegistered ("Plater")) then
+				PlaterDBChr.minimap = PlaterDBChr.minimap or {}
+				LDBIcon:Register ("Plater", databroker, PlaterDBChr.minimap)
+			end
+			
+			Plater.databroker = databroker
+		end
+
 	end
 	
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -2145,7 +2249,7 @@ local class_specs_coords = {
 
 			Plater.RefreshTankCache()
 			
-			Plater.UpdateAuraCache()
+			--Plater.UpdateAuraCache()
 			Plater.UpdateAllPlates()
 			
 			--check if can run combat enter hook and schedule it true
@@ -2830,10 +2934,6 @@ local class_specs_coords = {
 				--mix the plater functions into the castbar (most of the functions are for scripting support)
 				DF:Mixin (plateFrame.unitFrame.castBar, Plater.ScriptMetaFunctions)
 				plateFrame.unitFrame.castBar:HookScript ("OnHide", plateFrame.unitFrame.castBar.OnHideWidget)
-
-				--setup non interruptible cast shield
-				plateFrame.unitFrame.castBar.BorderShield:SetTexture ([[Interface\ACHIEVEMENTFRAME\UI-Achievement-Progressive-IconBorder]])
-				plateFrame.unitFrame.castBar.BorderShield:SetTexCoord (5/64, 37/64, 1/64, 36/64)
 				
 				--> create an overlay frame that sits just above the castbar
 				--this is ideal for adding borders and other overlays
@@ -2859,9 +2959,11 @@ local class_specs_coords = {
 			--> border
 				--create a border using default borders from the retail game
 				local healthBarBorder = CreateFrame("frame", nil, plateFrame.unitFrame.healthBar, "NamePlateFullBorderTemplate", BackdropTemplateMixin and "BackdropTemplate")
+				healthBarBorder:SetFrameLevel (plateFrame.unitFrame.healthBar:GetFrameLevel() + 1)
 				plateFrame.unitFrame.healthBar.border = healthBarBorder
 				
 				local powerBarBorder = CreateFrame("frame", nil, plateFrame.unitFrame.powerBar, "NamePlateFullBorderTemplate", BackdropTemplateMixin and "BackdropTemplate")
+				powerBarBorder:SetFrameLevel (plateFrame.unitFrame.powerBar:GetFrameLevel() + 1)
 				plateFrame.unitFrame.powerBar.border = powerBarBorder
 				powerBarBorder:SetVertexColor (0, 0, 0, 1)
 
@@ -3235,6 +3337,8 @@ local class_specs_coords = {
 			unitFrame.actorType = actorType
 			unitFrame.ActorType = actorType --exposed to scripts
 			
+			--reset color values
+			healthBar.R, healthBar.G, healthBar.B = nil, nil, nil
 			--sending true to force the color update when the color overrider is enabled
 			Plater.FindAndSetNameplateColor (unitFrame, true)
 			
@@ -3455,6 +3559,9 @@ function Plater.OnInit() --private --~oninit ~init
 		PlaterDBChr.buffsBanned = PlaterDBChr.buffsBanned or {}
 		PlaterDBChr.spellRangeCheckRangeEnemy = PlaterDBChr.spellRangeCheckRangeEnemy or {}
 		PlaterDBChr.spellRangeCheckRangeFriendly = PlaterDBChr.spellRangeCheckRangeFriendly or {}
+
+	--Register LDB
+	Plater.InitLDB()
 
 	--to fix: attempt to index field 'spellRangeCheck' (a string value)
 		if (type (PlaterDBChr.spellRangeCheckRangeEnemy) ~= "table") then
@@ -4054,47 +4161,70 @@ function Plater.OnInit() --private --~oninit ~init
 		
 		function Plater.UpdateCastbarIcon(castBar)
 			local profile = Plater.db.profile
+			local icon = castBar.Icon
+			local unitFrame = castBar.unitFrame
+			local borderShield = castBar.BorderShield
+			
+			icon:SetDrawLayer ("OVERLAY", 5)
+			borderShield:SetDrawLayer ("OVERLAY", 6)
+			local castBarHeight = castBar:GetHeight()
+			
 			if (profile.castbar_icon_customization_enabled) then
-				local icon = castBar.Icon
-				local unitFrame = castBar.unitFrame
 
 				if (profile.castbar_icon_show) then
 					icon:ClearAllPoints()
-					castBar.BorderShield:Hide()
+					borderShield:ClearAllPoints()
+					borderShield:SetTexture ([[Interface\GROUPFRAME\UI-GROUP-MAINTANKICON]])
+					borderShield:SetTexCoord (0, 1, 0, 1)
+					borderShield:SetDesaturated (true)
+					PixelUtil.SetSize (borderShield, castBarHeight * 0.8, castBarHeight)
 
 					if (profile.castbar_icon_attach_to_side == "left") then
 						if (profile.castbar_icon_size == "same as castbar") then
 							icon:SetPoint("topright", castBar, "topleft", profile.castbar_icon_x_offset, 0)
 							icon:SetPoint("bottomright", castBar, "bottomleft", profile.castbar_icon_x_offset, 0)
+							
+							PixelUtil.SetPoint (borderShield, "center", castBar, "left", 0, 0)
 
 						elseif (profile.castbar_icon_size == "same as castbar plus healthbar") then
 							icon:SetPoint("topright", unitFrame.healthBar, "topleft", profile.castbar_icon_x_offset, 0)
 							icon:SetPoint("bottomright", castBar, "bottomleft", profile.castbar_icon_x_offset, 0)
+							
+							PixelUtil.SetPoint (borderShield, "center", castBar, "left", 0, 0)
 						end
 
 					elseif (profile.castbar_icon_attach_to_side == "right") then
 						if (profile.castbar_icon_size == "same as castbar") then
 							icon:SetPoint("topleft", castBar, "topright", profile.castbar_icon_x_offset, 0)
 							icon:SetPoint("bottomleft", castBar, "bottomright", profile.castbar_icon_x_offset, 0)
+							
+							PixelUtil.SetPoint (borderShield, "center", castBar, "right", 0, 0)
 
 						elseif (profile.castbar_icon_size == "same as castbar plus healthbar") then
 							icon:SetPoint("topleft", unitFrame.healthBar, "topright", profile.castbar_icon_x_offset, 0)
 							icon:SetPoint("bottomleft", castBar, "bottomright", profile.castbar_icon_x_offset, 0)
+							
+							PixelUtil.SetPoint (borderShield, "center", castBar, "right", 0, 0)
 						end
 					end
 
 					icon:SetWidth(icon:GetHeight())
 				else
 					icon:Hide()
-					castBar.BorderShield:Hide()
+					borderShield:Hide()
 				end
 			else
-				local castBarHeight = castBar:GetHeight()
-				castBar.Icon:ClearAllPoints()
-				PixelUtil.SetPoint (castBar.Icon, "left", castBar, "left", 0, 0)
-				PixelUtil.SetSize (castBar.Icon, castBarHeight, castBarHeight)
-				castBar.BorderShield:ClearAllPoints()
-				PixelUtil.SetPoint (castBar.BorderShield, "left", castBar, "left", 0, 0)
+				icon:ClearAllPoints()
+				PixelUtil.SetPoint (icon, "left", castBar, "left", 0, 0)
+				PixelUtil.SetSize (icon, castBarHeight, castBarHeight)
+				
+				--setup non interruptible cast shield
+				borderShield:SetTexture ([[Interface\ACHIEVEMENTFRAME\UI-Achievement-Progressive-IconBorder]])
+				borderShield:SetTexCoord (5/64, 37/64, 1/64, 36/64)
+				borderShield:ClearAllPoints()
+				borderShield:SetPoint ("center", castBar.Icon, "center")
+				PixelUtil.SetSize (borderShield, castBarHeight * 1.4, castBarHeight * 1.4)
+				borderShield:SetDesaturated (false)
 			end
 		end
 		
@@ -4142,13 +4272,7 @@ function Plater.OnInit() --private --~oninit ~init
 					self.ReUpdateNextTick = true
 					self.ThrottleUpdate = -1
 					
-					--> set border shield
-					self.Icon:SetDrawLayer ("OVERLAY", 5)
-					self.BorderShield:SetDrawLayer ("OVERLAY", 6)
-					
 					if (notInterruptible) then
-						self.BorderShield:ClearAllPoints()
-						self.BorderShield:SetPoint ("center", self.Icon, "center")
 						self.BorderShield:Show()
 					else
 						self.BorderShield:Hide()
@@ -4238,8 +4362,6 @@ function Plater.OnInit() --private --~oninit ~init
 					self.SpellEndTime = self.spellEndTime or GetTime()
 				
 					if (self.ReUpdateNextTick) then
-						self.BorderShield:ClearAllPoints()
-						self.BorderShield:SetPoint ("center", self.Icon, "center")
 						self.ReUpdateNextTick = nil
 					end
 
@@ -4430,6 +4552,7 @@ function Plater.OnInit() --private --~oninit ~init
 				if (not UnitExists (unitFrame.unit) or self.CurrentHealth < 1) then
 					--the unit died!
 					unitFrame:Hide()
+					Plater.EndLogPerformanceCore("Plater-Core", "Health", "OnUpdateHealth")
 					return
 				end
 			end
@@ -4457,8 +4580,9 @@ function Plater.OnInit() --private --~oninit ~init
 			end
 			
 			if (plateFrame.actorType == ACTORTYPE_FRIENDLY_PLAYER) then
+				local isWithoutHealthbar = plateFrame.IsFriendlyPlayerWithoutHealthBar
 				Plater.ParseHealthSettingForPlayer (plateFrame)
-				self.ScheduleNameUpdate = true
+				self.ScheduleNameUpdate = plateFrame.IsFriendlyPlayerWithoutHealthBar ~= isWithoutHealthbar
 				--Plater.UpdatePlateText (plateFrame, DB_PLATE_CONFIG [ACTORTYPE_FRIENDLY_PLAYER], false)
 			end
 			
@@ -4577,7 +4701,7 @@ end
 
 	function Plater.SetQuestColorByReaction (unitFrame)
 		--unit is a quest mob, reset the color to quest color
-		if (unitFrame.ActorType) then
+		if (unitFrame.ActorType and DB_PLATE_CONFIG [unitFrame.ActorType].quest_color_enabled) then
 			if (unitFrame [MEMBER_REACTION] == UNITREACTION_NEUTRAL) then
 				Plater.ChangeHealthBarColor_Internal (unitFrame.healthBar, unpack (DB_PLATE_CONFIG [unitFrame.ActorType].quest_color_neutral))
 				
@@ -4681,7 +4805,7 @@ end
 				end
 
 				--check if the mob is a quest mob
-				if (unitFrame [MEMBER_QUEST]) then
+				if (unitFrame [MEMBER_QUEST] and DB_PLATE_CONFIG [unitFrame.ActorType].quest_color_enabled) then
 					Plater.SetQuestColorByReaction (unitFrame)
 					return
 				end
@@ -4856,7 +4980,7 @@ end
 			PixelUtil.SetPoint (castBar, "topright", healthBar, "bottomright", -castBarOffSetX, castBarOffSetY)
 			PixelUtil.SetWidth (castBar, castBarWidth)
 			PixelUtil.SetHeight (castBar, castBarHeight)
-			PixelUtil.SetSize (castBar.BorderShield, castBarHeight * 1.4, castBarHeight * 1.4)
+			--PixelUtil.SetSize (castBar.BorderShield, castBarHeight * 1.4, castBarHeight * 1.4)
 			PixelUtil.SetSize (castBar.Spark, profile.cast_statusbar_spark_width, castBarHeight)
 			Plater.UpdateCastbarIcon(castBar)
 
@@ -5707,15 +5831,18 @@ end
 		end
 		
 		local width, height = preset.width, preset.height
-		local x, y = preset.x, preset.y
+		local wscale, hscale = preset.wscale or 1, preset.hscale or 1
+		local x, y = preset.x or 0, preset.y or 0
 		local desaturated = preset.desaturated
 		local coords = preset.coords
 		local path = preset.path
 		local blend = preset.blend or "BLEND"
 		local alpha = preset.alpha or 1
+		local doScale = preset.autoScale
+		local custScale = preset.scale
 		local overlayColorR, overlayColorG, overlayColorB = DF:ParseColors (preset.color or "white")
 		
-		local scale = healthBarHeight / 10
+		local scale = (not doScale and custScale) or (healthBarHeight / (doScale and height or 10))
 		
 		--four parts (textures)
 		if (#coords == 4) then
@@ -5724,22 +5851,22 @@ end
 				texture:Show()
 				texture:SetTexture (path)
 				texture:SetTexCoord (unpack (coords [i]))
-				texture:SetSize (width * scale, height * scale)
+				texture:SetSize (width * scale * wscale, height * scale * hscale)
 				texture:SetAlpha (alpha)
 				texture:SetVertexColor (overlayColorR, overlayColorG, overlayColorB)
 				texture:SetDesaturated (desaturated)
 				
 				if (i == 1) then
-					PixelUtil.SetPoint (texture, "topleft", plateFrame.unitFrame.healthBar, "topleft", -x, y)
+					PixelUtil.SetPoint (texture, "topleft", plateFrame.unitFrame.healthBar, "topleft", -x * scale, y * scale)
 					
 				elseif (i == 2) then
-					PixelUtil.SetPoint (texture, "bottomleft", plateFrame.unitFrame.healthBar, "bottomleft", -x, -y)
+					PixelUtil.SetPoint (texture, "bottomleft", plateFrame.unitFrame.healthBar, "bottomleft", -x * scale, -y * scale)
 					
 				elseif (i == 3) then
-					PixelUtil.SetPoint (texture, "bottomright", plateFrame.unitFrame.healthBar, "bottomright", x, -y)
+					PixelUtil.SetPoint (texture, "bottomright", plateFrame.unitFrame.healthBar, "bottomright", x * scale, -y * scale)
 					
 				elseif (i == 4) then
-					PixelUtil.SetPoint (texture, "topright", plateFrame.unitFrame.healthBar, "topright", x, y)
+					PixelUtil.SetPoint (texture, "topright", plateFrame.unitFrame.healthBar, "topright", x * scale, y * scale)
 					
 				end
 			end
@@ -5756,16 +5883,18 @@ end
 				texture:SetTexture (path)
 				texture:SetBlendMode (blend)
 				texture:SetTexCoord (unpack (coords [i]))
-				PixelUtil.SetSize (texture, width * scale, height * scale)
+				--PixelUtil.SetSize (texture, width * scale, height * scale)
+				PixelUtil.SetSize (texture, width * scale * wscale, height * scale * hscale)
+				--texture:SetSize (width * scale * wscale, height * scale * hscale)
 				texture:SetDesaturated (desaturated)
 				texture:SetAlpha (alpha)
 				texture:SetVertexColor (overlayColorR, overlayColorG, overlayColorB)
 				
 				if (i == 1) then
-					PixelUtil.SetPoint (texture, "left", plateFrame.unitFrame.healthBar, "left", -x, y)
+					PixelUtil.SetPoint (texture, "left", plateFrame.unitFrame.healthBar, "left", -x * scale, y * scale)
 					
 				elseif (i == 2) then
-					PixelUtil.SetPoint (texture, "right", plateFrame.unitFrame.healthBar, "right", x, -y)
+					PixelUtil.SetPoint (texture, "right", plateFrame.unitFrame.healthBar, "right", x * scale, -y * scale)
 				end
 			end
 			
@@ -5782,6 +5911,13 @@ end
 	-- needReset is true when the previous unit type shown on this place is different from the current unit
 	function Plater.UpdatePlateText (plateFrame, plateConfigs, needReset) --private
 	
+		if plateFrame.unitFrame.isWidgetOnlyMode then
+			plateFrame.ActorNameSpecial:Hide()
+			plateFrame.ActorTitleSpecial:Hide()
+			
+			return
+		end
+		
 		-- ensure castBar updates are done, as this needs to be done for all types of plates...
 		local spellnameString = plateFrame.unitFrame.castBar.Text
 		local spellPercentString = plateFrame.unitFrame.castBar.percentText
@@ -5904,7 +6040,7 @@ end
 					local r, g, b, a
 					
 					--get the quest color if this npcs is a quest npc
-					if (plateFrame [MEMBER_QUEST]) then
+					if (plateFrame [MEMBER_QUEST] and DB_PLATE_CONFIG [plateFrame.unitFrame.ActorType].quest_color_enabled) then
 						if (plateFrame [MEMBER_REACTION] == UNITREACTION_NEUTRAL) then
 							r, g, b, a = unpack (plateConfigs.quest_color_neutral)
 						else
@@ -6851,7 +6987,7 @@ end
 			end
 			if (config.indicator_spec) then
 				-- use BG info if available
-				local texture, L, R, T, B = Plater.GetSpecIconForUnitFromBG(plateFrame [MEMBER_UNITID])
+				local texture, L, R, T, B = Plater.GetSpecIconForUnitFromBG(plateFrame.unitFrame [MEMBER_UNITID])
 				if texture then
 					Plater.AddIndicator (plateFrame, "specicon", texture, L, R, T, B)
 				else
@@ -7157,22 +7293,19 @@ end
 
 	--check the setting 'only_damaged' and 'only_thename' for player characters. not critical code, can run slow
 	function Plater.ParseHealthSettingForPlayer (plateFrame) --private
-		plateFrame.IsFriendlyPlayerWithoutHealthBar = false
-
+		local isFriendlyPlayerWithoutHealthBar = plateFrame.IsFriendlyPlayerWithoutHealthBar
 		if (DB_PLATE_CONFIG [ACTORTYPE_FRIENDLY_PLAYER].only_thename and not DB_PLATE_CONFIG [ACTORTYPE_FRIENDLY_PLAYER].only_damaged) then
-			Plater.HideHealthBar (plateFrame.unitFrame, true)
-			plateFrame.IsFriendlyPlayerWithoutHealthBar = true
+			if not isFriendlyPlayerWithoutHealthBar then
+				Plater.HideHealthBar (plateFrame.unitFrame, true)
+			end
 			
 		elseif (DB_PLATE_CONFIG [ACTORTYPE_FRIENDLY_PLAYER].only_damaged) then
 			local healthBar = plateFrame.unitFrame.healthBar
 			if ((healthBar.currentHealth or 1) < (healthBar.currentHealthMax or 1)) then
 				Plater.ShowHealthBar (plateFrame.unitFrame)
-			else
-				Plater.HideHealthBar (plateFrame.unitFrame, true)
 				
-				if (DB_PLATE_CONFIG [ACTORTYPE_FRIENDLY_PLAYER].only_thename) then
-					plateFrame.IsFriendlyPlayerWithoutHealthBar = true
-				end
+			elseif not isFriendlyPlayerWithoutHealthBar then
+				Plater.HideHealthBar (plateFrame.unitFrame, true)
 			end
 			
 		else
@@ -7794,6 +7927,7 @@ function Plater.CreatePlaterButtonAtInterfaceOptions()
 	
 	local open_options = function()
 		InterfaceOptionsFrame:Hide()
+		HideUIPanel(GameMenuFrame)
 		Plater.OpenOptionsPanel()
 	end
 	
@@ -7884,7 +8018,6 @@ function Plater.SetCVarsOnFirstRun()
 	--InterfaceOptionsNamesPanelUnitNameplatesMakeLarger:Click() --this isn't required anymore since we use our own unitframe now
 	--InterfaceOptionsNamesPanelUnitNameplatesPersonalResource:Click() --removing this since I don't have documentation on why this was added
 	--InterfaceOptionsNamesPanelUnitNameplatesPersonalResource:Click()
-	Plater.CreatePlaterButtonAtInterfaceOptions()
 	
 	--[=[
 	Plater.RestoreProfileCVars()
@@ -8150,25 +8283,71 @@ end
 	
 	local BG_PLAYER_CACHE = {}
 	function Plater.UpdateBgPlayerRoleCache()
-		local curNumScores = GetNumBattlefieldScores()
 		wipe(BG_PLAYER_CACHE)
-		for i = 1, curNumScores do
-			local name, _, _, _, _, faction, race, class, classToken, _, _, _, _, _, _, talentSpec = GetBattlefieldScore(i)
-			if name then
-				BG_PLAYER_CACHE[name] = {faction = faction, race = race, class = class, classToken = classToken, talentSpec = talentSpec}
+		if Plater.ZoneInstanceType == "pvp" then
+			local curNumScores = GetNumBattlefieldScores()
+			for i = 1, curNumScores do
+				local info = C_PvP.GetScoreInfo(i)
+				if info then
+					local name, faction, race, class, classToken, talentSpec = info.name, info.faction, info.raceName, info.className, info.classToken, info.talentSpec
+					if name then
+						BG_PLAYER_CACHE[name] = {faction = faction, race = race, class = class, classToken = classToken, talentSpec = talentSpec, specID = (CLASS_INFO_CACHE[classToken] and CLASS_INFO_CACHE[classToken][talentSpec] and CLASS_INFO_CACHE[classToken][talentSpec].specID), name = name}
+					end
+				end
+			end
+		elseif Plater.ZoneInstanceType == "arena" then
+			local numOpps = GetNumArenaOpponentSpecs();
+			for i=1, numOpps do
+				local specID, gender = GetArenaOpponentSpec(i);
+				if (specID > 0) then
+					local name = GetUnitName ("arena"..i, true)
+					if name then
+						local id, talentSpec, _, _, _, class = GetSpecializationInfoByID(specID, gender);
+						local class, classToken = UnitClass("arena"..i);
+						local race = UnitRace("arena"..i);
+						BG_PLAYER_CACHE[name] = {faction = nil, race = race, class = class, classToken = classToken, talentSpec = talentSpec, specID = specID, name = name}
+					end
+				end
 			end
 		end
 	end
+
+	function Plater.GetUnitBGInfo(unit)
+
+		if (not UnitIsPlayer(unit)) then
+			return nil
+		end
+		
+		if (not Plater.ZoneInstanceType == "pvp" and not Plater.ZoneInstanceType == "arena") then
+			return nil
+		end
+
+		local name = GetUnitName(unit, true)
+		if not BG_PLAYER_CACHE[name] then
+			Plater.UpdateBgPlayerRoleCache()
+		end
+
+		return BG_PLAYER_CACHE[name]
+	end
 	
 	function Plater.GetSpecIconForUnitFromBG(unit)
+
+		if (not UnitIsPlayer(unit)) then
+			return nil
+		end
+		
+		if (not Plater.ZoneInstanceType == "pvp" and not Plater.ZoneInstanceType == "arena") then
+			return nil
+		end
+
 		local name = GetUnitName(unit, true)
 		if not BG_PLAYER_CACHE[name] then
 			Plater.UpdateBgPlayerRoleCache()
 		end
 		
 		local cache = BG_PLAYER_CACHE[name]
-		if cache then
-			return Plater.GetSpecIcon(CLASS_INFO_CACHE[cache.classToken] and CLASS_INFO_CACHE[cache.classToken][cache.talentSpec] and CLASS_INFO_CACHE[cache.classToken][cache.talentSpec].specID)
+		if cache and cache.specID then
+			return Plater.GetSpecIcon(cache.specID)
 		end
 		return nil
 	end
@@ -8376,6 +8555,7 @@ end
 	--@noSpecialAuras: won't check special auras
 	function Plater.CheckAuras (self, buffList, debuffList, noSpecialAuras)
 		local buffFrame = self.BuffFrame
+		local buffFrame2 = self.BuffFrame2
 		
 		Plater.ResetAuraContainer (buffFrame)
 		
@@ -8388,7 +8568,12 @@ end
 		buffFrame.unit = self.unit
 		Plater.AlignAuraFrames (buffFrame)
 		buffFrame:SetAlpha (DB_AURA_ALPHA)
-		buffFrame2:SetAlpha (DB_AURA_ALPHA)
+		
+		if (DB_AURA_SEPARATE_BUFFS) then
+			buffFrame2.unit = self.unit
+			Plater.AlignAuraFrames (buffFrame2)
+			buffFrame2:SetAlpha (DB_AURA_ALPHA)
+		end
 	end
 	
 	--return the health bar and the unitname text
@@ -8868,9 +9053,9 @@ end
 		else
 			local rangeChecker
 			if unitFrame [MEMBER_REACTION] < 5 then 
-				spellForRangeCheck = Plater.RangeCheckFunctionEnemy
+				rangeChecker = Plater.RangeCheckFunctionEnemy
 			else
-				spellForRangeCheck = Plater.RangeCheckFunctionFriendly
+				rangeChecker = Plater.RangeCheckFunctionFriendly
 			end
 			if (rangeChecker and rangeChecker (unitFrame [MEMBER_UNITID])) then
 				unitFrame [MEMBER_RANGE] = true
@@ -9394,7 +9579,6 @@ end
 			["ApplyPatches"] = true,
 			["RefreshConfig"] = true,
 			["RefreshConfigProfileChanged"] = true,
-			["RefreshConfig"] = true,
 			["SaveConsoleVariables"] = true,
 			["GetSettings"] = true,
 			["CodeTypeNames"] = true,
@@ -9464,6 +9648,7 @@ end
 			["RefreshTankCache"] = true,
 			["ForceFindPetOwner"] = true,
 			["UpdateBgPlayerRoleCache"] = false,
+			["InitLDB"] = true,
 		},
 		
 		["DetailsFramework"] = {
@@ -9828,7 +10013,7 @@ end
 		
 		--init modEnv if necessary
 		local needsInitCall = false
-		if not PLATER_GLOBAL_MOD_ENV [scriptObject.scriptId] then
+		if (not PLATER_GLOBAL_MOD_ENV [scriptObject.scriptId]) then
 			needsInitCall = true
 			PLATER_GLOBAL_MOD_ENV [scriptObject.scriptId] = {
 				config = {}
@@ -9843,9 +10028,26 @@ end
 
 		for i = 1, #scriptOptions do
 			local thisOption = scriptOptions[i]
-			if options_for_config_table[thisOption.Type] then
-				if type(scriptOptionsValues[thisOption.Key]) == "boolean" then
+			if (options_for_config_table[thisOption.Type]) then
+				if (type(scriptOptionsValues[thisOption.Key]) == "boolean") then
 					PLATER_GLOBAL_MOD_ENV [scriptObject.scriptId].config[thisOption.Key] = scriptOptionsValues[thisOption.Key]
+				elseif (thisOption.Type == 7) then
+					--check if the options is a list
+					
+					--build default values if needed
+					if not scriptOptionsValues[thisOption.Key] then
+						scriptOptionsValues[thisOption.Key] = DF.table.copy({}, thisOption.Value)
+					end
+					
+					--build a hash table with the entries in the list
+					local hashTable = {}
+					for index, entryTable in ipairs(scriptOptionsValues[thisOption.Key]) do
+						local key = entryTable[1]
+						local value = entryTable[2]
+						hashTable[key] = value
+					end
+
+					PLATER_GLOBAL_MOD_ENV [scriptObject.scriptId].config[thisOption.Key] = hashTable
 				else
 					PLATER_GLOBAL_MOD_ENV [scriptObject.scriptId].config[thisOption.Key] = scriptOptionsValues[thisOption.Key] or thisOption.Value
 				end
@@ -9869,9 +10071,9 @@ end
 				else
 					--store the function to execute inside the global script object
 					--setfenv (compiledScript, functionFilter)
-					if not Plater.db.profile.shadowMode then
+					if (not Plater.db.profile.shadowMode) then
 						DF:SetEnvironment(compiledScript, nil, platerModEnvironment)
-					elseif Plater.db.profile.shadowMode == 1 then
+					elseif (Plater.db.profile.shadowMode == 1) then
 						SetPlaterEnvironment(compiledScript)
 					end
 					
@@ -9949,9 +10151,26 @@ end
 
 		for i = 1, #scriptOptions do
 			local thisOption = scriptOptions[i]
-			if options_for_config_table[thisOption.Type] then
-				if type(scriptOptionsValues[thisOption.Key]) == "boolean" then
+			if (options_for_config_table[thisOption.Type]) then
+				if (type(scriptOptionsValues[thisOption.Key]) == "boolean") then
 					PLATER_GLOBAL_SCRIPT_ENV [scriptObject.scriptId].config[thisOption.Key] = scriptOptionsValues[thisOption.Key]
+				elseif (thisOption.Type == 7) then
+					--check if the options is a list
+					
+					--build default values if needed
+					if not scriptOptionsValues[thisOption.Key] then
+						scriptOptionsValues[thisOption.Key] = DF.table.copy({}, thisOption.Value)
+					end
+					
+					--build a hash table with the entries in the list
+					local hashTable = {}
+					for index, entryTable in ipairs(scriptOptionsValues[thisOption.Key]) do
+						local key = entryTable[1]
+						local value = entryTable[2]
+						hashTable[key] = value
+					end
+
+					PLATER_GLOBAL_SCRIPT_ENV [scriptObject.scriptId].config[thisOption.Key] = hashTable
 				else
 					PLATER_GLOBAL_SCRIPT_ENV [scriptObject.scriptId].config[thisOption.Key] = scriptOptionsValues[thisOption.Key] or thisOption.Value
 				end
@@ -9966,9 +10185,9 @@ end
 			else
 				--get the function to execute
 				--setfenv (compiledScript, functionFilter)
-				if not Plater.db.profile.shadowMode then
+				if (not Plater.db.profile.shadowMode) then
 					DF:SetEnvironment(compiledScript, nil, platerModEnvironment)
-				elseif Plater.db.profile.shadowMode == 1 then
+				elseif (Plater.db.profile.shadowMode == 1) then
 					SetPlaterEnvironment(compiledScript)
 				end
 				scriptFunctions [scriptType] = compiledScript()
@@ -9983,7 +10202,6 @@ end
 		elseif (scriptObject.ScriptType == 3) then --unit plate
 			triggerContainer = "NpcNames"
 		end
-		
 		
 		for i = 1, #scriptObject [triggerContainer] do
 			local triggerId = scriptObject [triggerContainer] [i]
@@ -10046,7 +10264,7 @@ end
 				end
 				
 				--run initialization (once)
-				if needsInitCall then
+				if (needsInitCall) then
 					Plater.ScriptMetaFunctions.ScriptRunInitialization(globalScriptObject)
 					needsInitCall = false
 				end
@@ -10978,7 +11196,31 @@ function SlashCmdList.PLATER (msg, editbox)
 		
 		return
 	
+	elseif (msg == "minimap") then
+		PlaterDBChr.minimap.hide = not PlaterDBChr.minimap.hide
+		
+		if (PlaterDBChr.minimap.hide) then
+			LDBIcon:Hide ("Plater")
+		else
+			LDBIcon:Show ("Plater")
+		end
+		LDBIcon:Refresh ("Plater", PlaterDBChr.minimap)
+		
+		return
+	
 	end
+	
+	local usage = "Usage Info:"
+	usage = usage .. "\n|cffffaeae/plater|r : Open the Plater options window"
+	usage = usage .. "\n|cffffaeae/plater|r |cffffff33version|r: print Plater version information"
+	usage = usage .. "\n|cffffaeae/plater|r |cffffff33profstart|r: Start Plater profiling"
+	usage = usage .. "\n|cffffaeae/plater|r |cffffff33profstop|r: Stop Plater profiling"
+	usage = usage .. "\n|cffffaeae/plater|r |cffffff33profprint|r: Print gathered profiling information"
+	usage = usage .. "\n|cffffaeae/plater|r |cffffff33add|r: Adds the targeted unit to the NPC Cache"
+	usage = usage .. "\n|cffffaeae/plater|r |cffffff33colors|r: Opens the Plater color palette"
+	usage = usage .. "\n|cffffaeae/plater|r |cffffff33minimap|r: Toggle the Plater minimap icon"
+	usage = usage .. "\n|cffffaeaeVersion:|r |cffffff33" .. Plater.GetVersionInfo() .. "|r"
+	Plater:Msg(usage)
 	
 	Plater.OpenOptionsPanel()
 end

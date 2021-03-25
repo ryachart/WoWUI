@@ -32,7 +32,7 @@ local SEARCH_PROVIDER_LAYOUT = {
   {
     headerTemplate = "AuctionatorStringColumnHeaderTemplate",
     headerParameters = { "timeLeft" },
-    headerText = AUCTIONATOR_L_TIME_LEFT_H,
+    headerText = AUCTIONATOR_L_TIME_LEFT,
     cellTemplate = "AuctionatorStringCellTemplate",
     cellParameters = { "timeLeftPretty" },
     defaultHide = true,
@@ -71,6 +71,7 @@ function AuctionatorSearchDataProviderMixin:OnShow()
     Auctionator.Cancelling.Events.RequestCancel,
   })
 
+  self.processCountPerUpdate = 200
   self:Reset()
 end
 
@@ -133,7 +134,8 @@ function AuctionatorSearchDataProviderMixin:OnEvent(eventName, itemRef, auctionI
 
   -- Get item search results, excluding individual auction updates (which cause
   -- the display to blank)
-  elseif eventName == "ITEM_SEARCH_RESULTS_UPDATED" and auctionID == nil then
+  elseif eventName == "ITEM_SEARCH_RESULTS_UPDATED" then
+    self.onPreserveScroll()
     self:Reset()
     self:AppendEntries(self:ProcessItemResults(itemRef), true)
 
@@ -169,17 +171,22 @@ function AuctionatorSearchDataProviderMixin:ProcessCommodityResults(itemID)
       price = resultInfo.unitPrice,
       bidPrice = nil,
       owners = resultInfo.owners,
-      otherSellers = Auctionator.Utilities.StringJoin(resultInfo.owners, ", "),
+      totalNumberOfOwners = resultInfo.totalNumberOfOwners,
+      otherSellers = Auctionator.Utilities.StringJoin(resultInfo.owners, PLAYER_LIST_DELIMITER),
       quantity = resultInfo.quantity,
       quantityFormatted = Auctionator.Utilities.DelimitThousands(resultInfo.quantity),
       level = "0",
-      timeLeftPretty = Auctionator.Utilities.RoundTime(resultInfo.timeLeftSeconds or 0),
+      timeLeftPretty = Auctionator.Utilities.FormatTimeLeft(resultInfo.timeLeftSeconds),
       timeLeft = resultInfo.timeLeftSeconds or 0, --Used in sorting
       auctionID = resultInfo.auctionID,
       itemID = itemID,
       itemType = Auctionator.Constants.ITEM_TYPES.COMMODITY,
       canBuy = not (resultInfo.containsOwnerItem or resultInfo.containsAccountItem)
     }
+
+    if #entry.owners > 0 and #entry.owners < entry.totalNumberOfOwners then
+      entry.otherSellers = AUCTIONATOR_L_SELLERS_OVERFLOW_TEXT:format(entry.otherSellers, entry.totalNumberOfOwners - #entry.owners)
+    end
 
     if resultInfo.containsOwnerItem then
       -- Test if the auction has been loaded for cancelling
@@ -209,21 +216,6 @@ function AuctionatorSearchDataProviderMixin:ProcessCommodityResults(itemID)
   return entries
 end
 
-local function TimeLeftBandToHours(timeLeftBand)
-  if timeLeftBand == Enum.AuctionHouseTimeLeftBand.Short then
-    return "0 - 0.5"
-  elseif timeLeftBand == Enum.AuctionHouseTimeLeftBand.Medium then
-    return "0.5 - 2"
-  elseif timeLeftBand == Enum.AuctionHouseTimeLeftBand.Long then
-    return "2 - 12"
-  elseif timeLeftBand == Enum.AuctionHouseTimeLeftBand.VeryLong then
-    return "12 - 48"
-  else
-    Auctionator.Debug.Message("Missing auction time left band")
-    return ""
-  end
-end
-
 function AuctionatorSearchDataProviderMixin:ProcessItemResults(itemKey)
   local entries = {}
   local anyOwnedNotLoaded = false
@@ -235,8 +227,9 @@ function AuctionatorSearchDataProviderMixin:ProcessItemResults(itemKey)
       bidPrice = resultInfo.bidAmount,
       level = tostring(resultInfo.itemKey.itemLevel or 0),
       owners = resultInfo.owners,
-      otherSellers = Auctionator.Utilities.StringJoin(resultInfo.owners, ", "),
-      timeLeftPretty = TimeLeftBandToHours(resultInfo.timeLeft),
+      totalNumberOfOwners = resultInfo.totalNumberOfOwners,
+      otherSellers = Auctionator.Utilities.StringJoin(resultInfo.owners, PLAYER_LIST_DELIMITER),
+      timeLeftPretty = Auctionator.Utilities.FormatTimeLeftBand(resultInfo.timeLeft),
       timeLeft = resultInfo.timeLeft, --Used in sorting and the vanilla AH tooltip code
       quantity = resultInfo.quantity,
       quantityFormatted = Auctionator.Utilities.DelimitThousands(resultInfo.quantity),
@@ -245,6 +238,10 @@ function AuctionatorSearchDataProviderMixin:ProcessItemResults(itemKey)
       itemType = Auctionator.Constants.ITEM_TYPES.ITEM,
       canBuy = resultInfo.buyoutAmount ~= nil and not (resultInfo.containsOwnerItem or resultInfo.containsAccountItem)
     }
+
+    if #entry.owners > 0 and #entry.owners < entry.totalNumberOfOwners then
+      entry.otherSellers = AUCTIONATOR_L_SELLERS_OVERFLOW_TEXT:format(entry.otherSellers, entry.totalNumberOfOwners - #entry.owners)
+    end
 
     if resultInfo.itemKey.battlePetSpeciesID ~= 0 and entry.itemLink ~= nil then
       entry.level = tostring(Auctionator.Utilities.GetPetLevelFromLink(entry.itemLink))

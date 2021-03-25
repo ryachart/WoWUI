@@ -1543,7 +1543,8 @@ SexyMap2DB = {
 			["dragPositions"] = {
 				["MiniMapTracking"] = -3.103815685958185,
 				["MiniMapMailFrame"] = 241.5386367990212,
-				["GarrisonLandingPageMinimapButton"] = 213.0023772734718,
+				["GarrisonLandingPageMinimapButton"] = 212.356492803411,
+				["QueueStatusMinimapButton"] = 228.0036783230799,
 			},
 			["controlVisibility"] = true,
 		},

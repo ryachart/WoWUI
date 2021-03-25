@@ -40,10 +40,10 @@ local CANCELLING_TABLE_LAYOUT = {
   },
   {
     headerTemplate = "AuctionatorStringColumnHeaderTemplate",
-    headerText = AUCTIONATOR_L_TIME_LEFT_H,
+    headerText = AUCTIONATOR_L_TIME_LEFT,
     headerParameters = { "timeLeft" },
     cellTemplate = "AuctionatorStringCellTemplate",
-    cellParameters = { "timeLeft" },
+    cellParameters = { "timeLeftPretty" },
     width = 120,
   },
   {
@@ -165,8 +165,20 @@ end
 
 function AuctionatorCancellingDataProviderMixin:IsValidAuction(auctionInfo)
   return
+    --We don't handle WoW Tokens (can't cancel and no time left)
+    auctionInfo.itemKey.itemID ~= Auctionator.Constants.WOW_TOKEN_ID and
     auctionInfo.status == 0 and
     tIndexOf(self.beenCancelled, auctionInfo.auctionID) == nil
+end
+
+function AuctionatorCancellingDataProviderMixin:FilterAuction(auctionInfo)
+  local searchString = self:GetParent().SearchFilter:GetText()
+  if searchString ~= "" then
+    --Uses that the item link for an auction contains its name
+    return string.match(string.lower(auctionInfo.itemLink), string.lower(searchString))
+  else
+    return true
+  end
 end
 
 function AuctionatorCancellingDataProviderMixin:PopulateAuctions()
@@ -179,7 +191,7 @@ function AuctionatorCancellingDataProviderMixin:PopulateAuctions()
     local info = C_AuctionHouse.GetOwnedAuctionInfo(index)
 
     --Only look at unsold and uncancelled (yet) auctions
-    if self:IsValidAuction(info) then
+    if self:IsValidAuction(info) and self:FilterAuction(info) then
       local price = info.buyoutAmount or info.bidAmount
       total = total + price * info.quantity
       table.insert(results, {
@@ -190,7 +202,8 @@ function AuctionatorCancellingDataProviderMixin:PopulateAuctions()
         bidder = info.bidder,
         itemKey = info.itemKey,
         itemLink = info.itemLink, -- Used for tooltips
-        timeLeft = Auctionator.Utilities.RoundTime(info.timeLeftSeconds or 0),
+        timeLeft = info.timeLeftSeconds,
+        timeLeftPretty = Auctionator.Utilities.FormatTimeLeft(info.timeLeftSeconds),
         cancelled = (tIndexOf(self.waitingforCancellation, info.auctionID) ~= nil),
         undercut = self.undercutInfo[info.auctionID] or AUCTIONATOR_L_UNDERCUT_UNKNOWN
       })

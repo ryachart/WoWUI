@@ -1,6 +1,6 @@
 
 
-local dversion = 234
+local dversion = 237
 
 local major, minor = "DetailsFramework-1.0", dversion
 local DF, oldminor = LibStub:NewLibrary (major, minor)
@@ -328,7 +328,6 @@ end
 --> copy from table2 to table1 overwriting values but do not copy data that cannot be compressed
 function DF.table.copytocompress (t1, t2)
 	for key, value in pairs (t2) do
-		print (key, value)
 		if (key ~= "__index" and type(value) ~= "function") then
 			if (type (value) == "table") then
 				t1 [key] = t1 [key] or {}
@@ -2409,6 +2408,16 @@ end
 -----------------------------
 
 function DF:OpenInterfaceProfile()
+	-- OptionsFrame1/2 should be registered if created with DF:CreateAddOn, so open to them directly
+	if self.OptionsFrame1 then
+		InterfaceOptionsFrame_OpenToCategory (self.OptionsFrame1)
+		if self.OptionsFrame2 then
+			InterfaceOptionsFrame_OpenToCategory (self.OptionsFrame2)
+		end
+		return
+	end
+	
+	-- fallback (broken as of ElvUI Skins in version 12.18+... maybe fix/change will come)
 	InterfaceOptionsFrame_OpenToCategory (self.__name)
 	InterfaceOptionsFrame_OpenToCategory (self.__name)
 	for i = 1, 100 do

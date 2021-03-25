@@ -1,14 +1,14 @@
 local mod	= DBM:NewMod(2422, "DBM-CastleNathria", nil, 1190)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision("20210118213658")
+mod:SetRevision("20210224082525")
 mod:SetCreatureID(165759)
 mod:SetEncounterID(2402)
 mod:DisableIEEUCombatDetection()--kael gets stuck on boss frames well after encounter has ended, therefor must not re-engage boss off this bug
 mod:SetUsedIcons(1, 2, 3, 4, 5)
 mod.onlyHighest = true--Instructs DBM health tracking to literally only store highest value seen during fight, even if it drops below that
 mod.noBossDeathKill = true--Instructs mod to ignore 165759 deaths, since goal is to heal kael, not kill him
-mod:SetHotfixNoticeRev(20210105000000)--2021, 01, 05
+mod:SetHotfixNoticeRev(20210128000000)--2021, 01, 28
 mod:SetMinSyncRevision(20210105000000)
 --mod.respawnTime = 29
 
@@ -45,7 +45,7 @@ mod:RegisterEventsInCombat(
  or (source.type = "NPC" and source.firstSeen = timestamp) or (target.type = "NPC" and target.firstSeen = timestamp)
  or (abililty.id = 326455 or ability.id = 326455 or ability.id = 325506) and type = "begincast"
 
- ability.id = 328659 or ability.id == 341254 or ability.id = 328731 and (type = "applybuff" or type = "removebuff")
+ or ability.id = 328659 or ability.id == 341254 or ability.id = 328731 and (type = "applybuff" or type = "removebuff")
 --]]
 --Shade of Kael'thas
 local warnFeiryStrike							= mod:NewCastAnnounce(326455, 2, nil, nil, "Melee")
@@ -139,7 +139,6 @@ mod:AddRangeFrameOption(6, 328885)
 mod:AddInfoFrameOption(326078, true)--343026
 mod:AddSetIconOption("SetIconOnEmberBlast", 325877, true, false, {1})
 mod:AddSetIconOption("SetIconOnBirdo", 328731, true, true, {2, 3, 4, 5})
---mod:AddNamePlateOption("NPAuraOnPhoenixEmbers", 328731)
 mod:AddNamePlateOption("NPAuraOnPhoenixFixate", 328479)
 
 mod.vb.addMode = 0--No adds spawning, 1-Adds Spawning from Darithos Tables, 2-Adds spawning from Shade table
@@ -166,7 +165,7 @@ local addTimers = {
 			--Bleakwing Assassin
 			[167566] = {70, 60, 80},
 			--Vile Occultist
-			[165763] = {100, 150},
+			[165763] = {90, 150},
 			--Soul Infuser
 			[165762] = {170, 70},
 			--Pestering Fiend
@@ -266,7 +265,7 @@ local addTimers = {
 			--Bleakwing Assassin
 			[167566] = {20, 60, 80},
 			--Vile Occultist
-			[165763] = {50, 140},
+			[165763] = {40, 140},
 			--Soul Infuser
 			[165762] = {110, 80},--80 iffy, could be 70 or 75
 			--Pestering Fiend
@@ -411,7 +410,7 @@ function mod:OnCombatStart(delay)
 	if self.Options.RangeFrame then
 		DBM.RangeCheck:Show(6)
 	end
-	if self.Options.NPAuraOnPhoenixFixate then--self.Options.NPAuraOnPhoenixEmbers
+	if self.Options.NPAuraOnPhoenixFixate then
 		DBM:FireEvent("BossMod_EnableHostileNameplates")
 	end
 	self:Schedule(42, setForcedAddSpawns, self)
@@ -452,7 +451,7 @@ function mod:OnCombatStart(delay)
 		difficultyName = "lfr"
 		timerBleakwingAssassinCD:Start(70, 1)
 		timerPesteringFiendCD:Start(70, 1)
-		timerVileOccultistCD:Start(100, 1)
+		timerVileOccultistCD:Start(90, 1)
 		self:Unschedule(expectedVile)
 		self:Schedule(110, expectedVile, self)
 		timerSoulInfuserCD:Start(170, 1)
@@ -461,7 +460,7 @@ function mod:OnCombatStart(delay)
 	end
 end
 
-function mod:OnCombatEnd(wipe, isSecondRun)
+function mod:OnCombatEnd(wipe)
 	table.wipe(seenAdds)
 	table.wipe(castsPerGUID)
 	table.wipe(infuserTargets)
@@ -471,11 +470,8 @@ function mod:OnCombatEnd(wipe, isSecondRun)
 	if self.Options.RangeFrame then
 		DBM.RangeCheck:Hide()
 	end
-	if self.Options.NPAuraOnPhoenixFixate then--self.Options.NPAuraOnPhoenixEmbers or
+	if self.Options.NPAuraOnPhoenixFixate then
 		DBM.Nameplate:Hide(true, nil, nil, nil, true, true)
-	end
-	if not isSecondRun then
-		DBM:AddMsg("Add timer accuracy may stil suffer greatly until blizzard fixes bugs with adds inconsistently firing events when spawning, especially soul infusers")
 	end
 end
 
@@ -658,9 +654,6 @@ function mod:SPELL_AURA_APPLIED(args)
 			end
 		end
 	elseif spellId == 328731 then
---		if self.Options.NPAuraOnPhoenixEmbers then
---			DBM.Nameplate:Show(true, args.destGUID, spellId, nil, 20)
---		end
 		timerPhoenixRespawn:Start(20, args.destGUID)
 	elseif spellId == 333145 and self:AntiSpam(5, args.destName) then
 		warnReturnToStone:Show(args.destName)
@@ -707,7 +700,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		specWarnShadeSpawned:Show()
 		specWarnShadeSpawned:Play("bigmob")
 		timerFieryStrikeCD:Start(14)
-		timerEmberBlastCD:Start(20.1)
+		timerEmberBlastCD:Start(19.1)
 		timerBlazingSurgeCD:Start(28.8)
 		if self:IsMythic() then
 			timerCloakofFlamesCD:Start(39, 1)
@@ -736,9 +729,6 @@ mod.SPELL_AURA_APPLIED_DOSE = mod.SPELL_AURA_APPLIED
 function mod:SPELL_AURA_REMOVED(args)
 	local spellId = args.spellId
 	if spellId == 328731 then
---		if self.Options.NPAuraOnPhoenixEmbers then
---			DBM.Nameplate:Hide(true, args.destGUID, spellId)
---		end
 		timerPhoenixRespawn:Stop(args.destGUID)
 	elseif spellId == 326078 then
 		infuserTargets[args.destName] = nil
@@ -791,7 +781,7 @@ function mod:SPELL_AURA_REMOVED(args)
 			timerVanquisherCD:Start(3, 1)
 			timerBleakwingAssassinCD:Start(20, 1)
 			timerPesteringFiendCD:Start(20, 1)
-			timerVileOccultistCD:Start(50, 1)
+			timerVileOccultistCD:Start(40, 1)
 			self:Schedule(60, expectedVile, self)
 			timerSoulInfuserCD:Start(110, 1)
 			self:Schedule(120, expectedInfuser, self)
@@ -858,7 +848,7 @@ function mod:UNIT_DIED(args)
 				timerVanquisherCD:Start(8, 1)
 				timerBleakwingAssassinCD:Start(28, 1)
 				timerPesteringFiendCD:Start(28, 1)
-				timerVileOccultistCD:Start(58, 1)
+				timerVileOccultistCD:Start(48, 1)
 				self:Schedule(68, expectedVile, self)
 				timerSoulInfuserCD:Start(128, 1)
 				self:Schedule(138, expectedInfuser, self)

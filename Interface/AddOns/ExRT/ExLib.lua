@@ -163,7 +163,7 @@ CheckButton	ExRTRadioButtonModernTemplate
 local GlobalAddonName, ExRT = ...
 local isExRT = GlobalAddonName == "ExRT"
 
-local libVersion = 39
+local libVersion = 41
 
 if type(ELib)=='table' and type(ELib.V)=='number' and ELib.V > libVersion then return end
 
@@ -274,6 +274,7 @@ do
 			end
 		end
 	end
+	ELib.ModObjFuncs = Mod
 end
 
 --=======================================================================
@@ -2693,7 +2694,7 @@ do
 		if self.leftText then
 			self.leftText:SetText(text)
 		else
-			self.leftText = ELib:Text(self,text,size or 11):Point("RIGHT",self,"LEFT",-5,0)
+			self.leftText = ELib:Text(self,text,size or 11):Point("RIGHT",self,"LEFT",-5,0):Right()
 		end
 		return self
 	end
@@ -2835,10 +2836,21 @@ do
 			self.ScrollBar:SetValue(val - delta)
 		end
 	end
+	local function CheckHideScroll(self)
+		if not self.HideOnNoScroll then
+			return
+		end
+		if not self.buttonUP:IsEnabled() and not self.buttonDown:IsEnabled() then
+			self:Hide()
+		else
+			self:Show()
+		end
+	end
 	local function ScrollFrameScrollBarValueChanged(self,value)
 		local parent = self:GetParent():GetParent()
 		parent:SetVerticalScroll(value) 
 		self:UpdateButtons()
+		CheckHideScroll(self)
 	end
 	local function ScrollFrameScrollBarValueChangedH(self,value)
 		local parent = self:GetParent():GetParent()
@@ -2849,6 +2861,7 @@ do
 		self.content:SetHeight(newHeight)
 		self.ScrollBar:Range(0,max(newHeight-self:GetHeight(),0),nil,true)
 		self.ScrollBar:UpdateButtons()
+		CheckHideScroll(self.ScrollBar)
 
 		return self
 	end
@@ -2871,6 +2884,13 @@ do
 		self.SetNewWidth = ScrollFrameChangeWidth
 		self.Width = ScrollFrameChangeWidth
 
+		return self
+	end
+
+	local function Widget_HideScrollOnNoScroll(self)
+		self.ScrollBar.HideOnNoScroll = true
+		self.ScrollBar:UpdateButtons()
+		CheckHideScroll(self.ScrollBar)
 		return self
 	end
 
@@ -2908,6 +2928,7 @@ do
 		self.Height = ScrollFrameChangeHeight
 
 		self.AddHorizontal = Widget_AddHorizontal
+		self.HideScrollOnNoScroll = Widget_HideScrollOnNoScroll
 
 		Mod(self)
 		self._Size = self.Size
@@ -3044,7 +3065,23 @@ do
 
 		return self
 	end
+	local function Widget_SetVertical(self)
+		self.Texture:SetGradientAlpha("HORIZONTAL",0.20,0.21,0.25,1, 0.05,0.06,0.09,1)
+		self.TextObj = self:GetTextObj()
+		self.TextObj:SetPoint("CENTER",-5,0)
+		
+		local group = self:CreateAnimationGroup()
+		group:SetScript('OnFinished', function() group:Play() end)
+		local rotation = group:CreateAnimation('Rotation')
+		rotation:SetDuration(0.000001)
+		rotation:SetEndDelay(2147483647)
+		rotation:SetChildKey("TextObj")
+		rotation:SetOrigin('BOTTOMRIGHT', 0, 0)
+		rotation:SetDegrees(90)
+		group:Play()
 
+		return self
+	end
 
 
 	function ELib:Button(parent,text,template)
@@ -3064,6 +3101,7 @@ do
 		self._Disable = self.Disable	self.Disable = Widget_Disable
 		self.GetTextObj = Widget_GetTextObj
 		self.FontSize = Widget_SetFontSize
+		self.SetVertical = Widget_SetVertical
 
 		return self
 	end
@@ -3207,6 +3245,15 @@ do
 end
 
 do
+	local function CheckBoxOnEnter(self)
+		local tooltipTitle = self.text:GetText()
+		local tooltipText = self.tooltipText
+		if tooltipTitle == "" or not tooltipTitle then
+			tooltipTitle = tooltipText
+			tooltipText = nil
+		end
+		ELib.Tooltip.Show(self,"ANCHOR_TOP",tooltipTitle,{tooltipText,1,1,1,true})
+	end
 	local function Click(self)
 		self:GetParent():Click()
 	end
@@ -3225,6 +3272,12 @@ do
 		self.Button:SetScript("OnLeave",ButtonOnLeave)
 		return self
 	end
+	local function Widget_Tooltip(self,text)
+		self.tooltipText = text
+		self:SetScript("OnEnter",CheckBoxOnEnter)
+		self:SetScript("OnLeave",ELib.Tooltip.Hide)
+		return self
+	end
 	function ELib:Radio(parent,text,checked,template)
 		if template == 0 then
 			template = "UIRadioButtonTemplate"
@@ -3238,6 +3291,7 @@ do
 
 		Mod(self)
 		self.AddButton = Widget_TextToButton
+		self.Tooltip = Widget_Tooltip
 
 		return self
 	end
@@ -3537,7 +3591,7 @@ do
 		end
 		parent:Update()
 		if parent.SetListValue then
-			parent:SetListValue(self.index,...)
+			parent:SetListValue(listParent.index,...)
 		end
 		if parent.isCheckList and parent.ValueChanged then
 			parent:ValueChanged()
@@ -4427,6 +4481,7 @@ function ELib.ScrollDropDown:Reload(level)
 					button.leaveFunc = data.leaveFunc
 					button.hoverArg = data.hoverArg
 					button.checkFunc = data.checkFunc
+					button.tooltip = data.tooltip
 
 					if not data.checkFunc then
 						button.checkFunc = ScrollDropDown_DefaultCheckFunc
@@ -4489,6 +4544,11 @@ function ELib.ScrollDropDown.OnButtonEnter(self)
 	if func then
 		func(self,self.hoverArg)
 	end
+	if self.tooltip then
+		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+		GameTooltip:AddLine(self.tooltip)
+		GameTooltip:Show()
+	end
 	ELib.ScrollDropDown:CloseSecondLevel(self.Level)
 	if self.subMenu then
 		if IsDropDownCustom then
@@ -4502,6 +4562,9 @@ function ELib.ScrollDropDown.OnButtonLeave(self)
 	local func = self.leaveFunc
 	if func then
 		func(self)
+	end
+	if self.tooltip then
+		GameTooltip_Hide()
 	end
 end
 
@@ -4581,7 +4644,12 @@ function ELib.ScrollDropDown.ToggleDropDownMenu(self,level,customList,customWidt
 	end
 	dropDown:ClearAllPoints()
 	if level > 1 then
-		dropDown:SetPoint("TOPLEFT",self,"TOPRIGHT",level > 1 and ELib.ScrollDropDown.DropDownList[level-1].Slider:IsShown() and 24 or 12,isModern and 8 or 16)
+		if dropDownWidth and dropDownWidth + ELib.ScrollDropDown.DropDownList[level-1]:GetRight() > GetScreenWidth() then
+			dropDown:SetPoint("TOP",self,"TOP",0,8)
+			dropDown:SetPoint("RIGHT",ELib.ScrollDropDown.DropDownList[level-1],"LEFT",-5,0)
+		else
+			dropDown:SetPoint("TOPLEFT",self,"TOPRIGHT",level > 1 and ELib.ScrollDropDown.DropDownList[level-1].Slider:IsShown() and 24 or 12,isModern and 8 or 16)
+		end
 	else
 		local toggleX = self.toggleX or -16
 		local toggleY = self.toggleY or 0
@@ -6226,7 +6294,7 @@ do
 			firstHidden.toHide = false
 			return firstHidden
 		end
-		local text = ELib:Text(self.C,"",14)
+		local text = ELib:Text(self.C,"",14):Color()
 		self.groupText[text] = true
 
 		if self.ModGroup then
@@ -6339,7 +6407,7 @@ do
 									subTop = subTop + BUTTON_HEIGHT + 5
 								end
 	
-								local groupText = GetGroupText(self,subNow)
+								local groupText = GetGroupText(self,subNow..tostring(subData))
 								if isUpdateReq then
 									groupText:SetParent(button.sub)
 									groupText:Point("TOPLEFT",15,-subTop):Size(buttonWidth,GROUP_HEIGHT)
@@ -6390,7 +6458,7 @@ do
 						button.expandIcon.texture:SetTexCoord(0.375,0.4375,0.5,0.625)
 						button.sub:Hide()
 					end
-				end				
+				end
 			end
 		end
 		for level=1,2 do
@@ -6398,6 +6466,9 @@ do
 			for v in pairs(list) do
 				if v.toHide then
 					v:Hide()
+					if level == 1 then
+						v.uid = nil
+					end
 				end
 			end
 		end

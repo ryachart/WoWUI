@@ -873,8 +873,8 @@ local default_profile = {
 		},
 		
 	--> segments
-		segments_amount = 18,
-		segments_amount_to_save = 18,
+		segments_amount = 40,
+		segments_amount_to_save = 40,
 		segments_panic_mode = false,
 		segments_auto_erase = 1,
 		
@@ -1248,6 +1248,12 @@ local default_global_data = {
 		},
 		current_exp_raid_encounters = {},
 		
+	--> profile by spec
+		profile_by_spec = {},
+	
+	--> displays by spec
+		displays_by_spec = {},
+		
 	--> death log
 		show_totalhitdamage_on_overkill = false,
 		
@@ -1311,6 +1317,7 @@ local default_global_data = {
 		
 	--> min health done on the death report
 		deathlog_healingdone_min = 1,
+		deathlog_healingdone_min_arena = 400,
 		
 	--> mythic plus config
 		mythic_plus = {
@@ -1693,10 +1700,29 @@ function Details:ImportProfile (profileString, newProfileName)
 				end
 			end
 		end
-		
+
+		--profile imported, set mythic dungeon to default settings
+		local mythicPlusSettings = Details.mythic_plus
+		mythicPlusSettings.always_in_combat = false
+		mythicPlusSettings.merge_boss_trash = true
+		mythicPlusSettings.delete_trash_after_merge = true
+		mythicPlusSettings.boss_dedicated_segment = true
+		mythicPlusSettings.make_overall_when_done = true
+		mythicPlusSettings.make_overall_boss_only = false
+		mythicPlusSettings.show_damage_graphic = true
+		mythicPlusSettings.delay_to_show_graphic = 5
+		mythicPlusSettings.last_mythicrun_chart = {}
+		mythicPlusSettings.mythicrun_chart_frame = {}
+		mythicPlusSettings.mythicrun_chart_frame_minimized = {}
+		mythicPlusSettings.mythicrun_chart_frame_ready = {}
+
+		--make the max amount of segments be 30
+		Details.segments_amount = 40
+		Details.segments_amount_to_save = 40
+
 		--transfer instance data to the new created profile
 		profileObject.instances = DetailsFramework.table.copy ({}, profileData.instances)
-		
+
 		Details:ApplyProfile (newProfileName)
 		
 		Details:Msg ("profile successfully imported.")--localize-me

@@ -1,9 +1,7 @@
-## Interface: 90002
+## Interface: 90005
 ## Title: Friend Groups
 ## Author: Mikeprod
-## Version: 9.0
-## X-Curse-Project-ID: 103161
-## X-WoWI-ID: 25105
+## Edited by Thainii
 
 ## Notes: Addon managing your contact list with groups
 ## SavedVariables: FriendGroups_SavedVars

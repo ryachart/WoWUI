@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1615674673,
+	["tstmp"] = 1616617484,
 	["config"] = {
 		["lineWidth"] = 4,
 		["secondPosition"] = 0,
@@ -9,28 +9,28 @@ HidingBarDB = {
 				["tstmp"] = 1609009379,
 			},
 			["Bartender4"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["DBM"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["ElkBuffBars"] = {
 				["tstmp"] = 1613366703,
 			},
 			["Prat"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["ExRT"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["BagnonLauncher"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["WeakAuras"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["Masque"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 		},
 		["grabMinimap"] = true,
@@ -54,37 +54,37 @@ HidingBarDB = {
 		["frameStrata"] = 2,
 		["mbtnSettings"] = {
 			["LibDBIcon10_Details"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["LibDBIcon10_ElkBuffBars"] = {
 				["tstmp"] = 1613366703,
 			},
 			["LibDBIcon10_ExorsusRaidTools"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["LibDBIcon10_PitBull4"] = {
 				["tstmp"] = 1609009379,
 			},
 			["LibDBIcon10_MythicDungeonTools"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["LibDBIcon10_WowUp"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["LibDBIcon10_SimulationCraft"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["LibDBIcon10_DetailsStreamer"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["LibDBIcon10_WeakAuras"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["LibDBIcon10_Plater"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["LibDBIcon10_DBM"] = {
-				["tstmp"] = 1615674673,
+				["tstmp"] = 1616617484,
 			},
 			["LibDBIcon10_Bartender4"] = {
 				["tstmp"] = 1615513221,
@@ -97,14 +97,14 @@ HidingBarDB = {
 		},
 		["position"] = 630.0444721566305,
 		["fadeOpacity"] = 0.2,
-		["orientation"] = 0,
+		["grabMinimapAfterN"] = 1,
 		["bgColor"] = {
 			0.1, -- [1]
 			0.1, -- [2]
 			0.1, -- [3]
 			0.7, -- [4]
 		},
-		["grabMinimapAfterN"] = 1,
 		["mbtnPosition"] = 0,
+		["orientation"] = 0,
 	},
 }

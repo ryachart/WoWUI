@@ -151,7 +151,7 @@ function Plater.OpenOptionsPanel()
 	--controi o menu principal
 	local f = DF:CreateSimplePanel (UIParent, optionsWidth, optionsHeight, "Plater: professional nameplate addon for hardcore gamers", "PlaterOptionsPanelFrame", {UseScaleBar = true}, Plater.db.profile.OptionsPanelDB)
 	f.Title:SetAlpha (.75)
-	f:SetFrameStrata ("MEDIUM")
+	f:SetFrameStrata ("HIGH")
 	DF:ApplyStandardBackdrop (f)
 	f:ClearAllPoints()
 	PixelUtil.SetPoint (f, "center", UIParent, "center", 2, 2, 1, 1)
@@ -603,8 +603,8 @@ function Plater.OpenOptionsPanel()
 			end
 			
 			function profilesFrame.OpenProfileManagement()
-				Plater:OpenInterfaceProfile()
 				f:Hide()
+				Plater:OpenInterfaceProfile()
 				C_Timer.After (.5, function()
 					mainFrame:SetIndex (1)
 					mainFrame:SelectIndex (_, 1)
@@ -869,8 +869,8 @@ function Plater.OpenOptionsPanel()
 	local textures = LibSharedMedia:HashTable ("statusbar")
 
 	--outline table
-	local outline_modes = {"NONE", "MONOCHROME", "OUTLINE", "THICKOUTLINE"}
-	local outline_modes_names = {"None", "Monochrome", "Outline", "Thick Outline"}
+	local outline_modes = {"NONE", "MONOCHROME", "OUTLINE", "THICKOUTLINE", "MONOCHROME, OUTLINE", "MONOCHROME, THICKOUTLINE"}
+	local outline_modes_names = {"None", "Monochrome", "Outline", "Thick Outline", "Monochrome Outline", "Monochrome Thick Outline"}
 	local build_outline_modes_table = function (actorType, member)
 		local t = {}
 		for i = 1, #outline_modes do
@@ -1318,7 +1318,7 @@ local debuff_options = {
 			Plater.db.profile.aura_breakline_space = value
 			Plater.RefreshDBUpvalues()
 		end,
-		min = 1,
+		min = 0,
 		max = 15,
 		step = 0.01,
 		usedecimals = true,
@@ -12784,6 +12784,17 @@ end
 			usedecimals = true,
 		},
 		
+		{type = "blank"},
+		{type = "label", get = function() return "Region:" end, text_template = DF:GetTemplate ("font", "ORANGE_FONT_TEMPLATE")},
+		
+		{
+			type = "select",
+			get = function() return Plater.db.profile.number_region end,
+			values = function() return build_number_format_options() end,
+			name = "Number Format",
+			desc = "Number format",
+		},
+		
 		{type = "breakline"},
 		{type = "label", get = function() return "Misc:" end, text_template = DF:GetTemplate ("font", "ORANGE_FONT_TEMPLATE")},
 		
@@ -13043,17 +13054,6 @@ end
 		},
 
 		{type = "blank"},
-		{type = "label", get = function() return "Region:" end, text_template = DF:GetTemplate ("font", "ORANGE_FONT_TEMPLATE")},
-		
-		{
-			type = "select",
-			get = function() return Plater.db.profile.number_region end,
-			values = function() return build_number_format_options() end,
-			name = "Number Format",
-			desc = "Number format",
-		},
-		
-		{type = "breakline"},
 
 		{type = "label", get = function() return "Unit Widget Bars:" end, text_template = DF:GetTemplate ("font", "ORANGE_FONT_TEMPLATE")},
 	

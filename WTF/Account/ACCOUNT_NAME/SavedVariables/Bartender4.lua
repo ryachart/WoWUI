@@ -1421,6 +1421,7 @@ Bartender4DB = {
 					},
 				},
 				["Default"] = {
+					["enabled"] = false,
 					["position"] = {
 						["y"] = -186.9430694580078,
 						["x"] = -437.7023315429688,
@@ -1653,12 +1654,12 @@ Bartender4DB = {
 		["Shadegarr - Tichondrius"] = "Default",
 		["Glaivegarr - Blackrock"] = "Default",
 		["Flashsmite - Blackrock"] = "Default",
-		["Fangarr - Tichondrius"] = "Default",
+		["Huntgarr - Thunderlord"] = "Default",
 		["Raingarr - Tichondrius"] = "Default",
 		["Mistgarr - Tichondrius"] = "Default",
 		["Raingarr - Thunderlord"] = "Default",
-		["Huntgarr - Thunderlord"] = "Default",
 		["Theofang - Thunderlord"] = "Theofang - Thunderlord",
+		["Fangarr - Tichondrius"] = "Default",
 		["Flashlyte - Blackrock"] = "Default",
 		["Arantir - Lightbringer"] = "Default",
 	},

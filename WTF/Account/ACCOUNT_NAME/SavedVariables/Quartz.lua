@@ -26,11 +26,13 @@ Quartz3DB = {
 		["Player"] = {
 			["profiles"] = {
 				["Default"] = {
+					["h"] = 20,
 					["targetname"] = true,
-					["w"] = 320,
-					["y"] = -140.9995727539063,
+					["w"] = 180,
+					["y"] = -150.9991912841797,
 					["point"] = "CENTER",
-					["x"] = 3,
+					["fontsize"] = 12,
+					["x"] = -104.9997863769531,
 					["texture"] = "Smooth",
 				},
 			},
@@ -55,12 +57,14 @@ Quartz3DB = {
 		["Target"] = {
 			["profiles"] = {
 				["Default"] = {
-					["showhostile"] = false,
+					["noInterruptChangeColor"] = false,
 					["showfriendly"] = false,
-					["y"] = -127.999755859375,
+					["y"] = -134.99951171875,
 					["hideblizz"] = false,
-					["point"] = "TOP",
-					["x"] = 242.0000610351563,
+					["point"] = "CENTER",
+					["texture"] = "Smooth",
+					["x"] = 90,
+					["noInterruptShield"] = false,
 				},
 			},
 		},
@@ -82,17 +86,19 @@ Quartz3DB = {
 		["Glaivegarr - Blackrock"] = "Default",
 		["Shadegarr - Tichondrius"] = "Default",
 		["Ignorc - Blackrock"] = "Default",
+		["Paingarr - Sargeras"] = "Default",
 		["Theofang - Thunderlord"] = "Default",
 		["Flashsmite - Blackrock"] = "Default",
 		["Mistgarr - Tichondrius"] = "Default",
-		["Paingarr - Sargeras"] = "Default",
 		["Huntgarr - Thunderlord"] = "Default",
 		["Raingarr - Thunderlord"] = "Default",
-		["Flashlyte - Blackrock"] = "Default",
 		["Fangarr - Tichondrius"] = "Default",
+		["Flashlyte - Blackrock"] = "Default",
+		["Angarr - Blackrock"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
+			["borderalpha"] = 0.8,
 			["spelltextcolor"] = {
 				nil, -- [1]
 				nil, -- [2]
@@ -112,12 +118,14 @@ Quartz3DB = {
 				1, -- [4]
 			},
 			["modules"] = {
+				["Swing"] = false,
+				["Buff"] = false,
+				["Pet"] = false,
+				["Player"] = false,
 				["GCD"] = false,
 				["Focus"] = false,
 				["Target"] = false,
-				["Buff"] = false,
 				["Mirror"] = false,
-				["Pet"] = false,
 			},
 			["timetextcolor"] = {
 				nil, -- [1]

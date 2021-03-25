@@ -2,12 +2,13 @@
 NameplateSCTDB = {
 	["profileKeys"] = {
 		["Theofang - Thunderlord"] = "Default",
-		["Mistgarr - Tichondrius"] = "Default",
 		["Felgarr - Thunderlord"] = "Default",
-		["Shadegarr - Tichondrius"] = "Default",
-		["Raingarr - Thunderlord"] = "Default",
 		["Angarr - Thunderlord"] = "Default",
+		["Shadegarr - Tichondrius"] = "Default",
+		["Angarr - Blackrock"] = "Default",
+		["Raingarr - Thunderlord"] = "Default",
 		["Fangarr - Tichondrius"] = "Default",
+		["Mistgarr - Tichondrius"] = "Default",
 	},
 	["global"] = {
 		["sizing"] = {

@@ -2,7 +2,9 @@ function Auctionator.ReagentSearch.DoTradeSkillReagentsSearch()
   local recipeIndex = TradeSkillFrame.RecipeList:GetSelectedRecipeID()
   local recipeLevel = TradeSkillFrame.DetailsFrame:GetSelectedRecipeLevel()
 
-  local items = { C_TradeSkillUI.GetRecipeInfo(recipeIndex).name }
+  local recipeInfo = C_TradeSkillUI.GetRecipeInfo(recipeIndex, recipeLevel)
+
+  local items = {recipeInfo.name}
 
   for reagentIndex = 1, C_TradeSkillUI.GetRecipeNumReagents(recipeIndex, recipeLevel) do
 
@@ -10,7 +12,15 @@ function Auctionator.ReagentSearch.DoTradeSkillReagentsSearch()
     table.insert(items, reagentName)
   end
 
-  Auctionator.API.v1.MultiSearchExact(AUCTIONATOR_L_REAGENT_SEARCH, items)
+  if recipeInfo.alternateVerb == ENSCRIBE then
+    -- Enchanting names are pretty unique, and we want to be able to find the
+    -- enchantment (which has a name that isn't exactly recipeInfo.name)
+    -- Hence we do a non-exact search.
+    Auctionator.API.v1.MultiSearch(AUCTIONATOR_L_REAGENT_SEARCH, items)
+  else
+    -- Exact search to avoid spurious results, say with "Shrouded Cloth"
+    Auctionator.API.v1.MultiSearchExact(AUCTIONATOR_L_REAGENT_SEARCH, items)
+  end
 end
 
 function Auctionator.ReagentSearch.GetSkillReagentsTotal()
@@ -23,9 +33,11 @@ function Auctionator.ReagentSearch.GetSkillReagentsTotal()
 
     local multiplier = select(3, C_TradeSkillUI.GetRecipeReagentInfo(recipeIndex, reagentIndex, recipeLevel))
     local link = select(1, C_TradeSkillUI.GetRecipeReagentItemLink(recipeIndex, reagentIndex))
-    local unitPrice = Auctionator.API.v1.GetAuctionPriceByItemLink(AUCTIONATOR_L_REAGENT_SEARCH, link)
-    if unitPrice ~= nil then
-      total = total + multiplier * unitPrice
+    if link ~= nil then
+      local unitPrice = Auctionator.API.v1.GetAuctionPriceByItemLink(AUCTIONATOR_L_REAGENT_SEARCH, link)
+      if unitPrice ~= nil then
+        total = total + multiplier * unitPrice
+      end
     end
   end
 

@@ -23,11 +23,11 @@ g_auctionHouseSortsBySearchContext = {
 	{
 		{
 			["reverseSort"] = false,
-			["sortOrder"] = 0,
+			["sortOrder"] = 2,
 		}, -- [1]
 		{
-			["reverseSort"] = true,
-			["sortOrder"] = 2,
+			["reverseSort"] = false,
+			["sortOrder"] = 0,
 		}, -- [2]
 	}, -- [3]
 	{
