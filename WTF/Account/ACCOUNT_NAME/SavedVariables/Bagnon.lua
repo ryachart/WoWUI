@@ -51,8 +51,8 @@ Bagnon_Sets = {
 			},
 			["hiddenRules"] = {
 			},
-			["y"] = -93.9945068359375,
-			["x"] = -368.9996337890625,
+			["y"] = 0,
+			["x"] = -160.999267578125,
 			["borderColor"] = {
 			},
 			["showBags"] = true,
@@ -86,11 +86,11 @@ Bagnon_Sets = {
 			},
 			["color"] = {
 			},
-			["borderColor"] = {
-			},
+			["x"] = 95.00000762939453,
 			["hiddenRules"] = {
 			},
-			["x"] = 95.00000762939453,
+			["borderColor"] = {
+			},
 		},
 		["guild"] = {
 			["y"] = -225.4996948242188,
@@ -121,11 +121,11 @@ Bagnon_Sets = {
 			},
 			["color"] = {
 			},
-			["hiddenBags"] = {
-			},
+			["x"] = 487.9999389648438,
 			["hiddenRules"] = {
 			},
-			["x"] = 487.9999389648438,
+			["hiddenBags"] = {
+			},
 		},
 		["bank"] = {
 			["rules"] = {
@@ -161,8 +161,8 @@ Bagnon_Sets = {
 			["x"] = 79.00003051757812,
 			["borderColor"] = {
 			},
-			["columns"] = 21,
 			["showBags"] = true,
+			["columns"] = 21,
 		},
 	},
 	["keyColor"] = {
@@ -174,10 +174,10 @@ Bagnon_Sets = {
 	["mineColor"] = {
 	},
 	["version"] = "9.0.6",
-	["refrigeColor"] = {
+	["leatherColor"] = {
 	},
 	["enchantColor"] = {
 	},
-	["leatherColor"] = {
+	["refrigeColor"] = {
 	},
 }

@@ -19,7 +19,6 @@ MADB = {
 					},
 					["name"] = "PlayerPowerBarAltMover",
 					["scale"] = 1.093751549720764,
-					["orgScale"] = 1,
 					["pos"] = {
 						"BOTTOM", -- [1]
 						"UIParent", -- [2]
@@ -27,14 +26,15 @@ MADB = {
 						300.7998033621603, -- [4]
 						566.8562622070312, -- [5]
 					},
+					["orgScale"] = 1,
 				},
 				["GhostFrame"] = {
 					["orgPos"] = {
 						"TOP", -- [1]
-						"UIParent", -- [2]
+						"UIWidgetTopCenterContainerFrame", -- [2]
 						"BOTTOM", -- [3]
 						0, -- [4]
-						1060, -- [5]
+						-3.999999761581421, -- [5]
 					},
 					["name"] = "GhostFrame",
 					["pos"] = {
@@ -85,18 +85,18 @@ MADB = {
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
 						0, -- [4]
-						140, -- [5]
+						175, -- [5]
 					},
 					["name"] = "UIWidgetPowerBarContainerFrame",
 					["scale"] = 120.0008239746094,
-					["orgScale"] = 1,
 					["pos"] = {
 						"BOTTOM", -- [1]
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
-						2.070825382686031, -- [4]
+						2.070827290034663, -- [4]
 						4.041628360748291, -- [5]
 					},
+					["orgScale"] = 1,
 				},
 				["PetActionButtonsMover"] = {
 					["orgPos"] = {
@@ -118,10 +118,10 @@ MADB = {
 				["StreamingIcon"] = {
 					["orgPos"] = {
 						"LEFT", -- [1]
-						"UIParent", -- [2]
+						"UIWidgetTopCenterContainerFrame", -- [2]
 						"RIGHT", -- [3]
-						-959.5, -- [4]
-						497.0000610351563, -- [5]
+						0, -- [4]
+						-27.50002861022949, -- [5]
 					},
 					["name"] = "StreamingIcon",
 					["pos"] = {
@@ -147,40 +147,6 @@ MADB = {
 						"TOP", -- [3]
 						-5, -- [4]
 						-226.9998168945313, -- [5]
-					},
-				},
-				["UIWidgetTopCenterContainerFrame"] = {
-					["orgPos"] = {
-						"TOP", -- [1]
-						"UIParent", -- [2]
-						"TOP", -- [3]
-						0, -- [4]
-						-15, -- [5]
-					},
-					["name"] = "UIWidgetTopCenterContainerFrame",
-					["pos"] = {
-						"TOP", -- [1]
-						"UIParent", -- [2]
-						"TOP", -- [3]
-						-4.00048828125, -- [4]
-						-110.9998168945313, -- [5]
-					},
-				},
-				["ReadyCheckFrame"] = {
-					["orgPos"] = {
-						"CENTER", -- [1]
-						"UIParent", -- [2]
-						"CENTER", -- [3]
-						0, -- [4]
-						-10, -- [5]
-					},
-					["name"] = "ReadyCheckFrame",
-					["pos"] = {
-						"CENTER", -- [1]
-						"UIParent", -- [2]
-						"CENTER", -- [3]
-						-3.0517578125e-05, -- [4]
-						-9.99993896484375, -- [5]
 					},
 				},
 				["UIPanelMover1"] = {
@@ -230,25 +196,29 @@ MADB = {
 						"TOP", -- [1]
 						"UIErrorsFrame", -- [2]
 						"BOTTOM", -- [3]
-						3.0517578125e-05, -- [4]
-						0, -- [5]
+						-2, -- [4]
+						13, -- [5]
 					},
 				},
-				["BossBanner"] = {
-					["orgPos"] = {
-						"TOP", -- [1]
-						"UIParent", -- [2]
-						"TOP", -- [3]
-						0, -- [4]
-						-120, -- [5]
+				["RaidBrowserFrame"] = {
+					["UIPanelWindows"] = {
+						["pushable"] = 1,
+						["area"] = "left",
 					},
-					["name"] = "BossBanner",
-					["pos"] = {
-						"TOP", -- [1]
+					["orgPos"] = {
+						"CENTER", -- [1]
 						"UIParent", -- [2]
-						"TOP", -- [3]
-						-3.0517578125e-05, -- [4]
-						-119.9996948242188, -- [5]
+						"CENTER", -- [3]
+						0, -- [4]
+						0, -- [5]
+					},
+					["name"] = "RaidBrowserFrame",
+					["pos"] = {
+						"BOTTOMLEFT", -- [1]
+						"UIParent", -- [2]
+						"BOTTOMLEFT", -- [3]
+						775.000244140625, -- [4]
+						449, -- [5]
 					},
 				},
 				["QuestLogPopupDetailFrame"] = {
@@ -273,22 +243,20 @@ MADB = {
 						345.9998474121094, -- [5]
 					},
 				},
-				["CastingBarFrame"] = {
+				["TooltipMover"] = {
 					["orgPos"] = {
-						"BOTTOM", -- [1]
+						"TOP", -- [1]
 						"UIParent", -- [2]
-						"BOTTOM", -- [3]
+						0, -- [3]
 						0, -- [4]
-						160, -- [5]
 					},
-					["name"] = "CastingBarFrame",
-					["hidden"] = true,
+					["name"] = "TooltipMover",
 					["pos"] = {
-						"BOTTOM", -- [1]
+						"TOP", -- [1]
 						"UIParent", -- [2]
-						"BOTTOM", -- [3]
-						0, -- [4]
-						160, -- [5]
+						"TOP", -- [3]
+						634.0011596679688, -- [4]
+						-849.0000457763672, -- [5]
 					},
 				},
 				["BagItemTooltipMover"] = {
@@ -307,25 +275,21 @@ MADB = {
 						-653.9997863769531, -- [5]
 					},
 				},
-				["ChallengesKeystoneFrame"] = {
-					["UIPanelWindows"] = {
-						["pushable"] = 0,
-						["area"] = "center",
-					},
+				["RaidBossEmoteFrame"] = {
 					["orgPos"] = {
-						"CENTER", -- [1]
-						"UIParent", -- [2]
-						"CENTER", -- [3]
+						"TOP", -- [1]
+						"UIErrorsFrame", -- [2]
+						"BOTTOM", -- [3]
 						0, -- [4]
-						40, -- [5]
+						-70, -- [5]
 					},
-					["name"] = "ChallengesKeystoneFrame",
+					["name"] = "RaidBossEmoteFrame",
 					["pos"] = {
-						"BOTTOMLEFT", -- [1]
-						"UIParent", -- [2]
-						"BOTTOMLEFT", -- [3]
-						751.0000610351562, -- [4]
-						415.9998779296875, -- [5]
+						"TOP", -- [1]
+						"RaidWarningFrame", -- [2]
+						"BOTTOM", -- [3]
+						-1.999908447265625, -- [4]
+						110.9999389648438, -- [5]
 					},
 				},
 				["ObjectiveTrackerFrameMover"] = {
@@ -340,7 +304,6 @@ MADB = {
 					["orgHeight"] = 700.0000610351562,
 					["height"] = 620,
 					["orgWidth"] = 235.0000610351563,
-					["width"] = 235.0000610351563,
 					["pos"] = {
 						"TOPRIGHT", -- [1]
 						"MinimapCluster", -- [2]
@@ -348,6 +311,7 @@ MADB = {
 						-9.9998779296875, -- [4]
 						-79.99993896484375, -- [5]
 					},
+					["width"] = 235.0000610351563,
 				},
 				["QuestFrame"] = {
 					["UIPanelWindows"] = {
@@ -370,67 +334,69 @@ MADB = {
 						365, -- [5]
 					},
 				},
-				["RaidBossEmoteFrame"] = {
-					["orgPos"] = {
-						"TOP", -- [1]
-						"UIErrorsFrame", -- [2]
-						"BOTTOM", -- [3]
-						0, -- [4]
-						-70, -- [5]
-					},
-					["name"] = "RaidBossEmoteFrame",
-					["pos"] = {
-						"TOP", -- [1]
-						"RaidWarningFrame", -- [2]
-						"BOTTOM", -- [3]
-						-1.99993896484375, -- [4]
-						110.9999389648438, -- [5]
-					},
-				},
-				["TooltipMover"] = {
-					["orgPos"] = {
-						"TOP", -- [1]
-						"UIParent", -- [2]
-						0, -- [3]
-						0, -- [4]
-					},
-					["name"] = "TooltipMover",
-					["pos"] = {
-						"TOP", -- [1]
-						"UIParent", -- [2]
-						"TOP", -- [3]
-						634.0011596679688, -- [4]
-						-849.0000457763672, -- [5]
-					},
-				},
-				["RaidBrowserFrame"] = {
+				["ChallengesKeystoneFrame"] = {
 					["UIPanelWindows"] = {
-						["pushable"] = 1,
-						["area"] = "left",
+						["pushable"] = 0,
+						["area"] = "center",
 					},
 					["orgPos"] = {
 						"CENTER", -- [1]
 						"UIParent", -- [2]
 						"CENTER", -- [3]
 						0, -- [4]
-						0, -- [5]
+						40, -- [5]
 					},
-					["name"] = "RaidBrowserFrame",
+					["name"] = "ChallengesKeystoneFrame",
 					["pos"] = {
 						"BOTTOMLEFT", -- [1]
 						"UIParent", -- [2]
 						"BOTTOMLEFT", -- [3]
-						775.000244140625, -- [4]
-						449, -- [5]
+						751.0000610351562, -- [4]
+						415.9998168945313, -- [5]
+					},
+				},
+				["CastingBarFrame"] = {
+					["orgPos"] = {
+						"BOTTOM", -- [1]
+						"UIParent", -- [2]
+						"BOTTOM", -- [3]
+						0, -- [4]
+						195, -- [5]
+					},
+					["name"] = "CastingBarFrame",
+					["hidden"] = true,
+					["pos"] = {
+						"BOTTOM", -- [1]
+						"UIParent", -- [2]
+						"BOTTOM", -- [3]
+						0, -- [4]
+						160, -- [5]
+					},
+				},
+				["ReadyCheckFrame"] = {
+					["orgPos"] = {
+						"CENTER", -- [1]
+						"UIParent", -- [2]
+						"CENTER", -- [3]
+						0, -- [4]
+						-10, -- [5]
+					},
+					["name"] = "ReadyCheckFrame",
+					["pos"] = {
+						"CENTER", -- [1]
+						"UIParent", -- [2]
+						"CENTER", -- [3]
+						-3.0517578125e-05, -- [4]
+						-9.99993896484375, -- [5]
 					},
 				},
 			},
 		},
 	},
-	["closeGUIOnEscape"] = false,
+	["tooltips"] = true,
 	["modifiedFramesOnly"] = true,
 	["squareMM"] = false,
-	["noMMMW"] = false,
 	["playSound"] = false,
-	["tooltips"] = true,
+	["noMMMW"] = false,
+	["closeGUIOnEscape"] = false,
 }

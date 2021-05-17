@@ -67,10 +67,10 @@ Bartender4DB = {
 					["enabled"] = true,
 					["version"] = 3,
 					["position"] = {
-						["scale"] = 1.264999985694885,
+						["y"] = 62,
 						["x"] = -515,
 						["point"] = "BOTTOM",
-						["y"] = 62,
+						["scale"] = 1.264999985694885,
 					},
 				},
 				["Default"] = {
@@ -143,8 +143,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -153,8 +153,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -209,8 +209,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -219,8 +219,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -275,8 +275,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -285,8 +285,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -342,8 +342,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -352,8 +352,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -388,6 +388,72 @@ Bartender4DB = {
 					},
 				},
 				["Flashsmite - Blackrock"] = {
+					["actionbars"] = {
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 41.75,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["y"] = -227.4998474121094,
+								["x"] = -231.5001831054688,
+								["point"] = "CENTER",
+							},
+						}, -- [2]
+						{
+							["rows"] = 12,
+							["padding"] = 5,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -82,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [3]
+						{
+							["rows"] = 12,
+							["padding"] = 5,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [4]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 110,
+								["x"] = 3,
+								["point"] = "BOTTOM",
+							},
+						}, -- [5]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 110,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						[10] = {
+						},
+					},
+				},
+				["Mistgarr - Tichondrius"] = {
 					["actionbars"] = {
 						{
 							["padding"] = 6,
@@ -449,11 +515,12 @@ Bartender4DB = {
 						}, -- [7]
 						{
 						}, -- [8]
-						[10] = {
-						},
+						nil, -- [9]
+						{
+						}, -- [10]
 					},
 				},
-				["Mistgarr - Tichondrius"] = {
+				["Theofang - Thunderlord"] = {
 					["actionbars"] = {
 						{
 							["padding"] = 6,
@@ -520,72 +587,6 @@ Bartender4DB = {
 						}, -- [10]
 					},
 				},
-				["Theofang - Thunderlord"] = {
-					["actionbars"] = {
-						{
-							["padding"] = 6,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 41.75,
-								["x"] = -510,
-								["point"] = "BOTTOM",
-							},
-						}, -- [1]
-						{
-							["enabled"] = false,
-							["version"] = 3,
-							["position"] = {
-								["y"] = -227.4998474121094,
-								["x"] = -231.5001831054688,
-								["point"] = "CENTER",
-							},
-						}, -- [2]
-						{
-							["padding"] = 5,
-							["rows"] = 12,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 610,
-								["x"] = -82,
-								["point"] = "BOTTOMRIGHT",
-							},
-						}, -- [3]
-						{
-							["padding"] = 5,
-							["rows"] = 12,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 610,
-								["x"] = -42,
-								["point"] = "BOTTOMRIGHT",
-							},
-						}, -- [4]
-						{
-							["padding"] = 6,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 110,
-								["x"] = 3,
-								["point"] = "BOTTOM",
-							},
-						}, -- [5]
-						{
-							["padding"] = 6,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 110,
-								["x"] = -510,
-								["point"] = "BOTTOM",
-							},
-						}, -- [6]
-						{
-						}, -- [7]
-						{
-						}, -- [8]
-						[10] = {
-						},
-					},
-				},
 				["Default"] = {
 					["actionbars"] = {
 						{
@@ -599,8 +600,8 @@ Bartender4DB = {
 							},
 							["padding"] = 0,
 							["visibility"] = {
-								["custom"] = true,
 								["combat"] = false,
+								["custom"] = true,
 								["always"] = false,
 								["customdata"] = "fade [combat]show",
 								["nocombat"] = false,
@@ -711,8 +712,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -721,8 +722,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -777,8 +778,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -787,8 +788,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -843,8 +844,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -853,8 +854,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -1050,10 +1051,10 @@ Bartender4DB = {
 					["padding"] = -2,
 					["version"] = 3,
 					["position"] = {
-						["scale"] = 1,
+						["y"] = 41.75,
 						["x"] = 37.5,
 						["point"] = "BOTTOM",
-						["y"] = 41.75,
+						["scale"] = 1,
 					},
 				},
 				["Default"] = {
@@ -1301,62 +1302,94 @@ Bartender4DB = {
 				},
 			},
 		},
-		["ZoneAbilityBar"] = {
+		["Vehicle"] = {
 			["profiles"] = {
-				["Fangarr - Tichondrius"] = {
+				["Felgarr - Thunderlord"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 223.0000457763672,
-						["x"] = -31.50006103515625,
-						["point"] = "BOTTOM",
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
 					},
 				},
-				["Raingarr - Tichondrius"] = {
+				["Ignorc - Blackrock"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = -266.7206115722656,
-						["x"] = 470.2337646484375,
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
+				["Shadegarr - Tichondrius"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
+				["Huntgarr - Thunderlord"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
+				["Flashsmite - Blackrock"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
 						["point"] = "CENTER",
 					},
 				},
 				["Mistgarr - Tichondrius"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 223.0000457763672,
-						["x"] = -31.50006103515625,
-						["point"] = "BOTTOM",
-					},
-				},
-				["Default"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = -266.7206115722656,
-						["x"] = 470.2337646484375,
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
 						["point"] = "CENTER",
 					},
 				},
-				["Raingarr - Thunderlord"] = {
+				["Theofang - Thunderlord"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 223.0000457763672,
-						["x"] = -31.50006103515625,
-						["point"] = "BOTTOM",
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
 					},
 				},
-				["Agraxx - Wyrmrest Accord"] = {
+				["Default"] = {
+					["position"] = {
+						["y"] = -98.77752685546875,
+						["x"] = 344.6892395019531,
+						["point"] = "TOPLEFT",
+					},
+					["version"] = 3,
+				},
+				["Glaivegarr - Blackrock"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 223.0000457763672,
-						["x"] = -31.50006103515625,
-						["point"] = "BOTTOM",
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
 					},
 				},
-				["Skren - Thunderlord"] = {
+				["Paingarr - Sargeras"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 223.0000457763672,
-						["x"] = -31.50006103515625,
-						["point"] = "BOTTOM",
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
+					},
+				},
+				["Arantir - Lightbringer"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 42.50006103515625,
+						["x"] = 104.5,
+						["point"] = "CENTER",
 					},
 				},
 			},
@@ -1518,9 +1551,9 @@ Bartender4DB = {
 				["Default"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = -188.9159996738454,
-						["x"] = 294.9624853852911,
-						["point"] = "LEFT",
+						["y"] = 183.658862878543,
+						["x"] = -223.1879712045338,
+						["point"] = "BOTTOMRIGHT",
 						["scale"] = 0.8500000238418579,
 						["growHorizontal"] = "LEFT",
 					},
@@ -1552,94 +1585,62 @@ Bartender4DB = {
 				},
 			},
 		},
-		["Vehicle"] = {
+		["ZoneAbilityBar"] = {
 			["profiles"] = {
-				["Felgarr - Thunderlord"] = {
+				["Fangarr - Tichondrius"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
+						["y"] = 223.0000457763672,
+						["x"] = -31.50006103515625,
+						["point"] = "BOTTOM",
 					},
 				},
-				["Ignorc - Blackrock"] = {
+				["Raingarr - Tichondrius"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
-					},
-				},
-				["Shadegarr - Tichondrius"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
-					},
-				},
-				["Huntgarr - Thunderlord"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
-					},
-				},
-				["Flashsmite - Blackrock"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
+						["y"] = -266.7206115722656,
+						["x"] = 470.2337646484375,
 						["point"] = "CENTER",
 					},
 				},
 				["Mistgarr - Tichondrius"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
-					},
-				},
-				["Theofang - Thunderlord"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
+						["y"] = 223.0000457763672,
+						["x"] = -31.50006103515625,
+						["point"] = "BOTTOM",
 					},
 				},
 				["Default"] = {
-					["position"] = {
-						["y"] = -98.77752685546875,
-						["x"] = 344.6892395019531,
-						["point"] = "TOPLEFT",
-					},
-					["version"] = 3,
-				},
-				["Glaivegarr - Blackrock"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
+						["y"] = -266.7206115722656,
+						["x"] = 470.2337646484375,
 						["point"] = "CENTER",
 					},
 				},
-				["Paingarr - Sargeras"] = {
+				["Raingarr - Thunderlord"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
+						["y"] = 223.0000457763672,
+						["x"] = -31.50006103515625,
+						["point"] = "BOTTOM",
 					},
 				},
-				["Arantir - Lightbringer"] = {
+				["Agraxx - Wyrmrest Accord"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 42.50006103515625,
-						["x"] = 104.5,
-						["point"] = "CENTER",
+						["y"] = 223.0000457763672,
+						["x"] = -31.50006103515625,
+						["point"] = "BOTTOM",
+					},
+				},
+				["Skren - Thunderlord"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 223.0000457763672,
+						["x"] = -31.50006103515625,
+						["point"] = "BOTTOM",
 					},
 				},
 			},
@@ -1647,20 +1648,20 @@ Bartender4DB = {
 	},
 	["profileKeys"] = {
 		["Felgarr - Thunderlord"] = "Default",
-		["Ignorc - Blackrock"] = "Default",
-		["Angarr - Thunderlord"] = "Default",
-		["Paingarr - Sargeras"] = "Default",
 		["Angarr - Blackrock"] = "Default",
+		["Angarr - Thunderlord"] = "Default",
+		["Flashlyte - Blackrock"] = "Default",
+		["Ignorc - Blackrock"] = "Default",
 		["Shadegarr - Tichondrius"] = "Default",
-		["Glaivegarr - Blackrock"] = "Default",
-		["Flashsmite - Blackrock"] = "Default",
 		["Theofang - Thunderlord"] = "Theofang - Thunderlord",
-		["Raingarr - Tichondrius"] = "Default",
+		["Huntgarr - Thunderlord"] = "Default",
+		["Fangarr - Tichondrius"] = "Default",
+		["Flashsmite - Blackrock"] = "Default",
 		["Mistgarr - Tichondrius"] = "Default",
 		["Raingarr - Thunderlord"] = "Default",
-		["Fangarr - Tichondrius"] = "Default",
-		["Huntgarr - Thunderlord"] = "Default",
-		["Flashlyte - Blackrock"] = "Default",
+		["Raingarr - Tichondrius"] = "Default",
+		["Glaivegarr - Blackrock"] = "Default",
+		["Paingarr - Sargeras"] = "Default",
 		["Arantir - Lightbringer"] = "Default",
 	},
 	["profiles"] = {
